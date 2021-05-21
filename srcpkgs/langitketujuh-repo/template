@@ -1,0 +1,40 @@
+# Template file for 'langitketujuh-repo'
+pkgname=langitketujuh-repo
+version=0.1
+revision=1
+build_style=meta
+short_desc="LangitKetujuh Linux for the current repository"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="Public Domain"
+homepage="http://langitketujuh.id"
+
+do_install() {
+	vmkdir usr/share/xbps.d
+	case "$XBPS_TARGET_MACHINE" in
+		aarch64*)
+			echo "repository=https://repo.langitketujuh.id/current/aarch64" > \
+				${DESTDIR}/usr/share/xbps.d/70-langitketujuh-repository-main.conf
+			echo "repository=https://repo.langitketujuh.id/current/aarch64/debug" > \
+				${DESTDIR}/usr/share/xbps.d/80-langitketujuh-repository-debug.conf
+			;;
+		*-musl)
+			echo "repository=https://repo.langitketujuh.id/current/musl" > \
+				${DESTDIR}/usr/share/xbps.d/70-langitketujuh-repository-main.conf
+			echo "repository=https://repo.langitketujuh.id/current/musl/debug" > \
+				${DESTDIR}/usr/share/xbps.d/80-langitketujuh-repository-debug.conf
+			;;
+		*)
+			echo "repository=https://repo.langitketujuh.id/current" > \
+				${DESTDIR}/usr/share/xbps.d/70-langitketujuh-repository-main.conf
+			echo "repository=https://repo.langitketujuh.id/current/debug" > \
+				${DESTDIR}/usr/share/xbps.d/80-langitketujuh-repository-debug.conf
+			;;
+	esac
+}
+
+langitketujuh-repo-debug_package() {
+	short_desc="${short_desc/debug}"
+	pkg_install() {
+		vmove usr/share/xbps.d/80-langitketujuh-repository-debug.conf
+	}
+}
