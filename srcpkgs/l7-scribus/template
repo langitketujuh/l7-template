@@ -1,0 +1,15 @@
+# Template file for 'l7-scribus'
+pkgname=l7-scribus
+version=1.5.7
+revision=2
+build_style=meta
+depends="scribus"
+short_desc="LangitKetujuh patch for scribus package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+  vinstall ${FILESDIR}/prefs150.xml 0644 etc/skel/.config/scribus prefs150.xml
+  vinstall ${FILESDIR}/scribus150.rc 0644 etc/skel/.config/scribus scribus150.rc
+}

@@ -1,0 +1,12 @@
+[$Version]
+update_info=gwenview.upd:SideBar_StatusBar_Rename
+
+[Recent Files]
+
+[SideBar]
+IsVisible BrowseMode=true
+IsVisible ViewMode=true
+IsVisible ViewMode FullScreen=false
+
+[ThumbnailView]
+ListVideos=false

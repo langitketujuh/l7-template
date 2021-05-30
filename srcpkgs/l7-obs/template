@@ -1,0 +1,13 @@
+# Template file for 'l7-obs'
+pkgname=l7-obs
+version=26.1.2
+revision=1
+depends="obs"
+short_desc="LangitKetujuh patch for obs package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+  vinstall ${FILESDIR}/global.ini 0644 etc/skel/.config/obs-studio global.ini
+}

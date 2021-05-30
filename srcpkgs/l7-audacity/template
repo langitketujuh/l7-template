@@ -1,0 +1,14 @@
+# Template file for 'l7-audacity'
+pkgname=l7-audacity
+version=2.4.1
+revision=2
+depends="audacity"
+short_desc="LangitKetujuh patch for audacity package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+  vinstall ${FILESDIR}/audacity.cfg 0644 etc/skel/.audacity-data audacity.cfg
+  vinstall ${FILESDIR}/ImageCache.png 0644 etc/skel/.audacity-data/Theme ImageCache.png
+}

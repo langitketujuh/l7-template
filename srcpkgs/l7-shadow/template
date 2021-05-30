@@ -1,0 +1,16 @@
+# Template file for 'l7-shadow'
+pkgname=l7-shadow
+version=4.8.1
+revision=1
+build_style=meta
+depends="shadow"
+short_desc="LangitKetujuh patch for shadow package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+conf_files="/etc/default/useradd"
+
+do_install() {
+  vsed -i ${FILESDIR}/useradd -e 's/bash/fish/'
+  vinstall ${FILESDIR}/useradd 0644 etc/default useradd
+}

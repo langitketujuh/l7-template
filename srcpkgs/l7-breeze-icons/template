@@ -1,0 +1,21 @@
+# Template file for 'l7-breeze-icons'
+pkgname=l7-breeze-icons
+version=5.82.0
+revision=1
+depends="breeze-icons"
+short_desc="LangitKetujuh patch for breeze-icons package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+conf_files="
+  /usr/share/icons/breeze/places/64/start-here-kde.svg
+  /usr/share/icons/breeze/places/96/start-here-kde.svg
+  /usr/share/icons/breeze-dark/places/64/start-here-kde.svg
+  /usr/share/icons/breeze-dark/places/96/start-here-kde.svg"
+
+do_install() {
+  for f in breeze breeze-dark; do
+    vinstall ${FILESDIR}/64-start-here-kde.svg 0644 usr/share/icons/${f}/places/64 start-here-kde.svg
+    vinstall ${FILESDIR}/96-start-here-kde.svg 0644 usr/share/icons/${f}/places/96 start-here-kde.svg
+  done
+}

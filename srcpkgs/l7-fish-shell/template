@@ -1,0 +1,21 @@
+# Template file for 'l7-fish-shell'
+pkgname=l7-fish-shell
+version=3.2.2
+revision=1
+build_style=meta
+depends="fish-shell"
+short_desc="LangitKetujuh patch for fish-shell package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+post_install() {
+  vmkdir etc/skel/.config/fish/functions/
+}
+
+do_install() {
+  vinstall ${FILESDIR}/fish_variables 0644 etc/skel/.config/fish fish_variables
+  for f in fish_prompt vpsm_config; do
+    vinstall ${FILESDIR}/${f}.fish 0644 etc/skel/.config/fish/functions ${f}.fish
+  done
+}

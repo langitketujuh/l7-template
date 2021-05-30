@@ -1,0 +1,14 @@
+# Template file for 'l7-kscreenlocker'
+pkgname=l7-kscreenlocker
+version=5.21.5
+revision=1
+build_style=meta
+depends="kscreenlocker"
+short_desc="LangitKetujuh patch for kscreenlocker package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+  vinstall ${FILESDIR}/kscreenlockerrc 0644 etc/skel/.config kscreenlockerrc
+}

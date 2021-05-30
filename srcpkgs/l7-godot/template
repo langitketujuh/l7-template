@@ -1,0 +1,13 @@
+# Template file for 'l7-godot'
+pkgname=l7-godot
+version=3.3
+revision=1
+depends="godot"
+short_desc="LangitKetujuh patch for godot package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+  vinstall ${FILESDIR}/editor_settings-3.tres 0644 etc/skel/.config/godot editor_settings-3.tres
+}

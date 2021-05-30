@@ -1,0 +1,14 @@
+# Template file for 'l7-ark'
+pkgname=l7-ark
+version=21.04.1
+revision=1
+build_style=meta
+depends="ark"
+short_desc="LangitKetujuh patch for ark package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+  vinstall ${FILESDIR}/arkrc 0644 etc/skel/.config arkrc
+}

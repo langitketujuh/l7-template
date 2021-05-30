@@ -1,0 +1,14 @@
+# Template file for 'l7-libreoffice'
+pkgname=l7-libreoffice
+version=7.1.3.2
+revision=1
+build_style=meta
+depends="libreoffice breeze"
+short_desc="LangitKetujuh patch for libreoffice package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+  vinstall ${FILESDIR}/registrymodifications.xcu 0600 etc/skel/.config/libreoffice/4/user registrymodifications.xcu
+}

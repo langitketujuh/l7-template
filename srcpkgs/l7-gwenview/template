@@ -1,0 +1,14 @@
+# Template file for 'l7-gwenview'
+pkgname=l7-gwenview
+version=21.04.1
+revision=1
+build_style=meta
+depends="gwenview"
+short_desc="LangitKetujuh patch for gwenview package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+  vinstall ${FILESDIR}/gwenviewrc 0644 etc/skel/.config gwenviewrc
+}

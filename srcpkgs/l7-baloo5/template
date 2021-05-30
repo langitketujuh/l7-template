@@ -1,0 +1,15 @@
+# Template file for 'l7-baloo5'
+pkgname=l7-baloo5
+version=5.82.0
+revision=1
+build_style=meta
+depends="baloo5"
+short_desc="LangitKetujuh patch for baloo5 package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+  vinstall ${FILESDIR}/baloofilerc 0644 etc/skel/.config baloofilerc
+  vinstall ${FILESDIR}/baloorc 0644 etc/skel/.config baloorc
+}

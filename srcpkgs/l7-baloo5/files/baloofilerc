@@ -1,0 +1,6 @@
+[Basic Settings]
+Indexing-Enabled=false
+
+[General]
+exclude filters=*.loT,lzo,.uic,moc_*.cpp,*.rej,*.fq,*.a,*.po,*.faa,*.swap,.histfile.*,.yarn,*.o,*.ini,.bzr,*.jsc,*.elc,*.db,*.qrc,po,*~,confstat,*.fastq,.git,.xsession-errors*,node_modules,libtool,*.pyo,CMakeCache.txt,.svn,.obj,config.status,CMakeTmpQmake,*.gmo,*.fna,confdefs.h,*.init,qrc_*.cpp,.pch,*.so,*.moc,_darcs,*.fasta,*.pc,*.class,*.qmlc,*.rcore,*.csproj,lost+found,*.vm*,*.omf,*.nvram,*.lo,CTestTestfile.cmake,CVS,nbproject,autom4te,*.gb,__pycache__,*.aux,*.part,conftest,CMakeTmp,*.map,.moc,litmain.sh,.npm,CMakeFiles,ui_*.h,*.orig,Makefile.am,node_packages,*.m4,*.la,.hg,.yarn-cache,core-dumps,*.tmp,*.gbff,cmake_install.cmake,*.pyc
+exclude filters version=4

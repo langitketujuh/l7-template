@@ -1,0 +1,18 @@
+# Template file for 'l7-base-files'
+pkgname=l7-base-files
+version=0.142
+revision=11
+build_style=meta
+depends="base-files"
+short_desc="LangitKetujuh patch for base-files package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+conf_files="/usr/bin/lsb_release"
+
+do_install() {
+  vsed -i ${FILESDIR}/lsb_release -e 's/distributor_id="VoidLinux"/distributor_id="LangitKetujuh"/'
+  vsed -i ${FILESDIR}/lsb_release -e 's/description="Void Linux"/description="LangitKetujuh GNU\/Linux"/'
+  vsed -i ${FILESDIR}/lsb_release -e 's/codename="void"/codename="langitketujuh"/'
+  vinstall ${FILESDIR}/lsb_release 0755 usr/bin lsb_release
+}
