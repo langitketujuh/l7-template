@@ -1,0 +1,15 @@
+# Template file for 'l7-gimp'
+pkgname=l7-gimp
+version=2.10.24
+revision=1
+build_style=meta
+depends="gimp gmic-gimp"
+short_desc="LangitKetujuh patch for gimp package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+  vsed -i ${FILESDIR}/gimprc -e 's/# (theme "Dark")/(theme "System")/'
+  vinstall ${FILESDIR}/gimprc 0644 etc/skel/.config/GIMP/2.10 gimprc
+}

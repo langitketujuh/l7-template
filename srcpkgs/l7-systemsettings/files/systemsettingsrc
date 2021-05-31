@@ -1,0 +1,14 @@
+[KFileDialog Settings]
+Recent Files[$e]=
+Recent URLs[$e]=
+
+[MainWindow]
+MenuBar=Disabled
+State=
+ToolBarsMovable=Disabled
+
+[Notification Messages]
+FormatSettingsChanged=false
+
+[PlasmaRunnerManager]
+LaunchCounts=

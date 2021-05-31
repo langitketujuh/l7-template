@@ -1,0 +1,14 @@
+# Template file for 'l7-desktop-file-utils'
+pkgname=l7-desktop-file-utils
+version=0.26
+revision=1
+build_style=meta
+depends="desktop-file-utils"
+short_desc="LangitKetujuh patch for desktop-file-utils package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+  vinstall ${FILESDIR}/mimeapps.list 0644 etc/skel/.config mimeapps.list
+}

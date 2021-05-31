@@ -8,7 +8,6 @@ short_desc="LangitKetujuh patch for shadow package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
-conf_files="/etc/default/useradd"
 
 do_install() {
   vsed -i ${FILESDIR}/useradd -e 's/bash/fish/'

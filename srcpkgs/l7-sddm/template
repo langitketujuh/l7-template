@@ -1,0 +1,17 @@
+# Template file for 'l7-sddm'
+pkgname=l7-sddm
+version=0.19.0
+revision=3
+build_style=meta
+depends="sddm"
+short_desc="LangitKetujuh patch for sddm package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+  vmkdir usr/share/sddm/themes
+  vinstall ${FILESDIR}/kde_settings.conf 0644 etc/sddm.conf.d kde_settings.conf
+  vcopy ${FILESDIR}/langitketujuh usr/share/sddm/themes
+  vcopy ${FILESDIR}/langitketujuh-dark usr/share/sddm/themes
+}

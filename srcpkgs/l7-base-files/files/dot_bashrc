@@ -1,0 +1,71 @@
+# .bashrc
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+if [[ ${EUID} == 0 ]] ; then
+    PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
+else
+    PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
+fi
+
+# Disable beep
+xset b off
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+alias disk="lsblk -o NAME,TYPE,FSTYPE,FSAVAIL,FSUSED,FSUSE%,SIZE,LABEL,MOUNTPOINT"
+alias ll="ls -hNlh --color=auto --group-directories-first"
+alias pp="ping -c3 langitketujuh.id"
+alias ffmpeg="ffmpeg -hide_banner"
+alias clone="git clone --depth 1"
+alias fontfresh="fc-cache -fv"
+alias mkd="mkdir -pv"
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -vI"
+alias e='exit 0'
+alias c='clear'
+alias h="history"
+
+alias chgrp="chgrp --preserve-root"
+alias chmod="chmod --preserve-root"
+alias chown="chown --preserve-root"
+
+alias flathub="flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo"
+
+alias g="git"
+alias ga="git add ."
+alias gcm="git commit -m"
+alias gco="git checkout"
+alias gcob="git checkout -b"
+alias gd="git diff --color=always"
+alias gi="git init"
+alias glg="git log --graph --oneline --decorate --all"
+alias gm="git merge"
+alias gp="git push"
+alias gpl="git pull"
+alias gs="git status -sbu"
+alias gst="git stash"
+alias gstl="git stash list"
+
+alias please="sudo"                             # better asking
+alias sync="sudo xbps-install -S"               # update the repodata
+alias update="sudo xbps-install -Su"            # update the package
+alias get="sudo xbps-install"                   # install the package
+alias forceget="sudo xbps-install -Sf"          # force install packages
+alias info="xbps-query -S"                      # information of packages
+alias remove="sudo xbps-remove -R"              # remove some packages
+alias forceremove="sudo xbps-remove -R -f"      # force remove some packages
+alias autoclean="sudo xbps-remove -v -Oo"       # remove orphaned packages
+alias search="xbps-query -v -Rs"                # search packages
+alias searchlocal="xbps-query -v -s"            # search local packages
+alias deps="xbps-query -vRx"                    # depedency of packages
+alias installed="xbps-query -v -l"              # list installed
+alias filelist="xbps-query --regex -Rf"         # list of the packages
+alias repolist="xbps-query -v -L"               # repo list
+alias reconfigure="sudo xbps-reconfigure -v"    # reconfigure packages

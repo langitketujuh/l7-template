@@ -1,0 +1,17 @@
+# Template file for 'l7-plasma-desktop'
+pkgname=l7-plasma-desktop
+version=5.21.5
+revision=1
+build_style=meta
+depends="plasma-desktop"
+short_desc="LangitKetujuh patch for plasma-desktop package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+  vmkdir usr/share
+  vcopy ${FILESDIR}/plasma usr/share
+  vcopy ${FILESDIR}/wallpapers usr/share
+  vinstall ${FILESDIR}/kdeglobals 0644 etc/skel/.config kdeglobals
+}

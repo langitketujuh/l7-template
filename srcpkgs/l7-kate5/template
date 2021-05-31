@@ -1,0 +1,16 @@
+# Template file for 'l7-kate5'
+pkgname=l7-kate5
+version=21.04.1
+revision=1
+build_style=meta
+depends="kate5"
+short_desc="LangitKetujuh patch for kate5 package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+  vinstall ${FILESDIR}/katerc 0644 etc/skel/.config katerc
+  vinstall ${FILESDIR}/kateschemarc 0644 etc/skel/.config kateschemarc
+  vinstall ${FILESDIR}/katesyntaxhighlightingrc 0644 etc/skel/.config katesyntaxhighlightingrc
+}

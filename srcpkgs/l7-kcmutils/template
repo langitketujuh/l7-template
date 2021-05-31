@@ -1,0 +1,15 @@
+# Template file for 'l7-kcmutils'
+pkgname=l7-kcmutils
+version=5.82.0
+revision=1
+build_style=meta
+depends="kcmutils"
+short_desc="LangitKetujuh patch for kcmutils package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+  vinstall ${FILESDIR}/kcminputrc 0644 etc/skel/.config kcminputrc
+  vinstall ${FILESDIR}/touchpadrc 0644 etc/skel/.config touchpadrc
+}
