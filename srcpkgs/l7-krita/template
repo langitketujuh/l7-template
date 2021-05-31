@@ -3,12 +3,11 @@ pkgname=l7-krita
 version=4.4.3
 revision=2
 build_style=meta
-depends="krita"
+depends="krita gmic"
 short_desc="LangitKetujuh patch for krita package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
-conf_files="/etc/xdg/kritarc"
 
 do_install() {
   vsed -i ${FILESDIR}/kritarc -e 's/Theme=Krita dark/Theme=Breeze Dark/'
