@@ -1,0 +1,15 @@
+[Desktop Entry]
+Comment=Updater for LangitKetujuh OS
+Exec=sudo l7-tools --update
+GenericName=Updater for LangitKetujuh OS
+Icon=system-software-update
+Name=Update System
+NoDisplay=false
+OnlyShowIn=KDE;
+StartupNotify=true
+Terminal=1
+TerminalOptions=
+Type=Application
+Categories=Qt;KDE;System;
+X-KDE-SubstituteUID=false
+X-KDE-Username=

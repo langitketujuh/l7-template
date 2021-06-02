@@ -1,0 +1,403 @@
+#!/usr/bin/env bash
+
+TITLE="LangitKetujuh Tools"
+NAME=$(basename "$0")
+VERSION="1.11"
+LICENSE="GPL-2.0-only"
+TMP="/tmp"
+ANYKEY=$(echo -e 'Press any key to quit')
+
+ARCH=$(uname -m)
+
+usage()
+{
+echo -e "\n\033[1;33m$TITLE $VERSION\033[0m"
+echo -e "\e[3mConfiguring tool and installing third-party\e[0m"
+echo
+    cat <<- EOF
+license : $LICENSE
+usage   : $NAME [option]
+option  :
+          --update      -u    update system
+          --install     -i    install l7-tools from web
+
+        color profile:
+          --adobe-icc   -a    install adobe icc
+          --idea-icc    -d    install idealliance icc
+          --eci-icc     -e    install eci icc
+          --jpma-icc    -j    install jpma icc
+          --vigc-icc    -g    install vigc icc
+          --snap-icc    -g    install snap committee icc
+
+        from repo:
+          --wine-emu    -w    install wine emulator
+
+        plugin:
+          --separate+   -p    install separate+ gimp
+
+          --help        -h    show this help
+          --version     -v    show $NAME version
+
+EOF
+}
+
+check_root(){
+  if [ $(id -u) -ne 0 ]; then
+  echo -e "\033[1;91m[FAILED]\033[0m Please run as root!"
+  exit
+  fi
+}
+
+quit(){
+    echo
+    read -n 1 -s -r -p "$ANYKEY"
+    exit 0
+}
+
+for arg in "$@"; do
+    case $arg in
+        --update|-u)
+            check_root
+            # check internet
+            ping -q -w2 -c2 langitketujuh.id &>/dev/null
+            if [ $? -eq 0 ]; then
+              echo -e "" &>/dev/null
+            else
+              echo -e "\033[1;91m[FAILED]\033[0m No internet network!"
+              quit
+              exit;
+            fi
+            echo -e "\033[1;36m[1]\033[0m Synchronization"
+            xbps-install -S;
+            echo -e "\033[1;36m[2]\033[0m Update system"
+            xbps-install -uy
+            quit
+            ;;
+        --adobe-icc|-a)
+            check_root
+            echo -e "\033[1;36m[0]\033[0m Checking"
+            if ls -lh /usr/share/color/icc/adobe/ | grep icc > $TMP/checkers >/dev/null 2>&1; then
+              echo -e "\033[1;36m[FINISH]\033[0m Adobe icc installed"
+              exit;
+              else
+              echo -e "\033[1;36m[1]\033[0m Preparing new dir $TMP"
+              mkdir $TMP/adobe-icc >/dev/null 2>&1
+              cd $TMP/adobe-icc
+              echo -e "\033[1;36m[2]\033[0m Download Adobe icc profiles"
+              wget -c https://download.adobe.com/pub/adobe/iccprofiles/mac/AdobeICCProfilesCS4Mac_end-user.zip >/dev/null 2>&1
+              echo -e "\033[1;36m[3]\033[0m Unzip"
+              unzip -o -qq AdobeICCProfilesCS4Mac_end-user.zip
+              echo -e "\033[1;36m[4]\033[0m Installing"
+              install -D -m644 -t /usr/share/color/icc/adobe/ */RGB/*.icc
+              install -D -m644 -t /usr/share/color/icc/adobe/ */CMYK/*.icc
+              install -D -m644 -t /usr/share/doc/adobe */*.pdf
+              if ls -lh /usr/share/color/icc/adobe > $TMP/checkers >/dev/null 2>&1; then
+                echo -e "\033[1;36m[FINISH]\033[0m Adobe icc installed"
+                else
+                echo -e "\033[1;91m[FAILED]\033[0m Adobe icc profiles not installed!"
+                exit;
+              fi
+            fi
+            ;;
+        --scribus-icc|-j)
+            check_root
+            echo -e "\033[1;36m[0]\033[0m Checking"
+            if ls -lh /usr/share/color/icc/scribus/ > $TMP/checkers >/dev/null 2>&1; then
+              echo -e "\033[1;36m[FINISH]\033[0m Icc profiles from Scribus installed"
+              exit;
+              else
+              echo -e "\033[1;36m[1]\033[0m Preparing new dir $TMP"
+              mkdir $TMP/scribus-icc >/dev/null 2>&1
+              cd $TMP/scribus-icc
+              echo -e "\033[1;36m[2]\033[0m Download icc profiles from Scribus"
+              wget -c https://github.com/scribusproject/scribus/raw/master/resources/profiles/GenericCMYK.icm >/dev/null 2>&1
+              wget -c https://github.com/scribusproject/scribus/raw/master/resources/profiles/ISOcoated_v2_300_bas.icc >/dev/null 2>&1
+              echo -e "\033[1;36m[3]\033[0m Installing"
+              install -D -m644 -t /usr/share/color/icc/scribus *
+              if ls -lh /usr/share/color/icc/scribus | grep icc > $TMP/checkers >/dev/null 2>&1; then
+                echo -e "\033[1;36m[FINISH]\033[0m Icc profiles from Scribus installed"
+                else
+                echo -e "\033[1;91m[FAILED]\033[0m Icc profiles from Scribus not installed!"
+              exit;
+              fi
+            fi
+            ;;
+        --eci-icc|-e)
+            check_root
+            echo -e "\033[1;36m[0]\033[0m Checking"
+            if ls -lh /usr/share/color/icc/eci/ > $TMP/checkers >/dev/null 2>&1; then
+              echo -e "\033[1;36m[FINISH]\033[0m ECI icc profiles installed"
+              exit;
+              else
+              echo -e "\033[1;36m[1] Preparing new dir $TMP"
+              mkdir $TMP/eci-icc >/dev/null 2>&1
+              cd $TMP/eci-icc
+              echo -e "\033[1;36m[2]\033[0m\033[0m Download ECI icc profiles"
+              wget -c www.eci.org/lib/exe/fetch.php?media=downloads:icc_profiles_from_eci:eci_offset_2009.zip >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/PSOcoated_v3.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/PSOuncoated_v3_FOGRA52.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/PSOsc-b_paper_v3_FOGRA54.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/SC_paper_eci.icc >/dev/null 2>&1
+              echo -e "\033[1;36m[3]\033[0m Installing"
+              install -D -m644 -t /usr/share/color/icc/eci *.icc
+              if ls -lh /usr/share/color/icc/eci  > $TMP/checkers >/dev/null 2>&1; then
+                echo -e "\033[1;36m[FINISH]\033[0m ECI icc profiles installed"
+                else
+                echo -e "\033[1;91m[FAILED]\033[0m ECI icc not installed!"
+                exit;
+              fi
+            fi
+            ;;
+        --idea-icc|-d)
+            check_root
+            echo -e "\033[1;36m[0]\033[0m Checking"
+            if ls -lh /usr/share/color/icc/idea/ > $TMP/checkers >/dev/null 2>&1; then
+              echo -e "\033[1;36m[FINISH]\033[0m IDEAlliance icc profiles installed"
+              exit;
+              else
+              echo -e "\033[1;36m[1]\033[0m Preparing new dir $TMP"
+              mkdir $TMP/idea-icc >/dev/null 2>&1
+              cd $TMP/idea-icc
+              echo -e "\033[1;36m[2]\033[0m Download IDEAlliance icc profiles"
+              wget -c http://www.color.org/registry/profiles/JapanColor2011Coated.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/CGATS21_CRPC7.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/CGATS21_CRPC6.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/GRACoL2013_CRPC6.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/GRACoL2006_Coated1v2.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/CGATS21_CRPC5.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/SWOP2013C3_CRPC5.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/SWOP2006_Coated3v2.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/CGATS21_CRPC4.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/CGATS21_CRPC3.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/GRACoL2013UNC_CRPC3.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/SWOP2006_Coated5v2.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/CGATS21_CRPC2.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/CGATS21_CRPC1.icc >/dev/null 2>&1
+              echo -e "\033[1;36m[3]\033[0m Installing"
+              install -D -m644 -t /usr/share/color/icc/idealliance *.icc
+              if ls -lh /usr/share/color/icc/idealliance | grep icc > $TMP/checkers >/dev/null 2>&1; then
+                echo -e "\033[1;36m[FINISH]\033[0m IDEAlliance icc profiles installed"
+                else
+                echo -e "\033[1;91m[FAILED]\033[0m IDEAlliance icc not installed!"
+                exit;
+              fi            
+            fi
+            ;;
+        --jpma-icc|-j)
+            check_root
+            echo -e "\033[1;36m[0]\033[0m Checking"
+            if ls -lh /usr/share/color/icc/jpma/ > $TMP/checkers >/dev/null 2>&1; then
+              echo -e "\033[1;36m[FINISH]\033[0m Japan Printing Machinery Association icc profiles installed"
+              exit;
+              else
+              echo -e "\033[1;36m[1]\033[0m Preparing new dir $TMP"
+              mkdir $TMP/jpma-icc >/dev/null 2>&1
+              cd $TMP/jpma-icc
+              echo -e "\033[1;36m[2]\033[0m Download Japan Printing Machinery Association icc profiles"
+              wget -c http://www.color.org/registry/profiles/JapanColor2011Coated.icc >/dev/null 2>&1
+              echo -e "\033[1;36m[3]\033[0m Installing"
+              install -D -m644 -t /usr/share/color/icc/jpma *.icc
+              if ls -lh /usr/share/color/icc/jpma/ > $TMP/checkers >/dev/null 2>&1; then
+                echo -e "\033[1;36m[FINISH]\033[0m Japan Printing Machinery Association icc profiles installed"
+                else
+                echo -e "\033[1;91m[FAILED]\033[0m Japan Printing Machinery Association icc not installed!"
+                exit;
+              fi
+            fi
+            ;;
+        --vigc-icc|-g)
+            check_root
+            echo -e "\033[1;36m[0]\033[0m Checking"
+            if ls -lh /usr/share/color/icc/vigc/ > $TMP/checkers >/dev/null 2>&1; then
+              echo -e "\033[1;36m[FINISH]\033[0m VIGC icc profiles installed"
+              exit;
+              else
+              echo -e "\033[1;36m[1]\033[0m Preparing new dir $TMP"
+              mkdir $TMP/vigc-icc >/dev/null 2>&1
+              cd $TMP/vigc-icc
+              echo -e "\033[1;36m[2]\033[0m Download VIGC icc profiles"
+              wget -c http://www.color.org/registry/profiles/Coated_Fogra39L_VIGC_300.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/Coated_Fogra39L_VIGC_260.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/Uncoated_Fogra47L_VIGC_260.icc >/dev/null 2>&1
+              wget -c http://www.color.org/registry/profiles/Uncoated_Fogra47L_VIGC_300.icc >/dev/null 2>&1
+              echo -e "\033[1;36m[3]\033[0m Installing"
+              install -D -m644 -t /usr/share/color/icc/vigc *.icc
+              if ls -lh /usr/share/color/icc/vigc | grep icc > $TMP/checkers >/dev/null 2>&1; then
+                echo -e "\033[1;36m[FINISH]\033[0m VIGC icc profiles installed"
+                else
+                echo -e "\033[1;91m[FAILED]\033[0m VIGC icc not installed!"
+                exit;
+              fi
+            fi
+            ;;
+        --snap-icc|-g)
+            check_root
+            echo -e "\033[1;36m[0]\033[0m Checking"
+            if ls -lh /usr/share/color/icc/snap/ > $TMP/checkers >/dev/null 2>&1; then
+              echo -e "\033[1;36m[FINISH]\033[0m SNAP Committee icc profiles installed"
+              exit;
+              else
+              echo -e "\033[1;36m[1]\033[0m Preparing new dir $TMP"
+              mkdir $TMP/snap-icc >/dev/null 2>&1
+              cd $TMP/snap-icc
+              echo -e "\033[1;36m[2]\033[0m Download SNAP Committee icc profiles"
+              wget -c http://www.color.org/registry/profiles/SNAP2007.icc >/dev/null 2>&1
+              echo -e "\033[1;36m[4]\033[0m Installing"
+              install -D -m644 -t /usr/share/color/icc/snap *.icc
+              if ls -lh /usr/share/color/icc/snap | grep icc > $TMP/checkers >/dev/null 2>&1; then
+                echo -e "\033[1;36m[FINISH]\033[0m SNAP Committee icc profiles installed"
+                else
+                echo -e "\033[1;91m[FAILED]\033[0m SNAP Committee icc not installed!"
+                exit;
+              fi
+            fi
+            ;;
+        --separate+|-p)
+            check_root
+            echo -e "\033[1;36m[1]\033[0m Install depedency"
+            xbps-install -Sy mesa-dri gimp gimp-python gimp-devel lcms lcms-devel gettext gettext-devel
+            echo -e "\033[1;36m[2]\033[0m Preparing new dir $TMP"
+            mkdir -p $TMP/separate+ >/dev/null 2>&1
+            cd $TMP/separate+
+            echo -e "\033[1;36m[3]\033[0m Download source code"
+            wget -ncv "https://osdn.net/projects/separate-plus/downloads/51630/separate%2B-0.5.9-alpha3.zip" -O "separate+-0.5.9-alpha3.zip" >/dev/null 2>&1
+            unzip -o -q separate+-0.5.9-alpha3.zip >/dev/null 2>&1
+            cd separate+-0.5.9/
+            echo -e "\033[1;36m[4]\033[0m Installing"
+            make >/dev/null 2>&1
+            make PREFIX="/usr" install >/dev/null 2>&1
+            install -dm755 /usr/share/gimp/2.0/scripts
+            install -m644 sample-scripts/* /usr/share/gimp/2.0/scripts
+            echo -e "\033[1;36m[FINISH]\033[0m Separate+ installed"
+            ;;
+        --wine-emu|-w)
+            check_root
+            if xbps-query -v -L | grep musl > $TMP/checkers ; then
+              echo -e "\033[1;36m[1]\033[0m Install Wine Windows for musl"
+              xbps-install -S libwine wine wine-common wine-gecko wine-tools wine-mono winetricks zenity glu
+              if wineserver -v > $TMP/checkers >/dev/null 2>&1; then
+              echo -e "\033[1;36m[FINISH]\033[0m Wine Windows installed"
+              else
+              echo -e "\033[1;91m[FAILED]\033[0m Wine is not installed";
+              exit;
+              fi
+            else
+              echo -e "\033[1;36m[1]\033[0m Install repo nonfree and multilib"
+              xbps-install -Sy void-repo-nonfree void-repo-multilib
+              echo -e "\033[1;36m[2]\033[0m Install Wine Windows for glibc"
+              xbps-install -S libwine libwine-32bit wine wine-32bit wine-common wine-gecko wine-tools wine-mono winetricks zenity glu-32bit
+              if wineserver -v > $TMP/checkers >/dev/null 2>&1; then
+              echo -e "\033[1;36m[FINISH]\033[0m Wine Windows installed"
+              else
+              echo -e "\033[1;91m[FAILED]\033[0m Wine is not installed";
+              exit;
+              fi
+            fi
+            ;;
+        --downgrade-lite)
+            check_root
+            echo -e "\033[1;36m[1] Display Callibrator\033[0m"
+            echo -e "[*] Packages: \033[1;33mdispcalGUI\033[0m"
+            read -e -p "[*] Remove: [Y/n]: " CALLIBRATION_PKGS
+            if [[ $CALLIBRATION_PKGS =~ ^[Yy]$ ]]; then
+              echo -e "[*] Remove: \033[1;33mYes\033[0m"
+              xbps-remove -R dispcalGUI
+            fi
+            echo -e "\033[1;36m[2] Add-ons 2D Software\033[0m"
+            echo -e "[*] Packages: \033[1;33mgmic gmic-gimp gimp-lqr-plugin xsane-gimp resynthesizer\033[0m"
+            read -e -p "[*] Remove: [Y/n]: " PLUGINS_PKGS
+            if [[ $PLUGINS_PKGS =~ ^[Yy]$ ]]; then
+              echo -e "[*] Remove: \033[1;33mYes\033[0m"
+              xbps-remove -R gmic gmic-gimp gimp-lqr-plugin xsane-gimp resynthesizer
+            fi
+            echo -e "\033[1;36m[3] Photography Software\033[0m"
+            echo -e "[*] Packages: \033[1;33mdigikam rawtherapee hugin Converseen\033[0m"
+            read -e -p "[*] Remove: [Y/n]: " PHOTOGRAPHY_PKGS
+            if [[ $PHOTOGRAPHY_PKGS =~ ^[Yy]$ ]]; then
+              echo -e "[*] Remove: \033[1;33mYes\033[0m"
+              xbps-remove -Ry digikam rawtherapee hugin Converseen
+            fi
+            echo -e "\033[1;36m[4] Non-linear Editor\033[0m"
+            echo -e "[*] Packages: \033[1;33mkdenlive\033[0m"
+            read -e -p "[*] Remove: [Y/n]: " VIDEO_EDITOR_PKGS
+            if [[ $VIDEO_EDITOR_PKGS =~ ^[Yy]$ ]]; then
+              echo -e "[*] Remove: \033[1;33mYes\033[0m"
+              xbps-remove -Ry kdenlive
+            fi
+            echo -e "\033[1;36m[5] Font Maker\033[0m"
+            echo -e "[*] Packages: \033[1;33mfontforge\033[0m"
+            read -e -p "[*] Remove: [Y/n]: " FONT_MAKER_PKGS
+            if [[ $FONT_MAKER_PKGS =~ ^[Yy]$ ]]; then
+              echo -e "[*] Remove: \033[1;33mYes\033[0m"
+              xbps-remove -Ry fontforge
+            fi
+            echo -e "\033[1;36m[6] Digital Painting\033[0m"
+            echo -e "[*] Packages: \033[1;33mkrita l7-krita\033[0m"
+            read -e -p "[*] Remove: [Y/n]: " PAINTING_PKGS
+            if [[ $PAINTING_PKGS =~ ^[Yy]$ ]]; then
+              echo -e "[*] Remove: \033[1;33mYes\033[0m"
+              xbps-remove -Ry krita l7-krita
+            fi
+            echo -e "\033[1;36m[7] Recorder & Broadcaster Software\033[0m"
+            echo -e "[*] Packages: \033[1;33mobs l7-obs\033[0m"
+            read -e -p "[*] Remove: [Y/n]: " RECORD_PKGS
+            if [[ $RECORD_PKGS =~ ^[Yy]$ ]]; then
+              echo -e "[*] Remove: \033[1;33mYes\033[0m"
+              xbps-remove -Ry obs l7-obs
+            fi
+            echo -e "\033[1;36m[8] Layout & Desktop Publishing\033[0m"
+            echo -e "[*] Packages: \033[1;33mscribus l7-scribus\033[0m"
+            read -e -p "[*] Remove: [Y/n]: " PUBLISH_PKGS
+            if [[ $PUBLISH_PKGS =~ ^[Yy]$ ]]; then
+              echo -e "[*] Remove: \033[1;33mYes\033[0m"
+              xbps-remove -Ry scribus l7-scribus
+            fi
+            echo -e "\033[1;36m[9] 2D/3D Animation Full Feature\033[0m"
+            echo -e "[*] Packages: \033[1;33mblender synfigstudio opentoonz\033[0m"
+            read -e -p "[*] Remove: [Y/n]: " ANIMATION_PKGS
+            if [[ $ANIMATION_PKGS =~ ^[Yy]$ ]]; then
+              echo -e "[*] Remove: \033[1;33mYes\033[0m"
+              xbps-remove -Ry blender synfigstudio opentoonz
+            fi
+            echo -e "\033[1;36m[10] Audio Production\033[0m"
+            echo -e "[*] Packages: \033[1;33mjack jack_capture sox audacity l7-audacity ardour l7-ardour kid3 soundkonverter\033[0m"
+            read -e -p "[*] Remove: [Y/n]: " AUDIO_PRO_PKGS
+            if [[ $AUDIO_PRO_PKGS =~ ^[Yy]$ ]]; then
+              echo -e "[*] Remove: \033[1;33mYes\033[0m"
+              xbps-remove -Ry jack jack_capture sox audacity l7-audacity ardour l7-ardour kid3 soundkonverter
+            fi
+            echo -e "\033[1;36m[11] Extra Google Fonts\033[0m"
+            echo -e "[*] Packages: \033[1;33mgoogle-fonts-ttf\033[0m"
+            read -e -p "[*] Remove: [Y/n]: " FONTS_EXTRA_PKGS
+            if [[ $FONTS_EXTRA_PKGS =~ ^[Yy]$ ]]; then
+              echo -e "[*] Remove: \033[1;33mYes\033[0m"
+              xbps-remove -Ry google-fonts-ttf
+            fi
+            echo -e "\033[1;36m[12] Game Engine Kreator Mutiplatform\033[0m"
+            echo -e "[*] Packages: \033[1;33mgodot l7-godot\033[0m"
+            read -e -p "[*] Remove: [Y/n]: " GAME_PKGS
+            if [[ $GAME_PKGS =~ ^[Yy]$ ]]; then
+              echo -e "[*] Remove: \033[1;33mYes\033[0m"
+              xbps-remove -Ry godot l7-godot
+            fi
+            echo -e "\033[1;36m[13] Program Compiler\033[0m"
+            echo -e "[*] Packages: \033[1;33mautomake bison fakeroot flex libtool m4 patch pkg-config qemu-user-static scons yasm pkgconf gcc-objc++ llvm clang icu cmake\033[0m"
+            read -e -p "[*] Remove: [Y/n]: " COMPILER_PKGS
+            if [[ $COMPILER_PKGS =~ ^[Yy]$ ]]; then
+              echo -e "[*] Remove: \033[1;33mYes\033[0m"
+              xbps-remove -Ry automake bison fakeroot flex libtool m4 patch pkg-config qemu-user-static scons yasm pkgconf gcc-objc++ llvm clang icu cmake
+            fi
+            ;;
+        --help|-h)
+            usage
+            exit 0
+            ;;
+        --version|-v)
+            echo -e "\033[1;33m $NAME\033[0m version $VERSION"
+            exit 0
+            ;;
+        *)
+            echo -e "Please run : \033[1;33msudo l7-tools --update\033[0m"
+            exit 2
+    esac
+done

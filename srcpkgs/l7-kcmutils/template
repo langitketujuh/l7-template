@@ -11,5 +11,4 @@ homepage="https://langitketujuh.id"
 
 do_install() {
   vinstall ${FILESDIR}/kcminputrc 0644 etc/skel/.config kcminputrc
-  vinstall ${FILESDIR}/touchpadrc 0644 etc/skel/.config touchpadrc
 }
