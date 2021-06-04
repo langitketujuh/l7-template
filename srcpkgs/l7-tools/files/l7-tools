@@ -2,12 +2,20 @@
 
 TITLE="LangitKetujuh Tools"
 NAME=$(basename "$0")
-VERSION="1.11"
+VERSION="1.13"
 LICENSE="GPL-2.0-only"
 TMP="/tmp"
 ANYKEY=$(echo -e 'Press any key to quit')
 
 ARCH=$(uname -m)
+
+check_confict() {
+  for f in ardour base-files breeze-icons plasma-desktop runit-void; do
+    if [ -n "$(xbps-query -s ${f})" ]; then
+      xbps-install -y $f &>/dev/null
+    fi
+  done
+}
 
 usage()
 {
@@ -56,21 +64,24 @@ quit(){
 
 for arg in "$@"; do
     case $arg in
+        --test|-t)
+            check_confict
+            ;;
         --update|-u)
             check_root
-            # check internet
-            ping -q -w2 -c2 langitketujuh.id &>/dev/null
-            if [ $? -eq 0 ]; then
-              echo -e "" &>/dev/null
-            else
-              echo -e "\033[1;91m[FAILED]\033[0m No internet network!"
-              quit
-              exit;
-            fi
             echo -e "\033[1;36m[1]\033[0m Synchronization"
             xbps-install -S;
-            echo -e "\033[1;36m[2]\033[0m Update system"
+            echo -e "\033[1;36m[2]\033[0m Update system and packages"
+            check_confict
             xbps-install -uy
+            echo -e "\033[1;36m[3]\033[0m Clean cache and remove orphans (Optional)"
+            read -e -p "[*] Do it: [y/N]: " CACHE
+            if [[ $CACHE =~ ^[Yy]$ ]]; then
+              echo -e "[*] Yes, wait a minutes."
+              xbps-remove -vOoy
+              else
+              echo -e "[*] Skip clean cache."
+            fi
             quit
             ;;
         --adobe-icc|-a)
