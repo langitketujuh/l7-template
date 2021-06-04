@@ -2,7 +2,7 @@
 
 TITLE="LangitKetujuh Tools"
 NAME=$(basename "$0")
-VERSION="1.13"
+VERSION="1.14"
 LICENSE="GPL-2.0-only"
 TMP="/tmp"
 ANYKEY=$(echo -e 'Press any key to quit')
@@ -71,9 +71,8 @@ for arg in "$@"; do
             check_root
             echo -e "\033[1;36m[1]\033[0m Synchronization"
             xbps-install -S;
-            echo -e "\033[1;36m[2]\033[0m Update system and packages"
-            check_confict
-            xbps-install -uy
+            echo -e "\033[1;36m[2]\033[0m Full system upgrade"
+            xbps-install -uyI
             echo -e "\033[1;36m[3]\033[0m Clean cache and remove orphans (Optional)"
             read -e -p "[*] Do it: [y/N]: " CACHE
             if [[ $CACHE =~ ^[Yy]$ ]]; then
