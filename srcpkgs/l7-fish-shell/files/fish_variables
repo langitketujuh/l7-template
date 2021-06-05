@@ -52,7 +52,7 @@ SETUVAR _fish_abbr_search:xbps\x2dquery\x20\x2dv\x20\x2dRs
 SETUVAR _fish_abbr_searchlocal:xbps\x2dquery\x20\x2dv\x20\x2ds
 SETUVAR _fish_abbr_su:sudo\x20\x2di
 SETUVAR _fish_abbr_sync:sudo\x20xbps\x2dinstall\x20\x2dS
-SETUVAR _fish_abbr_update:sudo\x20xbps\x2dinstall\x20\x2dSu
+SETUVAR _fish_abbr_update:sudo\x20xbps\x2dinstall\x20\x2dSIu
 SETUVAR _fish_abbr_wget:wget\x20\x2dc
 SETUVAR fish_color_autosuggestion:969896
 SETUVAR fish_color_cancel:\x2dr

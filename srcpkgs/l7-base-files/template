@@ -1,7 +1,7 @@
 # Template file for 'l7-base-files'
 pkgname=l7-base-files
 version=0.142
-revision=11
+revision=12
 build_style=meta
 depends="base-files"
 short_desc="LangitKetujuh patch for base-files package"

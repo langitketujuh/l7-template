@@ -55,7 +55,7 @@ alias gstl="git stash list"
 
 alias please="sudo"                             # better asking
 alias sync="sudo xbps-install -S"               # update the repodata
-alias update="sudo xbps-install -Su"            # update the package
+alias update="sudo xbps-install -SIu"           # update the package
 alias get="sudo xbps-install"                   # install the package
 alias forceget="sudo xbps-install -Sf"          # force install packages
 alias info="xbps-query -S"                      # information of packages
