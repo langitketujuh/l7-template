@@ -54,4 +54,14 @@ elif [ "$ARCH" = x86_64-musl ]; then
   xbps-rindex --privkey ~/.ssh/private.pem --sign --signedby "LangitKetujuh Linux" $HOST_DIR/binpkgs/
   xbps-rindex --privkey ~/.ssh/private.pem --sign-pkg $HOST_DIR/binpkgs/$PACKAGES*.xbps
   xbps-rindex -af $HOST_DIR/binpkgs/$PACKAGES*.xbps
+elif [ "$ARCH" = i686 ]; then
+  MASTER_DIR="masterdir-x86"
+  HOST_DIR="$PWD/hostdir-x86"
+  rm -rfv $HOST_DIR/binpkgs/$PACKAGES{*.xbps,*.sig}
+  XBPS_HOSTDIR="$HOST_DIR" ./xbps-src -m $MASTER_DIR pkg $PACKAGES
+  xbps-rindex --privkey ~/.ssh/private.pem --sign --signedby "LangitKetujuh Linux" $HOST_DIR/binpkgs/
+  xbps-rindex --privkey ~/.ssh/private.pem --sign-pkg $HOST_DIR/binpkgs/$PACKAGES*.xbps
+  xbps-rindex -af $HOST_DIR/binpkgs/$PACKAGES*.xbps
+else
+  echo "Architecture not support"
 fi
