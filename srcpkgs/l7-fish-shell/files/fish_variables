@@ -48,8 +48,8 @@ SETUVAR _fish_abbr_reconfigure:sudo\x20xbps\x2dreconfigure\x20\x2dv
 SETUVAR _fish_abbr_remove:sudo\x20xbps\x2dremove\x20\x2dR
 SETUVAR _fish_abbr_repolist:xbps\x2dquery\x20\x2dLv
 SETUVAR _fish_abbr_rm:rm\x20\x2dIdv
-SETUVAR _fish_abbr_search:xbps\x2dquery\x20\x2dRsv
-SETUVAR _fish_abbr_searchlocal:xbps\x2dquery\x20\x2dsv
+SETUVAR _fish_abbr_search:xbps\x2dquery\x20\x2dvRs
+SETUVAR _fish_abbr_searchlocal:xbps\x2dquery\x20\x2dvs
 SETUVAR _fish_abbr_su:sudo\x20\x2di
 SETUVAR _fish_abbr_sync:sudo\x20xbps\x2dinstall\x20\x2dS
 SETUVAR _fish_abbr_update:sudo\x20xbps\x2dinstall\x20\x2dSIu
