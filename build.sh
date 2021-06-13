@@ -45,7 +45,6 @@ if [ "$ARCH" = x86_64 ]; then
   XBPS_HOSTDIR="$HOST_DIR" ./xbps-src -m $MASTER_DIR pkg $PACKAGES
   xbps-rindex --privkey ~/.ssh/private.pem --sign --signedby "LangitKetujuh Linux" $HOST_DIR/binpkgs/
   xbps-rindex --privkey ~/.ssh/private.pem --sign-pkg $HOST_DIR/binpkgs/$PACKAGES*.xbps
-  xbps-rindex -af $HOST_DIR/binpkgs/$PACKAGES*.xbps
 elif [ "$ARCH" = x86_64-musl ]; then
   MASTER_DIR="masterdir-x86_64-musl"
   HOST_DIR="$PWD/hostdir-x86_64-musl"
@@ -53,7 +52,6 @@ elif [ "$ARCH" = x86_64-musl ]; then
   XBPS_HOSTDIR="$HOST_DIR" ./xbps-src -m $MASTER_DIR pkg $PACKAGES
   xbps-rindex --privkey ~/.ssh/private.pem --sign --signedby "LangitKetujuh Linux" $HOST_DIR/binpkgs/
   xbps-rindex --privkey ~/.ssh/private.pem --sign-pkg $HOST_DIR/binpkgs/$PACKAGES*.xbps
-  xbps-rindex -af $HOST_DIR/binpkgs/$PACKAGES*.xbps
 elif [ "$ARCH" = i686 ]; then
   MASTER_DIR="masterdir-x86"
   HOST_DIR="$PWD/hostdir-x86"
@@ -61,7 +59,6 @@ elif [ "$ARCH" = i686 ]; then
   XBPS_HOSTDIR="$HOST_DIR" ./xbps-src -m $MASTER_DIR pkg $PACKAGES
   xbps-rindex --privkey ~/.ssh/private.pem --sign --signedby "LangitKetujuh Linux" $HOST_DIR/binpkgs/
   xbps-rindex --privkey ~/.ssh/private.pem --sign-pkg $HOST_DIR/binpkgs/$PACKAGES*.xbps
-  xbps-rindex -af $HOST_DIR/binpkgs/$PACKAGES*.xbps
 else
   echo "Architecture not support"
 fi
