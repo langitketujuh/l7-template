@@ -73,13 +73,17 @@ for arg in "$@"; do
             xbps-install -S;
             echo -e "\033[1;36m[2]\033[0m Full system upgrade"
             xbps-install -uI
-            echo -e "\033[1;36m[3]\033[0m Clean cache and remove orphans (Optional)"
-            read -e -p "[*] Do it: [y/N]: " CACHE
+            echo -e "\033[1;36m[3]\033[0m Remove all old kernels?"
+            read -e -p "Do you want to continue? [y/N]: " KERNEL
+            if [[ $KERNEL =~ ^[Yy]$ ]]; then
+              echo -e "[*] Yes, wait a minutes"
+              sudo vkpurge rm all
+            fi
+            echo -e "\033[1;36m[4]\033[0m Remove obsolete and orphans packages?"
+            read -e -p "Do you want to continue? [y/N]: " CACHE
             if [[ $CACHE =~ ^[Yy]$ ]]; then
-              echo -e "[*] Yes, wait a minutes."
+              echo -e "[*] Yes, wait a minutes"
               xbps-remove -vOoy
-              else
-              echo -e "[*] Skip clean cache."
             fi
             quit
             ;;

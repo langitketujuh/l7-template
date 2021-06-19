@@ -1,6 +1,6 @@
 # Template file for 'l7-kscreenlocker'
 pkgname=l7-kscreenlocker
-version=5.22.0
+version=5.22.1
 revision=1
 build_style=meta
 depends="kscreenlocker"

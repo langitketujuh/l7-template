@@ -1,7 +1,7 @@
 # Template file for 'l7-plasma-desktop'
 pkgname=l7-plasma-desktop
-version=5.22.0
-revision=3
+version=5.22.1
+revision=1
 build_style=meta
 depends="plasma-desktop"
 short_desc="LangitKetujuh patch for plasma-desktop package"
