@@ -27,48 +27,10 @@
 
 # Make sure we don't inherit these from env.
 
-while getopts "a:p:h:" opt; do
-case $opt in
-	a) ARCH="$OPTARG";;
-	p) PACKAGES="$OPTARG";;
-	h) echo "${0#/*}: [-a x86_64|x86_64-musl] [-p packages]" >&2; exit 1;;
-esac
+PACKAGES="isoimagewriter ardour l7-ardour ark l7-ark audacity l7-audacity baloo5 l7-baloo5 base-files l7-base-files breeze l7-breeze breeze-gtk l7-breeze-gtk breeze-icons l7-breeze-icons desktop-file-utils l7-desktop-file-utils l7-export fish-shell l7-fish-shell gimp l7-gimp godot l7-godot gwenview l7-gwenview kate5 l7-kate5 kcmutils l7-kcmutils konsole l7-konsole krita l7-krita kscreenlocker l7-kscreenlocker libreoffice l7-libreoffice obs l7-obs plasma-desktop l7-plasma-desktop removed-packages l7-removed-packages l7-repo runit-void l7-runit-void scribus l7-scribus sddm l7-sddm shadow l7-shadow systemsettings l7-systemsettings l7-tools"
+
+xbps-install -S >/dev/null 2>&1
+
+for c in $PACKAGES; do
+  xbps-query -R ${c} | grep pkgver
 done
-shift $((OPTIND - 1))
-
-[ ! -x build.sh ] && exit 0
-
-remove_old() {
-  rm -rfv $PWD/hostdir-$ARCH/binpkgs/$PACKAGES-{*.xbps,*.sig}
-}
-
-build_xbps(){
-  XBPS_HOSTDIR="$HOST_DIR" ./xbps-src -m $MASTER_DIR pkg ${f}
-  xbps-rindex --privkey ~/.ssh/private.pem --sign --signedby "LangitKetujuh Linux" $HOST_DIR/binpkgs/
-  xbps-rindex --privkey ~/.ssh/private.pem --sign-pkg $HOST_DIR/binpkgs/${f}*.xbps
-}
-
-if [ "$ARCH" = x86_64 ]; then
-  for f in $PACKAGES; do
-    remove_old
-    MASTER_DIR="masterdir-x86_64"
-    HOST_DIR="$PWD/hostdir-x86_64"
-    build_xbps
-  done
-elif [ "$ARCH" = x86_64-musl ]; then
-  for f in $PACKAGES; do
-    remove_old
-    MASTER_DIR="masterdir-x86_64-musl"
-    HOST_DIR="$PWD/hostdir-x86_64-musl"
-    build_xbps
-  done
-elif [ "$ARCH" = i686 ]; then
-  for f in $PACKAGES; do
-    remove_old
-    MASTER_DIR="masterdir-i686"
-    HOST_DIR="$PWD/hostdir-i686"
-    build_xbps
-  done
-else
-  echo "Architecture not support"
-fi
