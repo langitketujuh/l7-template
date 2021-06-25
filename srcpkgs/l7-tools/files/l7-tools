@@ -2,7 +2,7 @@
 
 TITLE="LangitKetujuh Tools"
 NAME=$(basename "$0")
-VERSION="1.14"
+VERSION="1.16"
 LICENSE="GPL-2.0-only"
 TMP="/tmp"
 ANYKEY=$(echo -e 'Press any key to quit')
@@ -56,6 +56,17 @@ check_root(){
   fi
 }
 
+screen_tearing_intel(){
+  if cat /usr/share/xbps.d/xbps.conf | grep xf86-video-intel > $TMP/checkers >/dev/null 2>&1; then
+    echo >/dev/null 2>&1
+    else
+    echo -e "\033[1;36m[*]\033[0m Remove Intel screen tearing"
+    echo "ignorepkg=xf86-video-intel" >> /usr/share/xbps.d/xbps.conf
+    xbps-install -S
+    xbps-remove -Ry xf86-video-intel
+  fi
+}
+
 quit(){
     echo
     read -n 1 -s -r -p "$ANYKEY"
@@ -71,16 +82,17 @@ for arg in "$@"; do
             check_root
             echo -e "\033[1;36m[1]\033[0m Synchronization"
             xbps-install -S;
+            screen_tearing_intel
             echo -e "\033[1;36m[2]\033[0m Full system upgrade"
             xbps-install -uI
             echo -e "\033[1;36m[3]\033[0m Remove all old kernels?"
-            read -e -p "Do you want to continue? [y/N]: " KERNEL
+            read -e -p "[*] Do you want to continue? [y/N]: " KERNEL
             if [[ $KERNEL =~ ^[Yy]$ ]]; then
               echo -e "[*] Yes, wait a minutes"
               sudo vkpurge rm all
             fi
             echo -e "\033[1;36m[4]\033[0m Remove obsolete and orphans packages?"
-            read -e -p "Do you want to continue? [y/N]: " CACHE
+            read -e -p "[*] Do you want to continue? [y/N]: " CACHE
             if [[ $CACHE =~ ^[Yy]$ ]]; then
               echo -e "[*] Yes, wait a minutes"
               xbps-remove -vOoy
