@@ -59,7 +59,7 @@
     </entry>
     <entry name="showRecentDocs" type="Bool">
       <label>Whether to show the "Recent Files" category.</label>
-      <default>true</default>
+      <default>false</default>
     </entry>
     <entry name="showRecentContacts" type="Bool">
       <label>Whether to show the "Recent Contacts" category.</label>
@@ -68,7 +68,7 @@
 
     <entry name="useExtraRunners" type="Bool">
       <label>Whether to use additional KRunner plugins to produce results in the search.</label>
-      <default>true</default>
+      <default>false</default>
     </entry>
     <entry name="extraRunners" type="StringList">
       <label>The plugin id's of additional KRunner plugins to use. Only used if useExtraRunners is true.</label>

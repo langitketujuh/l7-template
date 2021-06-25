@@ -27,7 +27,7 @@
         </entry>
         <entry name="systemApplications" type="StringList">
             <label>List of applications at the top of the "Computer" tab.</label>
-            <default>systemsettings.desktop,org.kde.kinfocenter.desktop,org.kde.discover.desktop</default>
+            <default>systemsettings.desktop,org.kde.kinfocenter.desktop</default>
         </entry>
         <entry name="favoritesDisplay" type="Int">
             <label>How to display favorites: 0 = Grid, 1 = List</label>
