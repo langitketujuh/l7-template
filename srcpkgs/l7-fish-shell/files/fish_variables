@@ -14,7 +14,7 @@ SETUVAR _fish_abbr_clone:git\x20clone\x20\x2d\x2ddepth\x201
 SETUVAR _fish_abbr_cp:cp\x20\x2div
 SETUVAR _fish_abbr_deps:xbps\x2dquery\x20\x2dvRx
 SETUVAR _fish_abbr_df:df\x20\x2dH
-SETUVAR _fish_abbr_disk:lsblk\x20\x2do\x20NAME\x2cTYPE\x2cFSTYPE\x2cFSAVAIL\x2cFSUSED\x2cFSUSE\x25\x2cSIZE\x2cLABEL\x2cMOUNTPOINT
+SETUVAR _fish_abbr_disk:lsblk\x20\x2do\x20name\x2ctran\x2ctype\x2cfstype\x2cfsavail\x2cfsused\x2cfsuse\x25\x2csize\x2clabel\x2cmountpoint\x2cmodel
 SETUVAR _fish_abbr_du:du\x20\x2dch
 SETUVAR _fish_abbr_e:exit\x200
 SETUVAR _fish_abbr_ff:fc\x2dcache\x20\x2dfv

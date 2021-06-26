@@ -2,7 +2,7 @@
 
 TITLE="LangitKetujuh Tools"
 NAME=$(basename "$0")
-VERSION="1.16"
+VERSION="1.17"
 LICENSE="GPL-2.0-only"
 TMP="/tmp"
 ANYKEY=$(echo -e 'Press any key to quit')
@@ -27,7 +27,7 @@ license : $LICENSE
 usage   : $NAME [option]
 option  :
           --update      -u    update system
-          --install     -i    install l7-tools from web
+          --remote      -r    remote from terminal
 
         color profile:
           --adobe-icc   -a    install adobe icc
@@ -99,10 +99,18 @@ for arg in "$@"; do
             fi
             quit
             ;;
+        --remote|-r)
+            if find ~/.ssh/ -name "*.pub" -type f >/dev/null 2>&1; then
+              echo -e >/dev/null 2>&1
+              else
+              ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519
+            fi
+            tmate
+            ;;
         --adobe-icc|-a)
             check_root
             echo -e "\033[1;36m[0]\033[0m Checking"
-            if ls -lh /usr/share/color/icc/adobe/ | grep icc > $TMP/checkers >/dev/null 2>&1; then
+            if find /usr/share/color/icc/adobe/ -name "*.icc" -type f >/dev/null 2>&1; then
               echo -e "\033[1;36m[FINISH]\033[0m Adobe icc installed"
               exit;
               else
@@ -117,7 +125,7 @@ for arg in "$@"; do
               install -D -m644 -t /usr/share/color/icc/adobe/ */RGB/*.icc
               install -D -m644 -t /usr/share/color/icc/adobe/ */CMYK/*.icc
               install -D -m644 -t /usr/share/doc/adobe */*.pdf
-              if ls -lh /usr/share/color/icc/adobe > $TMP/checkers >/dev/null 2>&1; then
+              if find /usr/share/color/icc/adobe/ -name "*.icc" -type f >/dev/null 2>&1; then
                 echo -e "\033[1;36m[FINISH]\033[0m Adobe icc installed"
                 else
                 echo -e "\033[1;91m[FAILED]\033[0m Adobe icc profiles not installed!"
@@ -128,7 +136,7 @@ for arg in "$@"; do
         --scribus-icc|-j)
             check_root
             echo -e "\033[1;36m[0]\033[0m Checking"
-            if ls -lh /usr/share/color/icc/scribus/ > $TMP/checkers >/dev/null 2>&1; then
+            if find /usr/share/color/icc/scribus/ -name "*.icc" -type f >/dev/null 2>&1; then
               echo -e "\033[1;36m[FINISH]\033[0m Icc profiles from Scribus installed"
               exit;
               else
@@ -140,7 +148,7 @@ for arg in "$@"; do
               wget -c https://github.com/scribusproject/scribus/raw/master/resources/profiles/ISOcoated_v2_300_bas.icc >/dev/null 2>&1
               echo -e "\033[1;36m[3]\033[0m Installing"
               install -D -m644 -t /usr/share/color/icc/scribus *
-              if ls -lh /usr/share/color/icc/scribus | grep icc > $TMP/checkers >/dev/null 2>&1; then
+              if find /usr/share/color/icc/scribus/ -name "*.icc" -type f >/dev/null 2>&1; then
                 echo -e "\033[1;36m[FINISH]\033[0m Icc profiles from Scribus installed"
                 else
                 echo -e "\033[1;91m[FAILED]\033[0m Icc profiles from Scribus not installed!"
@@ -151,7 +159,7 @@ for arg in "$@"; do
         --eci-icc|-e)
             check_root
             echo -e "\033[1;36m[0]\033[0m Checking"
-            if ls -lh /usr/share/color/icc/eci/ > $TMP/checkers >/dev/null 2>&1; then
+            if find /usr/share/color/icc/eci/ -name "*.icc" -type f >/dev/null 2>&1; then
               echo -e "\033[1;36m[FINISH]\033[0m ECI icc profiles installed"
               exit;
               else
@@ -166,7 +174,7 @@ for arg in "$@"; do
               wget -c http://www.color.org/registry/profiles/SC_paper_eci.icc >/dev/null 2>&1
               echo -e "\033[1;36m[3]\033[0m Installing"
               install -D -m644 -t /usr/share/color/icc/eci *.icc
-              if ls -lh /usr/share/color/icc/eci  > $TMP/checkers >/dev/null 2>&1; then
+              if find /usr/share/color/icc/eci/ -name "*.icc" -type f >/dev/null 2>&1; then
                 echo -e "\033[1;36m[FINISH]\033[0m ECI icc profiles installed"
                 else
                 echo -e "\033[1;91m[FAILED]\033[0m ECI icc not installed!"
@@ -177,7 +185,7 @@ for arg in "$@"; do
         --idea-icc|-d)
             check_root
             echo -e "\033[1;36m[0]\033[0m Checking"
-            if ls -lh /usr/share/color/icc/idea/ > $TMP/checkers >/dev/null 2>&1; then
+            if find /usr/share/color/icc/idealliance/ -name "*.icc" -type f >/dev/null 2>&1; then
               echo -e "\033[1;36m[FINISH]\033[0m IDEAlliance icc profiles installed"
               exit;
               else
@@ -201,7 +209,7 @@ for arg in "$@"; do
               wget -c http://www.color.org/registry/profiles/CGATS21_CRPC1.icc >/dev/null 2>&1
               echo -e "\033[1;36m[3]\033[0m Installing"
               install -D -m644 -t /usr/share/color/icc/idealliance *.icc
-              if ls -lh /usr/share/color/icc/idealliance | grep icc > $TMP/checkers >/dev/null 2>&1; then
+              if find /usr/share/color/icc/idealliance/ -name "*.icc" -type f >/dev/null 2>&1; then
                 echo -e "\033[1;36m[FINISH]\033[0m IDEAlliance icc profiles installed"
                 else
                 echo -e "\033[1;91m[FAILED]\033[0m IDEAlliance icc not installed!"
@@ -212,7 +220,7 @@ for arg in "$@"; do
         --jpma-icc|-j)
             check_root
             echo -e "\033[1;36m[0]\033[0m Checking"
-            if ls -lh /usr/share/color/icc/jpma/ > $TMP/checkers >/dev/null 2>&1; then
+            if find /usr/share/color/icc/jpma/ -name "*.icc" -type f >/dev/null 2>&1; then
               echo -e "\033[1;36m[FINISH]\033[0m Japan Printing Machinery Association icc profiles installed"
               exit;
               else
@@ -223,7 +231,7 @@ for arg in "$@"; do
               wget -c http://www.color.org/registry/profiles/JapanColor2011Coated.icc >/dev/null 2>&1
               echo -e "\033[1;36m[3]\033[0m Installing"
               install -D -m644 -t /usr/share/color/icc/jpma *.icc
-              if ls -lh /usr/share/color/icc/jpma/ > $TMP/checkers >/dev/null 2>&1; then
+              if find /usr/share/color/icc/jpma/ -name "*.icc" -type f >/dev/null 2>&1; then
                 echo -e "\033[1;36m[FINISH]\033[0m Japan Printing Machinery Association icc profiles installed"
                 else
                 echo -e "\033[1;91m[FAILED]\033[0m Japan Printing Machinery Association icc not installed!"
@@ -234,7 +242,7 @@ for arg in "$@"; do
         --vigc-icc|-g)
             check_root
             echo -e "\033[1;36m[0]\033[0m Checking"
-            if ls -lh /usr/share/color/icc/vigc/ > $TMP/checkers >/dev/null 2>&1; then
+            if find /usr/share/color/icc/vigc/ -name "*.icc" -type f >/dev/null 2>&1; then
               echo -e "\033[1;36m[FINISH]\033[0m VIGC icc profiles installed"
               exit;
               else
@@ -248,7 +256,7 @@ for arg in "$@"; do
               wget -c http://www.color.org/registry/profiles/Uncoated_Fogra47L_VIGC_300.icc >/dev/null 2>&1
               echo -e "\033[1;36m[3]\033[0m Installing"
               install -D -m644 -t /usr/share/color/icc/vigc *.icc
-              if ls -lh /usr/share/color/icc/vigc | grep icc > $TMP/checkers >/dev/null 2>&1; then
+              if find /usr/share/color/icc/vigc/ -name "*.icc" -type f >/dev/null 2>&1; then
                 echo -e "\033[1;36m[FINISH]\033[0m VIGC icc profiles installed"
                 else
                 echo -e "\033[1;91m[FAILED]\033[0m VIGC icc not installed!"
@@ -259,7 +267,7 @@ for arg in "$@"; do
         --snap-icc|-g)
             check_root
             echo -e "\033[1;36m[0]\033[0m Checking"
-            if ls -lh /usr/share/color/icc/snap/ > $TMP/checkers >/dev/null 2>&1; then
+            if find /usr/share/color/icc/snap/ -name "*.icc" -type f >/dev/null 2>&1; then
               echo -e "\033[1;36m[FINISH]\033[0m SNAP Committee icc profiles installed"
               exit;
               else
@@ -270,7 +278,7 @@ for arg in "$@"; do
               wget -c http://www.color.org/registry/profiles/SNAP2007.icc >/dev/null 2>&1
               echo -e "\033[1;36m[4]\033[0m Installing"
               install -D -m644 -t /usr/share/color/icc/snap *.icc
-              if ls -lh /usr/share/color/icc/snap | grep icc > $TMP/checkers >/dev/null 2>&1; then
+              if ls find /usr/share/color/icc/snap/ -name "*.icc" -type f >/dev/null 2>&1; then
                 echo -e "\033[1;36m[FINISH]\033[0m SNAP Committee icc profiles installed"
                 else
                 echo -e "\033[1;91m[FAILED]\033[0m SNAP Committee icc not installed!"
@@ -320,7 +328,7 @@ for arg in "$@"; do
               fi
             fi
             ;;
-        --downgrade-lite)
+        --downgrade)
             check_root
             echo -e "\033[1;36m[1] Display Callibrator\033[0m"
             echo -e "[*] Packages: \033[1;33mdispcalGUI\033[0m"
@@ -399,14 +407,21 @@ for arg in "$@"; do
               echo -e "[*] Remove: \033[1;33mYes\033[0m"
               xbps-remove -Ry google-fonts-ttf
             fi
-            echo -e "\033[1;36m[12] Game Engine Kreator Mutiplatform\033[0m"
+            echo -e "\033[1;36m[12] Game Engine Creator Mutiplatform\033[0m"
             echo -e "[*] Packages: \033[1;33mgodot l7-godot\033[0m"
             read -e -p "[*] Remove: [Y/n]: " GAME_PKGS
             if [[ $GAME_PKGS =~ ^[Yy]$ ]]; then
               echo -e "[*] Remove: \033[1;33mYes\033[0m"
               xbps-remove -Ry godot l7-godot
             fi
-            echo -e "\033[1;36m[13] Program Compiler\033[0m"
+            echo -e "\033[1;36m[13] CAD Sofware\033[0m"
+            echo -e "[*] Packages: \033[1;33mfreecad LibreCAD\033[0m"
+            read -e -p "[*] Remove: [Y/n]: " GAME_PKGS
+            if [[ $GAME_PKGS =~ ^[Yy]$ ]]; then
+              echo -e "[*] Remove: \033[1;33mYes\033[0m"
+              xbps-remove -Ry freecad LibreCAD
+            fi
+            echo -e "\033[1;36m[14] Program Compiler\033[0m"
             echo -e "[*] Packages: \033[1;33mautomake bison fakeroot flex libtool m4 patch pkg-config qemu-user-static scons yasm pkgconf gcc-objc++ llvm clang icu cmake\033[0m"
             read -e -p "[*] Remove: [Y/n]: " COMPILER_PKGS
             if [[ $COMPILER_PKGS =~ ^[Yy]$ ]]; then
