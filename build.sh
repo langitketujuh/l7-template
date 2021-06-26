@@ -46,7 +46,7 @@ build_xbps(){
   XBPS_HOSTDIR="$HOST_DIR" ./xbps-src -m $MASTER_DIR pkg ${f}
   xbps-rindex --privkey ~/.ssh/private.pem --sign --signedby "LangitKetujuh Linux" $HOST_DIR/binpkgs/
   xbps-rindex --privkey ~/.ssh/private.pem --sign-pkg $HOST_DIR/binpkgs/${f}*.xbps
-  xbps-rindex -a $HOST_DIR/binpkgs/${f}*.xbps -f
+  xbps-rindex -a $HOST_DIR/binpkgs/*.xbps -f
 }
 
 if [ "$ARCH" = x86_64 ]; then
