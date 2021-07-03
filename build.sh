@@ -46,6 +46,9 @@ build_xbps(){
   XBPS_HOSTDIR="$HOST_DIR" ./xbps-src -m $MASTER_DIR pkg ${f}
   xbps-rindex --privkey ~/.ssh/private.pem --sign --signedby "LangitKetujuh Linux" $HOST_DIR/binpkgs/
   xbps-rindex --privkey ~/.ssh/private.pem --sign-pkg $HOST_DIR/binpkgs/${f}*.xbps
+}
+
+generate_repodata(){
   xbps-rindex -a $HOST_DIR/binpkgs/*.xbps -f
 }
 
@@ -55,6 +58,7 @@ if [ "$ARCH" = x86_64 ]; then
     MASTER_DIR="masterdir-x86_64"
     HOST_DIR="$PWD/hostdir-x86_64"
     build_xbps
+    generate_repodata
   done
 elif [ "$ARCH" = x86_64-musl ]; then
   for f in $PACKAGES; do
@@ -62,6 +66,7 @@ elif [ "$ARCH" = x86_64-musl ]; then
     MASTER_DIR="masterdir-x86_64-musl"
     HOST_DIR="$PWD/hostdir-x86_64-musl"
     build_xbps
+    generate_repodata
   done
 elif [ "$ARCH" = i686 ]; then
   for f in $PACKAGES; do
@@ -69,6 +74,7 @@ elif [ "$ARCH" = i686 ]; then
     MASTER_DIR="masterdir-i686"
     HOST_DIR="$PWD/hostdir-i686"
     build_xbps
+    generate_repodata
   done
 else
   echo "Architecture not support"
