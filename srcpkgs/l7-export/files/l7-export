@@ -4,7 +4,7 @@ TITLE="LangitKetujuh Export"
 NAME=$(basename "$0")
 INSTALLDIR=$(which basename)
 INKSCAPEDIR=$(which inkscape)
-VERSION="1.12"
+VERSION="1.13"
 WEB="https://langitketujuh.id"
 LICENSE="GPL-2.0-only"
 TMP="/tmp"
@@ -55,20 +55,20 @@ for arg in "$@"; do
     case $arg in
         --install|-i)
             check_root
-            if xbps-install --version > $TMP/checkers >/dev/null 2>&1;
+            if xbps-install --version >/dev/null 2>&1;
               then
               echo -e "\033[1;36m[1]\033[0m Install depedencies > XBPS distro"
               mkdir -pv $TMP
               xbps-install -Sy xbps;
               xbps-install sudo curl wget base-files colord unzip which \
               inkscape ghostscript ImageMagick libwebp-tools zip
-              elif dnf --version > $TMP/checkers >/dev/null 2>&1;
+              elif dnf --version >/dev/null 2>&1;
                 then
                 echo -e "\033[1;36m[1]\033[0m Install depedencies > RPM distro"
                 mkdir -pv $TMP
                 yum install sudo curl wget fedora-release colord unzip which \
                 inkscape ghostscript ImageMagick libwebp-tools zip
-              elif pacman --version > $TMP/checkers >/dev/null 2>&1;
+              elif pacman --version >/dev/null 2>&1;
                 then
                 echo -e "\033[1;36m[1]\033[0m Install depedencies > Pacman distro"
                 mkdir -pv $TMP
@@ -76,14 +76,14 @@ for arg in "$@"; do
                 pacman -S sudo curl wget lsb-release colord unzip which \
                 inkscape ghostscript imagemagick libwebp \
                 poppler poppler-glib poppler-qt5 zip
-              elif apt --version > $TMP/checkers >/dev/null 2>&1;
+              elif apt --version >/dev/null 2>&1;
                 then
                 echo -e "\033[1;36m[1]\033[0m Install depedencies > APT distro"
                 mkdir -pv $TMP
                 apt -y update;
                 apt install sudo curl wget lsb-release colord unzip \
                 inkscape ghostscript imagemagick webp zip
-              elif zypper --version > $TMP/checkers >/dev/null 2>&1;
+              elif zypper --version >/dev/null 2>&1;
                 then
                 echo -e "\033[1;36m[1]\033[0m Install depedencies > Zypper distro"
                 mkdir -pv $TMP
@@ -190,8 +190,7 @@ SOURCE=$1
 IDPATTERN=$2
 
 search_file() {
-  ls $SOURCE > $TMP/checkers
-  cat $TMP/checkers | wc -c
+  find . -name "$SOURCE" -type f | wc -c
 }
 
 check_file() {
@@ -231,35 +230,35 @@ check_id() {
 }
 
 check_depedencies() {
-  if inkscape --version > $TMP/checkers >/dev/null 2>&1; then
+  if inkscape --version >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m inkscape is not already installed."
     echo -e "Please run \033[1;33ml7-export --install\033[0m";
     exit;
   fi
-  if ls $CHEMICAL_PROOF > $TMP/checkers >/dev/null 2>&1; then
+  if find . -name "$CHEMICAL_PROOF" -type f >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m Krita cmyk icm is not already installed."
     echo -e "Please run \033[1;33ml7-export --install\033[0m";
     exit;
   fi
-  if convert -version > $TMP/checkers >/dev/null 2>&1; then
+  if convert -version >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m ImageMagick is not already installed."
     echo -e "Please run \033[1;33ml7-export --install\033[0m";
     exit;
   fi
-  if gs --version > $TMP/checkers >/dev/null 2>&1; then
+  if gs --version >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m ghostscript is not already installed."
     echo -e "Please run \033[1;33ml7-export --install\033[0m";
     exit;
   fi
-  if cwebp -version > $TMP/checkers >/dev/null 2>&1; then
+  if cwebp -version >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m webp, libwebp or libwebp-tools is not already installed."
