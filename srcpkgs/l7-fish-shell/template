@@ -1,6 +1,6 @@
 # Template file for 'l7-fish-shell'
 pkgname=l7-fish-shell
-version=3.2.2
+version=3.3.1
 revision=5
 build_style=meta
 depends="fish-shell"

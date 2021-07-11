@@ -1,6 +1,6 @@
 # Template file for 'l7-obs'
 pkgname=l7-obs
-version=27.0.0
+version=27.0.1
 revision=1
 depends="obs"
 short_desc="LangitKetujuh patch for obs package"
