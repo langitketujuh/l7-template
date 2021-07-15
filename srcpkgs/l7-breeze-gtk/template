@@ -10,9 +10,9 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  # file modified
-  vinstall ${FILESDIR}/dot_gtkrc-2.0 0644 etc/skel .gtkrc-2.0
-  vinstall ${FILESDIR}/colors.css 0644 etc/skel/.config/gtk-3.0 colors.css
-  vinstall ${FILESDIR}/gtk.css 0644 etc/skel/.config/gtk-3.0 gtk.css
-  vinstall ${FILESDIR}/settings.ini 0644 etc/skel/.config/gtk-3.0 settings.ini
+	# file modified
+	vinstall ${FILESDIR}/dot_gtkrc-2.0 0644 etc/skel .gtkrc-2.0
+	vinstall ${FILESDIR}/colors.css 0644 etc/skel/.config/gtk-3.0 colors.css
+	vinstall ${FILESDIR}/gtk.css 0644 etc/skel/.config/gtk-3.0 gtk.css
+	vinstall ${FILESDIR}/settings.ini 0644 etc/skel/.config/gtk-3.0 settings.ini
 }

@@ -10,8 +10,8 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  vmkdir usr/share/sddm/themes
-  vinstall ${FILESDIR}/kde_settings.conf 0644 etc/sddm.conf.d kde_settings.conf
-  vcopy ${FILESDIR}/langitketujuh usr/share/sddm/themes
-  vcopy ${FILESDIR}/langitketujuh-dark usr/share/sddm/themes
+	vmkdir usr/share/sddm/themes
+	vinstall ${FILESDIR}/kde_settings.conf 0644 etc/sddm.conf.d kde_settings.conf
+	vcopy ${FILESDIR}/langitketujuh usr/share/sddm/themes
+	vcopy ${FILESDIR}/langitketujuh-dark usr/share/sddm/themes
 }

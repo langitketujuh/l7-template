@@ -10,12 +10,12 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 post_install() {
-  vmkdir etc/skel/.config/fish/functions/
+	vmkdir etc/skel/.config/fish/functions/
 }
 
 do_install() {
-  vinstall ${FILESDIR}/fish_variables 0644 etc/skel/.config/fish fish_variables
-  for f in fish_prompt vpsm_config; do
-    vinstall ${FILESDIR}/${f}.fish 0644 etc/skel/.config/fish/functions ${f}.fish
-  done
+	vinstall ${FILESDIR}/fish_variables 0644 etc/skel/.config/fish fish_variables
+	for f in fish_prompt vpsm_config; do
+		vinstall ${FILESDIR}/${f}.fish 0644 etc/skel/.config/fish/functions ${f}.fish
+	done
 }

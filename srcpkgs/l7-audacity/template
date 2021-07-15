@@ -9,6 +9,6 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  vinstall ${FILESDIR}/audacity.cfg 0644 etc/skel/.audacity-data audacity.cfg
-  vinstall ${FILESDIR}/ImageCache.png 0644 etc/skel/.audacity-data/Theme ImageCache.png
+	vinstall ${FILESDIR}/audacity.cfg 0644 etc/skel/.audacity-data audacity.cfg
+	vinstall ${FILESDIR}/ImageCache.png 0644 etc/skel/.audacity-data/Theme ImageCache.png
 }

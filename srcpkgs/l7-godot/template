@@ -9,5 +9,5 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  vinstall ${FILESDIR}/editor_settings-3.tres 0644 etc/skel/.config/godot editor_settings-3.tres
+	vinstall ${FILESDIR}/editor_settings-3.tres 0644 etc/skel/.config/godot editor_settings-3.tres
 }

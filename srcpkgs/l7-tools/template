@@ -10,7 +10,7 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  vbin ${FILESDIR}/l7-tools l7-tools
-  vmkdir usr/share/applications
-  vinstall ${FILESDIR}/system.update.langitketujuh.desktop 0644 usr/share/applications system.update.langitketujuh.desktop
+	vbin ${FILESDIR}/l7-tools
+	vmkdir usr/share/applications
+	vinstall ${FILESDIR}/system.update.langitketujuh.desktop 0644 usr/share/applications system.update.langitketujuh.desktop
 }

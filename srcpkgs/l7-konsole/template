@@ -10,6 +10,6 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  vinstall ${FILESDIR}/konsolerc 0644 etc/skel/.config konsolerc
-  vinstall ${FILESDIR}/breeze-dark.colorscheme 0644 etc/skel/.local/share/konsole "Breeze Dark.colorscheme"
+	vinstall ${FILESDIR}/konsolerc 0644 etc/skel/.config konsolerc
+	vinstall ${FILESDIR}/breeze-dark.colorscheme 0644 etc/skel/.local/share/konsole "Breeze Dark.colorscheme"
 }

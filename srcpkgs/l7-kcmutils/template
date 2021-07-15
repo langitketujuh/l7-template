@@ -10,5 +10,5 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  vinstall ${FILESDIR}/kcminputrc 0644 etc/skel/.config kcminputrc
+	vinstall ${FILESDIR}/kcminputrc 0644 etc/skel/.config kcminputrc
 }

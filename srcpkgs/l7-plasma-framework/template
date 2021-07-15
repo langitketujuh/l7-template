@@ -10,6 +10,6 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  vmkdir usr/share
-  vcopy ${FILESDIR}/plasma usr/share
+	vmkdir usr/share
+	vcopy ${FILESDIR}/plasma usr/share
 }

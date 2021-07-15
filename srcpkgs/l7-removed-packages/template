@@ -9,20 +9,20 @@ license="Public Domain"
 homepage="https://langitketujuh.id"
 
 replaces="
-  packages<=0.0.0.0_1
+	packages<=0.0.0.0_1
 "
 
 if [ "$XBPS_TARGET_LIBC" = "musl" ]; then
-  replaces+="
-    packages<=0.0.0.0_1
-    "
+	replaces+="
+		packages<=0.0.0.0_1
+		"
 fi
 
 case "$XBPS_TARGET_MACHINE" in
-  ppc64*) ;;
-  ppc*)
-    replaces+="
-      packages<=0.0.0.0_1
-    "
-    ;;
+	ppc64*) ;;
+	ppc*)
+		replaces+="
+			packages<=0.0.0.0_1
+		"
+		;;
 esac

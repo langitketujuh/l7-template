@@ -10,6 +10,6 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  vsed -i ${FILESDIR}/gimprc -e 's/# (theme "Dark")/(theme "System")/'
-  vinstall ${FILESDIR}/gimprc 0644 etc/skel/.config/GIMP/2.10 gimprc
+	vsed -i ${FILESDIR}/gimprc -e 's/# (theme "Dark")/(theme "System")/'
+	vinstall ${FILESDIR}/gimprc 0644 etc/skel/.config/GIMP/2.10 gimprc
 }

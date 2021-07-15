@@ -10,5 +10,5 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  vinstall ${FILESDIR}/registrymodifications.xcu 0600 etc/skel/.config/libreoffice/4/user registrymodifications.xcu
+	vinstall ${FILESDIR}/registrymodifications.xcu 0600 etc/skel/.config/libreoffice/4/user registrymodifications.xcu
 }

@@ -10,7 +10,7 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  vinstall ${FILESDIR}/katerc 0644 etc/skel/.config katerc
-  vinstall ${FILESDIR}/kateschemarc 0644 etc/skel/.config kateschemarc
-  vinstall ${FILESDIR}/katesyntaxhighlightingrc 0644 etc/skel/.config katesyntaxhighlightingrc
+	vinstall ${FILESDIR}/katerc 0644 etc/skel/.config katerc
+	vinstall ${FILESDIR}/kateschemarc 0644 etc/skel/.config kateschemarc
+	vinstall ${FILESDIR}/katesyntaxhighlightingrc 0644 etc/skel/.config katesyntaxhighlightingrc
 }

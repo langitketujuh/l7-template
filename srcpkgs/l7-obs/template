@@ -9,5 +9,5 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  vinstall ${FILESDIR}/global.ini 0644 etc/skel/.config/obs-studio global.ini
+	vinstall ${FILESDIR}/global.ini 0644 etc/skel/.config/obs-studio global.ini
 }

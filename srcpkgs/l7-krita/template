@@ -10,6 +10,6 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  vsed -i ${FILESDIR}/kritarc -e 's/Theme=Krita dark/Theme=Breeze Dark/'
-  vinstall ${FILESDIR}/kritarc 0644 etc/skel/.config kritarc
+	vsed -i ${FILESDIR}/kritarc -e 's/Theme=Krita dark/Theme=Breeze Dark/'
+	vinstall ${FILESDIR}/kritarc 0644 etc/skel/.config kritarc
 }

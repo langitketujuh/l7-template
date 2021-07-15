@@ -10,6 +10,6 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  vsed -i ${FILESDIR}/useradd -e 's/bash/fish/'
-  vinstall ${FILESDIR}/useradd 0644 etc/default useradd
+	vsed -i ${FILESDIR}/useradd -e 's/bash/fish/'
+	vinstall ${FILESDIR}/useradd 0644 etc/default useradd
 }

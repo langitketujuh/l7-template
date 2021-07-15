@@ -10,5 +10,5 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  vinstall ${FILESDIR}/dark-ardour.colors 0644 usr/share/ardour6/themes dark-ardour.colors
+	vinstall ${FILESDIR}/dark-ardour.colors 0644 usr/share/ardour6/themes dark-ardour.colors
 }

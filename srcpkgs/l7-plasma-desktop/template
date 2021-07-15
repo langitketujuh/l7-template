@@ -1,7 +1,7 @@
 # Template file for 'l7-plasma-desktop'
 pkgname=l7-plasma-desktop
 version=5.22.3
-revision=2
+revision=1
 build_style=meta
 depends="plasma-desktop l7-plasma-framework"
 short_desc="LangitKetujuh patch for plasma-desktop package"
@@ -10,8 +10,8 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  vmkdir usr/share
-  vcopy ${FILESDIR}/plasma usr/share
-  vinstall ${FILESDIR}/kdeglobals 0644 etc/skel/.config kdeglobals
-  vinstall ${FILESDIR}/touchpadrc 0644 etc/skel/.config touchpadrc
+	vmkdir usr/share
+	vcopy ${FILESDIR}/plasma usr/share
+	vinstall ${FILESDIR}/kdeglobals 0644 etc/skel/.config kdeglobals
+	vinstall ${FILESDIR}/touchpadrc 0644 etc/skel/.config touchpadrc
 }

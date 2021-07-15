@@ -10,10 +10,10 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  vsed -i ${FILESDIR}/lsb_release -e 's/distributor_id="VoidLinux"/distributor_id="LangitKetujuh"/'
-  vsed -i ${FILESDIR}/lsb_release -e 's/description="Void Linux"/description="LangitKetujuh GNU\/Linux"/'
-  vsed -i ${FILESDIR}/lsb_release -e 's/codename="void"/codename="langitketujuh"/'
-  vinstall ${FILESDIR}/lsb_release 0755 usr/bin lsb_release
-  # file modified
-  vinstall ${FILESDIR}/dot_bashrc 0644 etc/skel .bashrc
+	vsed -i ${FILESDIR}/lsb_release -e 's/distributor_id="VoidLinux"/distributor_id="LangitKetujuh"/'
+	vsed -i ${FILESDIR}/lsb_release -e 's/description="Void Linux"/description="LangitKetujuh GNU\/Linux"/'
+	vsed -i ${FILESDIR}/lsb_release -e 's/codename="void"/codename="langitketujuh"/'
+	vbin "${FILESDIR}/lsb_release"
+	# file modified
+	vinstall ${FILESDIR}/dot_bashrc 0644 etc/skel .bashrc
 }

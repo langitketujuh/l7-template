@@ -10,6 +10,6 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-  vinstall ${FILESDIR}/baloofilerc 0644 etc/skel/.config baloofilerc
-  vinstall ${FILESDIR}/baloorc 0644 etc/skel/.config baloorc
+	vinstall ${FILESDIR}/baloofilerc 0644 etc/skel/.config baloofilerc
+	vinstall ${FILESDIR}/baloorc 0644 etc/skel/.config baloorc
 }
