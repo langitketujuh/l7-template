@@ -1,6 +1,6 @@
 # Template file for 'l7-plasma-framework'
 pkgname=l7-plasma-framework
-version=5.22.3
+version=5.84.0
 revision=1
 build_style=meta
 depends="plasma-framework"
