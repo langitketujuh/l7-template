@@ -7,12 +7,18 @@ INKSCAPEDIR=$(which inkscape)
 VERSION="1.14"
 WEB="https://langitketujuh.id"
 LICENSE="GPL-2.0-only"
+
 TMP="/tmp"
+
 SRGB="/usr/share/color/icc/colord/sRGB.icc"
 CHEMICAL_PROOF="/usr/share/color/icc/krita/cmyk.icm"
 SWOP2006_COATED3V2="/usr/share/color/icc/idealliance/SWOP2006_Coated3v2.icc"
 JAPANCOLOR2001COATED="/usr/share/color/icc/adobe/JapanColor2001Coated.icc"
 USWEBCOATEDSWOP="/usr/share/color/icc/adobe/USWebCoatedSWOP.icc"
+
+SOURCE=$1
+IDPATTERN=$2
+CACHE=".cache"
 
 usage() {
  echo -e "\n\033[1;36m $TITLE $VERSION\033[0m"
@@ -186,9 +192,6 @@ for arg in "$@"; do
     esac
 done
 
-SOURCE=$1
-IDPATTERN=$2
-
 search_file() {
   find . -name "$SOURCE" -type f | wc -c
 }
@@ -295,99 +298,83 @@ check_file
 check_id
 check_depedencies
 
-check_stroke_to_path() {
-cat "$SOURCE" | sed 's/;/ /g' | grep -oE 'stroke:#[^ ]*' | sed 's/stroke://g' | sed 's/#000000//g' | sort -u | xargs | tr -d '\n'
-}
-
 check_fill_opacity() {
-cat "$SOURCE" | sed 's/;/ /g' | grep fill-opacity:0. | grep -oE 'fill:#[^ ]*' | sed 's/fill://g' | sed 's/#000000//g' | sort -u | xargs | tr -d '\n'
+cat "$SOURCE" | grep 'fill-opacity=".[^ ]*"' | grep -oE 'id="[^ ]*' | tr -d 'id=")' | sort -u | xargs
 }
 
 check_filter() {
-cat "$SOURCE" | sed 's/;/ /g' | grep -oE 'filter:url\(#filter[^ ]*' | sed 's/filter:url//g' | tr -d '(#)"' | sort -u | xargs | tr -d '\n'
+cat "$SOURCE" | grep -oE '<filter id="[^ ]*"' | sed 's/<filter id="//g' | tr -d '")' | sort -u | xargs
+}
+
+check_pattern() {
+cat "$SOURCE" | grep -oE '<pattern id="[^ ]*"' | sed 's/<pattern id="//g' | tr -d '")' | sort -u | xargs
+}
+
+check_image() {
+cat "$SOURCE" | grep -oE '<image id="[^ ]*"' | sed 's/<image id="//g' | tr -d '")' | sort -u | xargs
 }
 
 check_linear_gradient() {
-cat "$SOURCE" | sed 's/;/ /g' | grep -oE 'fill:url\(#linearGradient[^ ]*' | sed 's/fill:url//g' | tr -d '(#)"' | sort -u | xargs | tr -d '\n'
+cat "$SOURCE" | grep -oE '<linearGradient id="[^ ]*"' | sed 's/<linearGradient id="//g' | tr -d '")' | sort -u | xargs
 }
 
 check_radial_gradient() {
-cat "$SOURCE" | sed 's/;/ /g' | grep -oE 'fill:url\(#radialGradient[^ ]*' | sed 's/fill:url//g' | tr -d '(#)"' | sort -u | xargs | tr -d '\n'
+cat "$SOURCE" | grep -oE '<radialGradient id="[^ ]*"' | sed 's/<radialGradient id="//g' | tr -d '")' | sort -u | xargs
 }
 
-check_mesh() {
-cat "$SOURCE" | sed 's/;/ /g' | grep -oE 'fill:url\(#meshgradient[^ ]*' | sed 's/fill:url//g' | tr -d '(#)"' | sort -u | xargs | tr -d '\n'
-}
-
-CIRCLE=$(cat "$SOURCE" | grep '<circle' | tr -d '<' | xargs -n1 | sort -u | xargs)
-RECTANGLE=$(cat "$SOURCE" | grep '<rect' | tr -d '<' | xargs -n1 | sort -u | xargs)
-TEXT=$(cat "$SOURCE" | grep '<text' | tr -d '<' | xargs -n1 | sort -u | xargs)
-PATTERN=$(cat "$SOURCE" | grep '<pattern' | tr -d '<' | xargs -n1 | sort -u | xargs)
-IMAGE=$(cat "$SOURCE" | grep -oE '<image' | tr -d '<' | xargs -n1 | sort -u | xargs)
-STAR=$(cat "$SOURCE" | grep -oE 'star' | xargs -n1 | sort -u | xargs)
-SPIRAL=$(cat "$SOURCE" | grep -oE 'spiral' | xargs -n1 | sort -u | xargs)
-BOX3DSIDE=$(cat "$SOURCE" | grep -oE 'box3dside' | xargs -n1 | sort -u | xargs)
-
-check_misc() {
-  echo $CIRCLE $RECTANGLE $TEXT $PATTERN $IMAGE $STAR $SPIRAL $BOX3DSIDE | sort -u | xargs
+check_mesh_gradient() {
+cat "$SOURCE" | grep -oE '<meshgradient id="[^ ]*"' | sed 's/<meshgradient id="//g' | tr -d '")' | sort -u | xargs
 }
 
 eps_validator() {
-  echo -e "Validator EPS8:"
-  if [ $(echo -n $(check_stroke_to_path) | wc -c) -eq 0 ]; then
-    echo -e "  Stroke to Path \t\033[1;36mSafe\033[0m"
-    else
-    echo -e "  Stroke to Path \t\033[1;33m$(check_stroke_to_path)\033[0m"
-  fi
   if [ $(echo -n $(check_fill_opacity) | wc -c) -eq 0 ]; then
-    echo -e "  Fill Opacity \t\t\033[1;36mSafe\033[0m"
+    echo -e >/dev/null 2>&1
     else
-    echo -e "  Fill Opacity \t\t\033[1;33m$(check_fill_opacity)\033[0m"
+    echo -e "Fill Opacity: \t\t\033[1;33m$(check_fill_opacity)\033[0m"
   fi
   if [ $(echo -n $(check_filter) | wc -c) -eq 0 ]; then
-    echo -e "  Remove Filter \t\033[1;36mSafe\033[0m"
+    echo -e >/dev/null 2>&1
     else
-    echo -e "  Remove Filter \t\033[1;33m$(check_filter)\033[0m"
+    echo -e "Filter Object: \t\t\033[1;33m$(check_filter)\033[0m"
+  fi
+  if [ $(echo -n $(check_pattern) | wc -c) -eq 0 ]; then
+    echo -e >/dev/null 2>&1
+    else
+    echo -e "Pattern Object: \t\033[1;33m$(check_pattern) \033[0m"
+  fi
+  if [ $(echo -n $(check_image) | wc -c) -eq 0 ]; then
+    echo -e >/dev/null 2>&1
+    else
+    echo -e "Bitmap Object: \t\t\033[1;33m$(check_image)\033[0m"
   fi
   if [ $(echo -n $(check_linear_gradient) | wc -c) -eq 0 ]; then
-    echo -e "  Linear Gradient \t\033[1;36mSafe\033[0m"
+    echo -e >/dev/null 2>&1
     else
-    echo -e "  Linear Gradient \t\033[1;33m$(check_linear_gradient) \033[0m"
+    echo -e "Linear Gradient: \t\033[1;33m$(check_linear_gradient) \033[0m"
   fi
   if [ $(echo -n $(check_radial_gradient) | wc -c) -eq 0 ]; then
-    echo -e "  Radial Gradient \t\033[1;36mSafe\033[0m"
-    else
-    echo -e "  Radial Gradient \t\033[1;33m$(check_radial_gradient) \033[0m"
-  fi
-  if [ $(echo -n $(check_mesh) | wc -c) -eq 0 ]; then
-    echo -e "  Mesh Gradient \t\033[1;36mSafe\033[0m"
-    else
-    echo -e "  Mesh Gradient \t\033[1;33m$(check_mesh) \033[0m"
-  fi
-  if [ $(echo -n $(check_misc) | wc -c) -eq 0 ]; then
-    echo -e "  Object to Path \t\033[1;36mSafe\033[0m"
-    else
-    echo -e "  Object to Path \t\033[1;33m$(check_misc)\033[0m"
-  fi
-  if [ $(echo -n $(check_stroke_to_path) $(check_fill_opacity) $(check_filter) $(check_mesh) $(check_misc) | wc -c) -eq 0 ]; then
-    echo -e ""
-    if  [ $(echo -n $(check_linear_gradient) $(check_radial_gradient) | wc -c) -eq 0 ]; then
     echo -e >/dev/null 2>&1
+    else
+    echo -e "Radial Gradient: \t\033[1;33m$(check_radial_gradient) \033[0m"
+  fi
+  if [ $(echo -n $(check_mesh_gradient) | wc -c) -eq 0 ]; then
+    echo -e >/dev/null 2>&1
+    else
+    echo -e "Mesh Gradient: \t\t\033[1;33m$(check_mesh_gradient) \033[0m"
+  fi
+  if [ $(echo -n $(check_fill_opacity) $(check_filter) $(check_pattern) $(check_image) $(check_linear_gradient) $(check_radial_gradient) $(check_mesh_gradient) | wc -c) -eq 0 ]; then
     echo -e "\033[1;36m[VALID]\033[0m $SOURCE supports EPS8"
     else
-    echo -e "\033[1;33m[WARNING]\033[0m Maybe $SOURCE is not supports EPS8."
-    read -e -p "Are you sure the opacity of the gradient is 100%? [y/N]: " OPACITY_GRADIENT
-      if [[ $OPACITY_GRADIENT =~ ^[Yy]$ ]]; then
-        echo -e >/dev/null 2>&1
-        else
-        echo -e ""
-        exit;
-      fi
-    fi
-    else
     echo -e ""
-    echo -e "\033[1;91m[FAILED]\033[0m $SOURCE export to EPS8 might be raster"
-    exit;
+    echo -e "\033[1;33m[WARNING]\033[0m $SOURCE maybe is not supports EPS8"
+    echo -e ""
+    read -e -p "Are you sure continue? [y/N]: " CONTINUE
+    if [[ $CONTINUE =~ ^[Yy]$ ]]; then
+      echo -e >/dev/null 2>&1
+      else
+      echo -e ""
+      exit;
+    fi
   fi
 }
 
@@ -400,7 +387,7 @@ to_png() {
       --export-id-only \
       --export-type=png \
       --export-dpi=$DPI \
-      --export-filename="$DIRECTORY/.temp/$ID_LIST.png" \
+      --export-filename="$DIRECTORY/$CACHE/$ID_LIST.png" \
       $SOURCE >/dev/null 2>&1
       sleep 1
   done
@@ -415,7 +402,7 @@ to_svg() {
       --export-id-only \
       --export-type=svg \
       --export-plain-svg \
-      --export-filename="$DIRECTORY/.temp/$ID_LIST.svg" \
+      --export-filename="$DIRECTORY/$CACHE/$ID_LIST.svg" \
       $SOURCE >/dev/null 2>&1
       sleep 1
   done
@@ -431,7 +418,7 @@ to_eps() {
       --export-type=eps \
       --export-text-to-path \
       --export-ignore-filters \
-      --export-filename="$DIRECTORY/.temp/$ID_LIST.eps" \
+      --export-filename="$DIRECTORY/$CACHE/$ID_LIST.eps" \
       $SOURCE >/dev/null 2>&1
       sleep 1
   done
@@ -448,7 +435,7 @@ to_pdf() {
       --export-type=pdf \
       --export-text-to-path \
       --export-ignore-filters \
-      --export-filename="$DIRECTORY/.temp/$ID_LIST.pdf" \
+      --export-filename="$DIRECTORY/$CACHE/$ID_LIST.pdf" \
       $SOURCE >/dev/null 2>&1
       sleep 1
   done
@@ -533,13 +520,13 @@ do
         echo -e "\033[1;91m[FAILED]\033[0m Folder output is empty."
         exit
       fi
-      mkdir -p "$DIRECTORY/.temp"
+      mkdir -p "$DIRECTORY/$CACHE"
       #convert to png and pdf default (pngtree)
       for id in $(inkscape -S $SOURCE | grep $IDPATTERN | cut -d "," -f 1)
       do
         # for market < 5 with export image preview
         if [ $MARKET -le 5 ]; then
-        mkdir -p "$DIRECTORY/.temp/$id"
+        mkdir -p "$DIRECTORY/$CACHE/$id"
           inkscape \
           --export-id=$id \
           --batch-process \
@@ -548,7 +535,7 @@ do
           --export-text-to-path \
           --export-ignore-filters \
           --export-dpi=$DPI \
-          --export-filename="$DIRECTORY/.temp/$id/$id.png" \
+          --export-filename="$DIRECTORY/$CACHE/$id/$id.png" \
           $SOURCE >/dev/null 2>&1
           inkscape \
           --export-id=$id \
@@ -557,7 +544,7 @@ do
           --export-type=eps \
           --export-text-to-path \
           --export-ignore-filters \
-          --export-filename="$DIRECTORY/.temp/$id/$id.eps" \
+          --export-filename="$DIRECTORY/$CACHE/$id/$id.eps" \
           $SOURCE >/dev/null 2>&1
         sleep 1
         # for shuttestock
@@ -618,7 +605,7 @@ do
         elif [ $MARKET -eq 7 ]; then
           echo -e "" >/dev/null 2>&1
       fi
-      cd $DIRECTORY/.temp
+      cd $DIRECTORY/$CACHE
       if [ $MARKET -eq 1 ]; then
         for dir in $(ls | cut -f 1)
           do
@@ -666,7 +653,7 @@ do
             do mv  $i .. >/dev/null 2>&1
           done
       fi
-      cd .. && rm -r .temp
+      cd .. && rm -r $CACHE
       cd ..
       finish
       break
@@ -716,13 +703,13 @@ do
         echo -e "\033[1;91m[FAILED]\033[0m Folder output is empty."
         exit
       fi
-      mkdir -p "$DIRECTORY/.temp"
+      mkdir -p "$DIRECTORY/$CACHE"
       to_png
-      cd $DIRECTORY/.temp
+      cd $DIRECTORY/$CACHE
       for i in *.png;
         do mv "$i" "../${i%.*}-$DEPTH-bit-$DPI-dpi.png"
       done
-      cd .. && rm -r .temp
+      cd .. && rm -r $CACHE
       cd ..
       finish
       break
@@ -793,9 +780,9 @@ do
         echo -e "\033[1;91m[FAILED]\033[0m "$BGCOLOR" is not support."
         exit
       fi
-      mkdir -p "$DIRECTORY/.temp"
+      mkdir -p "$DIRECTORY/$CACHE"
       to_png
-      cd $DIRECTORY/.temp
+      cd $DIRECTORY/$CACHE
       if [ $ICC -eq 1 ]; then
         PROFILENAME="srgb"
         for i in *.png; do
@@ -859,7 +846,7 @@ do
         else
           echo -e "\033[1;91m[FAILED]\033[0m Color Profile is not support."
         fi
-      cd .. && rm -r .temp
+      cd .. && rm -r $CACHE
       cd ..
       finish
       break
@@ -945,9 +932,9 @@ do
         echo -e "\033[1;91m[FAILED]\033[0m "$BGCOLOR" is not support."
         exit
       fi
-      mkdir -p "$DIRECTORY/.temp"
+      mkdir -p "$DIRECTORY/$CACHE"
       to_png
-      cd $DIRECTORY/.temp
+      cd $DIRECTORY/$CACHE
       if [ $ICC -eq 1 ]; then
         PROFILENAME="srgb"
         for i in *.png; do
@@ -1011,7 +998,7 @@ do
         else
           echo -e "\033[1;91m[FAILED]\033[0m Color Profile is not support."
         fi
-      cd .. && rm -r .temp
+      cd .. && rm -r $CACHE
       cd ..
       finish
       break
@@ -1095,11 +1082,11 @@ do
           echo -e "Merge PDF: \033[1;33mNo\033[0m"
           MERGE="n"
         fi
-      mkdir -p "$DIRECTORY/.temp"
+      mkdir -p "$DIRECTORY/$CACHE"
       #convert vector
       if [ $output -eq 1 ]; then
         to_svg
-        cd $DIRECTORY/.temp
+        cd $DIRECTORY/$CACHE
         if [ $COLOR -eq 1 ]; then
           PROFILENAME="srgb"
           for i in *.svg;
@@ -1153,7 +1140,7 @@ do
           if [ $MERGE == 'y' ]; then
             PROFILENAME="srgb"
             to_png
-            cd $DIRECTORY/.temp
+            cd $DIRECTORY/$CACHE
             for i in *.png; do
               convert "$i" \
                 -depth 8 \
@@ -1174,7 +1161,7 @@ do
           else
             PROFILENAME="srgb"
             to_png
-            cd $DIRECTORY/.temp
+            cd $DIRECTORY/$CACHE
             for i in *.png; do
               convert "$i" \
                 -quality 100 \
@@ -1188,7 +1175,7 @@ do
           if [ $MERGE == 'y' ]; then
             PROFILENAME="cmyk-krita"
             to_png
-            cd $DIRECTORY/.temp
+            cd $DIRECTORY/$CACHE
             for i in *.png; do
               convert "$i" \
                 -depth 8 \
@@ -1209,7 +1196,7 @@ do
           else
             PROFILENAME="cmyk-krita"
             to_png
-            cd $DIRECTORY/.temp
+            cd $DIRECTORY/$CACHE
             for i in *.png; do
               convert "$i" \
               -depth 8 \
@@ -1223,7 +1210,7 @@ do
           if [ $MERGE == 'y' ]; then
             PROFILENAME="cmyk-generic"
             to_png
-            cd $DIRECTORY/.temp
+            cd $DIRECTORY/$CACHE
             for i in *.png; do
               convert "$i" \
               -depth 8 \
@@ -1244,7 +1231,7 @@ do
           else
             PROFILENAME="cmyk-generic"
             to_png
-            cd $DIRECTORY/.temp
+            cd $DIRECTORY/$CACHE
             for i in *.png; do
               convert "$i" \
                 -depth 8 \
@@ -1258,7 +1245,7 @@ do
           if [ $MERGE == 'y' ]; then
             PROFILENAME="cmyk-corel"
             to_png
-            cd $DIRECTORY/.temp
+            cd $DIRECTORY/$CACHE
             for i in *.png; do
               convert "$i" \
                 -depth 8 \
@@ -1279,7 +1266,7 @@ do
           else
             PROFILENAME="cmyk-corel"
             to_png
-            cd $DIRECTORY/.temp
+            cd $DIRECTORY/$CACHE
             for i in *.png; do
               convert "$i" \
                 -depth 8 \
@@ -1293,7 +1280,7 @@ do
           if [ $MERGE == 'y' ]; then
             PROFILENAME="cmyk-adobe"
             to_png
-            cd $DIRECTORY/.temp
+            cd $DIRECTORY/$CACHE
             for i in *.png; do
               convert "$i" \
                 -depth 8 \
@@ -1314,7 +1301,7 @@ do
           else
             PROFILENAME="cmyk-adobe"
             to_png
-            cd $DIRECTORY/.temp
+            cd $DIRECTORY/$CACHE
             for i in *.png; do
               convert "$i" \
                 -quality 100 \
@@ -1332,7 +1319,7 @@ do
         echo -e "\033[1;91m[FAILED]\033[0m Can not convert."
         exit
       fi
-      cd .. && rm -r .temp
+      cd .. && rm -r $CACHE
       cd ..
       finish
       break
@@ -1345,11 +1332,11 @@ do
         echo -e "\033[1;91m[FAILED]\033[0m Folder output is empty."
         exit
       fi
-      mkdir -p "$DIRECTORY/.temp"
+      mkdir -p "$DIRECTORY/$CACHE"
       to_svg
-      cd $DIRECTORY/.temp
+      cd $DIRECTORY/$CACHE
       mv *.svg ..
-      cd .. && rm -r .temp
+      cd .. && rm -r $CACHE
       cd ..
       finish
       break
@@ -1364,14 +1351,14 @@ do
         echo -e "\033[1;91m[FAILED]\033[0m Folder output is empty."
         exit
       fi
-      mkdir -p "$DIRECTORY/.temp"
+      mkdir -p "$DIRECTORY/$CACHE"
       to_eps
-      cd $DIRECTORY/.temp
+      cd $DIRECTORY/$CACHE
       PROFILENAME="srgb"
       for i in *.eps;
         do mv "$i" "../${i%.*}-$PROFILENAME.eps"
       done
-      cd .. && rm -r .temp
+      cd .. && rm -r $CACHE
       cd ..
       finish
       break
@@ -1395,9 +1382,9 @@ do
         echo -e "\033[1;91m[FAILED]\033[0m Folder output is empty."
         exit
       fi
-      mkdir -p "$DIRECTORY/.temp"
+      mkdir -p "$DIRECTORY/$CACHE"
       to_pdf
-      cd $DIRECTORY/.temp
+      cd $DIRECTORY/$CACHE
       #srgb
       if [ $COLOR -eq 1 ]; then
         PROFILENAME="srgb"
@@ -1416,7 +1403,7 @@ do
               -sOutputFile="../${i%.*}-$PROFILENAME.ai" "$i"
           done
       fi
-      cd .. && rm -r .temp
+      cd .. && rm -r $CACHE
       cd ..
       finish
       break
@@ -1455,9 +1442,9 @@ do
         echo -e "\033[1;91m[FAILED]\033[0m Folder output is empty."
         exit
       fi
-      mkdir -p "$DIRECTORY/.temp"
+      mkdir -p "$DIRECTORY/$CACHE"
       to_pdf
-      cd $DIRECTORY/.temp
+      cd $DIRECTORY/$CACHE
       #srgb
       if [ $COLOR -eq 1 ]; then
         PROFILENAME="srgb"
@@ -1484,7 +1471,7 @@ do
               -sOutputFile="../${i%.*}-$PROFILENAME-$DEPTH-bit.psd" "$i"
           done
       fi
-      cd .. && rm -r .temp
+      cd .. && rm -r $CACHE
       cd ..
       finish
       break
@@ -1518,16 +1505,16 @@ do
         echo -e "\033[1;91m[FAILED]\033[0m Folder output is empty."
         exit
       fi
-      mkdir -p "$DIRECTORY/.temp"
+      mkdir -p "$DIRECTORY/$CACHE"
       for id in $(inkscape -S $SOURCE | grep $IDPATTERN | cut -d "," -f 1)
       do
-        inkscape -j -i $id -o "$DIRECTORY/.temp/$id.png" $SOURCE -d $DPI >/dev/null 2>&1
+        inkscape -j -i $id -o "$DIRECTORY/$CACHE/$id.png" $SOURCE -d $DPI >/dev/null 2>&1
       done
-      cd $DIRECTORY/.temp
+      cd $DIRECTORY/$CACHE
       for i in *.png; do
           cwebp -quiet "$i" -o "../${i%.*}-$DPI-dpi.webp";
       done
-      cd .. && rm -r .temp
+      cd .. && rm -r $CACHE
       finish
       break
       ;;
