@@ -4,7 +4,7 @@ TITLE="LangitKetujuh Export"
 NAME=$(basename "$0")
 INSTALLDIR=$(which basename)
 INKSCAPEDIR=$(which inkscape)
-VERSION="1.14"
+VERSION="1.15"
 WEB="https://langitketujuh.id"
 LICENSE="GPL-2.0-only"
 
@@ -19,6 +19,7 @@ USWEBCOATEDSWOP="/usr/share/color/icc/adobe/USWebCoatedSWOP.icc"
 SOURCE=$1
 IDPATTERN=$2
 CACHE=".cache"
+OPTIM_SOURCE=".optim_$SOURCE"
 
 usage() {
  echo -e "\n\033[1;36m $TITLE $VERSION\033[0m"
@@ -58,138 +59,138 @@ check_root(){
 }
 
 for arg in "$@"; do
-    case $arg in
-        --install|-i)
-            check_root
-            if xbps-install --version >/dev/null 2>&1;
-              then
-              echo -e "\033[1;36m[1]\033[0m Install depedencies > XBPS distro"
-              mkdir -pv $TMP
-              xbps-install -Sy xbps;
-              xbps-install sudo curl wget base-files colord unzip which \
-              inkscape ghostscript ImageMagick libwebp-tools zip
-              elif dnf --version >/dev/null 2>&1;
-                then
-                echo -e "\033[1;36m[1]\033[0m Install depedencies > RPM distro"
-                mkdir -pv $TMP
-                yum install sudo curl wget fedora-release colord unzip which \
-                inkscape ghostscript ImageMagick libwebp-tools zip
-              elif pacman --version >/dev/null 2>&1;
-                then
-                echo -e "\033[1;36m[1]\033[0m Install depedencies > Pacman distro"
-                mkdir -pv $TMP
-                pacman -Syy;
-                pacman -S sudo curl wget lsb-release colord unzip which \
-                inkscape ghostscript imagemagick libwebp \
-                poppler poppler-glib poppler-qt5 zip
-              elif apt --version >/dev/null 2>&1;
-                then
-                echo -e "\033[1;36m[1]\033[0m Install depedencies > APT distro"
-                mkdir -pv $TMP
-                apt -y update;
-                apt install sudo curl wget lsb-release colord unzip \
-                inkscape ghostscript imagemagick webp zip
-              elif zypper --version >/dev/null 2>&1;
-                then
-                echo -e "\033[1;36m[1]\033[0m Install depedencies > Zypper distro"
-                mkdir -pv $TMP
-                zypper install sudo curl wget lsb-release colord unzip which \
-                inkscape ghostscript ImageMagick libwebp-tools zip
-              else
-                echo -e "\033[1;36m[1]\033[0m Install depedencies > What your os?"
-              fi
-              echo -e "\033[1;36m[2]\033[0m Adobe icc"
-              echo -e "[*] Checking"
-              if find /usr/share/color/icc/adobe/ -name "*.icc" -type f >/dev/null 2>&1; then
-                echo -e "[*] Adobe icc installed"
-                else
-                echo -e "[*] Preparing new dir $TMP"
-                mkdir $TMP/adobe-icc >/dev/null 2>&1
-                cd $TMP/adobe-icc
-                echo -e "[*] Download Adobe icc Profiles"
-                wget -c https://download.adobe.com/pub/adobe/iccprofiles/mac/AdobeICCProfilesCS4Mac_end-user.zip >/dev/null 2>&1
-                echo -e "[*] Unzip"
-                unzip -o -q AdobeICCProfilesCS4Mac_end-user.zip >/dev/null 2>&1
-                echo -e "[*] Installing"
-                install -D -m644 -t /usr/share/color/icc/adobe/ */RGB/*.icc
-                install -D -m644 -t /usr/share/color/icc/adobe/ */CMYK/*.icc
-                install -D -m644 -t /usr/share/doc/adobe */*.pdf
-                if find /usr/share/color/icc/adobe/ -name "*.icc" -type f >/dev/null 2>&1; then
-                  echo -e "" >/dev/null 2>&1
-                  else
-                  echo -e "[-] Adobe icc is not already installed!"
-                  exit;
-                fi
-              fi
-              echo -e "\033[1;36m[3]\033[0m Krita cmyk icm"
-              echo -e "[*] Checking"
-              if find /usr/share/color/icc/krita/ -name "*.icm" -type f >/dev/null 2>&1; then
-                echo -e "[*] Krita cmyk icm installed"
-                else
-                echo -e "[*] Preparing new dir $TMP"
-                mkdir $TMP/krita-icc >/dev/null 2>&1
-                cd $TMP/krita-icc
-                echo -e "[*] Download Krita cmyk icm Profiles"
-                wget -c https://github.com/KDE/krita/raw/master/krita/data/profiles/cmyk.icm >/dev/null 2>&1
-                echo -e "[*] Installing"
-                install -D -m644 -t /usr/share/color/icc/krita *.icm
-                if find /usr/share/color/icc/krita/ -name "*.icm" -type f >/dev/null 2>&1; then
-                  echo -e "" >/dev/null 2>&1
-                  else
-                  echo -e "[-] Krita cmyk icm is not already installed!"
-                  exit;
-                fi
-              fi
-              echo -e "\033[1;36m[4]\033[0m IDEAlliance icc"
-              echo -e "[*] Checking"
-              if find /usr/share/color/icc/idealliance/ -name "*.icc" -type f >/dev/null 2>&1; then
-                echo -e "[*] IDEAlliance icc installed"
-                else
-                echo -e "[*] Preparing new dir $TMP"
-                mkdir $TMP/idea-icc >/dev/null 2>&1
-                cd $TMP/idea-icc
-                echo -e "[*] Download SWOP2006_Coated3v2 icc Profiles"
-                wget -c http://www.color.org/registry/profiles/SWOP2006_Coated3v2.icc >/dev/null 2>&1
-                echo -e "[*] Installing"
-                install -D -m644 -t /usr/share/color/icc/idealliance *.icc
-                if find /usr/share/color/icc/idealliance/ -name "*.icc" -type f >/dev/null 2>&1; then
-                  echo -e "" >/dev/null 2>&1
-                  else
-                  echo -e "[-] IDEAlliance icc is not already installed!"
-                  exit;
-                fi
-              fi
-              echo -e "\033[1;36m[FINISH]\033[0m Installation was successful!"
-            exit 0
-            ;;
-        --deps|-d)
-            echo -e "\033[1;33minkscape version: \033[0m"
-            if inkscape --version | grep "Inkscape 1.*" ;then
-                echo >/dev/null 2>&1; else
-                echo
-                echo "$NAME version: v$VERSION"
-                echo "only for inkscape 1.x!";
-            fi
-            echo
-            echo -e "\033[1;33mConvert ImageMagick version: \033[0m"
-            convert -version | grep Version:
-            echo
-            echo -e "\033[1;33mghostscript version: \033[0m"
-            gs --version
-            echo
-            echo -e "\033[1;33mwebp version: \033[0m"
-            cwebp -version
-            echo
-            exit 0
-            ;;
-        --help|-h)
-            usage
-            exit 0
-            ;;
-        --version|-v)
-            echo -e "\033[1;33m $NAME\033[0m version $VERSION"
-            exit 0
-    esac
+  case $arg in
+    --install|-i)
+      check_root
+      if xbps-install --version >/dev/null 2>&1;
+        then
+        echo -e "\033[1;36m[1]\033[0m Install depedencies > XBPS distro"
+        mkdir -pv $TMP
+        xbps-install -Sy xbps;
+        xbps-install sudo curl wget base-files colord unzip which \
+        inkscape ghostscript ImageMagick libwebp-tools python3-scour zip
+        elif dnf --version >/dev/null 2>&1;
+          then
+          echo -e "\033[1;36m[1]\033[0m Install depedencies > RPM distro"
+          mkdir -pv $TMP
+          yum install sudo curl wget fedora-release colord unzip which \
+          inkscape ghostscript ImageMagick libwebp-tools zip
+        elif pacman --version >/dev/null 2>&1;
+          then
+          echo -e "\033[1;36m[1]\033[0m Install depedencies > Pacman distro"
+          mkdir -pv $TMP
+          pacman -Syy;
+          pacman -S sudo curl wget lsb-release colord unzip which \
+          inkscape ghostscript imagemagick libwebp \
+          poppler poppler-glib poppler-qt5 zip
+        elif apt --version >/dev/null 2>&1;
+          then
+          echo -e "\033[1;36m[1]\033[0m Install depedencies > APT distro"
+          mkdir -pv $TMP
+          apt -y update;
+          apt install sudo curl wget lsb-release colord unzip \
+          inkscape ghostscript imagemagick webp zip
+        elif zypper --version >/dev/null 2>&1;
+          then
+          echo -e "\033[1;36m[1]\033[0m Install depedencies > Zypper distro"
+          mkdir -pv $TMP
+          zypper install sudo curl wget lsb-release colord unzip which \
+          inkscape ghostscript ImageMagick libwebp-tools zip
+        else
+          echo -e "\033[1;36m[1]\033[0m Install depedencies > What your os?"
+        fi
+        echo -e "\033[1;36m[2]\033[0m Adobe icc"
+        echo -e "[*] Checking"
+        if find /usr/share/color/icc/adobe/ -name "*.icc" -type f >/dev/null 2>&1; then
+          echo -e "[*] Adobe icc installed"
+          else
+          echo -e "[*] Preparing new dir $TMP"
+          mkdir $TMP/adobe-icc >/dev/null 2>&1
+          cd $TMP/adobe-icc
+          echo -e "[*] Download Adobe icc Profiles"
+          wget -c https://download.adobe.com/pub/adobe/iccprofiles/mac/AdobeICCProfilesCS4Mac_end-user.zip >/dev/null 2>&1
+          echo -e "[*] Unzip"
+          unzip -o -q AdobeICCProfilesCS4Mac_end-user.zip >/dev/null 2>&1
+          echo -e "[*] Installing"
+          install -D -m644 -t /usr/share/color/icc/adobe/ */RGB/*.icc
+          install -D -m644 -t /usr/share/color/icc/adobe/ */CMYK/*.icc
+          install -D -m644 -t /usr/share/doc/adobe */*.pdf
+          if find /usr/share/color/icc/adobe/ -name "*.icc" -type f >/dev/null 2>&1; then
+            echo -e "" >/dev/null 2>&1
+            else
+            echo -e "[-] Adobe icc is not already installed!"
+            exit;
+          fi
+        fi
+        echo -e "\033[1;36m[3]\033[0m Krita cmyk icm"
+        echo -e "[*] Checking"
+        if find /usr/share/color/icc/krita/ -name "*.icm" -type f >/dev/null 2>&1; then
+          echo -e "[*] Krita cmyk icm installed"
+          else
+          echo -e "[*] Preparing new dir $TMP"
+          mkdir $TMP/krita-icc >/dev/null 2>&1
+          cd $TMP/krita-icc
+          echo -e "[*] Download Krita cmyk icm Profiles"
+          wget -c https://github.com/KDE/krita/raw/master/krita/data/profiles/cmyk.icm >/dev/null 2>&1
+          echo -e "[*] Installing"
+          install -D -m644 -t /usr/share/color/icc/krita *.icm
+          if find /usr/share/color/icc/krita/ -name "*.icm" -type f >/dev/null 2>&1; then
+            echo -e "" >/dev/null 2>&1
+            else
+            echo -e "[-] Krita cmyk icm is not already installed!"
+            exit;
+          fi
+        fi
+        echo -e "\033[1;36m[4]\033[0m IDEAlliance icc"
+        echo -e "[*] Checking"
+        if find /usr/share/color/icc/idealliance/ -name "*.icc" -type f >/dev/null 2>&1; then
+          echo -e "[*] IDEAlliance icc installed"
+          else
+          echo -e "[*] Preparing new dir $TMP"
+          mkdir $TMP/idea-icc >/dev/null 2>&1
+          cd $TMP/idea-icc
+          echo -e "[*] Download SWOP2006_Coated3v2 icc Profiles"
+          wget -c http://www.color.org/registry/profiles/SWOP2006_Coated3v2.icc >/dev/null 2>&1
+          echo -e "[*] Installing"
+          install -D -m644 -t /usr/share/color/icc/idealliance *.icc
+          if find /usr/share/color/icc/idealliance/ -name "*.icc" -type f >/dev/null 2>&1; then
+            echo -e "" >/dev/null 2>&1
+            else
+            echo -e "[-] IDEAlliance icc is not already installed!"
+            exit;
+          fi
+        fi
+        echo -e "\033[1;36m[FINISH]\033[0m Installation was successful!"
+      exit 0
+      ;;
+    --deps|-d)
+      echo -e "\033[1;33minkscape version: \033[0m"
+      if inkscape --version | grep "Inkscape 1.*" ;then
+          echo >/dev/null 2>&1; else
+          echo
+          echo "$NAME version: v$VERSION"
+          echo "only for inkscape 1.x!";
+      fi
+      echo
+      echo -e "\033[1;33mConvert ImageMagick version: \033[0m"
+      convert -version | grep Version:
+      echo
+      echo -e "\033[1;33mghostscript version: \033[0m"
+      gs --version
+      echo
+      echo -e "\033[1;33mwebp version: \033[0m"
+      cwebp -version
+      echo
+      exit 0
+      ;;
+    --help|-h)
+      usage
+      exit 0
+      ;;
+    --version|-v)
+      echo -e "\033[1;33m $NAME\033[0m version $VERSION"
+      exit 0
+  esac
 done
 
 search_file() {
@@ -298,35 +299,45 @@ check_file
 check_id
 check_depedencies
 
-check_fill_opacity() {
-cat "$SOURCE" | grep 'fill-opacity=".[^ ]*"' | grep -oE 'id="[^ ]*' | tr -d 'id=")' | sort -u | xargs
+optimized_svg() {
+scour -q -i $SOURCE -o $OPTIM_SOURCE
 }
 
-check_filter() {
-cat "$SOURCE" | grep -oE '<filter id="[^ ]*"' | sed 's/<filter id="//g' | tr -d '")' | sort -u | xargs
-}
-
-check_pattern() {
-cat "$SOURCE" | grep -oE '<pattern id="[^ ]*"' | sed 's/<pattern id="//g' | tr -d '")' | sort -u | xargs
-}
-
-check_image() {
-cat "$SOURCE" | grep -oE '<image id="[^ ]*"' | sed 's/<image id="//g' | tr -d '")' | sort -u | xargs
-}
-
-check_linear_gradient() {
-cat "$SOURCE" | grep -oE '<linearGradient id="[^ ]*"' | sed 's/<linearGradient id="//g' | tr -d '")' | sort -u | xargs
-}
-
-check_radial_gradient() {
-cat "$SOURCE" | grep -oE '<radialGradient id="[^ ]*"' | sed 's/<radialGradient id="//g' | tr -d '")' | sort -u | xargs
-}
-
-check_mesh_gradient() {
-cat "$SOURCE" | grep -oE '<meshgradient id="[^ ]*"' | sed 's/<meshgradient id="//g' | tr -d '")' | sort -u | xargs
+rm_optimized_svg() {
+rm $OPTIM_SOURCE
 }
 
 eps_validator() {
+  optimized_svg
+
+  check_fill_opacity() {
+  cat $OPTIM_SOURCE | grep 'fill-opacity=".[^ ]*"' | grep -oE 'id="[^ ]*' | tr -d 'id=")' | sort -u | xargs
+  }
+
+  check_filter() {
+  cat $OPTIM_SOURCE | grep -oE '<filter id="[^ ]*"' | sed 's/<filter id="//g' | tr -d '")' | sort -u | xargs
+  }
+
+  check_pattern() {
+  cat $OPTIM_SOURCE | grep -oE '<pattern id="[^ ]*"' | sed 's/<pattern id="//g' | tr -d '")' | sort -u | xargs
+  }
+
+  check_image() {
+  cat $OPTIM_SOURCE | grep -oE '<image id="[^ ]*"' | sed 's/<image id="//g' | tr -d '")' | sort -u | xargs
+  }
+
+  check_linear_gradient() {
+  cat $OPTIM_SOURCE | grep -oE '<linearGradient id="[^ ]*"' | sed 's/<linearGradient id="//g' | tr -d '")' | sort -u | xargs
+  }
+
+  check_radial_gradient() {
+  cat $OPTIM_SOURCE | grep -oE '<radialGradient id="[^ ]*"' | sed 's/<radialGradient id="//g' | tr -d '")' | sort -u | xargs
+  }
+
+  check_mesh_gradient() {
+  cat $OPTIM_SOURCE | grep -oE '<meshgradient id="[^ ]*"' | sed 's/<meshgradient id="//g' | tr -d '")' | sort -u | xargs
+  }
+
   if [ $(echo -n $(check_fill_opacity) | wc -c) -eq 0 ]; then
     echo -e >/dev/null 2>&1
     else
@@ -388,7 +399,7 @@ to_png() {
       --export-type=png \
       --export-dpi=$DPI \
       --export-filename="$DIRECTORY/$CACHE/$ID_LIST.png" \
-      $SOURCE >/dev/null 2>&1
+      $OPTIM_SOURCE >/dev/null 2>&1
       sleep 1
   done
 }
@@ -403,7 +414,7 @@ to_svg() {
       --export-type=svg \
       --export-plain-svg \
       --export-filename="$DIRECTORY/$CACHE/$ID_LIST.svg" \
-      $SOURCE >/dev/null 2>&1
+      $OPTIM_SOURCE >/dev/null 2>&1
       sleep 1
   done
 }
@@ -419,7 +430,7 @@ to_eps() {
       --export-text-to-path \
       --export-ignore-filters \
       --export-filename="$DIRECTORY/$CACHE/$ID_LIST.eps" \
-      $SOURCE >/dev/null 2>&1
+      $OPTIM_SOURCE >/dev/null 2>&1
       sleep 1
   done
 }
@@ -436,7 +447,7 @@ to_pdf() {
       --export-text-to-path \
       --export-ignore-filters \
       --export-filename="$DIRECTORY/$CACHE/$ID_LIST.pdf" \
-      $SOURCE >/dev/null 2>&1
+      $OPTIM_SOURCE >/dev/null 2>&1
       sleep 1
   done
 }
@@ -521,8 +532,9 @@ do
         exit
       fi
       mkdir -p "$DIRECTORY/$CACHE"
+      optimized_svg
       #convert to png and pdf default (pngtree)
-      for id in $(inkscape -S $SOURCE | grep $IDPATTERN | cut -d "," -f 1)
+      for id in $(inkscape -S $OPTIM_SOURCE | grep $IDPATTERN | cut -d "," -f 1)
       do
         # for market < 5 with export image preview
         if [ $MARKET -le 5 ]; then
@@ -536,7 +548,7 @@ do
           --export-ignore-filters \
           --export-dpi=$DPI \
           --export-filename="$DIRECTORY/$CACHE/$id/$id.png" \
-          $SOURCE >/dev/null 2>&1
+          $OPTIM_SOURCE >/dev/null 2>&1
           inkscape \
           --export-id=$id \
           --batch-process \
@@ -545,7 +557,7 @@ do
           --export-text-to-path \
           --export-ignore-filters \
           --export-filename="$DIRECTORY/$CACHE/$id/$id.eps" \
-          $SOURCE >/dev/null 2>&1
+          $OPTIM_SOURCE >/dev/null 2>&1
         sleep 1
         # for shuttestock
           elif [ $MARKET -eq 6 ]; then
@@ -655,6 +667,7 @@ do
       fi
       cd .. && rm -r $CACHE
       cd ..
+      rm_optimized_svg
       finish
       break
       ;;
@@ -704,6 +717,7 @@ do
         exit
       fi
       mkdir -p "$DIRECTORY/$CACHE"
+      optimized_svg
       to_png
       cd $DIRECTORY/$CACHE
       for i in *.png;
@@ -711,6 +725,7 @@ do
       done
       cd .. && rm -r $CACHE
       cd ..
+      rm_optimized_svg
       finish
       break
       ;;
@@ -773,14 +788,15 @@ do
       if [ -z $BGCOLOR ]; then
         echo -e "\033[1;91m[FAILED]\033[0m Background color is empty."
         elif [ $BGCOLOR -eq 1 ]; then
-        bGCOLOR="white"
+        BGCOLOR="white"
         elif [ $BGCOLOR -eq 2 ]; then
-        bGCOLOR="black"
+        BGCOLOR="black"
         else
         echo -e "\033[1;91m[FAILED]\033[0m "$BGCOLOR" is not support."
         exit
       fi
       mkdir -p "$DIRECTORY/$CACHE"
+      optimized_svg
       to_png
       cd $DIRECTORY/$CACHE
       if [ $ICC -eq 1 ]; then
@@ -848,6 +864,7 @@ do
         fi
       cd .. && rm -r $CACHE
       cd ..
+      rm_optimized_svg
       finish
       break
       ;;
@@ -925,14 +942,15 @@ do
       if [ -z $BGCOLOR ]; then
         echo -e "\033[1;91m[FAILED]\033[0m Background color is empty."
         elif [ $BGCOLOR -eq 1 ]; then
-        bGCOLOR="white"
+        BGCOLOR="white"
         elif [ $BGCOLOR -eq 2 ]; then
-        bGCOLOR="black"
+        BGCOLOR="black"
         else
         echo -e "\033[1;91m[FAILED]\033[0m "$BGCOLOR" is not support."
         exit
       fi
       mkdir -p "$DIRECTORY/$CACHE"
+      optimized_svg
       to_png
       cd $DIRECTORY/$CACHE
       if [ $ICC -eq 1 ]; then
@@ -1000,6 +1018,7 @@ do
         fi
       cd .. && rm -r $CACHE
       cd ..
+      rm_optimized_svg
       finish
       break
       ;;
@@ -1083,6 +1102,7 @@ do
           MERGE="n"
         fi
       mkdir -p "$DIRECTORY/$CACHE"
+      optimized_svg
       #convert vector
       if [ $output -eq 1 ]; then
         to_svg
@@ -1105,12 +1125,12 @@ do
           else
             mv *-vector-$PROFILENAME.pdf ../
           fi
-        elif [ $COLOR -eq 2 ]; then
-          PROFILENAME="cmyk"
-          for i in *.svg;
-        do cat "$i" | inkscape --pipe -C \
-        -o "${i%.*}.pdf" \
-        >/dev/null 2>&1
+          elif [ $COLOR -eq 2 ]; then
+            PROFILENAME="cmyk"
+            for i in *.svg;
+          do cat "$i" | inkscape --pipe -C \
+          -o "${i%.*}.pdf" \
+          >/dev/null 2>&1
           done
           rm *.svg
           DEVICE="pdfwrite"
@@ -1321,6 +1341,7 @@ do
       fi
       cd .. && rm -r $CACHE
       cd ..
+      rm_optimized_svg
       finish
       break
       ;;
@@ -1333,11 +1354,13 @@ do
         exit
       fi
       mkdir -p "$DIRECTORY/$CACHE"
+      optimized_svg
       to_svg
       cd $DIRECTORY/$CACHE
       mv *.svg ..
       cd .. && rm -r $CACHE
       cd ..
+      rm_optimized_svg
       finish
       break
       ;;
@@ -1352,6 +1375,7 @@ do
         exit
       fi
       mkdir -p "$DIRECTORY/$CACHE"
+      optimized_svg
       to_eps
       cd $DIRECTORY/$CACHE
       PROFILENAME="srgb"
@@ -1360,6 +1384,7 @@ do
       done
       cd .. && rm -r $CACHE
       cd ..
+      rm_optimized_svg
       finish
       break
       ;;
@@ -1383,6 +1408,7 @@ do
         exit
       fi
       mkdir -p "$DIRECTORY/$CACHE"
+      optimized_svg
       to_pdf
       cd $DIRECTORY/$CACHE
       #srgb
@@ -1405,6 +1431,7 @@ do
       fi
       cd .. && rm -r $CACHE
       cd ..
+      rm_optimized_svg
       finish
       break
       ;;
@@ -1443,6 +1470,7 @@ do
         exit
       fi
       mkdir -p "$DIRECTORY/$CACHE"
+      optimized_svg
       to_pdf
       cd $DIRECTORY/$CACHE
       #srgb
@@ -1473,6 +1501,7 @@ do
       fi
       cd .. && rm -r $CACHE
       cd ..
+      rm_optimized_svg
       finish
       break
       ;;
@@ -1506,15 +1535,18 @@ do
         exit
       fi
       mkdir -p "$DIRECTORY/$CACHE"
-      for id in $(inkscape -S $SOURCE | grep $IDPATTERN | cut -d "," -f 1)
+      optimized_svg
+      for id in $(inkscape -S $OPTIM_SOURCE | grep $IDPATTERN | cut -d "," -f 1)
       do
-        inkscape -j -i $id -o "$DIRECTORY/$CACHE/$id.png" $SOURCE -d $DPI >/dev/null 2>&1
+        inkscape -j -i $id -o "$DIRECTORY/$CACHE/$id.png" $OPTIM_SOURCE -d $DPI >/dev/null 2>&1
       done
       cd $DIRECTORY/$CACHE
       for i in *.png; do
-          cwebp -quiet "$i" -o "../${i%.*}-$DPI-dpi.webp";
+        cwebp -quiet "$i" -o "../${i%.*}-$DPI-dpi.webp";
       done
       cd .. && rm -r $CACHE
+      cd ..
+      rm_optimized_svg
       finish
       break
       ;;

@@ -1,7 +1,7 @@
 # Template file for 'l7-export'
 pkgname=l7-export
-version=1.14
-revision=2
+version=1.15
+revision=1
 build_style=meta
 depends="
 	inkscape curl wget base-files l7-base-files colord
