@@ -10,6 +10,9 @@ license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-	vinstall ${FILESDIR}/PipeWire.desktop 0644 etc/skel/.config/autostart/
+	vmkdir etc/alsa
+	vcopy ${FILESDIR}/conf.d etc/alsa
+	vinstall ${FILESDIR}/PipeWire.desktop 0644 etc/skel/.config/autostart PipeWire.desktop
 	vsed -i ${FILESDIR}/pipewire.conf -e 's/#{ path = "\/usr\/bin\/pipewire"/{ path = "\/usr\/bin\/pipewire"/'
+	vinstall ${FILESDIR}/pipewire.conf 0644 usr/share/pipewire pipewire.conf
 }
