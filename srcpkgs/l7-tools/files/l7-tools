@@ -2,7 +2,7 @@
 
 TITLE="LangitKetujuh Tools"
 NAME=$(basename "$0")
-VERSION="1.17"
+VERSION="1.17.1"
 LICENSE="GPL-2.0-only"
 TMP="/tmp"
 ANYKEY=$(echo -e 'Press any key to quit')
@@ -38,6 +38,7 @@ option  :
           --snap-icc    -g    install snap committee icc
 
         from repo:
+          --pipewire    -p    install pipewire
           --wine-emu    -w    install wine emulator
 
         plugin:
@@ -106,6 +107,13 @@ for arg in "$@"; do
               ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519
             fi
             tmate
+            ;;
+        --pipewire|-p)
+            xbps-install -Sy pipewire alsa-pipewire libjack-pipewire
+            xbps-install -y l7-pipewire
+            rm /var/service/pulseaudio >/dev/null 2>&1
+            cp -f /etc/skel/.config/autostart/PipeWire.desktop $HOME/.config/autostart/
+            echo -e "\033[1;36m[FINISH]\033[0m PipeWire installed. You need to reboot."
             ;;
         --adobe-icc|-a)
             check_root
