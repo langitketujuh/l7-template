@@ -1,6 +1,6 @@
 # Template file for 'l7-pipewire'
 pkgname=l7-pipewire
-version=0.3.31
+version=0.3.32
 revision=1
 build_style=meta
 depends="pipewire"
