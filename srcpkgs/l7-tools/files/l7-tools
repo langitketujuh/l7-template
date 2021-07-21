@@ -108,13 +108,6 @@ for arg in "$@"; do
             fi
             tmate
             ;;
-        --pipewire|-p)
-            xbps-install -Sy pipewire alsa-pipewire libjack-pipewire
-            xbps-install -y l7-pipewire
-            rm /var/service/pulseaudio >/dev/null 2>&1
-            cp -f /etc/skel/.config/autostart/PipeWire.desktop $HOME/.config/autostart/
-            echo -e "\033[1;36m[FINISH]\033[0m PipeWire installed. You need to reboot."
-            ;;
         --adobe-icc|-a)
             check_root
             echo -e "\033[1;36m[0]\033[0m Checking"
