@@ -31,16 +31,12 @@ while getopts "a:p:h:" opt; do
 case $opt in
 	a) ARCH="$OPTARG";;
 	p) PACKAGES="$OPTARG";;
-	h) echo "${0#/*}: [-a x86_64|x86_64-musl] [-p packages]" >&2; exit 1;;
+	h) echo "${0#/*}: [-a i686|x86_64|x86_64-musl|all] [-p packages]" >&2; exit 1;;
 esac
 done
 shift $((OPTIND - 1))
 
 [ ! -x build.sh ] && exit 0
-
-remove_old() {
-  rm -rfv $PWD/hostdir-$ARCH/binpkgs/$PACKAGES-{*.xbps,*.sig}
-}
 
 build_xbps(){
   XBPS_HOSTDIR="$HOST_DIR" ./xbps-src -m $MASTER_DIR pkg ${f}
@@ -49,33 +45,30 @@ build_xbps(){
 }
 
 generate_repodata(){
-  xbps-rindex -a $HOST_DIR/binpkgs/*.xbps -f
+  XBPS_TARGET_ARCH=$ARCH xbps-rindex -a $HOST_DIR/binpkgs/*.xbps -f
 }
 
 if [ "$ARCH" = x86_64 ]; then
   for f in $PACKAGES; do
-    remove_old
     MASTER_DIR="masterdir-x86_64"
     HOST_DIR="$PWD/hostdir-x86_64"
     build_xbps
-    generate_repodata
   done
+  generate_repodata
 elif [ "$ARCH" = x86_64-musl ]; then
   for f in $PACKAGES; do
-    remove_old
     MASTER_DIR="masterdir-x86_64-musl"
     HOST_DIR="$PWD/hostdir-x86_64-musl"
     build_xbps
-    generate_repodata
   done
+  generate_repodata
 elif [ "$ARCH" = i686 ]; then
   for f in $PACKAGES; do
-    remove_old
     MASTER_DIR="masterdir-i686"
     HOST_DIR="$PWD/hostdir-i686"
     build_xbps
-    generate_repodata
   done
+  generate_repodata
 else
   echo "Architecture not support"
 fi
