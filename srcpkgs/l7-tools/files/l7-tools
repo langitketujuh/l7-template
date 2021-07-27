@@ -2,7 +2,7 @@
 
 TITLE="LangitKetujuh Tools"
 NAME=$(basename "$0")
-VERSION="1.17.1"
+VERSION="1.17.2"
 LICENSE="GPL-2.0-only"
 TMP="/tmp"
 ANYKEY=$(echo -e 'Press any key to quit')
@@ -38,7 +38,6 @@ option  :
           --snap-icc    -g    install snap committee icc
 
         from repo:
-          --pipewire    -p    install pipewire
           --wine-emu    -w    install wine emulator
 
         plugin:
@@ -58,13 +57,243 @@ check_root(){
 }
 
 screen_tearing_intel(){
-  if cat /usr/share/xbps.d/xbps.conf | grep xf86-video-intel > $TMP/checkers >/dev/null 2>&1; then
+  if cat /usr/share/xbps.d/xbps.conf | grep xf86-video-intel >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;36m[*]\033[0m Remove Intel screen tearing"
     echo "ignorepkg=xf86-video-intel" >> /usr/share/xbps.d/xbps.conf
     xbps-install -S
     xbps-remove -Ry xf86-video-intel
+  fi
+}
+
+search_patch() {
+  # P01 ardour
+  if xbps-query ardour | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /usr/share/ardour6/themes/dark-ardour.colors | grep -oE '31363bff' >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+    else
+      P01="l7-ardour"
+    fi
+  fi
+  # P02 ark
+  if xbps-query ark | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/arkrc >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P02="l7-ark"
+    fi
+  fi
+  # P03 audacity
+  if xbps-query audacity | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.audacity-data/audacity.cfg >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P03="l7-audacity"
+    fi
+  fi
+  # P04 baloo5
+  if xbps-query baloo5 | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/baloorc | grep -oE 'Indexing-Enabled=false' >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P04="l7-baloo5"
+    fi
+  fi
+  # P05 base-files
+  if xbps-query base-files | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /usr/bin/lsb_release | grep -oE 'codename="langitketujuh"' >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P05="l7-base-files"
+    fi
+  fi
+  # P06 breeze-gtk
+  if xbps-query breeze-gtk | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/gtk-3.0/settings.ini | grep -oE 'gtk-theme-name=Breeze-Dark' >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P06="l7-breeze-gtk"
+    fi
+  fi
+  # P07 breeze-icons
+  if xbps-query breeze-icons | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /usr/share/icons/breeze/places/64/start-here-kde.svg | grep -oE 'id="linearGradient2166"' >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P07="l7-breeze-icons"
+    fi
+  fi
+  # P08 l7-desktop-file-utils
+  if xbps-query desktop-file-utils | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/mimeapps.list >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P08="l7-desktop-file-utils"
+    fi
+  fi
+  # P09 l7-fish-shell
+  if xbps-query fish-shell | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/fish/fish_variables >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P09="l7-fish-shell"
+    fi
+  fi
+  # P10 l7-gimp
+  if xbps-query gimp | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/GIMP/2.10/gimprc | grep -oE 'theme "System"' >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P10="l7-gimp"
+    fi
+  fi
+  # P11 l7-godot
+  if xbps-query godot | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/godot/editor_settings-3.tres >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P11="l7-godot"
+    fi
+  fi
+  # P12 l7-gwenview
+  if xbps-query gwenview | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/gwenviewrc >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P12="l7-gwenview"
+    fi
+  fi
+  # P13 l7-kate5
+  if xbps-query kate5 | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/katerc >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P13="l7-kate5"
+    fi
+  fi
+  # P14 l7-kcmutils
+  if xbps-query kcmutils | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/kcminputrc >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P14="l7-kcmutils"
+    fi
+  fi
+  # P15 l7-konsole
+  if xbps-query konsole | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/konsolerc >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P15="l7-konsole"
+    fi
+  fi
+  # P16 l7-krita
+  if xbps-query krita | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/kritarc | grep -oE 'Theme=Breeze Dark' >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P16="l7-krita"
+    fi
+  fi
+  # P17 l7-kscreenlocker
+  if xbps-query kscreenlocker | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/kscreenlockerrc >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P17="l7-kscreenlocker"
+    fi
+  fi
+  # P18 l7-libreoffice
+  if xbps-query libreoffice | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/libreoffice/4/user/registrymodifications.xcu >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P18="l7-libreoffice"
+    fi
+  fi
+  # P19 l7-obs
+  if xbps-query obs | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/obs-studio/global.ini >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P19="l7-obs"
+    fi
+  fi
+  # P20 l7-pipewire
+  if xbps-query pipewire | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/autostart/PipeWire.desktop >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P20="l7-pipewire"
+    fi
+  fi
+  # P21 l7-plasma-desktop
+  if xbps-query plasma-desktop | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /usr/share/plasma/plasmoids/org.kde.plasma.kicker/contents/config/main.xml \
+    | grep -oE 'system.update.langitketujuh.desktop' >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P21="l7-plasma-desktop"
+    fi
+  fi
+  # P22 l7-plasma-framework
+  if xbps-query plasma-framework | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /usr/share/plasma/desktoptheme/default/metadata.desktop \
+    | grep -oE 'defaultWallpaperTheme=LangitKetujuh-Dark' >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P22="l7-plasma-framework"
+    fi
+  fi
+  # P23 l7-runit-void
+  if xbps-query runit-void | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/os-release | grep -oE 'NAME="LangitKetujuh OS"' >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P23="l7-runit-void"
+    fi
+  fi
+  # P24 l7-scribus
+  if xbps-query scribus | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/scribus/prefs150.xml >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P24="l7-scribus"
+    fi
+  fi
+  # P25 l7-sddm
+  if xbps-query sddm | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/sddm.conf.d/kde_settings.conf | grep -oE 'Current=langitketujuh-dark' >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P25="l7-sddm"
+    fi
+  fi
+  # P26 l7-shadow
+  if xbps-query shadow | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/default/useradd | grep -oE 'fish' >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P26="l7-shadow"
+    fi
+  fi
+  # P27 l7-systemsettings
+  if xbps-query systemsettings | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /etc/skel/.config/systemsettingsrc >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P27="l7-systemsettings"
+    fi
+  fi
+}
+
+reinstall_patch() {
+  if [ $(echo -n "$P01 $P02 $P03 $P04 $P05 $P06 $P07 $P08 $P09 $P10 $P11 $P12 $P13 $P14 $P15 $P16 $P17 $P18 $P19 $P20 $P21 $P22 $P23 $P24 $P25 $P26 $P27 $P28 $P29" | sed 's/ //g' | wc -c) -eq 0 ]; then
+    echo >/dev/null 2>&1
+    else
+    echo -e "\033[1;36m[*]\033[0m Reinstall patch"
+    xbps-install -fy $P01 $P02 $P03 $P04 $P05 $P06 $P07 $P08 $P09 $P10 $P11 $P12 $P13 $P14 $P15 $P16 $P17 $P18 $P19 $P20 $P21 $P22 $P23 $P24 $P25 $P26 $P27 $P28 $P29
   fi
 }
 
@@ -86,6 +315,7 @@ for arg in "$@"; do
             screen_tearing_intel
             echo -e "\033[1;36m[2]\033[0m Full system upgrade"
             xbps-install -uI
+            search_patch; reinstall_patch
             echo -e "\033[1;36m[3]\033[0m Remove all old kernels?"
             read -e -p "[*] Do you want to continue? [y/N]: " KERNEL
             if [[ $KERNEL =~ ^[Yy]$ ]]; then

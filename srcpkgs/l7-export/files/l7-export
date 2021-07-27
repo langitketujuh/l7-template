@@ -4,7 +4,7 @@ TITLE="LangitKetujuh Export"
 NAME=$(basename "$0")
 INSTALLDIR=$(which basename)
 INKSCAPEDIR=$(which inkscape)
-VERSION="1.15"
+VERSION="1.15.1"
 WEB="https://langitketujuh.id"
 LICENSE="GPL-2.0-only"
 
@@ -74,7 +74,7 @@ for arg in "$@"; do
           echo -e "\033[1;36m[1]\033[0m Install depedencies > RPM distro"
           mkdir -pv $TMP
           yum install sudo curl wget fedora-release colord unzip which \
-          inkscape ghostscript ImageMagick libwebp-tools zip
+          inkscape ghostscript ImageMagick libwebp-tools python3-scour zip
         elif pacman --version >/dev/null 2>&1;
           then
           echo -e "\033[1;36m[1]\033[0m Install depedencies > Pacman distro"
@@ -82,20 +82,20 @@ for arg in "$@"; do
           pacman -Syy;
           pacman -S sudo curl wget lsb-release colord unzip which \
           inkscape ghostscript imagemagick libwebp \
-          poppler poppler-glib poppler-qt5 zip
+          poppler poppler-glib poppler-qt5 scour zip
         elif apt --version >/dev/null 2>&1;
           then
           echo -e "\033[1;36m[1]\033[0m Install depedencies > APT distro"
           mkdir -pv $TMP
           apt -y update;
           apt install sudo curl wget lsb-release colord unzip \
-          inkscape ghostscript imagemagick webp zip
+          inkscape ghostscript imagemagick webp python3-scour zip
         elif zypper --version >/dev/null 2>&1;
           then
           echo -e "\033[1;36m[1]\033[0m Install depedencies > Zypper distro"
           mkdir -pv $TMP
           zypper install sudo curl wget lsb-release colord unzip which \
-          inkscape ghostscript ImageMagick libwebp-tools zip
+          inkscape ghostscript ImageMagick libwebp-tools python3-scour zip
         else
           echo -e "\033[1;36m[1]\033[0m Install depedencies > What your os?"
         fi
