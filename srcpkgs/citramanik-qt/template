@@ -24,6 +24,18 @@ do_check() {
 	xvfb-run python3 setup.py test
 }
 
-do_build() {
+pre_build() {
 	vmkdir usr/share/applications
+
+	for s in 16x16 22x22 24x24 32x32 48x48 64x64; do
+		vmkdir usr/share/icons/Papirus/${s}/apps
+	done
+
+	for f in 16 22 24 32 48 64; do
+		vinstall ${FILESDIR}/${f}.svg 0644 usr/share/icons/Papirus/${f}x${f}/apps citramanik-qt.svg
+	done
+}
+
+post_install() {
+	vinstall ${FILESDIR}/citramanik-qt.desktop 0644 usr/share/applications
 }
