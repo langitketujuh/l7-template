@@ -32,5 +32,5 @@ PACKAGES="isoimagewriter ardour l7-ardour ark l7-ark audacity l7-audacity baloo5
 xbps-install -S >/dev/null 2>&1
 
 for c in $PACKAGES; do
-  xbps-query -R ${c} | grep pkgver
-done
+   xbps-query -p pkgver ${c}
+done | less

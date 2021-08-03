@@ -1,6 +1,6 @@
 # Template file for 'l7-breeze-gtk'
 pkgname=l7-breeze-gtk
-version=5.22.3
+version=5.22.4
 revision=1
 build_style=meta
 depends="breeze-gtk"
