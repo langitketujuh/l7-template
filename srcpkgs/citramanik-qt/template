@@ -1,0 +1,27 @@
+# Template file for 'citramanik-qt'
+pkgname=citramanik-qt
+version=1.1.0
+revision=1
+_githash=59771f5c9a734051bb68fb5b7a083c58bf5f5843
+wrksrc="citramanik-qt-${_githash}"
+build_style=python3-module
+hostmakedepends="ghostscript intltool python3 python3-setuptools python3-PyQt5-devel-tools python3-lxml python3-Pillow pkg-config qt5-host-tools kcoreaddons kconfig"
+makedepends="ghostscript-devel python3-devel python3-PyQt5"
+depends="inkscape ghostscript python3-PyQt5 python3-setuptools python3-appdirs python3-lxml python3-Pillow libwebp-tools"
+checkdepends="xvfb-run python3-wheel $depends"
+short_desc="Bulk SVG export tool"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-3.0-or-later"
+homepage="https://citramanik.dev.is.my.id/"
+distfiles="https://github.com/devlovers-id/citramanik-qt/archive/${_githash}.tar.gz"
+checksum=bb9974c4845e967297b05f912dc03078d95e232505a6e42ec4c5fd901c75bd82
+
+python_version=3
+
+do_check() {
+	xvfb-run python3 setup.py test
+}
+
+do_build() {
+	vmkdir usr/share/applications
+}
