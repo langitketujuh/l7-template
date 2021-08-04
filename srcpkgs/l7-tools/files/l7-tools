@@ -43,6 +43,7 @@ option  :
         plugin:
           --separate+   -p    install separate+ gimp
 
+          --downgrade   -d    downgrade & uninstall program
           --help        -h    show this help
           --version     -v    show $NAME version
 
@@ -559,7 +560,7 @@ for arg in "$@"; do
               fi
             fi
             ;;
-        --downgrade)
+        --downgrade|-d)
             check_root
             echo -e "\033[1;36m[1] Display Callibrator\033[0m"
             echo -e "[*] Packages: \033[1;33mdispcalGUI\033[0m"
@@ -583,11 +584,11 @@ for arg in "$@"; do
               xbps-remove -Ry digikam rawtherapee hugin Converseen
             fi
             echo -e "\033[1;36m[4] Non-linear Editor\033[0m"
-            echo -e "[*] Packages: \033[1;33mkdenlive\033[0m"
+            echo -e "[*] Packages: \033[1;33mkdenlive handbrake\033[0m"
             read -e -p "[*] Remove: [Y/n]: " VIDEO_EDITOR_PKGS
             if [[ $VIDEO_EDITOR_PKGS =~ ^[Yy]$ ]]; then
               echo -e "[*] Remove: \033[1;33mYes\033[0m"
-              xbps-remove -Ry kdenlive
+              xbps-remove -Ry kdenlive handbrake
             fi
             echo -e "\033[1;36m[5] Font Maker\033[0m"
             echo -e "[*] Packages: \033[1;33mfontforge\033[0m"
@@ -625,11 +626,11 @@ for arg in "$@"; do
               xbps-remove -Ry blender synfigstudio opentoonz
             fi
             echo -e "\033[1;36m[10] Audio Production\033[0m"
-            echo -e "[*] Packages: \033[1;33mjack jack_capture sox audacity l7-audacity ardour l7-ardour kid3 soundkonverter\033[0m"
+            echo -e "[*] Packages: \033[1;33mjack jack_capture sox audacity l7-audacity ardour l7-ardour kid3 soundkonverter pulseeffects-legacy\033[0m"
             read -e -p "[*] Remove: [Y/n]: " AUDIO_PRO_PKGS
             if [[ $AUDIO_PRO_PKGS =~ ^[Yy]$ ]]; then
               echo -e "[*] Remove: \033[1;33mYes\033[0m"
-              xbps-remove -Ry jack jack_capture sox audacity l7-audacity ardour l7-ardour kid3 soundkonverter
+              xbps-remove -Ry jack jack_capture sox audacity l7-audacity ardour l7-ardour kid3 soundkonverter pulseeffects-legacy
             fi
             echo -e "\033[1;36m[11] Extra Google Fonts\033[0m"
             echo -e "[*] Packages: \033[1;33mgoogle-fonts-ttf\033[0m"
