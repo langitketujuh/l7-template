@@ -2,7 +2,7 @@
 
 TITLE="LangitKetujuh Tools"
 NAME=$(basename "$0")
-VERSION="1.17.2"
+VERSION="1.17.3"
 LICENSE="GPL-2.0-only"
 TMP="/tmp"
 ANYKEY=$(echo -e 'Press any key to quit')
@@ -31,7 +31,7 @@ option  :
 
         color profile:
           --adobe-icc   -a    install adobe icc
-          --idea-icc    -d    install idealliance icc
+          --idea-icc    -i    install idealliance icc
           --eci-icc     -e    install eci icc
           --jpma-icc    -j    install jpma icc
           --vigc-icc    -g    install vigc icc
@@ -414,7 +414,7 @@ for arg in "$@"; do
               fi
             fi
             ;;
-        --idea-icc|-d)
+        --idea-icc|-i)
             check_root
             echo -e "\033[1;36m[0]\033[0m Checking"
             if find /usr/share/color/icc/idealliance/ -name "*.icc" -type f >/dev/null 2>&1; then
