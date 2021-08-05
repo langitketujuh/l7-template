@@ -1,9 +1,9 @@
 # Template file for 'l7-tools'
 pkgname=l7-tools
-version=1.17.3
-revision=2
+version=1.17.4
+revision=1
 build_style=meta
-depends="wget"
+depends="wget unzip"
 short_desc="Configuring tool and installing third-party"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"

@@ -57,7 +57,7 @@ check_root(){
   fi
 }
 
-screen_tearing_intel(){
+check_screen_tearing_intel(){
   if cat /usr/share/xbps.d/xbps.conf | grep xf86-video-intel >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
@@ -68,7 +68,37 @@ screen_tearing_intel(){
   fi
 }
 
-search_patch() {
+check_enable_os_prober() {
+  if cat /etc/default/grub | grep "GRUB_DISABLE_OS_PROBER=false" >/dev/null 2>&1; then
+    echo >/dev/null 2>&1
+    else
+    echo -e "\033[1;36m[*]\033[0m Enable GRUB os-prober"
+    echo "GRUB_DISABLE_OS_PROBER=false" >> /etc/default/grub
+    os-prober
+    update-grub
+  fi
+}
+
+check_enable_rtc_windows() {
+  if find /boot/ -name "Microsoft" -type d >/dev/null 2>&1; then
+    echo >/dev/null 2>&1
+    else
+    if cat /etc/rc.conf | grep '#HARDWARECLOCK="UTC"' >/dev/null 2>&1; then
+    echo -e "\033[1;36m[*]\033[0m Enable localtime for Windows dualboot"
+    sed -i 's/#HARDWARECLOCK="UTC"/HARDWARECLOCK="localtime"/' /etc/rc.conf
+    echo -e "[*] HARDWARECLOCK=localtime"
+      if find /var/service/ -name "ntpd" -type d >/dev/null 2>&1; then
+      echo -e "\033[1;36m[*]\033[0m Disable automatic syncron clock service"
+        for f in ntpd openntpd ; do
+          rm -v /var/service/${f} >/dev/null 2>&1
+          echo -e "[*] removed '/var/service/${f}"
+        done
+      fi
+    fi
+  fi
+}
+
+check_patch() {
   # P01 ardour
   if xbps-query ardour | grep 'state: installed' >/dev/null 2>&1; then
     if cat /usr/share/ardour6/themes/dark-ardour.colors | grep -oE '31363bff' >/dev/null 2>&1; then
@@ -313,17 +343,20 @@ for arg in "$@"; do
             check_root
             echo -e "\033[1;36m[1]\033[0m Synchronization"
             xbps-install -S;
-            screen_tearing_intel
             echo -e "\033[1;36m[2]\033[0m Full system upgrade"
             xbps-install -uI
-            search_patch; reinstall_patch
-            echo -e "\033[1;36m[3]\033[0m Remove all old kernels?"
+            echo -e "\033[1;36m[3]\033[0m Check trouble and patch"
+            check_patch; reinstall_patch
+            check_screen_tearing_intel
+            check_enable_os_prober
+            check_enable_rtc_windows
+            echo -e "\033[1;36m[4]\033[0m Remove all old kernels?"
             read -e -p "[*] Do you want to continue? [y/N]: " KERNEL
             if [[ $KERNEL =~ ^[Yy]$ ]]; then
               echo -e "[*] Yes, wait a minutes"
               sudo vkpurge rm all
             fi
-            echo -e "\033[1;36m[4]\033[0m Remove obsolete and orphans packages?"
+            echo -e "\033[1;36m[5]\033[0m Remove obsolete and orphans packages?"
             read -e -p "[*] Do you want to continue? [y/N]: " CACHE
             if [[ $CACHE =~ ^[Yy]$ ]]; then
               echo -e "[*] Yes, wait a minutes"
