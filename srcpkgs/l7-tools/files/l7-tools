@@ -91,7 +91,7 @@ check_enable_rtc_windows() {
       echo -e "\033[1;36m[*]\033[0m Disable automatic syncron clock service"
         for f in ntpd openntpd ; do
           rm -v /var/service/${f} >/dev/null 2>&1
-          echo -e "[*] removed '/var/service/${f}"
+          echo -e "[*] removed '/var/service/${f}'"
         done
       fi
     fi
