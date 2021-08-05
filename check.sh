@@ -27,10 +27,10 @@
 
 # Make sure we don't inherit these from env.
 
-PACKAGES="isoimagewriter ardour l7-ardour ark l7-ark audacity l7-audacity baloo5 l7-baloo5 base-files l7-base-files breeze l7-breeze breeze-gtk l7-breeze-gtk breeze-icons l7-breeze-icons desktop-file-utils l7-desktop-file-utils l7-export fish-shell l7-fish-shell gimp l7-gimp godot l7-godot gwenview l7-gwenview kate5 l7-kate5 kcmutils l7-kcmutils konsole l7-konsole krita l7-krita kscreenlocker l7-kscreenlocker libreoffice l7-libreoffice obs l7-obs pipewire l7-pipewire plasma-desktop l7-plasma-desktop plasma-framework l7-plasma-framework removed-packages l7-removed-packages l7-repo runit-void l7-runit-void scribus l7-scribus sddm l7-sddm shadow l7-shadow systemsettings l7-systemsettings l7-tools"
+PACKAGES="isoimagewriter ardour l7-ardour ark l7-ark audacity l7-audacity baloo5 l7-baloo5 base-files l7-base-files breeze l7-breeze breeze-gtk l7-breeze-gtk breeze-icons l7-breeze-icons desktop-file-utils l7-desktop-file-utils fish-shell l7-fish-shell gimp l7-gimp godot l7-godot gwenview l7-gwenview kate5 l7-kate5 kcmutils l7-kcmutils konsole l7-konsole krita l7-krita kscreenlocker l7-kscreenlocker libreoffice l7-libreoffice obs l7-obs pipewire l7-pipewire plasma-desktop l7-plasma-desktop plasma-framework l7-plasma-framework removed-packages l7-removed-packages runit-void l7-runit-void scribus l7-scribus sddm l7-sddm shadow l7-shadow systemsettings l7-systemsettings"
 
 xbps-install -S >/dev/null 2>&1
 
 for c in $PACKAGES; do
    xbps-query -p pkgver ${c}
-done | less
+done
