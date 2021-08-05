@@ -1,6 +1,6 @@
 # Template file for 'l7-systemsettings'
 pkgname=l7-systemsettings
-version=5.22.3
+version=5.22.4
 revision=1
 build_style=meta
 depends="systemsettings"
