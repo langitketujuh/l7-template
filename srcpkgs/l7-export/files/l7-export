@@ -4,7 +4,7 @@ TITLE="LangitKetujuh Export"
 NAME=$(basename "$0")
 INSTALLDIR=$(which basename)
 INKSCAPEDIR=$(which inkscape)
-VERSION="1.15.1"
+VERSION="1.16.1"
 WEB="https://langitketujuh.id"
 LICENSE="GPL-2.0-only"
 
@@ -214,7 +214,11 @@ check_file() {
 }
 
 id() {
-  inkscape -S "$SOURCE" | grep "$IDPATTERN" | cut -d "," -f 1
+  rendersvg --query-all "$SOURCE" | grep "$IDPATTERN" | cut -d "," -f 1
+}
+
+id_optim() {
+  rendersvg --query-all "$SOURCE" | grep "$IDPATTERN" | cut -d "," -f 1
 }
 
 check_id() {
@@ -300,7 +304,7 @@ check_id
 check_depedencies
 
 optimized_svg() {
-scour -q -i $SOURCE -o $OPTIM_SOURCE
+usvg --keep-named-groups $SOURCE $OPTIM_SOURCE
 }
 
 rm_optimized_svg() {
@@ -390,65 +394,40 @@ eps_validator() {
 }
 
 to_png() {
-  for ID_LIST in $(id)
-  do
-    inkscape \
-      --export-id="$ID_LIST" \
-      --batch-process \
-      --export-id-only \
-      --export-type=png \
-      --export-dpi=$DPI \
-      --export-filename="$DIRECTORY/$CACHE/$ID_LIST.png" \
-      $OPTIM_SOURCE >/dev/null 2>&1
-      sleep 1
+  for ID_LIST in $(id); do
+    rsvg-convert \
+      -i "$ID_LIST" \
+      -d $DPI \
+      "$OPTIM_SOURCE" \
+      -a -f png -o "$DIRECTORY/$CACHE/$ID_LIST.png" >/dev/null 2>&1
   done
 }
 
 to_svg() {
-  for ID_LIST in $(id)
-  do
-    inkscape \
-      --export-id="$ID_LIST" \
-      --batch-process \
-      --export-id-only \
-      --export-type=svg \
-      --export-plain-svg \
-      --export-filename="$DIRECTORY/$CACHE/$ID_LIST.svg" \
-      $OPTIM_SOURCE >/dev/null 2>&1
-      sleep 1
+  for ID_LIST in $(id); do
+    rsvg-convert \
+      -i "$ID_LIST" \
+      "$OPTIM_SOURCE" \
+      -a -f svg -o "$DIRECTORY/$CACHE/$ID_LIST.svg" >/dev/null 2>&1
   done
 }
 
 to_eps() {
-  for ID_LIST in $(id)
-  do
-    inkscape \
-      --export-id="$ID_LIST" \
-      --batch-process \
-      --export-id-only \
-      --export-type=eps \
-      --export-text-to-path \
-      --export-ignore-filters \
-      --export-filename="$DIRECTORY/$CACHE/$ID_LIST.eps" \
-      $OPTIM_SOURCE >/dev/null 2>&1
-      sleep 1
+  for ID_LIST in $(id); do
+    rsvg-convert \
+      -i "$ID_LIST" \
+      "$OPTIM_SOURCE" \
+      -a -f eps -o "$DIRECTORY/$CACHE/$ID_LIST.eps" >/dev/null 2>&1
   done
 }
 
 # For pdf, ai and psd
 to_pdf() {
-  for ID_LIST in $(id)
-  do
-    inkscape \
-      --export-id="$ID_LIST" \
-      --batch-process \
-      --export-id-only \
-      --export-type=pdf \
-      --export-text-to-path \
-      --export-ignore-filters \
-      --export-filename="$DIRECTORY/$CACHE/$ID_LIST.pdf" \
-      $OPTIM_SOURCE >/dev/null 2>&1
-      sleep 1
+  for ID_LIST in $(id); do
+    rsvg-convert \
+      -i "$ID_LIST" \
+      "$OPTIM_SOURCE" \
+      -a -f pdf -o "$DIRECTORY/$CACHE/$ID_LIST.pdf" >/dev/null 2>&1
   done
 }
 
@@ -534,31 +513,20 @@ do
       mkdir -p "$DIRECTORY/$CACHE"
       optimized_svg
       #convert to png and pdf default (pngtree)
-      for id in $(inkscape -S $OPTIM_SOURCE | grep $IDPATTERN | cut -d "," -f 1)
-      do
+      for id in $(id_optim); do
         # for market < 5 with export image preview
         if [ $MARKET -le 5 ]; then
         mkdir -p "$DIRECTORY/$CACHE/$id"
-          inkscape \
-          --export-id=$id \
-          --batch-process \
-          --export-id-only \
-          --export-type=png \
-          --export-text-to-path \
-          --export-ignore-filters \
-          --export-dpi=$DPI \
-          --export-filename="$DIRECTORY/$CACHE/$id/$id.png" \
-          $OPTIM_SOURCE >/dev/null 2>&1
-          inkscape \
-          --export-id=$id \
-          --batch-process \
-          --export-id-only \
-          --export-type=eps \
-          --export-text-to-path \
-          --export-ignore-filters \
-          --export-filename="$DIRECTORY/$CACHE/$id/$id.eps" \
-          $OPTIM_SOURCE >/dev/null 2>&1
-        sleep 1
+          rsvg-convert \
+          -i "$id" \
+          -d $DPI \
+          "$OPTIM_SOURCE" \
+          -a -f png -o "$DIRECTORY/$CACHE/$id/$id.png" >/dev/null 2>&1
+          rsvg-convert \
+          -i "$id" \
+          -d $DPI \
+          "$OPTIM_SOURCE" \
+          -a -f eps -o "$DIRECTORY/$CACHE/$id/$id.eps" >/dev/null 2>&1
         # for shuttestock
           elif [ $MARKET -eq 6 ]; then
             to_eps
@@ -1128,9 +1096,9 @@ do
           elif [ $COLOR -eq 2 ]; then
             PROFILENAME="cmyk"
             for i in *.svg;
-          do cat "$i" | inkscape --pipe -C \
-          -o "${i%.*}.pdf" \
-          >/dev/null 2>&1
+            do cat "$i" | inkscape --pipe -C \
+            -o "${i%.*}.pdf" \
+            >/dev/null 2>&1
           done
           rm *.svg
           DEVICE="pdfwrite"
@@ -1138,7 +1106,6 @@ do
           do gs -q -dSAFER -dBATCH -dNOPAUSE -dNOCACHE -sDEVICE=$DEVICE \
             -sColorConversionStrategy=CMYK -dProcessColorModel=/DeviceCMYK \
             -sOutputFile="${i%.*}-vector-$PROFILENAME.pdf" "$i"
-            sleep 1
           done
           # merge
           if [ $MERGE == 'y' ]; then
@@ -1357,6 +1324,7 @@ do
       optimized_svg
       to_svg
       cd $DIRECTORY/$CACHE
+      ##---------------
       mv *.svg ..
       cd .. && rm -r $CACHE
       cd ..
@@ -1536,9 +1504,12 @@ do
       fi
       mkdir -p "$DIRECTORY/$CACHE"
       optimized_svg
-      for id in $(inkscape -S $OPTIM_SOURCE | grep $IDPATTERN | cut -d "," -f 1)
-      do
-        inkscape -j -i $id -o "$DIRECTORY/$CACHE/$id.png" $OPTIM_SOURCE -d $DPI >/dev/null 2>&1
+      for ID_LIST in $(id_optim); do
+        rsvg-convert \
+        -i "$ID_LIST" \
+        -d $DPI \
+        "$OPTIM_SOURCE" \
+        -a -f png -o "$DIRECTORY/$CACHE/$ID_LIST.png" >/dev/null 2>&1
       done
       cd $DIRECTORY/$CACHE
       for i in *.png; do
