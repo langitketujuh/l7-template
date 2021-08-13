@@ -451,14 +451,17 @@ do
       echo -e ""
       eps_validator
       echo -e ""
-      echo -e "Marketplace \t\tOutput \t\tAdvice (px) \tPreview (dpi)"
-      echo -e "  \033[1;33m[1] Pngtree\033[0m \t\t(eps+png).zip \t1200x1200 \t96"
-      echo -e "  \033[1;33m[2] Freepik\033[0m \t\t(eps+jpg).zip \t1200x1200 \t300"
-      echo -e "  \033[1;33m[3] Adobestock\033[0m \t(eps+jpg).zip \t500x500 \t600"
-      echo -e "  \033[1;33m[4] Vectorstock\033[0m \t(eps).zip + jpg 380x400 \t300"
-      echo -e "  \033[1;33m[5] Vecteezy\033[0m \t\teps + jpg \t4000x4000 \t96"
-      echo -e "  \033[1;33m[6] Shutterstock\033[0m \teps \t\t4000x4000 \t-"
-      echo -e "  \033[1;33m[7] Flaticon\033[0m \t\tsvg \t\t64x64 \t\t-"
+      echo -e "Preview Export: \033[1;33m \t96\033[0m DPI (Auto)"
+      echo -e ""
+      echo -e "Marketplace \t\tOutput"
+      echo -e "  \033[1;33m[1] Pngtree\033[0m \t\t(eps+png).zip"
+      echo -e "  \033[1;33m[2] Freepik\033[0m \t\t(eps+jpg).zip"
+      echo -e "  \033[1;33m[3] Adobestock\033[0m \t(eps+jpg).zip"
+      echo -e "  \033[1;33m[4] Vectorstock\033[0m \t(eps).zip+jpg"
+      echo -e "  \033[1;33m[5] Vecteezy\033[0m \t\teps+jpg"
+      echo -e "  \033[1;33m[6] Shutterstock\033[0m \teps"
+      echo -e "  \033[1;33m[7] Flaticon\033[0m \t\tsvg"
+      echo -e ""
       read -e -p "Number: " MARKET
       if [ -z $MARKET ]; then
         echo -e "\033[1;91m[FAILED]\033[0m Marketplace is empty."
@@ -486,24 +489,7 @@ do
         echo -e ""  >/dev/null 2>&1
         # marketplace 1-5 need dpi
         elif  [ $MARKET -le 5 ]; then
-          echo -e "Preview DPI:"
-          echo -e "  \033[1;33m[1] 96\033[0m \t\t(pngtree, vecteezy)"
-          echo -e "  \033[1;33m[2] 300\033[0m \t\t(freepik, vectorstock)"
-          echo -e "  \033[1;33m[3] 600\033[0m \t\t(adobestock)"
-          read -e -p "Number: " DPI_NUM
-          if [ -z $DPI_NUM ]; then
-            echo -e "\033[1;91m[FAILED]\033[0m Dpi is empty."
-            exit
-            elif [ $DPI_NUM -eq 1 ]; then
-            DPI="96"
-            elif [ $DPI_NUM -eq 2 ]; then
-            DPI="300"
-            elif [ $DPI_NUM -eq 3 ]; then
-            DPI="600"
-            else
-            echo -e "\033[1;91m[FAILED]\033[0m $DPI dpi not recommended."
-            exit
-          fi
+        DPI="96"
       fi
       read -e -p "Folder Output: " -i "$MARKETNAME" DIRECTORY
       if [ -z $DIRECTORY ]; then
