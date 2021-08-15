@@ -214,7 +214,7 @@ check_file() {
 }
 
 id() {
-  rendersvg --query-all "$SOURCE" | grep "$IDPATTERN" | cut -d "," -f 1
+  inkscape -S "$SOURCE" | grep "$IDPATTERN" | cut -d "," -f 1
 }
 
 check_id() {
@@ -575,7 +575,7 @@ do
           --export-ignore-filters \
           --export-dpi=$DPI \
           --export-filename="$DIRECTORY/$CACHE/$id/$id.png" \
-          $OPTIM_SOURCE >/dev/null 2>&1
+          $SOURCE >/dev/null 2>&1
           inkscape \
           --export-id=$id \
           --batch-process \
@@ -584,7 +584,7 @@ do
           --export-text-to-path \
           --export-ignore-filters \
           --export-filename="$DIRECTORY/$CACHE/$id/$id.eps" \
-          $OPTIM_SOURCE >/dev/null 2>&1
+          $SOURCE >/dev/null 2>&1
         # for shuttestock
           elif [ $MARKET -eq 9 ]; then
             to_eps
@@ -1624,7 +1624,7 @@ do
       optimized_svg
       for id in $(inkscape -S $OPTIM_SOURCE | grep $IDPATTERN | cut -d "," -f 1); do
         inkscape -j -i $id -o "$DIRECTORY/$CACHE/$id.png" \
-        $OPTIM_SOURCE -d $DPI >/dev/null 2>&1
+        $SOURCE -d $DPI >/dev/null 2>&1
       done
       cd "$DIRECTORY"/$CACHE
       for i in *.png; do
