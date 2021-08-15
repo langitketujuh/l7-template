@@ -4,7 +4,7 @@ TITLE="LangitKetujuh Export"
 NAME=$(basename "$0")
 INSTALLDIR=$(which basename)
 INKSCAPEDIR=$(which inkscape)
-VERSION="1.16.1"
+VERSION="1.16.4"
 WEB="https://langitketujuh.id"
 LICENSE="GPL-2.0-only"
 
@@ -68,20 +68,20 @@ for arg in "$@"; do
         mkdir -pv $TMP
         xbps-install -Sy xbps;
         xbps-install sudo curl wget base-files colord unzip which \
-        librsvg-utils resvg ghostscript ImageMagick libwebp-tools python3-scour zip
+        inkscape ghostscript ImageMagick libwebp-tools python3-scour zip
         elif dnf --version >/dev/null 2>&1;
           then
           echo -e "\033[1;36m[1]\033[0m Install depedencies > RPM distro"
           mkdir -pv $TMP
           yum install sudo curl wget fedora-release colord unzip which \
-          librsvg2 ghostscript ImageMagick libwebp-tools python3-scour zip
+          inkscape ghostscript ImageMagick libwebp-tools python3-scour zip
         elif pacman --version >/dev/null 2>&1;
           then
           echo -e "\033[1;36m[1]\033[0m Install depedencies > Pacman distro"
           mkdir -pv $TMP
           pacman -Syy;
           pacman -S sudo curl wget lsb-release colord unzip which \
-          librsvg ghostscript imagemagick libwebp \
+          inkscape ghostscript imagemagick libwebp \
           poppler poppler-glib poppler-qt5 scour zip
         elif apt --version >/dev/null 2>&1;
           then
@@ -89,13 +89,13 @@ for arg in "$@"; do
           mkdir -pv $TMP
           apt -y update;
           apt install sudo curl wget lsb-release colord unzip \
-          librsvg resvg ghostscript imagemagick webp python3-scour zip
+          inkscape ghostscript imagemagick webp python3-scour zip
         elif zypper --version >/dev/null 2>&1;
           then
           echo -e "\033[1;36m[1]\033[0m Install depedencies > Zypper distro"
           mkdir -pv $TMP
           zypper install sudo curl wget lsb-release colord unzip which \
-          librsvg ghostscript ImageMagick libwebp-tools python3-scour zip
+          inkscape ghostscript ImageMagick libwebp-tools python3-scour zip
         else
           echo -e "\033[1;36m[1]\033[0m Install depedencies > What your os?"
         fi
@@ -213,16 +213,8 @@ check_file() {
   fi
 }
 
-optimized_svg() {
-  usvg --keep-named-groups $SOURCE $OPTIM_SOURCE
-}
-
-rm_optimized_svg() {
-  rm $OPTIM_SOURCE
-}
-
 id() {
-  inkscape -S $SOURCE | grep $IDPATTERN | cut -d "," -f 1
+  rendersvg --query-all "$SOURCE" | grep "$IDPATTERN" | cut -d "," -f 1
 }
 
 check_id() {
@@ -230,12 +222,12 @@ check_id() {
   if [ -z $IDPATTERN ]; then
     echo -e ""
     echo -e "\033[1;91m[FAILED]\033[0m The ID object is empty."
-    exit;
+    rm_optimized_svg; exit;
     # check wrong id
     elif [ -z "$(id)" ]; then
     echo -e ""
     echo -e "\033[1;91m[FAILED]\033[0m Similar ID object \033[0;36m$IDPATTERN\033[0m was not found."
-    exit;
+    rm_optimized_svg; exit;
     else
     echo >/dev/null 2>&1;
   fi
@@ -307,6 +299,14 @@ check_file
 check_id
 check_depedencies
 
+optimized_svg() {
+  scour -q -i $SOURCE -o $OPTIM_SOURCE >/dev/null 2>&1
+}
+
+rm_optimized_svg() {
+  rm $OPTIM_SOURCE >/dev/null 2>&1
+}
+
 eps_validator() {
   optimized_svg
 
@@ -336,6 +336,14 @@ eps_validator() {
 
   check_mesh_gradient() {
   cat $OPTIM_SOURCE | grep -oE '<meshgradient id="[^ ]*"' | sed 's/<meshgradient id="//g' | tr -d '")' | sort -u | xargs
+  }
+
+  check_clip_path() {
+  cat $OPTIM_SOURCE | grep -oE '<clipPath id="[^ ]*"' | sed 's/<clipPath id="//g' | tr -d '")' | sort -u | xargs
+  }
+
+  check_mask() {
+  cat $OPTIM_SOURCE | grep -oE '<mask id="[^ ]*"' | sed 's/<mask id="//g' | tr -d '")' | sort -u | xargs
   }
 
   if [ $(echo -n $(check_fill_opacity) | wc -c) -eq 0 ]; then
@@ -373,18 +381,28 @@ eps_validator() {
     else
     echo -e "Mesh Gradient: \t\t\033[1;33m$(check_mesh_gradient) \033[0m"
   fi
-  if [ $(echo -n $(check_fill_opacity) $(check_filter) $(check_pattern) $(check_image) $(check_linear_gradient) $(check_radial_gradient) $(check_mesh_gradient) | wc -c) -eq 0 ]; then
+  if [ $(echo -n $(check_clip_path) | wc -c) -eq 0 ]; then
+    echo -e >/dev/null 2>&1
+    else
+    echo -e "Clip Path: \t\t\033[1;33m$(check_clip_path) \033[0m"
+  fi
+  if [ $(echo -n $(check_mask) | wc -c) -eq 0 ]; then
+    echo -e >/dev/null 2>&1
+    else
+    echo -e "Mask Object: \t\t\033[1;33m$(check_mask) \033[0m"
+  fi
+  if [ $(echo -n $(check_fill_opacity) $(check_filter) $(check_pattern) $(check_image) $(check_linear_gradient) $(check_radial_gradient) $(check_mesh_gradient) $(check_clip_path) $(check_mask) | wc -c) -eq 0 ]; then
     echo -e "\033[1;36m[VALID]\033[0m $SOURCE supports EPS8"
     else
     echo -e ""
-    echo -e "\033[1;33m[WARNING]\033[0m $SOURCE maybe is not supports EPS8"
+    echo -e "\033[1;33m[WARNING]\033[0m $SOURCE allows some elements in it to be raster"
     echo -e ""
     read -e -p "Are you sure continue? [y/N]: " CONTINUE
     if [[ $CONTINUE =~ ^[Yy]$ ]]; then
       echo -e >/dev/null 2>&1
       else
       echo -e ""
-      exit;
+      rm_optimized_svg; exit;
     fi
   fi
 }
@@ -398,7 +416,7 @@ to_png() {
       --export-type=png \
       --export-dpi=$DPI \
       --export-filename="$DIRECTORY/$CACHE/$ID_LIST.png" \
-      "$OPTIM_SOURCE" >/dev/null 2>&1
+      $SOURCE >/dev/null 2>&1
   done
 }
 
@@ -411,7 +429,7 @@ to_svg() {
       --export-type=svg \
       --export-plain-svg \
       --export-filename="$DIRECTORY/$CACHE/$ID_LIST.svg" \
-      "$OPTIM_SOURCE" >/dev/null 2>&1
+      $SOURCE >/dev/null 2>&1
   done
 }
 
@@ -425,10 +443,11 @@ to_eps() {
       --export-text-to-path \
       --export-ignore-filters \
       --export-filename="$DIRECTORY/$CACHE/$ID_LIST.eps" \
-      "$OPTIM_SOURCE" >/dev/null 2>&1
+      $SOURCE >/dev/null 2>&1
   done
 }
 
+# For pdf, ai and psd
 to_pdf() {
   for ID_LIST in $(id); do
     inkscape \
@@ -439,7 +458,7 @@ to_pdf() {
       --export-text-to-path \
       --export-ignore-filters \
       --export-filename="$DIRECTORY/$CACHE/$ID_LIST.pdf" \
-      "$OPTIM_SOURCE" >/dev/null 2>&1
+      $SOURCE >/dev/null 2>&1
   done
 }
 
@@ -507,16 +526,43 @@ do
         echo -e "\033[1;91m[FAILED]\033[0m Marketplace not support."
         exit
       fi
+      # shutterstock and flaticon no need dpi
+      if [ $MARKET -ge 9 ]; then
+        echo -e ""  >/dev/null 2>&1
+        # marketplace 1-5 need dpi
+        elif  [ $MARKET -le 8 ]; then
+          echo -e ""
+          echo -e "Preview DPI:"
+          echo -e "  \033[1;33m[1] 96\033[0m"
+          echo -e "  \033[1;33m[2] 300\033[0m"
+          echo -e "  \033[1;33m[3] 600\033[0m"
+          read -e -p "Number: " DPI_NUM
+          if [ -z $DPI_NUM ]; then
+            echo -e "\033[1;91m[FAILED]\033[0m Dpi is empty."
+            exit
+            elif [ $DPI_NUM -eq 1 ]; then
+            DPI="96"
+            elif [ $DPI_NUM -eq 2 ]; then
+            DPI="300"
+            elif [ $DPI_NUM -eq 3 ]; then
+            DPI="600"
+            else
+            echo -e "\033[1;91m[FAILED]\033[0m $DPI dpi not recommended."
+            exit
+          fi
+      fi
+      echo -e ""
       read -e -p "Folder Output: " -i "$MARKETNAME" DIRECTORY
-      if [ -z $DIRECTORY ]; then
+      if [ -z "$DIRECTORY" ]; then
         echo -e "\033[1;91m[FAILED]\033[0m Folder output is empty."
         exit
       fi
       loading
-      mkdir -p "'$DIRECTORY'/$CACHE"
+      mkdir -p "$DIRECTORY/$CACHE"
       optimized_svg
       #convert to png and pdf default (pngtree)
-      for id in $(inkscape -S $OPTIM_SOURCE | grep $IDPATTERN | cut -d "," -f 1); do
+      for id in $(inkscape -S $OPTIM_SOURCE | grep $IDPATTERN | cut -d "," -f 1)
+      do
         # for market < 8 with export image preview
         if [ $MARKET -le 8 ]; then
         mkdir -p "$DIRECTORY/$CACHE/$id"
@@ -540,16 +586,17 @@ do
           --export-filename="$DIRECTORY/$CACHE/$id/$id.eps" \
           $OPTIM_SOURCE >/dev/null 2>&1
         # for shuttestock
-        elif [ $MARKET -eq 9 ]; then
-          to_eps
+          elif [ $MARKET -eq 9 ]; then
+            to_eps
         # for flaticon
-        elif [ $MARKET -eq 10 ]; then
-          to_svg
-        else
-        exit
+          elif [ $MARKET -eq 10 ]; then
+            to_svg
+          else
+          exit
         fi
       done
       # export image preview
+      cd "$DIRECTORY"/$CACHE
       if [ $MARKET -le 8 ]; then
         # if eps+jpg (freepik)
         if [ $MARKET -eq 2 ]; then
@@ -622,7 +669,7 @@ do
       elif [ $MARKET -eq 10 ]; then
         echo -e "" >/dev/null 2>&1
       fi
-      cd $DIRECTORY/$CACHE
+      # move to directory
       if [ $MARKET -le 8 ]; then
         if [ $MARKET -eq 1 ]; then
           for dir in $(ls | cut -f 1)
@@ -706,6 +753,27 @@ do
       check_id
       echo -e "Export to: \033[1;36mPNG\033[0m"
       echo -e ""
+      echo -e "DPI:"
+      echo -e "  \033[1;33m[1] 72\033[0m"
+      echo -e "  \033[1;33m[2] 96\033[0m \t\t(recommended)"
+      echo -e "  \033[1;33m[3] 300\033[0m"
+      echo -e "  \033[1;33m[4] 600\033[0m"
+      read -e -p "Number: " DPI_NUM
+      if [ -z $DPI_NUM ]; then
+        echo -e "\033[1;91m[FAILED]\033[0m Dpi is empty."
+        exit
+        elif [ $DPI_NUM -eq 1 ]; then
+        DPI="72"
+        elif [ $DPI_NUM -eq 2 ]; then
+        DPI="96"
+        elif [ $DPI_NUM -eq 3 ]; then
+        DPI="300"
+        elif [ $DPI_NUM -eq 4 ]; then
+        DPI="600"
+        else
+        echo -e "\033[1;91m[FAILED]\033[0m $DPI dpi not recommended."
+        exit
+      fi
       echo -e "Depth:"
       echo -e "  \033[1;33m[1] 8-bit\033[0m \t\t(recommended)"
       echo -e "  \033[1;33m[2] 16-bit\033[0m"
@@ -722,7 +790,7 @@ do
         exit
       fi
       read -e -p "Folder Output: " -i "Png" DIRECTORY
-      if [ -z $DIRECTORY ]; then
+      if [ -z "$DIRECTORY" ]; then
         echo -e "\033[1;91m[FAILED]\033[0m Folder output is empty."
         exit
       fi
@@ -730,11 +798,11 @@ do
       mkdir -p "$DIRECTORY/$CACHE"
       optimized_svg
       to_png
-      cd $DIRECTORY/$CACHE
+      cd "$DIRECTORY"/$CACHE
       for i in *.png;
-        do mv "$i" "../${i%.*}-$DEPTH-bit-96dpi.png"
+        do mv "$i" "../${i%.*}-$DEPTH-bit-$DPI-dpi.png"
       done
-      cd .. #&& rm -r $CACHE
+      cd .. && rm -r $CACHE
       cd ..
       rm_optimized_svg
       finish
@@ -743,6 +811,27 @@ do
    "Jpg")
       echo -e "Export to: \033[1;36mJPG\033[0m"
       echo -e ""
+      echo -e "DPI:"
+      echo -e "  \033[1;33m[1] 72\033[0m"
+      echo -e "  \033[1;33m[2] 96\033[0m \t\t(recommended)"
+      echo -e "  \033[1;33m[3] 300\033[0m"
+      echo -e "  \033[1;33m[4] 600\033[0m"
+      read -e -p "Number: " DPI_NUM
+      if [ -z $DPI_NUM ]; then
+        echo -e "\033[1;91m[FAILED]\033[0m Dpi is empty."
+        exit
+        elif [ $DPI_NUM -eq 1 ]; then
+        DPI="72"
+        elif [ $DPI_NUM -eq 2 ]; then
+        DPI="96"
+        elif [ $DPI_NUM -eq 3 ]; then
+        DPI="300"
+        elif [ $DPI_NUM -eq 4 ]; then
+        DPI="600"
+        else
+        echo -e "\033[1;91m[FAILED]\033[0m $DPI dpi not recommended."
+        exit
+      fi
       echo -e "Color Profile:"
       echo -e "  \033[1;33m[1] RGB > Default\033[0m \t(sRGB)"
       echo -e "  \033[1;33m[2] CMYK > Krita\033[0m \t(Chemical proof)"
@@ -767,15 +856,29 @@ do
         exit
       fi
       read -e -p "Folder Output: " -i "Jpg" DIRECTORY
-      if [ -z $DIRECTORY ]; then
+      if [ -z "$DIRECTORY" ]; then
         echo -e "\033[1;91m[FAILED]\033[0m Folder output is empty."
+        exit
+      fi
+      echo -e "Background:"
+      echo -e "  \033[1;33m[1]\033[0m White"
+      echo -e "  \033[1;33m[2]\033[0m Black"
+      read -e -p "Background: " -i "1" BGCOLOR
+      if [ -z $BGCOLOR ]; then
+        echo -e "\033[1;91m[FAILED]\033[0m Background color is empty."
+        elif [ $BGCOLOR -eq 1 ]; then
+        BGCOLOR="white"
+        elif [ $BGCOLOR -eq 2 ]; then
+        BGCOLOR="black"
+        else
+        echo -e "\033[1;91m[FAILED]\033[0m "$BGCOLOR" is not support."
         exit
       fi
       loading
       mkdir -p "$DIRECTORY/$CACHE"
       optimized_svg
       to_png
-      cd $DIRECTORY/$CACHE
+      cd "$DIRECTORY"/$CACHE
       if [ $ICC -eq 1 ]; then
         PROFILENAME="srgb"
         for i in *.png; do
@@ -784,9 +887,9 @@ do
             -flatten \
             -quality 100 \
             -colorspace sRGB \
-            -background none \
+            -background $BGCOLOR \
             -profile $SRGB \
-            "../${i%.*}-$PROFILENAME-96dpi.jpg";
+            "../${i%.*}-$PROFILENAME-$DPI-dpi.jpg";
         done
         elif [ $ICC -eq 2 ]; then
           PROFILENAME="cmyk-krita"
@@ -796,9 +899,9 @@ do
             -flatten \
             -quality 100 \
             -colorspace CMYK \
-            -background none \
+            -background $BGCOLOR \
             -profile $CHEMICAL_PROOF \
-            "../${i%.*}-$PROFILENAME-96dpi.jpg";
+            "../${i%.*}-$PROFILENAME-$DPI-dpi.jpg";
           done
         elif [ $ICC -eq 3 ]; then
           PROFILENAME="cmyk-generic"
@@ -808,9 +911,9 @@ do
             -flatten \
             -quality 100 \
             -colorspace CMYK \
-            -background none \
+            -background $BGCOLOR \
             -profile $SWOP2006_COATED3V2 \
-            "../${i%.*}-$PROFILENAME-96dpi.jpg";
+            "../${i%.*}-$PROFILENAME-$DPI-dpi.jpg";
           done
         elif [ $ICC -eq 4 ]; then
           PROFILENAME="cmyk-corel"
@@ -820,9 +923,9 @@ do
             -flatten \
             -quality 100 \
             -colorspace CMYK \
-            -background none \
+            -background $BGCOLOR \
             -profile $JAPANCOLOR2001COATED \
-            "../${i%.*}-$PROFILENAME-96dpi.jpg";
+            "../${i%.*}-$PROFILENAME-$DPI-dpi.jpg";
           done
         elif [ $ICC -eq 5 ]; then
           PROFILENAME="cmyk-adobe"
@@ -832,9 +935,9 @@ do
             -flatten \
             -quality 100 \
             -colorspace CMYK \
-            -background none \
+            -background $BGCOLOR \
             -profile $USWEBCOATEDSWOP \
-            "../${i%.*}-$PROFILENAME-96dpi.jpg";
+            "../${i%.*}-$PROFILENAME-$DPI-dpi.jpg";
           done
         else
           echo -e "\033[1;91m[FAILED]\033[0m Color Profile is not support."
@@ -848,6 +951,27 @@ do
     "Tif")
       echo -e "Export to: \033[1;36mTIF\033[0m"
       echo -e ""
+      echo -e "DPI:"
+      echo -e "  \033[1;33m[1] 72\033[0m"
+      echo -e "  \033[1;33m[2] 96\033[0m \t\t(recommended)"
+      echo -e "  \033[1;33m[3] 300\033[0m"
+      echo -e "  \033[1;33m[4] 600\033[0m"
+      read -e -p "Number: " DPI_NUM
+      if [ -z $DPI_NUM ]; then
+        echo -e "\033[1;91m[FAILED]\033[0m Dpi is empty."
+        exit
+        elif [ $DPI_NUM -eq 1 ]; then
+        DPI="72"
+        elif [ $DPI_NUM -eq 2 ]; then
+        DPI="96"
+        elif [ $DPI_NUM -eq 3 ]; then
+        DPI="300"
+        elif [ $DPI_NUM -eq 4 ]; then
+        DPI="600"
+        else
+        echo -e "\033[1;91m[FAILED]\033[0m $DPI dpi not recommended."
+        exit
+      fi
       echo -e "Depth:"
       echo -e "  \033[1;33m[1] 8-bit\033[0m \t\t(recommended)"
       echo -e "  \033[1;33m[2] 16-bit\033[0m"
@@ -887,15 +1011,29 @@ do
         exit
       fi
       read -e -p "Folder Output: " -i "Tif" DIRECTORY
-      if [ -z $DIRECTORY ]; then
+      if [ -z "$DIRECTORY" ]; then
         echo -e "\033[1;91m[FAILED]\033[0m Folder output is empty."
+        exit
+      fi
+      echo -e "Background:"
+      echo -e "  \033[1;33m[1]\033[0m White"
+      echo -e "  \033[1;33m[2]\033[0m Black"
+      read -e -p "Background: " -i "1" BGCOLOR
+      if [ -z $BGCOLOR ]; then
+        echo -e "\033[1;91m[FAILED]\033[0m Background color is empty."
+        elif [ $BGCOLOR -eq 1 ]; then
+        BGCOLOR="white"
+        elif [ $BGCOLOR -eq 2 ]; then
+        BGCOLOR="black"
+        else
+        echo -e "\033[1;91m[FAILED]\033[0m "$BGCOLOR" is not support."
         exit
       fi
       loading
       mkdir -p "$DIRECTORY/$CACHE"
       optimized_svg
       to_png
-      cd $DIRECTORY/$CACHE
+      cd "$DIRECTORY"/$CACHE
       if [ $ICC -eq 1 ]; then
         PROFILENAME="srgb"
         for i in *.png; do
@@ -904,9 +1042,9 @@ do
             -flatten \
             -quality 100 \
             -colorspace sRGB \
-            -background none \
+            -background $BGCOLOR \
             -profile $SRGB \
-            "../${i%.*}-$PROFILENAME-96dpi.tif";
+            "../${i%.*}-$PROFILENAME-$DPI-dpi.tif";
         done
         elif [ $ICC -eq 2 ]; then
           PROFILENAME="cmyk-krita"
@@ -916,9 +1054,9 @@ do
             -flatten \
             -quality 100 \
             -colorspace CMYK \
-            -background none \
+            -background $BGCOLOR \
             -profile $CHEMICAL_PROOF \
-            "../${i%.*}-$PROFILENAME-96dpi.tif";
+            "../${i%.*}-$PROFILENAME-$DPI-dpi.tif";
           done
         elif [ $ICC -eq 3 ]; then
           PROFILENAME="cmyk-generic"
@@ -928,9 +1066,9 @@ do
             -flatten \
             -quality 100 \
             -colorspace CMYK \
-            -background none \
+            -background $BGCOLOR \
             -profile $SWOP2006_COATED3V2 \
-            "../${i%.*}-$PROFILENAME-96dpi.tif";
+            "../${i%.*}-$PROFILENAME-$DPI-dpi.tif";
           done
         elif [ $ICC -eq 4 ]; then
           PROFILENAME="cmyk-corel"
@@ -940,9 +1078,9 @@ do
             -flatten \
             -quality 100 \
             -colorspace CMYK \
-            -background none \
+            -background $BGCOLOR \
             -profile $JAPANCOLOR2001COATED \
-            "../${i%.*}-$PROFILENAME-96dpi.tif";
+            "../${i%.*}-$PROFILENAME-$DPI-dpi.tif";
           done
         elif [ $ICC -eq 5 ]; then
           PROFILENAME="cmyk-adobe"
@@ -952,9 +1090,9 @@ do
             -flatten \
             -quality 100 \
             -colorspace CMYK \
-            -background none \
+            -background $BGCOLOR \
             -profile $USWEBCOATEDSWOP \
-            "../${i%.*}-$PROFILENAME-96dpi.tif";
+            "../${i%.*}-$PROFILENAME-$DPI-dpi.tif";
           done
         else
           echo -e "\033[1;91m[FAILED]\033[0m Color Profile is not support."
@@ -984,6 +1122,27 @@ do
           exit
         fi
         elif [ $output -eq 2 ]; then
+          echo -e "DPI:"
+          echo -e "  \033[1;33m[1] 72\033[0m"
+          echo -e "  \033[1;33m[2] 96\033[0m \t\t(recommended)"
+          echo -e "  \033[1;33m[3] 300\033[0m"
+          echo -e "  \033[1;33m[4] 600\033[0m"
+          read -e -p "Number: " DPI_NUM
+          if [ -z $DPI_NUM ]; then
+            echo -e "\033[1;91m[FAILED]\033[0m Dpi is empty."
+            exit
+            elif [ $DPI_NUM -eq 1 ]; then
+            DPI="72"
+            elif [ $DPI_NUM -eq 2 ]; then
+            DPI="96"
+            elif [ $DPI_NUM -eq 3 ]; then
+            DPI="300"
+            elif [ $DPI_NUM -eq 4 ]; then
+            DPI="600"
+            else
+            echo -e "\033[1;91m[FAILED]\033[0m $DPI dpi not recommended."
+            exit
+          fi
           echo -e "Color Profile:"
           echo -e "  \033[1;33m[1] RGB > Default\033[0m \t(sRGB)"
           echo -e "  \033[1;33m[2] CMYK > Krita\033[0m \t(Chemical proof)"
@@ -1012,7 +1171,7 @@ do
         exit
       fi
       read -e -p "Folder Output: " -i "Pdf" DIRECTORY
-      if [ -z $DIRECTORY ]; then
+      if [ -z "$DIRECTORY" ]; then
         echo -e "\033[1;91m[FAILED]\033[0m Folder output is empty."
         exit
       fi
@@ -1029,7 +1188,7 @@ do
       #convert vector
       if [ $output -eq 1 ]; then
         to_svg
-        cd $DIRECTORY/$CACHE
+        cd "$DIRECTORY"/$CACHE
         if [ $COLOR -eq 1 ]; then
           PROFILENAME="srgb"
           for i in *.svg;
@@ -1051,9 +1210,9 @@ do
           elif [ $COLOR -eq 2 ]; then
             PROFILENAME="cmyk"
             for i in *.svg;
-            do cat "$i" | inkscape --pipe -C \
-            -o "${i%.*}.pdf" \
-            >/dev/null 2>&1
+          do cat "$i" | inkscape --pipe -C \
+          -o "${i%.*}.pdf" \
+          >/dev/null 2>&1
           done
           rm *.svg
           DEVICE="pdfwrite"
@@ -1082,7 +1241,7 @@ do
           if [ $MERGE == 'y' ]; then
             PROFILENAME="srgb"
             to_png
-            cd $DIRECTORY/$CACHE
+            cd "$DIRECTORY"/$CACHE
             for i in *.png; do
               convert "$i" \
                 -depth 8 \
@@ -1097,27 +1256,27 @@ do
             # convert merge
             gs -q -dSAFER -dBATCH -dNOPAUSE -dNOCACHE \
               -sDEVICE=pdfwrite \
-              -sOutputFile=../../$DIRECTORY-merge-raster-$PROFILENAME-96dpi.pdf \
+              -sOutputFile=../../$DIRECTORY-merge-raster-$PROFILENAME-$DPI-dpi.pdf \
               *.pdf;
             cd ..
           else
             PROFILENAME="srgb"
             to_png
-            cd $DIRECTORY/$CACHE
+            cd "$DIRECTORY"/$CACHE
             for i in *.png; do
               convert "$i" \
                 -quality 100 \
                 -colorspace sRGB \
                 -depth 8 \
                 -profile $SRGB \
-                "../${i%.*}-raster-$PROFILENAME-96dpi.pdf";
+                "../${i%.*}-raster-$PROFILENAME-$DPI-dpi.pdf";
             done
           fi
         elif [ $ICC -eq 2 ]; then
           if [ $MERGE == 'y' ]; then
             PROFILENAME="cmyk-krita"
             to_png
-            cd $DIRECTORY/$CACHE
+            cd "$DIRECTORY"/$CACHE
             for i in *.png; do
               convert "$i" \
                 -depth 8 \
@@ -1132,27 +1291,27 @@ do
             # convert merge
             gs -q -dSAFER -dBATCH -dNOPAUSE -dNOCACHE \
               -sDEVICE=pdfwrite \
-              -sOutputFile=../../$DIRECTORY-merge-raster-$PROFILENAME-96dpi.pdf \
+              -sOutputFile=../../$DIRECTORY-merge-raster-$PROFILENAME-$DPI-dpi.pdf \
           *.pdf;
             cd ..
           else
             PROFILENAME="cmyk-krita"
             to_png
-            cd $DIRECTORY/$CACHE
+            cd "$DIRECTORY"/$CACHE
             for i in *.png; do
               convert "$i" \
               -depth 8 \
               -quality 100 \
               -colorspace CMYK \
               -profile $CHEMICAL_PROOF \
-              "../${i%.*}-raster-$PROFILENAME-96dpi.pdf";
+              "../${i%.*}-raster-$PROFILENAME-$DPI-dpi.pdf";
             done
           fi
         elif [ $ICC -eq 3 ]; then
           if [ $MERGE == 'y' ]; then
             PROFILENAME="cmyk-generic"
             to_png
-            cd $DIRECTORY/$CACHE
+            cd "$DIRECTORY"/$CACHE
             for i in *.png; do
               convert "$i" \
               -depth 8 \
@@ -1167,27 +1326,27 @@ do
             # convert merge
             gs -q -dSAFER -dBATCH -dNOPAUSE -dNOCACHE \
               -sDEVICE=pdfwrite \
-              -sOutputFile=../../$DIRECTORY-merge-raster-$PROFILENAME-96dpi.pdf \
+              -sOutputFile=../../$DIRECTORY-merge-raster-$PROFILENAME-$DPI-dpi.pdf \
           *.pdf;
             cd ..
           else
             PROFILENAME="cmyk-generic"
             to_png
-            cd $DIRECTORY/$CACHE
+            cd "$DIRECTORY"/$CACHE
             for i in *.png; do
               convert "$i" \
                 -depth 8 \
                 -quality 100 \
                 -colorspace CMYK \
                 -profile $SWOP2006_COATED3V2 \
-                "../${i%.*}-raster-$PROFILENAME-96dpi.pdf";
+                "../${i%.*}-raster-$PROFILENAME-$DPI-dpi.pdf";
             done
           fi
         elif [ $ICC -eq 4 ]; then
           if [ $MERGE == 'y' ]; then
             PROFILENAME="cmyk-corel"
             to_png
-            cd $DIRECTORY/$CACHE
+            cd "$DIRECTORY"/$CACHE
             for i in *.png; do
               convert "$i" \
                 -depth 8 \
@@ -1202,27 +1361,27 @@ do
             # convert merge
             gs -q -dSAFER -dBATCH -dNOPAUSE -dNOCACHE \
               -sDEVICE=pdfwrite \
-              -sOutputFile=../../$DIRECTORY-merge-raster-$PROFILENAME-96dpi.pdf \
+              -sOutputFile=../../$DIRECTORY-merge-raster-$PROFILENAME-$DPI-dpi.pdf \
               *.pdf;
             cd ..
           else
             PROFILENAME="cmyk-corel"
             to_png
-            cd $DIRECTORY/$CACHE
+            cd "$DIRECTORY"/$CACHE
             for i in *.png; do
               convert "$i" \
                 -depth 8 \
                 -quality 100 \
                 -colorspace CMYK \
                 -profile $JAPANCOLOR2001COATED \
-                "../${i%.*}-raster-$PROFILENAME-96dpi.pdf";
+                "../${i%.*}-raster-$PROFILENAME-$DPI-dpi.pdf";
             done
           fi
         elif [ $ICC -eq 5 ]; then
           if [ $MERGE == 'y' ]; then
             PROFILENAME="cmyk-adobe"
             to_png
-            cd $DIRECTORY/$CACHE
+            cd "$DIRECTORY"/$CACHE
             for i in *.png; do
               convert "$i" \
                 -depth 8 \
@@ -1237,20 +1396,20 @@ do
             # convert merge
             gs -q -dSAFER -dBATCH -dNOPAUSE -dNOCACHE \
               -sDEVICE=pdfwrite \
-              -sOutputFile=../../$DIRECTORY-merge-raster-$PROFILENAME-96dpi.pdf \
+              -sOutputFile=../../$DIRECTORY-merge-raster-$PROFILENAME-$DPI-dpi.pdf \
               *.pdf;
             cd ..
           else
             PROFILENAME="cmyk-adobe"
             to_png
-            cd $DIRECTORY/$CACHE
+            cd "$DIRECTORY"/$CACHE
             for i in *.png; do
               convert "$i" \
                 -quality 100 \
                 -colorspace CMYK \
                 -depth 8 \
                 -profile $USWEBCOATEDSWOP \
-                "../${i%.*}-raster-$PROFILENAME-96dpi.pdf";
+                "../${i%.*}-raster-$PROFILENAME-$DPI-dpi.pdf";
             done
           fi
         else
@@ -1271,7 +1430,7 @@ do
       echo -e "Export to: \033[1;36mSVG\033[0m"
       echo -e ""
       read -e -p "Folder Output: " -i "Svg" DIRECTORY
-      if [ -z $DIRECTORY ]; then
+      if [ -z "$DIRECTORY" ]; then
         echo -e "\033[1;91m[FAILED]\033[0m Folder output is empty."
         exit
       fi
@@ -1279,8 +1438,7 @@ do
       mkdir -p "$DIRECTORY/$CACHE"
       optimized_svg
       to_svg
-      cd $DIRECTORY/$CACHE
-      ##---------------
+      cd "$DIRECTORY"/$CACHE
       mv *.svg ..
       cd .. && rm -r $CACHE
       cd ..
@@ -1294,7 +1452,7 @@ do
       eps_validator
       echo -e ""
       read -e -p "Folder Output: " -i "Eps" DIRECTORY
-      if [ -z $DIRECTORY ]; then
+      if [ -z "$DIRECTORY" ]; then
         echo -e "\033[1;91m[FAILED]\033[0m Folder output is empty."
         exit
       fi
@@ -1302,7 +1460,7 @@ do
       mkdir -p "$DIRECTORY/$CACHE"
       optimized_svg
       to_eps
-      cd $DIRECTORY/$CACHE
+      cd "$DIRECTORY"/$CACHE
       PROFILENAME="srgb"
       for i in *.eps;
         do mv "$i" "../${i%.*}-$PROFILENAME.eps"
@@ -1328,7 +1486,7 @@ do
         exit
       fi
       read -e -p "Folder Output: " -i "Ai" DIRECTORY
-      if [ -z $DIRECTORY ]; then
+      if [ -z "$DIRECTORY" ]; then
         echo -e "\033[1;91m[FAILED]\033[0m Folder output is empty."
         exit
       fi
@@ -1336,7 +1494,7 @@ do
       mkdir -p "$DIRECTORY/$CACHE"
       optimized_svg
       to_pdf
-      cd $DIRECTORY/$CACHE
+      cd "$DIRECTORY"/$CACHE
       #srgb
       if [ $COLOR -eq 1 ]; then
         PROFILENAME="srgb"
@@ -1391,7 +1549,7 @@ do
         exit
       fi
       read -e -p "Folder Output: " -i "Psd" DIRECTORY
-      if [ -z $DIRECTORY ]; then
+      if [ -z "$DIRECTORY" ]; then
         echo -e "\033[1;91m[FAILED]\033[0m Folder output is empty."
         exit
       fi
@@ -1399,7 +1557,7 @@ do
       mkdir -p "$DIRECTORY/$CACHE"
       optimized_svg
       to_pdf
-      cd $DIRECTORY/$CACHE
+      cd "$DIRECTORY"/$CACHE
       #srgb
       if [ $COLOR -eq 1 ]; then
         PROFILENAME="srgb"
@@ -1435,22 +1593,42 @@ do
     "Webp")
       echo -e "Export to: \033[1;36mWEBP\033[0m"
       echo -e ""
+      echo -e "DPI:"
+      echo -e "  \033[1;33m[1] 72\033[0m"
+      echo -e "  \033[1;33m[2] 96\033[0m \t\t(recommended)"
+      echo -e "  \033[1;33m[3] 300\033[0m"
+      echo -e "  \033[1;33m[4] 600\033[0m"
+      read -e -p "Number: " DPI_NUM
+      if [ -z $DPI_NUM ]; then
+        echo -e "\033[1;91m[FAILED]\033[0m Dpi is empty."
+        exit
+        elif [ $DPI_NUM -eq 1 ]; then
+        DPI="72"
+        elif [ $DPI_NUM -eq 2 ]; then
+        DPI="96"
+        elif [ $DPI_NUM -eq 3 ]; then
+        DPI="300"
+        elif [ $DPI_NUM -eq 4 ]; then
+        DPI="600"
+        else
+        echo -e "\033[1;91m[FAILED]\033[0m $DPI dpi not recommended."
+        exit
+      fi
       read -e -p "Folder Output: " -i "Webp" DIRECTORY
-      if [ -z $DIRECTORY ]; then
+      if [ -z "$DIRECTORY" ]; then
         echo -e "\033[1;91m[FAILED]\033[0m Folder output is empty."
         exit
       fi
       loading
       mkdir -p "$DIRECTORY/$CACHE"
       optimized_svg
-      for id in $(id); do
-        inkscape -j -i $id \
-        -o "$DIRECTORY/$CACHE/$id.png" \
+      for id in $(inkscape -S $OPTIM_SOURCE | grep $IDPATTERN | cut -d "," -f 1); do
+        inkscape -j -i $id -o "$DIRECTORY/$CACHE/$id.png" \
         $OPTIM_SOURCE -d $DPI >/dev/null 2>&1
       done
-      cd $DIRECTORY/$CACHE
+      cd "$DIRECTORY"/$CACHE
       for i in *.png; do
-        cwebp -quiet "$i" -o "../${i%.*}-96dpi.webp";
+        cwebp -quiet "$i" -o "../${i%.*}-$DPI-dpi.webp";
       done
       cd .. && rm -r $CACHE
       cd ..
@@ -1461,7 +1639,7 @@ do
     "Cancel")
       clear
       echo -e "\033[1;33mEXIT!.\033[0m"
-      exit
+      rm_optimized_svg; exit;
       ;;
     *) echo -e "\033[1;91m[FAILED]\033[0m" $REPLY. Try again.;;
   esac
