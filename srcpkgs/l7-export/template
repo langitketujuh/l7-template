@@ -1,6 +1,6 @@
 # Template file for 'l7-export'
 pkgname=l7-export
-version=1.16.4
+version=1.16.5
 revision=1
 build_style=meta
 depends="curl wget colord unzip which ghostscript
