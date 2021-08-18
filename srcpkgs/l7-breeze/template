@@ -1,9 +1,9 @@
 # Template file for 'l7-breeze'
 pkgname=l7-breeze
 version=5.22.4
-revision=1
+revision=2
 build_style=meta
-depends="breeze"
+depends="breeze l7-breeze-gtk l7-breeze-icons"
 short_desc="LangitKetujuh patch for breeze package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"

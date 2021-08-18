@@ -1,6 +1,6 @@
 # Template file for 'l7-breeze-icons'
 pkgname=l7-breeze-icons
-version=5.84.0
+version=5.85.0
 revision=2
 depends="breeze-icons"
 short_desc="LangitKetujuh patch for breeze-icons package"
