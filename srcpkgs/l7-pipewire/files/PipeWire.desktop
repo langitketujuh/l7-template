@@ -1,7 +1,7 @@
 [Desktop Entry]
 Comment[en_US]=Server and user space API to deal with multimedia pipelines
 Comment=Server and user space API to deal with multimedia pipelines
-Exec=pipewire &; pipewire-pulse &
+Exec=pipewire
 GenericName[en_US]=
 GenericName=
 Icon=org.pulseaudio.pavucontrol

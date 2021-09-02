@@ -1,7 +1,7 @@
 # Template file for 'l7-runit-void'
 pkgname=l7-runit-void
 version=20210314
-revision=2
+revision=3
 build_style=meta
 depends="runit-void"
 short_desc="LangitKetujuh patch for runit-void package"
@@ -11,5 +11,4 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vinstall ${FILESDIR}/os-release 0644 etc os-release
-	vinstall ${FILESDIR}/97-acpilight.sh 0644 etc/runit/core-services 97-acpilight.sh
 }
