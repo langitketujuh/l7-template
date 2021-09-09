@@ -1,7 +1,7 @@
 # Template file for 'l7-pipewire'
 pkgname=l7-pipewire
-version=0.3.33
-revision=4
+version=0.3.34
+revision=1
 build_style=meta
 depends="pipewire"
 short_desc="LangitKetujuh patch for pipewire package"
