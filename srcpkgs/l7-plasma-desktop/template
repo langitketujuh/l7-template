@@ -1,9 +1,9 @@
 # Template file for 'l7-plasma-desktop'
 pkgname=l7-plasma-desktop
 version=5.22.5
-revision=1
+revision=2
 build_style=meta
-depends="plasma-desktop l7-plasma-framework"
+depends="plasma-desktop l7-plasma-framework l7-papirus-icon-theme"
 short_desc="LangitKetujuh patch for plasma-desktop package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"

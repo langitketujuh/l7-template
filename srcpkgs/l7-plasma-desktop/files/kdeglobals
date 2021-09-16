@@ -121,7 +121,7 @@ Theme=Papirus-Dark
 
 [KDE]
 ColorScheme=Breeze Dark
-LookAndFeelPackage=org.kde.langitketujuhdark.desktop
+LookAndFeelPackage=org.langitketujuh.id.desktop
 SingleClick=false
 contrast=4
 widgetStyle=Breeze
