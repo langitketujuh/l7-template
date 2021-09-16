@@ -1,9 +1,9 @@
 # Template file for 'l7-plasma-framework'
 pkgname=l7-plasma-framework
 version=5.85.0
-revision=1
+revision=2
 build_style=meta
-depends="plasma-framework"
+depends="plasma-framework l7-kservice"
 short_desc="LangitKetujuh patch for plasma-framework package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"
@@ -12,4 +12,5 @@ homepage="https://langitketujuh.id"
 do_install() {
 	vmkdir usr/share
 	vcopy ${FILESDIR}/plasma usr/share
+	vcopy ${FILESDIR}/desktop-directories usr/share
 }

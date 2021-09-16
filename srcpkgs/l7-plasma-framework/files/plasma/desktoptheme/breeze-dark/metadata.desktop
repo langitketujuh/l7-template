@@ -91,8 +91,8 @@ X-KDE-PluginInfo-EnabledByDefault=true
 X-Plasma-API=5.0
 
 [Wallpaper]
-defaultWallpaperTheme=LangitKetujuh-Dark
-defaultFileSuffix=.png
+defaultWallpaperTheme=LangitKetujuh
+defaultFileSuffix=.svg
 defaultWidth=1920
 defaultHeight=1080
 
