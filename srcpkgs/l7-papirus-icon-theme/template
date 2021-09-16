@@ -1,0 +1,14 @@
+# Template file for 'l7-papirus-icon-theme'
+pkgname=l7-papirus-icon-theme
+version=20210802
+revision=1
+depends="papirus-icon-theme"
+short_desc="LangitKetujuh patch for papirus-icon-theme package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+	vmkdir usr/share/icons/
+	vcopy ${FILESDIR}/Papirus usr/share/icons
+}
