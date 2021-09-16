@@ -148,7 +148,7 @@ check_patch() {
   fi
   # P07 breeze-icons
   if xbps-query breeze-icons | grep 'state: installed' >/dev/null 2>&1; then
-    if cat /usr/share/icons/breeze/places/64/start-here-kde.svg | grep -oE 'id="linearGradient2166"' >/dev/null 2>&1; then
+    if cat /usr/share/icons/breeze/places/64/start-here-kde.svg | grep -oE '#60a5fa' >/dev/null 2>&1; then
       echo >/dev/null 2>&1
       else
       P07="l7-breeze-icons"
