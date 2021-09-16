@@ -1,7 +1,7 @@
 # Template file for 'l7-breeze-icons'
 pkgname=l7-breeze-icons
 version=5.85.0
-revision=2
+revision=3
 depends="breeze-icons"
 short_desc="LangitKetujuh patch for breeze-icons package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
@@ -14,5 +14,13 @@ do_install() {
 		vmkdir usr/share/icons/${f}/places/96
 		vinstall ${FILESDIR}/64-start-here-kde.svg 0644 usr/share/icons/${f}/places/64 start-here-kde.svg
 		vinstall ${FILESDIR}/96-start-here-kde.svg 0644 usr/share/icons/${f}/places/96 start-here-kde.svg
+	done
+	for f in breeze breeze-dark; do
+		vmkdir usr/share/icons/${f}/places/32
+		vmkdir usr/share/icons/${f}/places/48
+		vmkdir usr/share/icons/${f}/places/64
+		vinstall ${FILESDIR}/32-langitketujuh.svg 0644 usr/share/icons/${f}/apps/32 langitketujuh.svg
+		vinstall ${FILESDIR}/48-langitketujuh.svg 0644 usr/share/icons/${f}/apps/48 langitketujuh.svg
+		vinstall ${FILESDIR}/64-langitketujuh.svg 0644 usr/share/icons/${f}/apps/64 langitketujuh.svg
 	done
 }
