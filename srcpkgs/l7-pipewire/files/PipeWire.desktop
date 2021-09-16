@@ -1,12 +1,15 @@
 [Desktop Entry]
 Comment[en_US]=Server and user space API to deal with multimedia pipelines
+Comment[id]=Peladen dan API ruang pengguna untuk menangani pipa multimedia
 Comment=Server and user space API to deal with multimedia pipelines
 Exec=pipewire
-GenericName[en_US]=
-GenericName=
+GenericName[en_US]=Server and user space API to deal with multimedia pipelines
+GenericName[id]=Peladen dan API ruang pengguna untuk menangani pipa multimedia
+GenericName=Server and user space API to deal with multimedia pipelines
 Icon=org.pulseaudio.pavucontrol
 MimeType=
 Name[en_US]=PipeWire
+Name[id]=PipeWire
 Name=PipeWire
 Path=
 StartupNotify=true

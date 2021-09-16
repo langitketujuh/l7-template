@@ -1,12 +1,15 @@
 [Desktop Entry]
 Comment[en_US]=Server and user space API to deal with multimedia pipelines - PulseAudio client
+Comment[id]=Peladen dan API ruang pengguna untuk menangani pipa multimedia - Klien PulseAudio
 Comment=Server and user space API to deal with multimedia pipelines - PulseAudio client
 Exec=pipewire-pulse
-GenericName[en_US]=
-GenericName=
+GenericName[en_US]=Server and user space API to deal with multimedia pipelines - PulseAudio client
+GenericName[id]=Peladen dan API ruang pengguna untuk menangani pipa multimedia - Klien PulseAudio
+GenericName=Server and user space API to deal with multimedia pipelines - PulseAudio client
 Icon=org.pulseaudio.pavucontrol
 MimeType=
 Name[en_US]=PipeWire Pulse
+Name[id]=PipeWire Pulse
 Name=PipeWire Pulse
 Path=
 StartupNotify=true
