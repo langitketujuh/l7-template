@@ -270,7 +270,7 @@ check_patch() {
   # P22 l7-plasma-framework
   if xbps-query plasma-framework | grep 'state: installed' >/dev/null 2>&1; then
     if cat /usr/share/plasma/desktoptheme/default/metadata.desktop \
-    | grep -oE 'defaultWallpaperTheme=LangitKetujuh-Dark' >/dev/null 2>&1; then
+    | grep -oE 'defaultWallpaperTheme=LangitKetujuh' >/dev/null 2>&1; then
       echo >/dev/null 2>&1
       else
       P22="l7-plasma-framework"
@@ -294,7 +294,7 @@ check_patch() {
   fi
   # P25 l7-sddm
   if xbps-query sddm | grep 'state: installed' >/dev/null 2>&1; then
-    if cat /etc/sddm.conf.d/kde_settings.conf | grep -oE 'Current=langitketujuh-dark' >/dev/null 2>&1; then
+    if cat /etc/sddm.conf.d/kde_settings.conf | grep -oE 'Current=langitketujuh' >/dev/null 2>&1; then
       echo >/dev/null 2>&1
       else
       P25="l7-sddm"
@@ -322,6 +322,14 @@ check_patch() {
       echo >/dev/null 2>&1
       else
       P28="runit-backlight"
+    fi
+  fi
+  # P29 l7-kservice
+  if xbps-query kservice | grep 'state: installed' >/dev/null 2>&1; then
+    if cat /usr/share/desktop-directories/applications.menu | grep -oE 'LangitKetujuh' >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      P29="l7-kservice"
     fi
   fi
 }
