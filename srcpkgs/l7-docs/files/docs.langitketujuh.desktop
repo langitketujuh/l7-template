@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[en_US]=Documentation for LangitKetujuh OS
+Comment[id]=Dokumentasi untuk LangitKetujuh OS
+Comment=Documentation for LangitKetujuh OS
+Exec=xdg-open /usr/share/doc/l7/docs/html/index.html
+GenericName[en_US]=Documentation for LangitKetujuh OS
+GenericName[id]=Dokumentasi untuk LangitKetujuh OS
+GenericName=Documentation for LangitKetujuh OS
+Icon=calibre-ebook-edit
+Name[en_US]=Guide Book
+Name[id]=Buku Petunjuk
+Name=Guide Book
+NoDisplay=false
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+Categories=LangitKetujuh;
+X-KDE-SubstituteUID=false
+X-KDE-Username=

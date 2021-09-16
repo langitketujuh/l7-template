@@ -1,0 +1,23 @@
+# Template file for 'l7-docs'
+pkgname=l7-docs
+version=2021.09.17
+revision=1
+wrksrc="docs-${version}"
+hostmakedepends="mdBook mdbook-linkcheck"
+depends="xdg-utils"
+short_desc="Documentation for LangitKetujuh OS"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="CC-BY-SA-4.0"
+homepage="https://gitlab.com/langitketujuh/book/docs"
+distfiles="https://al.quds.repo.langitketujuh.id/src/docs-${version}.tar.gz"
+checksum="ed02939d5e83f13d7aed5099f58f76720a3643f1a2d656699259804ae82a60a2"
+
+do_build() {
+	mdbook build
+}
+
+do_install() {
+	vmkdir usr/share/doc/l7/docs
+	vcopy ${wrksrc}/docs/html usr/share/doc/l7/docs
+	vinstall ${FILESDIR}/docs.langitketujuh.desktop 0644 usr/share/applications docs.langitketujuh.desktop
+}
