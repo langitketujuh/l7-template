@@ -10,7 +10,7 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="CC-BY-SA-4.0"
 homepage="https://gitlab.com/langitketujuh/book/docs"
 distfiles="https://al.quds.repo.langitketujuh.id/src/docs-${version}.tar.gz"
-checksum="ed02939d5e83f13d7aed5099f58f76720a3643f1a2d656699259804ae82a60a2"
+checksum="b48c4d4b05cea911ec769185dd85414b377bc587a68416c1d8f17a40dcf58a3d"
 
 do_build() {
 	mdbook build
