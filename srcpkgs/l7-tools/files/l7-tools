@@ -326,7 +326,7 @@ check_patch() {
   fi
   # P29 l7-kservice
   if xbps-query kservice | grep 'state: installed' >/dev/null 2>&1; then
-    if cat /usr/share/desktop-directories/applications.menu | grep -oE 'LangitKetujuh' >/dev/null 2>&1; then
+    if cat /etc/xdg/menus/applications.menu | grep -oE 'LangitKetujuh' >/dev/null 2>&1; then
       echo >/dev/null 2>&1
       else
       P29="l7-kservice"
