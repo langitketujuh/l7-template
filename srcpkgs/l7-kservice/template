@@ -1,7 +1,7 @@
 # Template file for 'l7-kservice'
 pkgname=l7-kservice
 version=5.85.0
-revision=1
+revision=2
 build_style=meta
 depends="kservice"
 short_desc="LangitKetujuh patch for kservice package"
@@ -11,5 +11,5 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vmkdir etc/xdg/menus
-	vinstall ${FILESDIR}/applications.menu 0644 usr/share/desktop-directories applications.menu
+	vinstall ${FILESDIR}/applications.menu 0644 etc/xdg/menus applications.menu
 }
