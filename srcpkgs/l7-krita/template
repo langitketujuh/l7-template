@@ -1,6 +1,6 @@
 # Template file for 'l7-krita'
 pkgname=l7-krita
-version=4.4.7
+version=4.4.8
 revision=1
 build_style=meta
 depends="krita gmic"
