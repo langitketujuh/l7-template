@@ -1,6 +1,6 @@
 # Template file for 'l7-gimp'
 pkgname=l7-gimp
-version=2.10.24
+version=2.10.28
 revision=1
 build_style=meta
 depends="gimp"
