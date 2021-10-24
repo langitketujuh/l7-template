@@ -1,6 +1,6 @@
 # Template file for 'l7-konsole'
 pkgname=l7-konsole
-version=21.08.1
+version=21.08.2
 revision=1
 build_style=meta
 depends="konsole"
