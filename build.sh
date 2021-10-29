@@ -40,8 +40,8 @@ shift $((OPTIND - 1))
 
 build_xbps(){
   XBPS_HOSTDIR="$HOST_DIR" ./xbps-src -m $MASTER_DIR pkg ${f}
-  xbps-rindex --privkey ~/.ssh/private.pem --sign --signedby "LangitKetujuh Linux" $HOST_DIR/binpkgs/
-  xbps-rindex --privkey ~/.ssh/private.pem --sign-pkg $HOST_DIR/binpkgs/${f}*.xbps
+  XBPS_TARGET_ARCH=$ARCH xbps-rindex --privkey ~/.ssh/privkey.pem --sign --signedby "LangitKetujuh Linux" $HOST_DIR/binpkgs/
+  XBPS_TARGET_ARCH=$ARCH xbps-rindex --privkey ~/.ssh/privkey.pem --sign-pkg $HOST_DIR/binpkgs/${f}*.xbps
 }
 
 generate_repodata(){
