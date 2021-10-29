@@ -1,0 +1,17 @@
+# Template file for 'l7-pkg-codec'
+pkgname=l7-pkg-codec
+version=20211029
+revision=1
+build_style=meta
+depends="alsa-utils bluez-alsa paprefs pipewire alsa-pipewire 
+  libjack-pipewire libspa-bluetooth libspa-jack libspa-v4l2
+  gstreamer1-pipewire pulseaudio-utils gst-plugins-base1
+  gst-plugins-good1 gst-plugins-ugly1 gst-plugins-bad1
+  gst-libav ffmpeg faac faad2 flac jasper lame libdca
+  libmpeg2 libmad libtheora libvorbis libXv wavpack x264
+  xvidcore gstreamer-vaapi alsa-plugins-ffmpeg phonon-qt5-backend-vlc
+  v4l2loopback v4l-utils"
+short_desc="LangitKetujuh packages for Audio and Video codec base depedencies"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="Public Domain"
+homepage="https://langitketujuh.id"
