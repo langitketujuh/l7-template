@@ -1,7 +1,7 @@
 # Template file for 'l7-tools'
 pkgname=l7-tools
-version=1.17.6
-revision=3
+version=1.17.7
+revision=1
 build_style=meta
 depends="wget unzip l7-base-files"
 short_desc="Configuring tool and installing third-party"

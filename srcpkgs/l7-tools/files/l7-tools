@@ -27,6 +27,9 @@ usage   : $NAME [option]
 option  :
           --update      -u    update system
           --remote      -r    remote from terminal
+          --downgrade   -d    downgrade & uninstall program
+          --help        -h    show this help
+          --version     -v    show $NAME version
 
         color profile:
           --adobe-icc   -a    install adobe icc
@@ -35,16 +38,6 @@ option  :
           --jpma-icc    -j    install jpma icc
           --vigc-icc    -g    install vigc icc
           --snap-icc    -g    install snap committee icc
-
-        from repo:
-          --wine-emu    -w    install wine emulator
-
-        plugin:
-          --separate+   -p    install separate+ gimp
-
-          --downgrade   -d    downgrade & uninstall program
-          --help        -h    show this help
-          --version     -v    show $NAME version
 
 EOF
 }
@@ -572,48 +565,6 @@ for arg in "$@"; do
                 else
                 echo -e "\033[1;91m[FAILED]\033[0m SNAP Committee icc not installed!"
                 exit;
-              fi
-            fi
-            ;;
-        --separate+|-p)
-            check_root
-            echo -e "\033[1;36m[1]\033[0m Install depedency"
-            xbps-install -Sy mesa-dri gimp gimp-python gimp-devel lcms lcms-devel gettext gettext-devel
-            echo -e "\033[1;36m[2]\033[0m Preparing new dir $TMP"
-            mkdir -p $TMP/separate+ >/dev/null 2>&1
-            cd $TMP/separate+
-            echo -e "\033[1;36m[3]\033[0m Download source code"
-            wget -ncv "https://osdn.net/projects/separate-plus/downloads/51630/separate%2B-0.5.9-alpha3.zip" -O "separate+-0.5.9-alpha3.zip" >/dev/null 2>&1
-            unzip -o -q separate+-0.5.9-alpha3.zip >/dev/null 2>&1
-            cd separate+-0.5.9/
-            echo -e "\033[1;36m[4]\033[0m Installing"
-            make >/dev/null 2>&1
-            make PREFIX="/usr" install >/dev/null 2>&1
-            install -dm755 /usr/share/gimp/2.0/scripts
-            install -m644 sample-scripts/* /usr/share/gimp/2.0/scripts
-            echo -e "\033[1;36m[FINISH]\033[0m Separate+ installed"
-            ;;
-        --wine-emu|-w)
-            check_root
-            if xbps-query -v -L | grep musl > $TMP/checkers ; then
-              echo -e "\033[1;36m[1]\033[0m Install Wine Windows for musl"
-              xbps-install -S libwine wine wine-common wine-gecko wine-tools wine-mono winetricks zenity glu
-              if wineserver -v > $TMP/checkers >/dev/null 2>&1; then
-              echo -e "\033[1;36m[FINISH]\033[0m Wine Windows installed"
-              else
-              echo -e "\033[1;91m[FAILED]\033[0m Wine is not installed";
-              exit;
-              fi
-            else
-              echo -e "\033[1;36m[1]\033[0m Install repo nonfree and multilib"
-              xbps-install -Sy void-repo-nonfree void-repo-multilib
-              echo -e "\033[1;36m[2]\033[0m Install Wine Windows for glibc"
-              xbps-install -S libwine libwine-32bit wine wine-32bit wine-common wine-gecko wine-tools wine-mono winetricks zenity glu-32bit
-              if wineserver -v > $TMP/checkers >/dev/null 2>&1; then
-              echo -e "\033[1;36m[FINISH]\033[0m Wine Windows installed"
-              else
-              echo -e "\033[1;91m[FAILED]\033[0m Wine is not installed";
-              exit;
               fi
             fi
             ;;
