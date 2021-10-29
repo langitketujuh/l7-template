@@ -6,7 +6,7 @@ INSTALLDIR=$(which basename)
 INKSCAPEDIR=$(which inkscape)
 VERSION="1.16.5"
 WEB="https://langitketujuh.id"
-LICENSE="GPL-2.0-only"
+LICENSE="GPL-3.0-only"
 
 TMP="/tmp"
 

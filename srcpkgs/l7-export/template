@@ -1,13 +1,13 @@
 # Template file for 'l7-export'
 pkgname=l7-export
 version=1.16.5
-revision=1
+revision=2
 build_style=meta
 depends="curl wget colord unzip which ghostscript
 	inkscape ImageMagick libwebp-tools zip"
 short_desc="Yet Another CLI Exporter"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
-license="GPL-2.0-only"
+license="GPL-3.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
