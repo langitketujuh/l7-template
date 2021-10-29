@@ -1,7 +1,7 @@
 # Template file for 'citramanik-qt'
 pkgname=citramanik-qt
 version=1.3.0
-revision=1
+revision=2
 build_style=python3-module
 hostmakedepends="ghostscript intltool kconfig kcoreaddons python3 pkg-config python3-lxml
  python3-setuptools python3-PyQt5-devel-tools python3-Pillow qt5-host-tools"
