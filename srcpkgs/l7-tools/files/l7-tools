@@ -5,6 +5,7 @@ NAME=$(basename "$0")
 LICENSE="GPL-2.0-only"
 TMP="/tmp"
 ANYKEY=$(echo -e 'Press any key to quit')
+VERSION="1.17.8"
 
 ARCH=$(uname -m)
 
@@ -634,11 +635,11 @@ for arg in "$@"; do
               xbps-remove -Ry blender synfigstudio opentoonz
             fi
             echo -e "\033[1;36m[10] Audio Production\033[0m"
-            echo -e "[*] Packages: \033[1;33mjack jack_capture sox audacity l7-audacity ardour l7-ardour kid3 soundkonverter\033[0m"
+            echo -e "[*] Packages: \033[1;33maudacity l7-audacity ardour l7-ardour kid3 soundkonverter lmms freepats cmt alsa-plugins-jack zita-ajbridge zita-alsa-pcmi zita-at1 zita-njbridge zita-resampler alsa-plugins-samplerate calf fftw rubberband librubberband ladspa-bs2b speex speexdsp mda-lv2 soundfont-fluid\033[0m"
             read -e -p "[*] Remove: [Y/n]: " AUDIO_PRO_PKGS
             if [[ $AUDIO_PRO_PKGS =~ ^[Yy]$ ]]; then
               echo -e "[*] Remove: \033[1;33mYes\033[0m"
-              xbps-remove -Ry jack jack_capture sox audacity l7-audacity ardour l7-ardour kid3 soundkonverter
+              xbps-remove -Ry audacity l7-audacity ardour l7-ardour kid3 soundkonverter lmms freepats cmt alsa-plugins-jack zita-ajbridge zita-alsa-pcmi zita-at1 zita-njbridge zita-resampler alsa-plugins-samplerate calf fftw rubberband librubberband ladspa-bs2b speex speexdsp mda-lv2 soundfont-fluid
             fi
             echo -e "\033[1;36m[11] Extra Google Fonts\033[0m"
             echo -e "[*] Packages: \033[1;33mgoogle-fonts-ttf\033[0m"
@@ -662,11 +663,11 @@ for arg in "$@"; do
               xbps-remove -Ry freecad LibreCAD
             fi
             echo -e "\033[1;36m[14] Program Compiler\033[0m"
-            echo -e "[*] Packages: \033[1;33mautomake bison fakeroot flex libtool m4 patch pkg-config qemu-user-static scons yasm pkgconf gcc-objc++ llvm clang icu cmake\033[0m"
+            echo -e "[*] Packages: \033[1;33mautomake bison fakeroot flex gdb libtool m4 patch pkg-config qemu-user-static scons yasm gcc-objc++ llvm clang icu cmake\033[0m"
             read -e -p "[*] Remove: [Y/n]: " COMPILER_PKGS
             if [[ $COMPILER_PKGS =~ ^[Yy]$ ]]; then
               echo -e "[*] Remove: \033[1;33mYes\033[0m"
-              xbps-remove -Ry automake bison fakeroot flex libtool m4 patch pkg-config qemu-user-static scons yasm pkgconf gcc-objc++ llvm clang icu cmake
+              xbps-remove -Ry automake bison fakeroot flex gdb libtool m4 patch pkg-config qemu-user-static scons yasm gcc-objc++ llvm clang icu cmake
             fi
             ;;
         --help|-h)

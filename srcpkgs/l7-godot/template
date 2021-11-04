@@ -1,7 +1,7 @@
 # Template file for 'l7-godot'
 pkgname=l7-godot
-version=3.3
-revision=2
+version=3.3.4
+revision=1
 depends="godot"
 short_desc="LangitKetujuh patch for godot package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"

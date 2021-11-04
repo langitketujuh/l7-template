@@ -39,8 +39,11 @@ shift $((OPTIND - 1))
 [ ! -x build.sh ] && exit 0
 
 build_xbps(){
+  # build masterdir
   XBPS_HOSTDIR="$HOST_DIR" ./xbps-src -m $MASTER_DIR pkg ${f}
+  # add signed by
   XBPS_TARGET_ARCH=$ARCH xbps-rindex --privkey ~/.ssh/privkey.pem --sign --signedby "LangitKetujuh Linux" $HOST_DIR/binpkgs/
+  # generate signature
   XBPS_TARGET_ARCH=$ARCH xbps-rindex --privkey ~/.ssh/privkey.pem --sign-pkg $HOST_DIR/binpkgs/${f}*.xbps
 }
 
@@ -67,6 +70,15 @@ elif [ "$ARCH" = i686 ]; then
     MASTER_DIR="masterdir-i686"
     HOST_DIR="$PWD/hostdir-i686"
     build_xbps
+  done
+  generate_repodata
+elif [ "$ARCH" = all ]; then
+  for a in x86_64 x86_64-musl i686; do
+    for f in $PACKAGES; do
+      MASTER_DIR="masterdir-${a}"
+      HOST_DIR="$PWD/hostdir-${a}"
+      build_xbps
+    done
   done
   generate_repodata
 else

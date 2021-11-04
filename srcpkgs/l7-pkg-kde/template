@@ -1,0 +1,16 @@
+# Template file for 'l7-pkg-kde'
+pkgname=l7-pkg-kde
+version=20211104
+revision=1
+build_style=meta
+depends="xdg-utils xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-kde
+  xdg-user-dirs xdg-user-dirs-gtk libappindicator sddm kde5 kdesu kde5-baseapps
+  kaccounts-integration kaccounts-providers kimageformats plasma-browser-integration
+  plasma-disks plasma-nm plasma-pa colord-kde gnome-color-manager kio-extras
+  kio-gdrive kcm-wacomtablet plasma-wayland-protocols kdegraphics-thumbnailers
+  ffmpegthumbnailer ffmpegthumbs ksuperkey kidentitymanagement
+  plasma-firewall accountsservice"
+short_desc="LangitKetujuh packages for KDE Plasma Applications base depedencies"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="Public Domain"
+homepage="https://langitketujuh.id"

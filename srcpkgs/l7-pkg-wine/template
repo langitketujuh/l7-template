@@ -1,6 +1,6 @@
 # Template file for 'l7-pkg-wine'
 pkgname=l7-pkg-wine
-version=20211029
+version=20211104
 revision=1
 build_style=meta
 short_desc="LangitKetujuh packages for Wine base depedencies"
@@ -13,7 +13,7 @@ case "$XBPS_TARGET_MACHINE" in
 		depends="wine wine-gecko wine-mono wine-tools winetricks protontricks libgcc libstdc++ libdrm libglvnd mesa-dri"
 		;;
 	x86_64*)
-		depends="wine wine-gecko wine-mono wine-tools winetricks protontricks libgcc libstdc++ libdrm libglvnd mesa-dri wine-32bit libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit mesa-dri-32bit"
+		depends="wine wine-gecko wine-mono wine-tools winetricks protontricks libgcc libstdc++ libdrm libglvnd mesa-dri wine-32bit libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit mesa-dri-32bit void-repo-multilib"
 		;;
 	i686*)
 		depends="wine wine-gecko wine-mono wine-tools winetricks protontricks libgcc libstdc++ libdrm libglvnd mesa-dri"

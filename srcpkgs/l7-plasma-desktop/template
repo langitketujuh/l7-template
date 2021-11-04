@@ -1,6 +1,6 @@
 # Template file for 'l7-plasma-desktop'
 pkgname=l7-plasma-desktop
-version=5.23.1
+version=5.23.2.1
 revision=1
 build_style=meta
 depends="plasma-desktop l7-plasma-framework l7-papirus-icon-theme"

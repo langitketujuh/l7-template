@@ -1,6 +1,6 @@
 # Template file for 'l7-pkg-codec'
 pkgname=l7-pkg-codec
-version=20211029
+version=20211104
 revision=1
 build_style=meta
 depends="alsa-utils bluez-alsa paprefs pipewire alsa-pipewire 
