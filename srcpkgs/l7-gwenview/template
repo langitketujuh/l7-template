@@ -1,6 +1,6 @@
 # Template file for 'l7-gwenview'
 pkgname=l7-gwenview
-version=21.08.2
+version=21.08.3
 revision=1
 build_style=meta
 depends="gwenview"
