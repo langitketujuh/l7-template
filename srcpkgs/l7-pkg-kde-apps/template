@@ -1,12 +1,12 @@
 # Template file for 'l7-pkg-kde-apps'
 pkgname=l7-pkg-kde-apps
-version=20211104
+version=20211110
 revision=1
 build_style=meta
 depends="konsole dolphin filelight kdeconnect print-manager spectacle
   ark k3b kwalletmanager kcalc kget okular ssr kmediaplayer elisa
   gwenview partitionmanager vlc bup kup kamoso skanlite krfb krdc
-  kolourpaint ktorrent kcharselect"
+  kolourpaint ktorrent kcharselect filelight"
 short_desc="LangitKetujuh packages for KDE Plasma base depedencies"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="Public Domain"
