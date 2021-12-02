@@ -593,11 +593,11 @@ for arg in "$@"; do
               xbps-remove -Ry digikam rawtherapee hugin Converseen
             fi
             echo -e "\033[1;36m[4] Non-linear Editor\033[0m"
-            echo -e "[*] Packages: \033[1;33mkdenlive handbrake\033[0m"
+            echo -e "[*] Packages: \033[1;33mkdenlive handbrake mkvtoolnix-gui\033[0m"
             read -e -p "[*] Remove: [Y/n]: " VIDEO_EDITOR_PKGS
             if [[ $VIDEO_EDITOR_PKGS =~ ^[Yy]$ ]]; then
               echo -e "[*] Remove: \033[1;33mYes\033[0m"
-              xbps-remove -Ry kdenlive handbrake
+              xbps-remove -Ry kdenlive handbrake mkvtoolnix-gui
             fi
             echo -e "\033[1;36m[5] Font Maker\033[0m"
             echo -e "[*] Packages: \033[1;33mfontforge\033[0m"
