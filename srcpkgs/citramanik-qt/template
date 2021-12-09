@@ -14,7 +14,7 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-3.0-or-later"
 homepage="https://citramanik.dev.is.my.id/"
 distfiles="https://github.com/devlovers-id/${pkgname}/archive/refs/tags/${version}.tar.gz"
-checksum=3e203e8883f53d5efce94c23f3743ce2f54ea18ba22b9dbed81b290eabbb4fa5
+checksum="3e203e8883f53d5efce94c23f3743ce2f54ea18ba22b9dbed81b290eabbb4fa5"
 
 python_version=3
 

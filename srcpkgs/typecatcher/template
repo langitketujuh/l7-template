@@ -11,7 +11,7 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/andrewsomething/typecatcher"
 distfiles="https://github.com/andrewsomething/typecatcher/archive/refs/tags/${version}.tar.gz"
-checksum=8b7b78bac166c64f12de1314e5aea2791cb5628ca27447eb29efc408c50c36e7
+checksum="8b7b78bac166c64f12de1314e5aea2791cb5628ca27447eb29efc408c50c36e7"
 
 pre_build() {
 	rm -rf apport
