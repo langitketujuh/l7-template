@@ -4,7 +4,7 @@ TITLE="LangitKetujuh Export"
 NAME=$(basename "$0")
 INSTALLDIR=$(which basename)
 INKSCAPEDIR=$(which inkscape)
-VERSION="1.16.5"
+VERSION="1.16.6"
 WEB="https://langitketujuh.id"
 LICENSE="GPL-3.0-only"
 
@@ -89,7 +89,7 @@ for arg in "$@"; do
           mkdir -pv $TMP
           apt -y update;
           apt install sudo curl wget lsb-release colord unzip \
-          inkscape ghostscript imagemagick webp python3-scour zip
+          inkscape ghostscript imagemagick webp python3-scour scour zip
         elif zypper --version >/dev/null 2>&1;
           then
           echo -e "\033[1;36m[1]\033[0m Install depedencies > Zypper distro"
@@ -165,11 +165,11 @@ for arg in "$@"; do
       ;;
     --deps|-d)
       echo -e "\033[1;33minkscape version: \033[0m"
-      if inkscape --version | grep "Inkscape 1.*" ;then
+      if inkscape --version | grep "Inkscape 1\.*" ;then
           echo >/dev/null 2>&1; else
           echo
           echo "$NAME version: v$VERSION"
-          echo "only for inkscape 1.x!";
+          echo "Only support for Inkscape 1.x!";
       fi
       echo
       echo -e "\033[1;33mConvert ImageMagick version: \033[0m"
@@ -234,62 +234,61 @@ check_id() {
 }
 
 check_depedencies() {
-  if inkscape --version >/dev/null 2>&1; then
+  if inkscape --version | grep "Inkscape 1\.*" >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
-    echo -e "\033[1;91m[FAILED]\033[0m inkscape is not already installed."
-    echo -e "Please run \033[1;33ml7-export --install\033[0m";
+    echo -e "\033[1;91m[FAILED]\033[0m Not detected Inkscape 1.x!"
     exit;
   fi
   if find . -name "$CHEMICAL_PROOF" -type f >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m Krita cmyk icm is not already installed."
-    echo -e "Please run \033[1;33ml7-export --install\033[0m";
+    echo -e "Please run \033[1;33msudo l7-export --install\033[0m";
     exit;
   fi
   if convert -version >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m ImageMagick is not already installed."
-    echo -e "Please run \033[1;33ml7-export --install\033[0m";
+    echo -e "Please run \033[1;33msudo l7-export --install\033[0m";
     exit;
   fi
   if gs --version >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m ghostscript is not already installed."
-    echo -e "Please run \033[1;33ml7-export --install\033[0m";
+    echo -e "Please run \033[1;33msudo l7-export --install\033[0m";
     exit;
   fi
   if cwebp -version >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m webp, libwebp or libwebp-tools is not already installed."
-    echo -e "Please run \033[1;33ml7-export --install\033[0m";
+    echo -e "Please run \033[1;33msudo l7-export --install\033[0m";
     exit;
   fi
   if find /usr/share/color/icc/adobe/ -name "*.icc" -type f >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m Adobe icc is not already installed."
-    echo -e "Please run \033[1;33ml7-export --install\033[0m";
+    echo -e "Please run \033[1;33msudo l7-export --install\033[0m";
     exit;
   fi
   if find /usr/share/color/icc/krita/ -name "*.icm" -type f >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m Krita cmyk icm is not already installed."
-    echo -e "Please run \033[1;33ml7-export --install\033[0m";
+    echo -e "Please run \033[1;33msudo l7-export --install\033[0m";
     exit;
   fi
   if find /usr/share/color/icc/idealliance/ -name "*.icc" -type f >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m Idealliance icc is not already installed."
-    echo -e "Please run \033[1;33ml7-export --install\033[0m";
+    echo -e "Please run \033[1;33msudo l7-export --install\033[0m";
     exit;
-    echo -e "Please run \033[1;33ml7-export --install\033[0m";
+    echo -e "Please run \033[1;33msudo l7-export --install\033[0m";
     exit;
   fi
 }
