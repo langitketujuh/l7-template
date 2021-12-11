@@ -1,6 +1,6 @@
 # Template file for 'l7-pkg-kde'
 pkgname=l7-pkg-kde
-version=20211104
+version=20211211
 revision=1
 build_style=meta
 depends="xdg-utils xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-kde
@@ -10,7 +10,7 @@ depends="xdg-utils xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-
   kio-gdrive kcm-wacomtablet plasma-wayland-protocols kdegraphics-thumbnailers
   ffmpegthumbnailer ffmpegthumbs ksuperkey kidentitymanagement
   plasma-firewall accountsservice"
-short_desc="LangitKetujuh packages for KDE Plasma Applications base depedencies"
+short_desc="KDE Plasma Applications - meta package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="Public Domain"
 homepage="https://langitketujuh.id"

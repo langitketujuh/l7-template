@@ -1,9 +1,9 @@
 # Template file for 'l7-pkg-wine'
 pkgname=l7-pkg-wine
-version=20211104
+version=20211211
 revision=1
 build_style=meta
-short_desc="LangitKetujuh packages for Wine base depedencies"
+short_desc="Run Microsoft Windows applications - meta package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="Public Domain"
 homepage="https://langitketujuh.id"

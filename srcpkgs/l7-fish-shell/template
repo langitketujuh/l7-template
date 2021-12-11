@@ -1,10 +1,10 @@
 # Template file for 'l7-fish-shell'
 pkgname=l7-fish-shell
 version=3.3.1
-revision=6
+revision=7
 build_style=meta
 depends="fish-shell"
-short_desc="LangitKetujuh patch for fish-shell package"
+short_desc="Additional configuration for fish-shell package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"
 homepage="https://langitketujuh.id"

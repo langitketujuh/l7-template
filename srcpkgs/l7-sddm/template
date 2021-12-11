@@ -1,10 +1,10 @@
 # Template file for 'l7-sddm'
 pkgname=l7-sddm
 version=0.19.0
-revision=5
+revision=6
 build_style=meta
 depends="sddm"
-short_desc="LangitKetujuh patch for sddm package"
+short_desc="Additional configuration for sddm package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"
 homepage="https://langitketujuh.id"

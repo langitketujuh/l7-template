@@ -1,10 +1,10 @@
 # Template file for 'l7-desktop-file-utils'
 pkgname=l7-desktop-file-utils
 version=0.26
-revision=1
+revision=2
 build_style=meta
 depends="desktop-file-utils"
-short_desc="LangitKetujuh patch for desktop-file-utils package"
+short_desc="Additional configuration for desktop-file-utils package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"
 homepage="https://langitketujuh.id"

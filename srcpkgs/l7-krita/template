@@ -1,10 +1,10 @@
 # Template file for 'l7-krita'
 pkgname=l7-krita
 version=4.4.8
-revision=1
+revision=2
 build_style=meta
 depends="krita gmic"
-short_desc="LangitKetujuh patch for krita package"
+short_desc="Additional configuration for krita package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"
 homepage="https://langitketujuh.id"

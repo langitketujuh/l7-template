@@ -1,10 +1,10 @@
 # Template file for 'l7-pkg-rust'
 pkgname=l7-pkg-rust
-version=20211104
+version=20211211
 revision=1
 build_style=meta
 depends="rust rust-analyzer rust-cargo-audit rust-cargo-bloat rust-doc rust-sccache rust-std cargo cargo-aoc cargo-geiger  racer"
-short_desc="LangitKetujuh packages for Rust Programming and compiler base depedencies"
+short_desc="Rust Programming and compiler - meta package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="Public Domain"
 homepage="https://langitketujuh.id"

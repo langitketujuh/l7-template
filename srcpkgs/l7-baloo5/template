@@ -1,10 +1,10 @@
 # Template file for 'l7-baloo5'
 pkgname=l7-baloo5
 version=5.88.0
-revision=1
+revision=2
 build_style=meta
 depends="baloo5"
-short_desc="LangitKetujuh patch for baloo5 package"
+short_desc="Additional configuration for baloo5 package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"
 homepage="https://langitketujuh.id"

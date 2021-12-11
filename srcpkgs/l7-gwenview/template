@@ -1,10 +1,10 @@
 # Template file for 'l7-gwenview'
 pkgname=l7-gwenview
 version=21.08.3
-revision=1
+revision=2
 build_style=meta
 depends="gwenview"
-short_desc="LangitKetujuh patch for gwenview package"
+short_desc="Additional configuration for gwenview package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"
 homepage="https://langitketujuh.id"

@@ -1,10 +1,10 @@
 # Template file for 'l7-shadow'
 pkgname=l7-shadow
 version=4.8.1
-revision=2
+revision=3
 build_style=meta
 depends="shadow"
-short_desc="LangitKetujuh patch for shadow package"
+short_desc="Additional configuration for shadow package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"
 homepage="https://langitketujuh.id"

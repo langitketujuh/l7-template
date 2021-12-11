@@ -1,10 +1,10 @@
 # Template file for 'l7-ardour'
 pkgname=l7-ardour
 version=6.9
-revision=1
+revision=2
 build_style=meta
 depends="ardour"
-short_desc="LangitKetujuh patch for ardour package"
+short_desc="Additional configuration for ardour package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"
 homepage="https://langitketujuh.id"

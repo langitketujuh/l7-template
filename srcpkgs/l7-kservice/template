@@ -1,10 +1,10 @@
 # Template file for 'l7-kservice'
 pkgname=l7-kservice
 version=5.88.0
-revision=1
+revision=2
 build_style=meta
 depends="kservice"
-short_desc="LangitKetujuh patch for kservice package"
+short_desc="Additional configuration for kservice package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"
 homepage="https://langitketujuh.id"

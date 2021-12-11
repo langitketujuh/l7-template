@@ -1,9 +1,9 @@
 # Template file for 'l7-papirus-icon-theme'
 pkgname=l7-papirus-icon-theme
 version=20211101
-revision=1
+revision=2
 depends="papirus-icon-theme"
-short_desc="LangitKetujuh patch for papirus-icon-theme package"
+short_desc="Additional configuration for papirus-icon-theme package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"
 homepage="https://langitketujuh.id"

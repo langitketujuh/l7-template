@@ -1,10 +1,10 @@
 # Template file for 'l7-pipewire'
 pkgname=l7-pipewire
 version=0.3.40
-revision=1
+revision=2
 build_style=meta
 depends="pipewire"
-short_desc="LangitKetujuh patch for pipewire package"
+short_desc="Additional configuration for pipewire package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"
 homepage="https://langitketujuh.id"

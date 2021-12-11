@@ -1,13 +1,13 @@
 # Template file for 'l7-pkg-xorg'
 pkgname=l7-pkg-xorg
-version=20211104
+version=20211211
 revision=1
 build_style=meta
 depends="xorg xf86-input-evdev xf86-input-joystick xf86-input-libinput
   xf86-input-mtrack xf86-input-synaptics xf86-input-vmmouse xf86-input-wacom
   xorg-minimal xorg-input-drivers xorg-video-drivers mesa-ati-dri mesa-intel-dri
   mesa-nouveau-dri intel-video-accel"
-short_desc="LangitKetujuh packages for X.Org base depedencies"
+short_desc="X.org including xorg-minimal - meta package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="Public Domain"
 homepage="https://langitketujuh.id"

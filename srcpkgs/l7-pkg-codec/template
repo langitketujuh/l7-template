@@ -1,6 +1,6 @@
 # Template file for 'l7-pkg-codec'
 pkgname=l7-pkg-codec
-version=20211104
+version=20211211
 revision=1
 build_style=meta
 depends="alsa-utils bluez-alsa paprefs pipewire alsa-pipewire 
@@ -11,7 +11,7 @@ depends="alsa-utils bluez-alsa paprefs pipewire alsa-pipewire
   libmpeg2 libmad libtheora libvorbis libXv wavpack x264
   xvidcore gstreamer-vaapi alsa-plugins-ffmpeg phonon-qt5-backend-vlc
   v4l2loopback v4l-utils"
-short_desc="LangitKetujuh packages for Audio and Video codec base depedencies"
+short_desc="Audio and Video codec - meta package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="Public Domain"
 homepage="https://langitketujuh.id"

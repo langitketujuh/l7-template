@@ -1,10 +1,10 @@
 # Template file for 'l7-base-files'
 pkgname=l7-base-files
 version=0.142
-revision=14
+revision=15
 build_style=meta
 depends="base-files"
-short_desc="LangitKetujuh patch for base-files package"
+short_desc="Additional configuration for base-files package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"
 homepage="https://langitketujuh.id"

@@ -1,10 +1,10 @@
 # Template file for 'l7-konsole'
 pkgname=l7-konsole
 version=21.08.3
-revision=1
+revision=2
 build_style=meta
 depends="konsole"
-short_desc="LangitKetujuh patch for konsole package"
+short_desc="Additional configuration for konsole package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"
 homepage="https://langitketujuh.id"

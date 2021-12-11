@@ -1,10 +1,10 @@
 # Template file for 'l7-scribus'
 pkgname=l7-scribus
 version=1.5.7
-revision=3
+revision=4
 build_style=meta
 depends="scribus"
-short_desc="LangitKetujuh patch for scribus package"
+short_desc="Additional configuration for scribus package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-2.0-only"
 homepage="https://langitketujuh.id"
