@@ -1,7 +1,7 @@
 # Template file for 'l7-export'
 pkgname=l7-export
 version=1.16.6
-revision=2
+revision=1
 build_style=meta
 depends="curl wget colord unzip which ghostscript
 	inkscape ImageMagick libwebp-tools zip"
