@@ -1,0 +1,14 @@
+# Template file for 'l7-qt5ct'
+pkgname=l7-qt5ct
+version=1.5
+revision=1
+build_style=meta
+depends="qt5ct"
+short_desc="Additional configuration for qt5ct package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+	vinstall ${FILESDIR}/qt5ct.conf 0644 etc/skel/.config/qt5ct qt5ct.conf
+}
