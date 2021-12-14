@@ -1,7 +1,7 @@
 # Template file for 'l7-ark'
 pkgname=l7-ark
-version=21.08.3
-revision=2
+version=21.12.0
+revision=1
 build_style=meta
 depends="ark"
 short_desc="Additional configuration for ark package"
