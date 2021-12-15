@@ -1,7 +1,7 @@
 # Template file for 'l7-scribus'
 pkgname=l7-scribus
-version=1.5.7
-revision=4
+version=0.1.1
+revision=1
 build_style=meta
 depends="scribus"
 short_desc="Additional configuration for scribus package"

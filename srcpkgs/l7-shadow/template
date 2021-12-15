@@ -1,7 +1,7 @@
 # Template file for 'l7-shadow'
 pkgname=l7-shadow
-version=4.8.1
-revision=3
+version=0.1.1
+revision=1
 build_style=meta
 depends="shadow"
 short_desc="Additional configuration for shadow package"

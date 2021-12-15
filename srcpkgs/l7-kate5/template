@@ -1,6 +1,6 @@
 # Template file for 'l7-kate5'
 pkgname=l7-kate5
-version=21.12.0
+version=0.1.1
 revision=1
 build_style=meta
 depends="kate5"
