@@ -5,7 +5,7 @@ NAME=$(basename "$0")
 LICENSE="GPL-2.0-only"
 TMP="/tmp"
 ANYKEY=$(echo -e 'Press any key to quit')
-VERSION="1.17.8"
+VERSION="1.18.3"
 
 ARCH=$(uname -m)
 
@@ -91,16 +91,25 @@ check_enable_rtc_windows() {
   fi
 }
 
+check_pro_ver() {
+    for p in l7-ardour l7-ark l7-audacity l7-baloo5 l7-base-files \
+    l7-breeze-gtk l7-breeze-icons l7-breeze l7-desktop-file-utils \
+    l7-fish-shell l7-gimp l7-godot l7-gwenview l7-kate5 l7-kcmutils \
+    l7-keepassxc l7-konsole l7-krita l7-kscreenlocker l7-kservice \
+    l7-libreoffice l7-obs l7-papirus-icon-theme l7-pipewire l7-plasma-desktop \
+    l7-plasma-framework l7-runit-void l7-scribus l7-sddm l7-shadow l7-systemsettings ; do
+        xbps-query -p pkgname ${p}
+    done
+}
+
 check_version() {
-  if xbps-query -p pkgver l7-plasma-desktop | grep l7-plasma-desktop-5 >/dev/null 2>&1; then
+  if xbps-query -p pkgver l7-runit-void | grep l7-runit-void-2021 >/dev/null 2>&1; then
     echo -e "\033[1;36m[*]\033[0m Remove temporary cache"
     rm -v /var/cache/xbps/l7-*
     echo -e "\033[1;36m[*]\033[0m Reinstall Packages version"
-    xbps-install -f -y l7-ardour l7-ark l7-audacity l7-baloo5 l7-base-files l7-breeze-gtk \
-    l7-breeze-icons l7-breeze l7-desktop-file-utils l7-fish-shell l7-gimp l7-godot \
-    l7-gwenview l7-kate5 l7-kcmutils l7-keepassxc l7-konsole l7-krita l7-kscreenlocker \
-    l7-kservice l7-libreoffice l7-obs l7-papirus-icon-theme l7-pipewire l7-plasma-desktop \
-    l7-plasma-framework l7-runit-void l7-scribus l7-sddm l7-shadow l7-systemsettings
+    # downgrade if available packages
+    propackages=$(check_pro_ver | xargs)
+    xbps-install -f -y $propackages
     else
     echo >/dev/null 2>&1
   fi
@@ -514,7 +523,7 @@ for arg in "$@"; do
                 else
                 echo -e "\033[1;91m[FAILED]\033[0m IDEAlliance icc not installed!"
                 exit;
-              fi            
+              fi
             fi
             ;;
         --jpma-icc|-j)
