@@ -2,7 +2,7 @@
 Comment[en_US]=Update Operating Sistem
 Comment[id]=Perbarui Sistem Operasi
 Comment=Update Operating Sistem
-Exec=sudo l7-tools --update
+Exec=doas l7-tools --update
 GenericName[en_US]=Update Operating Sistem
 GenericName[id]=Perbarui Sistem Operasi
 GenericName=Update Operating Sistem

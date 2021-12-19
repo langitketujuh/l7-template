@@ -398,7 +398,7 @@ for arg in "$@"; do
             read -e -p "[*] Do you want to continue? [y/N]: " KERNEL
             if [[ $KERNEL =~ ^[Yy]$ ]]; then
               echo -e "[*] Yes, wait a minutes"
-              sudo vkpurge rm all
+              vkpurge rm all
             fi
             echo -e "\033[1;36m[5]\033[0m Remove obsolete and orphans packages?"
             read -e -p "[*] Do you want to continue? [y/N]: " CACHE
@@ -705,7 +705,7 @@ for arg in "$@"; do
             exit 0
             ;;
         *)
-            echo -e "Please run : \033[1;33msudo l7-tools --update\033[0m"
+            echo -e "Please run : \033[1;33mdoas l7-tools --update\033[0m"
             exit 2
     esac
 done

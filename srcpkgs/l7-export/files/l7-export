@@ -4,7 +4,7 @@ TITLE="LangitKetujuh Export"
 NAME=$(basename "$0")
 INSTALLDIR=$(which basename)
 INKSCAPEDIR=$(which inkscape)
-VERSION="1.16.6"
+VERSION="1.16.7"
 WEB="https://langitketujuh.id"
 LICENSE="GPL-3.0-only"
 
@@ -244,51 +244,51 @@ check_depedencies() {
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m Krita cmyk icm is not already installed."
-    echo -e "Please run \033[1;33msudo l7-export --install\033[0m";
+    echo -e "Please run \033[1;33mdoas/sudo l7-export --install\033[0m";
     exit;
   fi
   if convert -version >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m ImageMagick is not already installed."
-    echo -e "Please run \033[1;33msudo l7-export --install\033[0m";
+    echo -e "Please run \033[1;33mdoas/sudo l7-export --install\033[0m";
     exit;
   fi
   if gs --version >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m ghostscript is not already installed."
-    echo -e "Please run \033[1;33msudo l7-export --install\033[0m";
+    echo -e "Please run \033[1;33mdoas/sudo l7-export --install\033[0m";
     exit;
   fi
   if cwebp -version >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m webp, libwebp or libwebp-tools is not already installed."
-    echo -e "Please run \033[1;33msudo l7-export --install\033[0m";
+    echo -e "Please run \033[1;33mdoas/sudo l7-export --install\033[0m";
     exit;
   fi
   if find /usr/share/color/icc/adobe/ -name "*.icc" -type f >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m Adobe icc is not already installed."
-    echo -e "Please run \033[1;33msudo l7-export --install\033[0m";
+    echo -e "Please run \033[1;33mdoas/sudo l7-export --install\033[0m";
     exit;
   fi
   if find /usr/share/color/icc/krita/ -name "*.icm" -type f >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m Krita cmyk icm is not already installed."
-    echo -e "Please run \033[1;33msudo l7-export --install\033[0m";
+    echo -e "Please run \033[1;33mdoas/sudo l7-export --install\033[0m";
     exit;
   fi
   if find /usr/share/color/icc/idealliance/ -name "*.icc" -type f >/dev/null 2>&1; then
     echo >/dev/null 2>&1
     else
     echo -e "\033[1;91m[FAILED]\033[0m Idealliance icc is not already installed."
-    echo -e "Please run \033[1;33msudo l7-export --install\033[0m";
+    echo -e "Please run \033[1;33mdoas/sudo l7-export --install\033[0m";
     exit;
-    echo -e "Please run \033[1;33msudo l7-export --install\033[0m";
+    echo -e "Please run \033[1;33mdoas/sudo l7-export --install\033[0m";
     exit;
   fi
 }
