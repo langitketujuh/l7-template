@@ -5,7 +5,7 @@ NAME=$(basename "$0")
 LICENSE="GPL-2.0-only"
 TMP="/tmp"
 ANYKEY=$(echo -e 'Press any key to quit')
-VERSION="1.18.3"
+VERSION="1.18.5"
 
 ARCH=$(uname -m)
 
@@ -61,14 +61,53 @@ check_screen_tearing_intel(){
   fi
 }
 
+update_grub() {
+  os-prober
+  update-grub
+}
+
 check_enable_os_prober() {
-  if cat /etc/default/grub | grep "GRUB_DISABLE_OS_PROBER=false" >/dev/null 2>&1; then
-    echo >/dev/null 2>&1
-    else
-    echo -e "\033[1;36m[*]\033[0m Enable GRUB os-prober"
-    echo "GRUB_DISABLE_OS_PROBER=false" >> /etc/default/grub
-    os-prober
-    update-grub
+  if [ $(efibootmgr | wc -l) -eq 1 ]; then
+    # for legacy single, dualboot or more
+    if cat /etc/default/grub | grep "GRUB_DISABLE_OS_PROBER=false" >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+      else
+      echo -e "\033[1;36m[*]\033[0m Enable GRUB os-prober"
+      echo "GRUB_DISABLE_OS_PROBER=false" >> /etc/default/grub
+      update_grub
+    fi
+    else # if uefi singleboot
+    if [ $(ls /boot/efi/EFI/ | wc -l) -eq 1 ]; then
+      if cat /etc/default/grub | grep "GRUB_DISABLE_OS_PROBER=false" | grep '#' >/dev/null 2>&1; then
+      echo >/dev/null 2>&1
+        else
+        if cat /etc/default/grub | grep "GRUB_DISABLE_OS_PROBER=false" >/dev/null 2>&1; then
+          echo -e "\033[1;36m[*]\033[0m Disable GRUB os-prober"
+          sed -i 's/GRUB_DISABLE_OS_PROBER=false/#GRUB_DISABLE_OS_PROBER=false/' /etc/default/grub >/dev/null 2>&1
+          update_grub
+        else
+          echo -e "\033[1;36m[*]\033[0m Disable GRUB os-prober"
+          echo "#GRUB_DISABLE_OS_PROBER=false" >> /etc/default/grub
+          update_grub
+        fi
+      fi
+      else # if uefi dualboot or more
+      if cat /etc/default/grub | grep "GRUB_DISABLE_OS_PROBER=false" | grep '#' >/dev/null 2>&1; then
+      echo -e "\033[1;36m[*]\033[0m Enable GRUB os-prober"
+      echo -e "\033[1;36m[*] Detect Other EFI:\033[0m" $(ls /boot/efi/EFI/ | xargs)
+      sed -i 's/#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/' /etc/default/grub >/dev/null 2>&1
+      update_grub
+        else
+        if cat /etc/default/grub | grep "GRUB_DISABLE_OS_PROBER=false" >/dev/null 2>&1; then
+          echo >/dev/null 2>&1
+        else
+          echo -e "\033[1;36m[*]\033[0m Enable GRUB os-prober"
+          echo -e "\033[1;36m[*] Detect Other EFI:\033[0m" $(ls /boot/efi/EFI/ | xargs)
+          echo "GRUB_DISABLE_OS_PROBER=false" >> /etc/default/grub
+          update_grub
+        fi
+      fi
+    fi
   fi
 }
 

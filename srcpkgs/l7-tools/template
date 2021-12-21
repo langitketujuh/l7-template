@@ -1,6 +1,6 @@
 # Template file for 'l7-tools'
 pkgname=l7-tools
-version=1.18.4
+version=1.18.5
 revision=1
 build_style=meta
 depends="wget unzip l7-base-files l7-opendoas"
