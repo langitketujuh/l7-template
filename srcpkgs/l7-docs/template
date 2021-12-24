@@ -1,7 +1,7 @@
 # Template file for 'l7-docs'
 pkgname=l7-docs
 version=20211221
-revision=1
+revision=2
 wrksrc="docs-${version}"
 hostmakedepends="mdBook mdbook-linkcheck"
 depends="xdg-utils"
@@ -17,7 +17,7 @@ do_build() {
 }
 
 do_install() {
-	vmkdir usr/share/doc/l7/docs
-	vcopy ${wrksrc}/docs/html usr/share/doc/l7/docs
+	vmkdir usr/share/doc/langitketujuh/docs
+	vcopy ${wrksrc}/docs/html/* usr/share/doc/langitketujuh/docs
 	vinstall ${FILESDIR}/docs.langitketujuh.desktop 0644 usr/share/applications docs.langitketujuh.desktop
 }

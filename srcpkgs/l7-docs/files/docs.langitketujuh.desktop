@@ -2,7 +2,7 @@
 Comment[en_US]=Documentation for LangitKetujuh OS
 Comment[id]=Dokumentasi untuk LangitKetujuh OS
 Comment=Documentation for LangitKetujuh OS
-Exec=xdg-open /usr/share/doc/l7/docs/html/index.html
+Exec=xdg-open /usr/share/doc/langitketujuh/docs/index.html
 GenericName[en_US]=Documentation for LangitKetujuh OS
 GenericName[id]=Dokumentasi untuk LangitKetujuh OS
 GenericName=Documentation for LangitKetujuh OS
