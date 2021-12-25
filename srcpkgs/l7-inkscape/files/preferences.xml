@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<inkscape
+   version="1"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
+  <group
+     id="tools"
+     bounding_box="0">
+    <eventcontext
+       id="text"
+       show_sample_in_list="0"
+       selcue="1" />
+  </group>
+  <group
+     id="options">
+    <group
+       id="boot"
+       canvas="dark-check">
+    </group>
+    <group
+       id="softproof"
+       uri="/usr/share/color/icc/krita/cmyk.icm" />
+    <group
+       id="displayprofile"
+       enable="1"
+       from_display="1"
+       intent="0"
+       uri="/usr/share/color/icc/krita/sRGB-elle-V2-srgbtrc.icc" />
+    <group
+       id="autosave"
+       enable="1"
+       interval="2"
+       max="10" />
+  </group>
+  <group
+     id="theme"
+     defaultPreferDarkTheme="1"
+     defaultGtkTheme="Breeze-Dark"
+     defaultIconTheme="Papirus-Dark"
+     preferDarkTheme="1"
+     darkTheme="1"/>
+  <group
+     id="window">
+    <group
+       id="commands"
+       state="0" />
+    <group
+       id="rulers"
+       state="0" />
+    <group
+       id="scrollbars"
+       state="0" />
+  </group>
+  <group
+     id="fullscreen">
+    <group
+       id="commands"
+       state="0" />
+    <group
+       id="rulers"
+       state="0" />
+    <group
+       id="scrollbars"
+       state="0" />
+  </group>
+  <group
+     id="focus">
+    <group
+       id="commands"
+       state="0" />
+    <group
+       id="rulers"
+       state="0" />
+    <group
+       id="scrollbars"
+       state="0" />
+  </group>
+  <group
+     id="template">
+    <sodipodi:namedview
+       id="base"
+       pagecolor="#505050"
+       pageopacity="0"
+       pagecheckerboard="1"
+       bordercolor="#ffffff"
+       borderopacity="1"
+       objecttolerance="10.0"
+       gridtolerance="10.0"
+       guidetolerance="10.0"
+       pageshadow="0" />
+  </group>
+</inkscape>
