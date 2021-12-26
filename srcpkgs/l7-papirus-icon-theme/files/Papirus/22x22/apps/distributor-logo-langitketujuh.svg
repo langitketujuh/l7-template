@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="22"
+   height="22"
+   version="1"
+   id="svg12"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs16" />
+  <path
+     id="path12"
+     style="font-variation-settings:normal;opacity:0.2;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+     d="M 1.4185328,4.9002855 6.9706079,8.0002828 H 18.38203 V 9.6693959 H 9.9613557 l 5.5520953,3.0999981 h 2.868598 v 1.60159 l 3.099998,1.73057 V 7.6983262 h 7.76e-4 V 4.9002855 Z M 0.89427819,6.3372397 0.89350326,17.538509 H 20.957775 L 15.404939,14.438506 H 14.331393 14.330619 3.994255 V 8.0678071 Z" />
+  <path
+     style="fill:#2563eb;fill-opacity:1;stroke-width:0.811139"
+     d="M 0.63998363,5.8329105 0.63920854,17.034176 H 20.703478 L 15.150642,13.934177 H 14.0771 14.076325 3.7399603 V 7.5634779 Z"
+     id="path44874" />
+  <path
+     style="fill:#3b82f6;fill-opacity:1;stroke-width:0.811139"
+     d="M 1.1642382,4.3959561 6.7163133,7.4959536 H 18.127735 v 1.669113 H 9.7070611 l 5.5520939,3.0999984 h 2.868597 v 1.60159 l 3.1,1.730568 V 7.1939971 h 7.74e-4 v -2.798041 z"
+     id="path29607" />
+  <path
+     id="path31"
+     style="font-variation-settings:normal;opacity:0.2;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+     d="M 1.1655273,4.3962407 1.8342286,4.7695312 H 20.796875 v 2.7983396 7.7907722 l 0.429687,0.239013 V 7.1945802 h 0.0028 V 4.3962407 Z M 0.63916016,5.8330071 V 6.3592072 L 3.3085938,7.8496852 V 14.308594 H 14.95044 l 4.882323,2.72583 h 0.870118 L 15.151855,13.935303 H 3.7409668 V 7.5625 Z M 9.708252,9.165772 10.376953,9.5390625 18.127735,9.5383571 V 9.1650666 Z" />
+</svg>

@@ -1,6 +1,6 @@
 # Template file for 'l7-papirus-icon-theme'
 pkgname=l7-papirus-icon-theme
-version=0.1.1
+version=0.1.2
 revision=1
 depends="papirus-icon-theme"
 short_desc="Additional configuration for papirus-icon-theme package"
