@@ -1,6 +1,6 @@
 # Template file for 'l7-breeze-icons'
 pkgname=l7-breeze-icons
-version=0.1.1
+version=0.1.2
 revision=1
 depends="breeze-icons"
 short_desc="Additional configuration for breeze-icons package"
@@ -19,8 +19,24 @@ do_install() {
 		vmkdir usr/share/icons/${f}/places/32
 		vmkdir usr/share/icons/${f}/places/48
 		vmkdir usr/share/icons/${f}/places/64
-		vinstall ${FILESDIR}/32-langitketujuh.svg 0644 usr/share/icons/${f}/apps/32 langitketujuh.svg
-		vinstall ${FILESDIR}/48-langitketujuh.svg 0644 usr/share/icons/${f}/apps/48 langitketujuh.svg
-		vinstall ${FILESDIR}/64-langitketujuh.svg 0644 usr/share/icons/${f}/apps/64 langitketujuh.svg
+		vinstall ${FILESDIR}/32-LangitKetujuh.svg 0644 usr/share/icons/${f}/apps/32 LangitKetujuh.svg
+		vinstall ${FILESDIR}/48-LangitKetujuh.svg 0644 usr/share/icons/${f}/apps/48 LangitKetujuh.svg
+		vinstall ${FILESDIR}/64-LangitKetujuh.svg 0644 usr/share/icons/${f}/apps/64 LangitKetujuh.svg
+	done
+	for f in breeze; do
+		vmkdir usr/share/icons/${f}/places/16
+		vmkdir usr/share/icons/${f}/places/22
+		vmkdir usr/share/icons/${f}/places/24
+		vinstall ${FILESDIR}/16-folder-activities.svg 0644 usr/share/icons/${f}/places/16 folder-activities.svg
+		vinstall ${FILESDIR}/22-folder-activities.svg 0644 usr/share/icons/${f}/places/22 folder-activities.svg
+		vinstall ${FILESDIR}/24-folder-activities.svg 0644 usr/share/icons/${f}/places/24 folder-activities.svg
+	done
+	for f in breeze-dark; do
+		vmkdir usr/share/icons/${f}/places/16
+		vmkdir usr/share/icons/${f}/places/22
+		vmkdir usr/share/icons/${f}/places/24
+		vinstall ${FILESDIR}/16-dark-folder-activities.svg 0644 usr/share/icons/${f}/places/16 folder-activities.svg
+		vinstall ${FILESDIR}/22-dark-folder-activities.svg 0644 usr/share/icons/${f}/places/22 folder-activities.svg
+		vinstall ${FILESDIR}/24-dark-folder-activities.svg 0644 usr/share/icons/${f}/places/24 folder-activities.svg
 	done
 }
