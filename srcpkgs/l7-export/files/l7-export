@@ -4,7 +4,7 @@ TITLE="LangitKetujuh Export"
 NAME=$(basename "$0")
 INSTALLDIR=$(which basename)
 INKSCAPEDIR=$(which inkscape)
-VERSION="1.16.10"
+VERSION="1.16.11"
 WEB="https://langitketujuh.id"
 LICENSE="GPL-3.0-or-later"
 
