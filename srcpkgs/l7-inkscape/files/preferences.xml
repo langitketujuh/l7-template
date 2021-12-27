@@ -30,6 +30,9 @@
        enable="1"
        interval="2"
        max="10" />
+    <group
+       id="threading"
+       numthreads="8" />
   </group>
   <group
      id="theme"
