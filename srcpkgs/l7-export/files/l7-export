@@ -4,7 +4,7 @@ TITLE="LangitKetujuh Export"
 NAME=$(basename "$0")
 INSTALLDIR=$(which basename)
 INKSCAPEDIR=$(which inkscape)
-VERSION="1.16.8"
+VERSION="1.16.9"
 WEB="https://langitketujuh.id"
 LICENSE="GPL-3.0-or-later"
 
@@ -410,7 +410,6 @@ to_png() {
   for ID_LIST in $(id); do
     inkscape \
       --export-id="$ID_LIST" \
-      --batch-process \
       --export-id-only \
       --export-type=png \
       --export-dpi=$DPI \
@@ -423,7 +422,6 @@ to_svg() {
   for ID_LIST in $(id); do
     inkscape \
       --export-id="$ID_LIST" \
-      --batch-process \
       --export-id-only \
       --export-type=svg \
       --export-plain-svg \
@@ -436,7 +434,6 @@ to_eps() {
   for ID_LIST in $(id); do
     inkscape \
       --export-id="$ID_LIST" \
-      --batch-process \
       --export-id-only \
       --export-type=eps \
       --export-text-to-path \
@@ -451,7 +448,6 @@ to_pdf() {
   for ID_LIST in $(id); do
     inkscape \
       --export-id="$ID_LIST" \
-      --batch-process \
       --export-id-only \
       --export-type=pdf \
       --export-text-to-path \
@@ -567,7 +563,6 @@ do
         mkdir -p "$DIRECTORY/$CACHE/$id"
           inkscape \
           --export-id=$id \
-          --batch-process \
           --export-id-only \
           --export-type=png \
           --export-text-to-path \
@@ -577,7 +572,6 @@ do
           $SOURCE >/dev/null 2>&1
           inkscape \
           --export-id=$id \
-          --batch-process \
           --export-id-only \
           --export-type=eps \
           --export-text-to-path \
