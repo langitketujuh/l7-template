@@ -4,7 +4,7 @@ TITLE="LangitKetujuh Export"
 NAME=$(basename "$0")
 INSTALLDIR=$(which basename)
 INKSCAPEDIR=$(which inkscape)
-VERSION="1.16.11"
+VERSION="1.16.12"
 WEB="https://langitketujuh.id"
 LICENSE="GPL-3.0-or-later"
 
@@ -495,41 +495,36 @@ do
       echo -e "  \033[1;33m[11] Flaticon\033[0m \tsvg"
       echo -e ""
       read -e -p "Number: " MARKET
-      if [ -z $MARKET ]; then
+      if [ -z "$MARKET" ]; then
         echo -e "\033[1;91m[FAILED]\033[0m Marketplace is empty."
         exit
-        elif [ $MARKET -eq 1 ]; then
+        elif [ "$MARKET" -eq 1 ]; then
         MARKETNAME="Pngtree"
-        elif [ $MARKET -eq 2 ]; then
+        elif [ "$MARKET" -eq 2 ]; then
         MARKETNAME="Freepik"
-        elif [ $MARKET -eq 3 ]; then
+        elif [ "$MARKET" -eq 3 ]; then
         MARKETNAME="Adobestock"
-        elif [ $MARKET -eq 4 ]; then
+        elif [ "$MARKET" -eq 4 ]; then
         MARKETNAME="Vectorstock"
-        elif [ $MARKET -eq 5 ]; then
+        elif [ "$MARKET" -eq 5 ]; then
         MARKETNAME="Lovepik"
-        elif [ $MARKET -eq 6 ]; then
+        elif [ "$MARKET" -eq 6 ]; then
         MARKETNAME="Canva"
-        elif [ $MARKET -eq 7 ]; then
+        elif [ "$MARKET" -eq 7 ]; then
         MARKETNAME="Vecteezy"
-        elif [ $MARKET -eq 8 ]; then
+        elif [ "$MARKET" -eq 8 ]; then
         MARKETNAME="Dreamstime"
-        elif [ $MARKET -eq 9 ]; then
+        elif [ "$MARKET" -eq 9 ]; then
         MARKETNAME="iStock"
-        elif [ $MARKET -eq 10 ]; then
+        elif [ "$MARKET" -eq 10 ]; then
         MARKETNAME="Shutterstock"
-        elif [ $MARKET -eq 11 ]; then
+        elif [ "$MARKET" -eq 11 ]; then
         MARKETNAME="Flaticon"
         else
         echo -e "\033[1;91m[FAILED]\033[0m Marketplace not support."
         exit
       fi
-      # shutterstock and flaticon no need dpi
-      if [ $MARKET -ge 9 ]; then
-        echo -e ""  >/dev/null 2>&1
-        # marketplace 1-5 need dpi
-        elif  [ $MARKET -le 8 ]; then
-          echo -e ""
+      if [ "$MARKET" -ge 1 ] && [ "$MARKET" -le 9 ]; then
           echo -e "Preview DPI:"
           echo -e "  \033[1;33m[1] 96\033[0m"
           echo -e "  \033[1;33m[2] 300\033[0m"
@@ -558,200 +553,118 @@ do
       loading
       mkdir -p "$DIRECTORY/$CACHE"
       optimized_svg
-      #convert to png and pdf default (pngtree)
-      for id in $(inkscape -S $OPTIM_SOURCE | grep $IDPATTERN | cut -d "," -f 1)
-      do
-        # for market < 8 with export image preview
-        if [ $MARKET -le 8 ]; then
-        mkdir -p "$DIRECTORY/$CACHE/$id"
+      for id_mp in $(inkscape -S $OPTIM_SOURCE | grep $IDPATTERN | cut -d "," -f 1); do
+        # pngtree-istock
+        if [ "$MARKET" -ge 1 ] && [ "$MARKET" -le 9 ]; then
+          mkdir -p "$DIRECTORY/$CACHE/$id_mp"
           inkscape \
-          --export-id=$id \
+          --export-id="$id_mp" \
           --export-id-only \
           --export-type=png \
           --export-text-to-path \
           --export-ignore-filters \
           --export-dpi=$DPI \
-          --export-filename="$DIRECTORY/$CACHE/$id/$id.png" \
+          --export-filename="$DIRECTORY/$CACHE/$id_mp/$id_mp.png" \
           $OPTIM_SOURCE >/dev/null 2>&1
           inkscape \
-          --export-id=$id \
+          --export-id="$id_mp" \
           --export-id-only \
           --export-type=eps \
           --export-text-to-path \
           --export-ignore-filters \
-          --export-filename="$DIRECTORY/$CACHE/$id/$id.eps" \
+          --export-filename="$DIRECTORY/$CACHE/$id_mp/$id_mp.eps" \
           $OPTIM_SOURCE >/dev/null 2>&1
-        # for shuttestock
-          elif [ $MARKET -eq 9 ]; then
-            to_eps
-        # for flaticon
-          elif [ $MARKET -eq 10 ]; then
-            to_svg
-          else
-          exit
+        # shuttestock
+        elif [ "$MARKET" -eq 10 ]; then
+          inkscape \
+          --export-id="$id_mp" \
+          --export-id-only \
+          --export-type=eps \
+          --export-text-to-path \
+          --export-ignore-filters \
+          --export-filename="$DIRECTORY/$CACHE/$id_mp.eps" \
+          $OPTIM_SOURCE >/dev/null 2>&1
+        # flaticon
+        elif [ "$MARKET" -eq 11 ]; then
+          inkscape \
+          --export-id="$id_mp" \
+          --export-id-only \
+          --export-type=svg \
+          --export-plain-svg \
+          --export-filename="$DIRECTORY/$CACHE/$id_mp.svg" \
+          $OPTIM_SOURCE >/dev/null 2>&1
         fi
       done
-      # export image preview
+
+      # export jpg image preview
       cd "$DIRECTORY"/$CACHE
-      if [ $MARKET -le 8 ]; then
-        # if eps+jpg (freepik)
-        if [ $MARKET -eq 2 ]; then
-          for i in $(find -name "*.png" | sed 's/\.\///'); do
-            convert "$i"  \
-              -depth 8 \
-              -flatten \
-              -quality 100 \
-              -colorspace sRGB \
-              "${i%.*}.jpg";
+      if [ "$MARKET" -ge 2 ] && [ "$MARKET" -le 4 ]; then
+        for i in $(find -name "*.png" | sed 's/\.\///'); do
+          convert "$i"  \
+            -depth 8 \
+            -flatten \
+            -quality 100 \
+            -colorspace sRGB \
+            "${i%.*}.jpg";
+        done
+      elif [ "$MARKET" -ge 6 ] && [ "$MARKET" -le 9 ]; then
+        for i in $(find -name "*.png" | sed 's/\.\///');
+          do convert "$i"  \
+            -depth 8 \
+            -flatten \
+            -quality 100 \
+            -colorspace sRGB \
+            "${i%.*}.jpg";
           done
-        # if eps+jpg (adobe stock)
-        elif [ $MARKET -eq 3 ]; then
-          for i in $(find -name "*.png" | sed 's/\.\///'); do
-            convert "$i"  \
-              -depth 8 \
-              -flatten \
-              -quality 100 \
-              -colorspace sRGB \
-              "${i%.*}.jpg";
-          done
-        # if eps.zip and jpg (vectorstock)
-        elif [ $MARKET -eq 4 ]; then
-          for i in $(find -name "*.png" | sed 's/\.\///'); do
-            convert "$i"  \
-              -depth 8 \
-              -flatten \
-              -quality 100 \
-              -colorspace sRGB \
-              "${i%.*}.jpg";
-          done
-        # lovepik keep eps and png for graphich
-        elif [ $MARKET -eq 5 ]; then
-          echo -e "" >/dev/null 2>&1
-        # if eps and jpg (canva)
-        elif [ $MARKET -eq 6 ]; then
-          for i in $(find -name "*.png" | sed 's/\.\///');
-            do convert "$i"  \
-              -depth 8 \
-              -flatten \
-              -quality 100 \
-              -colorspace sRGB \
-              "${i%.*}.jpg";
-          done
-        # if eps and jpg (veectezy)
-        elif [ $MARKET -eq 7 ]; then
-          for i in $(find -name "*.png" | sed 's/\.\///');
-            do convert "$i"  \
-              -depth 8 \
-              -flatten \
-              -quality 100 \
-              -colorspace sRGB \
-              "${i%.*}.jpg";
-          done
-        # if eps and jpg (dreamstime)
-        elif [ $MARKET -eq 8 ]; then
-          for i in $(find -name "*.png" | sed 's/\.\///');
-            do convert "$i"  \
-              -depth 8 \
-              -flatten \
-              -quality 100 \
-              -colorspace sRGB \
-              "${i%.*}.jpg";
-          done
-        # if eps and jpg (istock)
-        elif [ $MARKET -eq 9 ]; then
-          for i in $(find -name "*.png" | sed 's/\.\///');
-            do convert "$i"  \
-              -depth 8 \
-              -flatten \
-              -quality 100 \
-              -colorspace sRGB \
-              "${i%.*}.jpg";
-          done
-        fi
-      # (shuttestock)
-      elif [ $MARKET -eq 10 ]; then
-        echo -e "" >/dev/null 2>&1
-      # (flaticon)
-      elif [ $MARKET -eq 11 ]; then
-        echo -e "" >/dev/null 2>&1
       fi
+
       # move to directory
-      if [ $MARKET -le 8 ]; then
-        if [ $MARKET -eq 1 ]; then
-          for dir in $(ls | cut -f 1)
-            do
-            cd $dir
-            zip ../../$dir.zip *.eps *.png >/dev/null 2>&1
-            cd ..
-          done
-        elif [ $MARKET -eq 2 ]; then
-          for dir in $(ls | cut -f 1)
-            do
-            cd $dir
-            zip ../../$dir.zip *.eps *.jpg >/dev/null 2>&1
-            cd ..
-          done
-        elif [ $MARKET -eq 3 ]; then
-          for dir in $(ls | cut -f 1)
-            do
-            cd $dir
-            zip ../../$dir.zip *.eps *.jpg >/dev/null 2>&1
-            cd ..
-          done
-        elif [ $MARKET -eq 4 ]; then
-          for dir in $(ls | cut -f 1)
-            do
-            cd $dir
-            zip ../../$dir.zip *.eps >/dev/null 2>&1
-            cd ..
-          done
-          for i in $(find -name "*.jpg" | sed 's/\.\///');
-            do mv  $i .. >/dev/null 2>&1
-          done
-        elif [ $MARKET -eq 5 ]; then
-          for dir in $(ls | cut -f 1)
-            do
-            cd $dir
-            zip ../../$dir.zip *.eps >/dev/null 2>&1
-            cd ..
-          done
-          for i in $(find -name "*.png" | sed 's/\.\///');
-            do mv  $i .. >/dev/null 2>&1
-          done
-        elif [ $MARKET -eq 6 ]; then
-          for i in $(find -name "*.eps" | sed 's/\.\///');
-            do mv  $i .. >/dev/null 2>&1
-          done
-          for i in $(find -name "*.jpg" | sed 's/\.\///');
-            do mv  $i .. >/dev/null 2>&1
-          done
-        elif [ $MARKET -eq 7 ]; then
-          for i in $(find -name "*.eps" | sed 's/\.\///');
-            do mv  $i .. >/dev/null 2>&1
-          done
-          for i in $(find -name "*.jpg" | sed 's/\.\///');
-            do mv  $i .. >/dev/null 2>&1
-          done
-        elif [ $MARKET -eq 8 ]; then
-          for i in $(find -name "*.eps" | sed 's/\.\///');
-            do mv  $i .. >/dev/null 2>&1
-          done
-          for i in $(find -name "*.jpg" | sed 's/\.\///');
-            do mv  $i .. >/dev/null 2>&1
-          done
-        elif [ $MARKET -eq 9 ]; then
-          for i in $(find -name "*.eps" | sed 's/\.\///');
-            do mv  $i .. >/dev/null 2>&1
-          done
-          for i in $(find -name "*.jpg" | sed 's/\.\///');
-            do mv  $i .. >/dev/null 2>&1
-          done
-        fi
-      elif [ $MARKET -eq 10 ]; then
+      if [ "$MARKET" -eq 1 ]; then
+        for dir in $(ls | cut -f 1)
+          do
+          cd $dir
+          zip ../../$dir.zip *.eps *.png >/dev/null 2>&1
+          cd ..
+        done
+      elif [ "$MARKET" -ge 2 ] && [ "$MARKET" -le 3 ]; then
+        for dir in $(ls | cut -f 1)
+          do
+          cd $dir
+          zip ../../$dir.zip *.eps *.jpg >/dev/null 2>&1
+          cd ..
+        done
+      elif [ "$MARKET" -eq 4 ]; then
+        for dir in $(ls | cut -f 1)
+          do
+          cd $dir
+          zip ../../$dir.zip *.eps >/dev/null 2>&1
+          cd ..
+        done
+        for i in $(find -name "*.jpg" | sed 's/\.\///');
+          do mv  $i .. >/dev/null 2>&1
+        done
+      elif [ "$MARKET" -eq 5 ]; then
+        for dir in $(ls | cut -f 1)
+          do
+          cd $dir
+          zip ../../$dir.zip *.eps >/dev/null 2>&1
+          cd ..
+        done
+        for i in $(find -name "*.png" | sed 's/\.\///');
+          do mv  $i .. >/dev/null 2>&1
+        done
+      elif [ "$MARKET" -ge 6 ] && [ "$MARKET" -le 9 ]; then
         for i in $(find -name "*.eps" | sed 's/\.\///');
           do mv  $i .. >/dev/null 2>&1
         done
-      elif [ $MARKET -eq 11 ]; then
+        for i in $(find -name "*.jpg" | sed 's/\.\///');
+          do mv  $i .. >/dev/null 2>&1
+        done
+      elif [ "$MARKET" -eq 10 ]; then
+        for i in $(find -name "*.eps" | sed 's/\.\///');
+          do mv  $i .. >/dev/null 2>&1
+        done
+      elif [ "$MARKET" -eq 11 ]; then
         for i in $(find -name "*.svg" | sed 's/\.\///');
           do mv  $i .. >/dev/null 2>&1
         done
