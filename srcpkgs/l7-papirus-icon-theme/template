@@ -1,6 +1,6 @@
 # Template file for 'l7-papirus-icon-theme'
 pkgname=l7-papirus-icon-theme
-version=0.1.2
+version=0.1.3
 revision=1
 depends="papirus-icon-theme"
 short_desc="Additional configuration for papirus-icon-theme package"
@@ -10,5 +10,7 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vmkdir usr/share/icons/
-	vcopy ${FILESDIR}/Papirus usr/share/icons
+	for f in Papirus Papirus-Dark; do
+		vcopy ${FILESDIR}/${f} usr/share/icons
+	done
 }
