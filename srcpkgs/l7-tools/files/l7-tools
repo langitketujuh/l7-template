@@ -5,7 +5,7 @@ NAME=$(basename "$0")
 LICENSE="GPL-2.0-only"
 TMP="/tmp"
 ANYKEY=$(echo -e 'Press any key to quit')
-VERSION="1.18.5"
+VERSION="1.18.6"
 
 ARCH=$(uname -m)
 
@@ -135,8 +135,9 @@ check_pro_ver() {
     l7-breeze-gtk l7-breeze-icons l7-breeze l7-desktop-file-utils \
     l7-fish-shell l7-gimp l7-godot l7-gwenview l7-kate5 l7-kcmutils \
     l7-keepassxc l7-konsole l7-krita l7-kscreenlocker l7-kservice \
-    l7-libreoffice l7-obs l7-papirus-icon-theme l7-pipewire l7-plasma-desktop \
-    l7-plasma-framework l7-runit-void l7-scribus l7-sddm l7-shadow l7-systemsettings ; do
+    l7-libreoffice l7-obs l7-papirus-icon-theme l7-pipewire \
+    l7-plasma-desktop l7-plasma-framework l7-runit-void l7-scribus \
+    l7-sddm l7-shadow l7-systemsettings l7-v4l2loopback ; do
         xbps-query -p pkgname ${p}
     done
 }
