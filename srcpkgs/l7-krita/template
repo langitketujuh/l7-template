@@ -1,6 +1,6 @@
 # Template file for 'l7-krita'
 pkgname=l7-krita
-version=0.1.1
+version=0.1.2
 revision=1
 build_style=meta
 depends="krita gmic"
@@ -12,4 +12,5 @@ homepage="https://langitketujuh.id"
 do_install() {
 	vsed -i ${FILESDIR}/kritarc -e 's/Theme=Krita dark/Theme=Breeze Dark/'
 	vinstall ${FILESDIR}/kritarc 0644 etc/skel/.config kritarc
+	vinstall ${FILESDIR}/LangitKetujuh.kws 0644 etc/skel/.local/share/krita/workspaces/ LangitKetujuh.kws
 }
