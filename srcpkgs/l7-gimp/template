@@ -1,7 +1,7 @@
 # Template file for 'l7-gimp'
 pkgname=l7-gimp
 version=0.1.2
-revision=1
+revision=2
 build_style=meta
 depends="gimp"
 short_desc="Additional configuration for gimp package"
@@ -12,4 +12,5 @@ homepage="https://langitketujuh.id"
 do_install() {
 	vsed -i ${FILESDIR}/gimprc -e 's/# (theme "Dark")/(theme "System")/'
 	vinstall ${FILESDIR}/gimprc 0644 etc/skel/.config/GIMP/2.10 gimprc
+	vinstall ${FILESDIR}/sessionrc 0644 etc/skel/.config/GIMP/2.10 sessionrc
 }
