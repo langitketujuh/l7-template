@@ -1,16 +1,17 @@
 # Template file for 'l7-tools'
 pkgname=l7-tools
-version=1.18.6
+version=1.18.8
 revision=1
-build_style=meta
+build_style=gnu-makefile
 depends="wget unzip l7-base-files l7-opendoas"
 short_desc="Configuring tool and installing third-party"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
-license="GPL-2.0-only"
-homepage="https://langitketujuh.id"
+license="GPL-3.0-or-later"
+homepage="https://gitlab.com/langitketujuh/l7-tools"
+distfiles="https://gitlab.com/langitketujuh/l7-tools/-/archive/${version}/l7-tools-${version}.tar.gz"
+checksum="4ec47eedf34cfc8f731e997b2762a6787a6a006c34a9a415eb760240e5611788"
 
-do_install() {
-	vbin ${FILESDIR}/l7-tools
+post_install() {
 	vmkdir usr/share/applications
-	vinstall ${FILESDIR}/system.update.langitketujuh.desktop 0644 usr/share/applications system.update.langitketujuh.desktop
+	vinstall system.update.langitketujuh.desktop 644 usr/share/applications
 }
