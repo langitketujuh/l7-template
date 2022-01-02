@@ -3,6 +3,7 @@
 *~
 \#*#
 *.o
+*.kate-swp
 masterdir*
 hostdir*
 masterdir*/
