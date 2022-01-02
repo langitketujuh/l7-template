@@ -1,6 +1,6 @@
 # Template file for 'l7-godot'
 pkgname=l7-godot
-version=0.1.1
+version=0.1.2
 revision=1
 depends="godot"
 short_desc="Additional configuration for godot package"

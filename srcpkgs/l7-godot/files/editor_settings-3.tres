@@ -2,3 +2,8 @@
 
 [resource]
 interface/editor/display_scale = 2
+interface/editor/main_font_size = 12
+interface/editor/code_font_size = 12
+interface/theme/preset = "Custom"
+interface/theme/base_color = Color( 0.203922, 0.227451, 0.247059, 1 )
+interface/theme/accent_color = Color( 0.239216, 0.682353, 0.913725, 1 )
