@@ -1,0 +1,15 @@
+# Template file for 'l7-blender'
+pkgname=l7-blender
+version=0.1.1
+revision=1
+build_style=meta
+depends="blender"
+short_desc="Additional configuration for blender package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-3.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+	vinstall ${FILESDIR}/Breeze_Dark.xml 0644 usr/share/blender/3.0/scripts/presets/interface_theme Breeze_Dark.xml
+	vinstall ${FILESDIR}/userpref.blend 0644 etc/skel/.config/blender/3.0/config userpref.blend
+}
