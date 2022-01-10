@@ -1,0 +1,25 @@
+# Template file for 'inkscape-multicalendar'
+pkgname=inkscape-multicalendar
+version=0.3.4
+revision=1
+_githash=da84cfe0d59d33704c5760c7f8926a23cb980936
+wrksrc="inkscape-multicalendar-${_githash}"
+build_style=meta
+depends="inkscape"
+short_desc="Extended version of Inkscape svgcalendar"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/artemtech/inkscape-multicalendar"
+distfiles="https://github.com/artemtech/inkscape-multicalendar/archive/${_githash}.tar.gz"
+checksum=af715eafbe66eb1d20c7aa64d8181c6437a5eef5a4c725033b28a71b5b6bcd84
+
+python_version=3
+
+do_install() {
+	vmkdir usr/share/inkscape/extensions
+	vsed -i multicalendar.inx -e 's/2020/2022/'
+	vcopy multicalendar_libs usr/share/inkscape/extensions
+	for f in inx py; do
+		vinstall multicalendar.${f} 0644 usr/share/inkscape/extensions multicalendar.${f}
+	done
+}
