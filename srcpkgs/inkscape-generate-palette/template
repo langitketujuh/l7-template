@@ -1,0 +1,22 @@
+# Template file for 'inkscape-generate-palette'
+pkgname=inkscape-generate-palette
+version=6.0
+revision=1
+wrksrc="inkscape-generate-palette-${version}"
+build_style=meta
+depends="inkscape"
+short_desc="Generate color palettes from selected objects"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/olibia/inkscape-generate-palette"
+distfiles="https://github.com/olibia/inkscape-generate-palette/archive/refs/tags/v${version}.tar.gz"
+checksum=479a115ec8e9429547aed2d138a4b2e19c75166c4d4d7191dfb873f2cd09f8ec
+
+python_version=3
+
+do_install() {
+	vmkdir usr/share/inkscape/extensions
+	for f in inx py; do
+		vinstall generate_palette.${f} 0644 usr/share/inkscape/extensions generate_palette.${f}
+	done
+}
