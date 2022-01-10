@@ -1,0 +1,199 @@
+diff --git a/outputpro.inx b/outputpro.inx
+index 0f9d1df..981c07d 100644
+--- a/outputpro.inx
++++ b/outputpro.inx
+@@ -1,13 +1,11 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+-    <name>Inkscape Output Pro</name>
++    <name>Output Pro...</name>
+     <id>fablabchemnitz.de.output_pro</id>
+     <effect>
+         <object-type>all</object-type>
+         <effects-menu>
+-            <submenu name="FabLab Chemnitz">
+-                <submenu name="Import/Export/Transfer"/>
+-            </submenu>
++            <submenu name="Export"/>
+         </effects-menu>
+     </effect>
+     <script>
+diff --git a/outputpro.py b/outputpro.py
+index 8eb617f..9df562e 100644
+--- a/outputpro.py
++++ b/outputpro.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python3
++#!/usr/bin/python3
+ 
+ import inkex, re, os, random, sys, subprocess, shutil
+ from inkex.command import inkscape
+@@ -138,7 +138,7 @@ class OutputProBitmap(inkex.EffectExtension):
+                     self.preview_zoom_title.setGeometry(44, 371, 256, 16)
+                     self.preview_zoom_title.setText('100%')
+                     self.preview_zoom_title.setAlignment(QtCore.Qt.AlignVCenter | QtCore.Qt.AlignLeft)
+-                    self.preview_zoom_title.setFont(QtGui.QFont('Ubuntu', 8))
++                    self.preview_zoom_title.setFont(QtGui.QFont('Noto Sans', 8))
+                     #self.preview_result_title.setStyleSheet('QFrame{font:7pt;border-radius: 2px;padding: 2px;background-color:rgba(0,0,0,128);color:white}')
+     
+                     self.view_c_button = QtWidgets.QPushButton('C', parent=self.preview_panel)
+@@ -179,21 +179,21 @@ class OutputProBitmap(inkex.EffectExtension):
+     
+                     self.view_image_info = QtWidgets.QLabel(parent=self.preview_panel)
+                     self.view_image_info.setGeometry(10, 400, 300, 190)
+-                    self.view_image_info.setFont(QtGui.QFont('Ubuntu', 8))
++                    self.view_image_info.setFont(QtGui.QFont('Noto Sans', 8))
+                     self.view_image_info.setWordWrap(True)
+                     self.view_image_info.setAlignment(QtCore.Qt.AlignTop)
+     
+                     #self.main_title = QtWidgets.QLabel(parent=self)
+                     #self.main_title.setText(_(u"BITMAPS").upper())
+                     #self.main_title.setGeometry(640, 30, 150, 30)
+-                    #self.main_title.setFont(QtWidgets.QFont('Ubuntu', 16, 75))
++                    #self.main_title.setFont(QtWidgets.QFont('Noto Sans', 16, 75))
+                     #self.main_title.setAlignment(QtCore.Qt.AlignRight)
+                     #self.main_title.setForegroundRole(QtWidgets.QPalette.ColorRole(2))
+     
+                     self.format_title = QtWidgets.QLabel(parent=self)
+                     self.format_title.setText(_(u"Format").upper())
+                     self.format_title.setGeometry(320, 70, 200, 15)
+-                    self.format_title.setFont(QtGui.QFont('Ubuntu', 8, 75))
++                    self.format_title.setFont(QtGui.QFont('Noto Sans', 8, 75))
+     
+                     self.format_choice = QtWidgets.QComboBox(parent=self)
+                     self.format_choice.setGeometry(320, 85, 200, 25)
+@@ -226,7 +226,7 @@ class OutputProBitmap(inkex.EffectExtension):
+                     self.color_mode_title_jpeg = QtWidgets.QLabel(parent=self.general_options_panel_jpeg)
+                     self.color_mode_title_jpeg.setText(_(u"Color mode").upper())
+                     self.color_mode_title_jpeg.setGeometry(10, 10, 260, 15)
+-                    self.color_mode_title_jpeg.setFont(QtGui.QFont('Ubuntu', 8))
++                    self.color_mode_title_jpeg.setFont(QtGui.QFont('Noto Sans', 8))
+     
+                     self.color_mode_choice_jpeg = QtWidgets.QComboBox(parent=self.general_options_panel_jpeg)
+                     self.color_mode_choice_jpeg.setGeometry(10, 25, 260, 25)
+@@ -235,37 +235,37 @@ class OutputProBitmap(inkex.EffectExtension):
+     
+                     self.color_mode_title_tip_jpeg = QtWidgets.QLabel(parent=self.general_options_panel_jpeg)
+                     self.color_mode_title_tip_jpeg.setGeometry(10, 50, 260, 15)
+-                    self.color_mode_title_tip_jpeg.setFont(QtGui.QFont('Ubuntu', 7))
++                    self.color_mode_title_tip_jpeg.setFont(QtGui.QFont('Noto Sans', 7))
+                     #self.color_mode_title_tip.setAlignment(QtCore.Qt.AlignLeft)
+     
+                     self.quality_title_jpeg = QtWidgets.QLabel(parent=self.general_options_panel_jpeg)
+                     self.quality_title_jpeg.setText(_(u"Quality").upper())
+                     self.quality_title_jpeg.setGeometry(285, 10, 100, 15)
+-                    self.quality_title_jpeg.setFont(QtGui.QFont('Ubuntu', 8))
++                    self.quality_title_jpeg.setFont(QtGui.QFont('Noto Sans', 8))
+     
+                     self.quality_percent_title_jpeg = QtWidgets.QLabel(parent=self.general_options_panel_jpeg)
+-                    self.quality_percent_title_jpeg.setText('50%')
++                    self.quality_percent_title_jpeg.setText('90%')
+                     self.quality_percent_title_jpeg.setGeometry(505, 10, 100, 40)
+-                    self.quality_percent_title_jpeg.setFont(QtGui.QFont('Ubuntu', 12, 75))
++                    self.quality_percent_title_jpeg.setFont(QtGui.QFont('Noto Sans', 12, 75))
+                     self.quality_percent_title_jpeg.setAlignment(QtCore.Qt.AlignRight)
+     
+                     self.quality_percent_title_left_jpeg = QtWidgets.QLabel(parent=self.general_options_panel_jpeg)
+                     self.quality_percent_title_left_jpeg.setText('Lower quality\nSmaller file')
+                     self.quality_percent_title_left_jpeg.setGeometry(285, 40, 160, 25)
+-                    self.quality_percent_title_left_jpeg.setFont(QtGui.QFont('Ubuntu', 7))
++                    self.quality_percent_title_left_jpeg.setFont(QtGui.QFont('Noto Sans', 7))
+                     self.quality_percent_title_left_jpeg.setAlignment(QtCore.Qt.AlignLeft)
+     
+                     self.quality_percent_title_right_jpeg = QtWidgets.QLabel(parent=self.general_options_panel_jpeg)
+                     self.quality_percent_title_right_jpeg.setText('Higher quality<br>Larger file')
+                     self.quality_percent_title_right_jpeg.setGeometry(445, 40, 160, 25)
+-                    self.quality_percent_title_right_jpeg.setFont(QtGui.QFont('Ubuntu', 7))
++                    self.quality_percent_title_right_jpeg.setFont(QtGui.QFont('Noto Sans', 7))
+                     self.quality_percent_title_right_jpeg.setAlignment(QtCore.Qt.AlignRight)
+     
+                     self.quality_choice_dial_jpeg = QtWidgets.QDial(parent=self.general_options_panel_jpeg)
+                     self.quality_choice_dial_jpeg.setRange(1,100)
+                     self.quality_choice_dial_jpeg.setGeometry(415, 10, 60, 60)
+                     self.quality_choice_dial_jpeg.setNotchesVisible(True)
+-                    self.quality_choice_dial_jpeg.setValue(50)
++                    self.quality_choice_dial_jpeg.setValue(90)
+                     self.quality_choice_dial_jpeg.sliderReleased.connect(self.generate_preview)
+                     self.quality_choice_dial_jpeg.valueChanged.connect(self.change_quality_live_jpeg)
+     
+@@ -277,7 +277,7 @@ class OutputProBitmap(inkex.EffectExtension):
+                     self.document_color_profile_title_jpeg = QtWidgets.QLabel(parent=self.general_options_panel_jpeg)
+                     self.document_color_profile_title_jpeg.setGeometry(290, 175, 320, 30)
+                     self.document_color_profile_title_jpeg.setWordWrap(True)
+-                    self.document_color_profile_title_jpeg.setFont(QtGui.QFont('Ubuntu', 7))
++                    self.document_color_profile_title_jpeg.setFont(QtGui.QFont('Noto Sans', 7))
+                     self.document_color_profile_title_jpeg.setAlignment(QtCore.Qt.AlignLeft)
+     
+                     if selected_print_profile == '':
+@@ -351,7 +351,7 @@ class OutputProBitmap(inkex.EffectExtension):
+                     self.area_to_export_title = QtWidgets.QLabel(parent=self.general_geometry_panel)
+                     self.area_to_export_title.setText(_(u"Area to export").upper())
+                     self.area_to_export_title.setGeometry(10, 20, 250, 15)
+-                    self.area_to_export_title.setFont(QtGui.QFont('Ubuntu', 8))
++                    self.area_to_export_title.setFont(QtGui.QFont('Noto Sans', 8))
+     
+                     self.area_to_export_choice = QtWidgets.QComboBox(parent=self.general_geometry_panel)
+                     self.area_to_export_choice.setGeometry(10, 35, 250, 25)
+@@ -361,7 +361,7 @@ class OutputProBitmap(inkex.EffectExtension):
+                     self.dpi_title = QtWidgets.QLabel(parent=self.general_geometry_panel)
+                     self.dpi_title.setText(_(u"Dots per inch").upper())
+                     self.dpi_title.setGeometry(270, 20, 200, 15)
+-                    self.dpi_title.setFont(QtGui.QFont('Ubuntu', 8))
++                    self.dpi_title.setFont(QtGui.QFont('Noto Sans', 8))
+     
+                     self.dpi_choice = QtWidgets.QSpinBox(parent=self.general_geometry_panel)
+                     self.dpi_choice.setValue(90)
+@@ -372,7 +372,7 @@ class OutputProBitmap(inkex.EffectExtension):
+                     self.dpi_text_title = QtWidgets.QLabel(parent=self.general_geometry_panel)
+                     self.dpi_text_title.setText('dpi')
+                     self.dpi_text_title.setGeometry(380, 35, 80, 25)
+-                    self.dpi_text_title.setFont(QtGui.QFont('Ubuntu', 8))
++                    self.dpi_text_title.setFont(QtGui.QFont('Noto Sans', 8))
+     
+                     self.x0_value = QtWidgets.QSpinBox(parent=self.general_geometry_panel)
+                     self.x0_value.setGeometry(10, 100, 80, 25)
+@@ -397,7 +397,7 @@ class OutputProBitmap(inkex.EffectExtension):
+                     self.area_to_export_id_title = QtWidgets.QLabel(parent=self.general_geometry_panel)
+                     self.area_to_export_id_title.setText(_(u"Object to be exported").upper())
+                     self.area_to_export_id_title.setGeometry(10, 70, 300, 15)
+-                    self.area_to_export_id_title.setFont(QtGui.QFont('Ubuntu', 8))
++                    self.area_to_export_id_title.setFont(QtGui.QFont('Noto Sans', 8))
+     
+                     self.area_to_export_id_name = QtWidgets.QLineEdit(parent=self.general_geometry_panel)
+                     self.area_to_export_id_name.setGeometry(10, 85, 300, 25)
+@@ -409,7 +409,7 @@ class OutputProBitmap(inkex.EffectExtension):
+                     self.prepress_paper_settings_label = QtWidgets.QLabel(parent=self.general_prepress_panel)
+                     self.prepress_paper_settings_label.setGeometry(10, 10, 300, 15)
+                     self.prepress_paper_settings_label.setText(_(u"Paper or film setting").upper())
+-                    self.prepress_paper_settings_label.setFont(QtGui.QFont('Ubuntu', 8))
++                    self.prepress_paper_settings_label.setFont(QtGui.QFont('Noto Sans', 8))
+     
+                     self.prepress_paper_settings_invert = QtWidgets.QCheckBox(parent=self.general_prepress_panel)
+                     self.prepress_paper_settings_invert.setGeometry(10, 25, 300, 25)
+@@ -426,7 +426,7 @@ class OutputProBitmap(inkex.EffectExtension):
+                     self.prepress_paper_cutmarks_label = QtWidgets.QLabel(parent=self.general_prepress_panel)
+                     self.prepress_paper_cutmarks_label.setGeometry(10, 85, 300, 15)
+                     self.prepress_paper_cutmarks_label.setText(_(u"Crop marks").upper())
+-                    self.prepress_paper_cutmarks_label.setFont(QtGui.QFont('Ubuntu', 8))
++                    self.prepress_paper_cutmarks_label.setFont(QtGui.QFont('Noto Sans', 8))
+     
+                     self.prepress_paper_cutmarks_check = QtWidgets.QCheckBox(parent=self.general_prepress_panel)
+                     self.prepress_paper_cutmarks_check.setGeometry(10, 100, 300, 25)
+@@ -498,7 +498,7 @@ class OutputProBitmap(inkex.EffectExtension):
+                     self.imposition_label = QtWidgets.QLabel(parent=self.general_imposition_panel)
+                     self.imposition_label.setGeometry(10, 10, 300, 15)
+                     self.imposition_label.setText(_(u"Amount of impositions").upper())
+-                    self.imposition_label.setFont(QtGui.QFont('Ubuntu', 8))
++                    self.imposition_label.setFont(QtGui.QFont('Noto Sans', 8))
+     
+                     self.imposition_vertical_number_label = QtWidgets.QLabel(parent=self.general_imposition_panel)
+                     self.imposition_vertical_number_label.setGeometry(10, 25, 200, 25)
+@@ -1053,7 +1053,7 @@ class OutputProBitmap(inkex.EffectExtension):
+     
+                     if not str(self.location_path) == '':
+                         result_imp = os.path.join(dirpathTempFolder.name, 'result-imp.' + list_of_export_formats[self.format_choice.currentIndex()].lower())
+-                        target_imp = os.path.abspath(self.location_path[0] + "." + self.location_path[1].lower())
++                        target_imp = os.path.abspath(self.location_path[0] + "." + list_of_export_formats[self.format_choice.currentIndex()].lower() + self.location_path[1].lower())
+                         if not os.path.isfile(result_imp):
+                             inkex.utils.debug("Error. No result generated to export. The following files were created in temp dir:")
+                             inkex.utils.debug(os.listdir(dirpathTempFolder.name))                   

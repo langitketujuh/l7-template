@@ -1,0 +1,22 @@
+# Template file for 'inkscape-outputpro'
+pkgname=inkscape-outputpro
+version=0.1
+revision=1
+_githash=76de8f94d135a782fb6c3be053593d985fa16972
+wrksrc="Inkscape-OUTPUT-PRO-${_githash}"
+build_style=meta
+depends="inkscape python3-PyQt5"
+short_desc="Export print-ready documents from Inkscape"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-or-later"
+homepage="https://github.com/vmario89/Inkscape-OUTPUT-PRO"
+distfiles="https://github.com/vmario89/Inkscape-OUTPUT-PRO/archive/${_githash}.tar.gz"
+checksum=9f809fe4c5bff4094eec3dcab2d6aed856b8d713aea1167df0ebed79b768aae3
+
+do_install() {
+	vmkdir usr/share/inkscape/extensions
+	vcopy outputpro usr/share/inkscape/extensions
+	for f in inx py; do
+		vinstall outputpro.${f} 0644 usr/share/inkscape/extensions outputpro.${f}
+	done
+}
