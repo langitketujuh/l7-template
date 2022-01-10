@@ -2,6 +2,7 @@
 pkgname=l7-blender
 version=0.1.1
 revision=1
+archs="x86_64 x86_64-musl"
 build_style=meta
 depends="blender"
 short_desc="Additional configuration for blender package"
