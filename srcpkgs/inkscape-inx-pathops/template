@@ -1,0 +1,21 @@
+# Template file for 'inkscape-inx-pathops'
+pkgname=inkscape-inx-pathops
+version=1.2
+revision=1
+_githash=b18c2b039744d1682aed620f5bac88d615dde10e
+wrksrc="inx-pathops-${_githash}"
+build_style=meta
+depends="inkscape"
+short_desc="Path operation multiple times for Inkscape"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-2.0-or-later"
+homepage="https://gitlab.com/moini_ink/inx-pathops"
+distfiles="https://gitlab.com/moini_ink/inx-pathops/-/archive/${_githash}/inx-pathops-${_githash}.tar.gz"
+checksum=3cddb5613a1333c6d67c4ff22caaff687f1b2a1c077a7cdb5733df6d36d37423
+
+python_version=3
+
+do_install() {
+	vmkdir usr/share/inkscape/extensions
+	vcopy src/* usr/share/inkscape/extensions
+}
