@@ -1,0 +1,23 @@
+# Template file for 'inkscape-nextgenerator'
+pkgname=inkscape-nextgenerator
+version=1.1.1
+revision=1
+_githash=90be6967b7bea4600df9a360bd39e76922c4a842
+wrksrc="nextgenerator-${_githash}"
+build_style=meta
+depends="inkscape"
+short_desc="Replaces strings in template SVG files"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-3.0-or-later"
+homepage="https://gitlab.com/Moini/nextgenerator"
+distfiles="https://gitlab.com/Moini/nextgenerator/-/archive/${_githash}/nextgenerator-${_githash}.tar.gz"
+checksum=2a507683ce195d52ba4f79a92cad3f5d7f6d3aaeb8fcc14e69ecbc185bbcfbf5
+
+python_version=3
+
+do_install() {
+	vmkdir usr/share/inkscape/extensions
+	for f in inx py; do
+		vinstall next_gen.${f} 0644 usr/share/inkscape/extensions next_gen.${f}
+	done
+}
