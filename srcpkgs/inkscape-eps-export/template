@@ -1,0 +1,23 @@
+# Template file for 'inkscape-eps-export'
+pkgname=inkscape-eps-export
+version=1.0.8
+revision=1
+_githash=bc9c4cc6fb1085d11283f286518a4e29a50519a7
+wrksrc="inkscape-eps-export-${_githash}"
+build_style=meta
+depends="inkscape"
+short_desc="AI compatible EPS output"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/tzunghaor/inkscape-eps-export"
+distfiles="https://github.com/tzunghaor/inkscape-eps-export/archive/${_githash}.tar.gz"
+checksum=ce6c65f31a17c3df11ff878f69b500f8f043cef3773556965768499c3f972f85
+
+python_version=3
+
+do_install() {
+	vmkdir usr/share/inkscape/extensions
+	for f in inx py; do
+		vinstall aieps_output.${f} 0644 usr/share/inkscape/extensions aieps_output.${f}
+	done
+}
