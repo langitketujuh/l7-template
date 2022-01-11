@@ -1,7 +1,7 @@
 # Template file for 'inkscape-outputpro'
 pkgname=inkscape-outputpro
 version=0.1
-revision=1
+revision=2
 _githash=76de8f94d135a782fb6c3be053593d985fa16972
 wrksrc="Inkscape-OUTPUT-PRO-${_githash}"
 build_style=meta

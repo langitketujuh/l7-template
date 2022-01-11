@@ -19,7 +19,7 @@ index 0f9d1df..981c07d 100644
      </effect>
      <script>
 diff --git a/outputpro.py b/outputpro.py
-index 8eb617f..9df562e 100644
+index 8eb617f..589056e 100644
 --- a/outputpro.py
 +++ b/outputpro.py
 @@ -1,4 +1,4 @@
@@ -134,7 +134,7 @@ index 8eb617f..9df562e 100644
      
                      self.area_to_export_choice = QtWidgets.QComboBox(parent=self.general_geometry_panel)
                      self.area_to_export_choice.setGeometry(10, 35, 250, 25)
-@@ -361,7 +361,7 @@ class OutputProBitmap(inkex.EffectExtension):
+@@ -361,10 +361,10 @@ class OutputProBitmap(inkex.EffectExtension):
                      self.dpi_title = QtWidgets.QLabel(parent=self.general_geometry_panel)
                      self.dpi_title.setText(_(u"Dots per inch").upper())
                      self.dpi_title.setGeometry(270, 20, 200, 15)
@@ -142,7 +142,11 @@ index 8eb617f..9df562e 100644
 +                    self.dpi_title.setFont(QtGui.QFont('Noto Sans', 8))
      
                      self.dpi_choice = QtWidgets.QSpinBox(parent=self.general_geometry_panel)
-                     self.dpi_choice.setValue(90)
+-                    self.dpi_choice.setValue(90)
++                    self.dpi_choice.setValue(96)
+                     self.dpi_choice.setGeometry(270, 35, 100, 25)
+                     self.dpi_choice.setRange(1, 99999)
+                     self.dpi_choice.editingFinished.connect(self.change_area_to_export)
 @@ -372,7 +372,7 @@ class OutputProBitmap(inkex.EffectExtension):
                      self.dpi_text_title = QtWidgets.QLabel(parent=self.general_geometry_panel)
                      self.dpi_text_title.setText('dpi')
