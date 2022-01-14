@@ -1,6 +1,6 @@
 # Template file for 'l7-v4l2loopback'
 pkgname=l7-v4l2loopback
-version=0.1.1
+version=0.1.2
 revision=1
 build_style=meta
 depends="v4l2loopback"
