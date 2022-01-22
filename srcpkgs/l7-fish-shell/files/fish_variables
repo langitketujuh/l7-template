@@ -12,10 +12,10 @@ SETUVAR _fish_abbr_chgrp:chgrp\x20\x2d\x2dpreserve\x2droot
 SETUVAR _fish_abbr_chmod:chmod\x20\x2d\x2dpreserve\x2droot
 SETUVAR _fish_abbr_chown:chown\x20\x2d\x2dpreserve\x2droot
 SETUVAR _fish_abbr_clone:git\x20clone\x20\x2d\x2ddepth\x201
-SETUVAR _fish_abbr_cp:cp\x20\x2div
+SETUVAR _fish_abbr_cp:cp\x20\x2dv
 SETUVAR _fish_abbr_deps:xbps\x2dquery\x20\x2dvRx
 SETUVAR _fish_abbr_df:df\x20\x2dH
-SETUVAR _fish_abbr_disk:lsblk\x20\x2do\x20name\x2cfstype\x2cfsavail\x2cfsused\x2cfsuse\x25\x2csize\x2cmountpoint
+SETUVAR _fish_abbr_disk:lsblk\x20\x2df
 SETUVAR _fish_abbr_du:du\x20\x2dch
 SETUVAR _fish_abbr_e:exit\x200
 SETUVAR _fish_abbr_ff:fc\x2dcache\x20\x2dfv
@@ -41,7 +41,7 @@ SETUVAR _fish_abbr_gstl:git\x20stash\x20list
 SETUVAR _fish_abbr_h:history
 SETUVAR _fish_abbr_info:xbps\x2dquery\x20\x2dR
 SETUVAR _fish_abbr_installed:xbps\x2dquery\x20\x2dl
-SETUVAR _fish_abbr_ll:ls\x20\x2dNlh\x20\x2d\x2dcolor\x3dauto\x20\x2d\x2dgroup\x2ddirectories\x2dfirst
+SETUVAR _fish_abbr_ll:ls\x20\x2dNlhg
 SETUVAR _fish_abbr_meminfo:free\x20\x2dmlt
 SETUVAR _fish_abbr_mkd:mkdir\x20\x2dpv
 SETUVAR _fish_abbr_mv:mv\x20\x2div

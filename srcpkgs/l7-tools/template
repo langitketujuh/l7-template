@@ -1,6 +1,6 @@
 # Template file for 'l7-tools'
 pkgname=l7-tools
-version=1.18.13
+version=1.18.14
 revision=1
 build_style=gnu-makefile
 depends="wget unzip l7-base-files l7-opendoas"
@@ -9,7 +9,7 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-3.0-or-later"
 homepage="https://gitlab.com/langitketujuh/l7-tools"
 distfiles="https://gitlab.com/langitketujuh/l7-tools/-/archive/${version}/l7-tools-${version}.tar.gz"
-checksum="2565ed5bfc8cda5613873dee500f317bd702314de30a1aac44e514a0fc3b5ad7"
+checksum="30f892be7e37c613b827b2baeb8e23536ac2a30aa3203fd51e696e35394e2fe4"
 
 post_install() {
 	vmkdir usr/share/applications

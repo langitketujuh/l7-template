@@ -1,6 +1,6 @@
 # Template file for 'l7-export'
 pkgname=l7-export
-version=1.16.15
+version=1.16.16
 revision=1
 build_style=gnu-makefile
 depends="curl wget colord unzip which ghostscript
@@ -10,4 +10,4 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-3.0-or-later"
 homepage="https://gitlab.com/langitketujuh/l7-export"
 distfiles="https://gitlab.com/langitketujuh/l7-export/-/archive/${version}/l7-export-${version}.tar.gz"
-checksum="c29647479fe3d6d19a6b3ba45a765346e5551f37cc3a73f67447b60790196e57"
+checksum="b56fc5bf77be07c9ae680d45a52f2607dafb406c6291db16a539e22bd4d08118"

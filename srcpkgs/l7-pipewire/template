@@ -1,6 +1,6 @@
 # Template file for 'l7-pipewire'
 pkgname=l7-pipewire
-version=0.1.1
+version=0.1.2
 revision=1
 build_style=meta
 depends="pipewire"
@@ -12,6 +12,4 @@ homepage="https://langitketujuh.id"
 do_install() {
 	vmkdir etc/alsa
 	vcopy ${FILESDIR}/conf.d etc/alsa
-	vinstall ${FILESDIR}/PipeWire.desktop 0644 etc/skel/.config/autostart
-	vinstall ${FILESDIR}/"PipeWire Pulse.desktop" 0644 etc/skel/.config/autostart
 }
