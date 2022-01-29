@@ -1,0 +1,14 @@
+# Template file for 'l7-octoxbps'
+pkgname=l7-octoxbps
+version=0.1.1
+revision=1
+build_style=meta
+depends="octoxbps"
+short_desc="Additional configuration for octoxbps package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-3.0-only"
+homepage="https://langitketujuh.id"
+
+do_install() {
+	vinstall ${FILESDIR}/octoxbps.conf 0644 etc/skel/.config/octoxbps octoxbps.conf
+}
