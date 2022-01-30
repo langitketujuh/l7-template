@@ -1,6 +1,6 @@
 # Template file for 'l7-pkg-lamp'
 pkgname=l7-pkg-lamp
-version=20211211
+version=0.1.1
 revision=1
 build_style=meta
 depends="php php-apache php-cgi php-fpm php-gd php-embed

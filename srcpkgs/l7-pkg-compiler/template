@@ -1,6 +1,6 @@
 # Template file for 'l7-pkg-compiler'
 pkgname=l7-pkg-compiler
-version=20211211
+version=0.1.1
 revision=1
 build_style=meta
 depends="automake bison fakeroot flex gdb libtool m4 patch pkg-config qemu-user-static

@@ -1,6 +1,6 @@
 # Template file for 'l7-pkg-compress'
 pkgname=l7-pkg-compress
-version=20211211
+version=0.1.1
 revision=1
 build_style=meta
 depends="atool p7zip zip unzip lzop lzip dtrx file-roller liblz4 lz4 zlib bzip2 xz"

@@ -1,6 +1,6 @@
 # Template file for 'l7-pkg-rust'
 pkgname=l7-pkg-rust
-version=20211211
+version=0.1.1
 revision=1
 build_style=meta
 depends="rust rust-analyzer rust-cargo-audit rust-cargo-bloat rust-doc rust-sccache rust-std cargo cargo-aoc cargo-geiger  racer"

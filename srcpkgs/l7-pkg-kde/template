@@ -1,6 +1,6 @@
 # Template file for 'l7-pkg-kde'
 pkgname=l7-pkg-kde
-version=20211211
+version=0.1.1
 revision=1
 build_style=meta
 depends="xdg-utils xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-kde

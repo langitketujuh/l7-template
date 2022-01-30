@@ -1,6 +1,6 @@
 # Template file for 'l7-pkg-wine'
 pkgname=l7-pkg-wine
-version=20211211
+version=0.1.1
 revision=1
 build_style=meta
 short_desc="Run Microsoft Windows applications - meta package"
