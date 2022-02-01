@@ -1,0 +1,18 @@
+# Template file for 'l7-ssr'
+pkgname=l7-ssr
+version=0.1.1
+revision=1
+build_style=meta
+depends="ssr"
+short_desc="Additional configuration for ssr package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-3.0-later"
+homepage="https://langitketujuh.id"
+
+do_install() {
+	vmkdir usr/share/simplescreenrecorder
+	for f in input output; do
+		vcopy ${FILESDIR}/${f}-profiles usr/share/simplescreenrecorder
+	done
+	vinstall ${FILESDIR}/settings.conf 0644 etc/skel/.ssr settings.conf
+}
