@@ -1,12 +1,12 @@
 # Template file for 'l7-runit-void'
 pkgname=l7-runit-void
 version=0.1.1
-revision=2
+revision=3
 build_style=meta
 depends="runit-void"
 short_desc="Additional configuration for runit-void package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
-license="GPL-2.0-only"
+license="CC0-1.0"
 homepage="https://langitketujuh.id"
 
 do_install() {
