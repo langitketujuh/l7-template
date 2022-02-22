@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[en_US]=Server and user space API to deal with multimedia pipelines
+Comment=Server and user space API to deal with multimedia pipelines
+Exec=pipewire-pulse
+GenericName[en_US]=
+GenericName=
+Icon=preferences-sound
+MimeType=
+Name[en_US]=PipeWire Pulse
+Name=PipeWire Pulse
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
