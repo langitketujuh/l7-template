@@ -1,2 +1,13 @@
 [Advanced]
 EnableKUIServerIntegration=true
+
+[Appearance]
+ShowMain=false
+
+[Internal]
+DropPosition=0,0
+FirstRun=false
+
+[MainWindow]
+RestorePositionForNextInstance=false
+ToolBarsMovable=Disabled

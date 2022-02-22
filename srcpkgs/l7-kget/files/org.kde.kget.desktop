@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=Qt;KDE;Network;FileTransfer;
 Comment=KGet is a versatile and user-friendly download manager
-Exec=kget -qwindowtitle %c %U
+Exec=kget --hideMainWindow -qwindowtitle %c %U
 GenericName=Download Manager
 Icon=kget
 MimeType=application/metalink+xml;application/x-bittorrent;
