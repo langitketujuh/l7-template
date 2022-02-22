@@ -1,12 +1,12 @@
 # Template file for 'l7-ark'
 pkgname=l7-ark
 version=0.1.1
-revision=1
+revision=2
 build_style=meta
 depends="ark"
 short_desc="Additional configuration for ark package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
-license="GPL-2.0-only"
+license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 
 do_install() {
