@@ -8,7 +8,8 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 conf_files="
-	/etc/xbps.d/00-repository-main.conf"
+	/etc/xbps.d/00-repository-main.conf
+	/etc/xbps.d/70-langitketujuh-repository-main.conf"
 
 do_install() {
 	vmkdir etc/xbps.d
@@ -18,17 +19,23 @@ do_install() {
 			echo "repository=https://void.webconverger.org/current/aarch64" > \
 				${DESTDIR}/etc/xbps.d/00-repository-main.conf
 			echo "repository=https://al.quds.repo.langitketujuh.id/current/aarch64" > \
+				${DESTDIR}/etc/xbps.d/70-langitketujuh-repository-main.conf
+			echo "repository=https://al.quds.repo.langitketujuh.id/current/aarch64" > \
 				${DESTDIR}/usr/share/xbps.d/70-langitketujuh-repository-main.conf
 			;;
 		*-musl)
 			echo "repository=https://void.webconverger.org/current/musl" > \
 				${DESTDIR}/etc/xbps.d/00-repository-main.conf
 			echo "repository=https://al.quds.repo.langitketujuh.id/current/musl" > \
+				${DESTDIR}/etc/xbps.d/70-langitketujuh-repository-main.conf
+			echo "repository=https://al.quds.repo.langitketujuh.id/current/musl" > \
 				${DESTDIR}/usr/share/xbps.d/70-langitketujuh-repository-main.conf
 			;;
 		*)
 			echo "repository=https://void.webconverger.org/current" > \
 				${DESTDIR}/etc/xbps.d/00-repository-main.conf
+			echo "repository=https://al.quds.repo.langitketujuh.id/current" > \
+				${DESTDIR}/etc/xbps.d/70-langitketujuh-repository-main.conf
 			echo "repository=https://al.quds.repo.langitketujuh.id/current" > \
 				${DESTDIR}/usr/share/xbps.d/70-langitketujuh-repository-main.conf
 			;;
