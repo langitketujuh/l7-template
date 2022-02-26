@@ -10,8 +10,8 @@ license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 conflicts="void-repo-multilib"
 conf_files="
-	/etc/xbps.d/00-repository-multilib.conf
-	/etc/xbps.d/00-repository-multilib-nonfree.conf"
+	/etc/xbps.d/10-repository-multilib.conf
+	/etc/xbps.d/10-repository-multilib-nonfree.conf"
 
 do_install() {
 	vmkdir etc/xbps.d
