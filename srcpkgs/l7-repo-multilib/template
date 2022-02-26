@@ -9,9 +9,6 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 conflicts="void-repo-multilib"
-conf_files="
-	/etc/xbps.d/10-repository-multilib.conf
-	/etc/xbps.d/10-repository-multilib-nonfree.conf"
 
 do_install() {
 	vmkdir etc/xbps.d
@@ -25,10 +22,10 @@ do_install() {
 }
 
 l7-repo-multilib-nonfree_package() {
-	conflicts="void-repo-multilib-nonfree"
 	short_desc="${short_desc/multilib/multilib\/nonfree}"
+	conflicts="void-repo-multilib-nonfree"
 	pkg_install() {
-		vmove usr/share/xbps.d/10-repository-multilib-nonfree.conf
 		vmove etc/xbps.d/10-repository-multilib-nonfree.conf
+		vmove usr/share/xbps.d/10-repository-multilib-nonfree.conf
 	}
 }
