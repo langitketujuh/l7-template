@@ -1,0 +1,27 @@
+# Template file for 'l7-repo-multilib'
+pkgname=l7-repo-multilib
+version=0.1
+revision=2
+archs="x86_64"
+build_style=meta
+conflicts="void-repo-multilib"
+short_desc="Langitketujuh drop-in file for the multilib repository"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-3.0-or-later"
+homepage="https://langitketujuh.id"
+
+do_install() {
+	vmkdir usr/share/xbps.d
+	for f in multilib multilib-nonfree; do
+		echo "repository=https://void.webconverger.org/current/${f/-/\/}" > \
+			${DESTDIR}/usr/share/xbps.d/10-repository-${f}.conf
+	done
+}
+
+l7-repo-multilib-nonfree_package() {
+	conflicts="void-repo-multilib-nonfree"
+	short_desc="${short_desc/multilib/multilib\/nonfree}"
+	pkg_install() {
+		vmove usr/share/xbps.d/10-repository-multilib-nonfree.conf
+	}
+}

@@ -1,25 +1,34 @@
 # Template file for 'l7-repo'
 pkgname=l7-repo
-version=0.1
+version=0.2
 revision=2
 build_style=meta
 short_desc="Langitketujuh drop-in file for the main repository"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
+conf_files="
+	/etc/xbps.d/00-repository-main.conf"
 
 do_install() {
+	vmkdir etc/xbps.d
 	vmkdir usr/share/xbps.d
 	case "$XBPS_TARGET_MACHINE" in
 		aarch64*)
+			echo "repository=https://void.webconverger.org/current/aarch64" > \
+				${DESTDIR}/etc/xbps.d/00-repository-main.conf
 			echo "repository=https://al.quds.repo.langitketujuh.id/current/aarch64" > \
 				${DESTDIR}/usr/share/xbps.d/70-langitketujuh-repository-main.conf
 			;;
 		*-musl)
+			echo "repository=https://void.webconverger.org/current/musl" > \
+				${DESTDIR}/etc/xbps.d/00-repository-main.conf
 			echo "repository=https://al.quds.repo.langitketujuh.id/current/musl" > \
 				${DESTDIR}/usr/share/xbps.d/70-langitketujuh-repository-main.conf
 			;;
 		*)
+			echo "repository=https://void.webconverger.org/current" > \
+				${DESTDIR}/etc/xbps.d/00-repository-main.conf
 			echo "repository=https://al.quds.repo.langitketujuh.id/current" > \
 				${DESTDIR}/usr/share/xbps.d/70-langitketujuh-repository-main.conf
 			;;

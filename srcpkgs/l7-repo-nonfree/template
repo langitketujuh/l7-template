@@ -1,0 +1,28 @@
+# Template file for 'l7-repo-nonfree'
+pkgname=l7-repo-nonfree
+version=0.1
+revision=2
+build_style=meta
+conflicts="void-repo-nonfree"
+short_desc="Langitketujuh drop-in file for the main repository"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-3.0-or-later"
+homepage="https://langitketujuh.id"
+
+do_install() {
+	vmkdir usr/share/xbps.d
+	case "$XBPS_TARGET_MACHINE" in
+		aarch64*)
+			echo "repository=https://void.webconverger.org/current/aarch64/nonfree" > \
+				${DESTDIR}/usr/share/xbps.d/10-repository-nonfree.conf
+			;;
+		*-musl)
+			echo "repository=https://void.webconverger.org/current/musl/nonfree" > \
+				${DESTDIR}/usr/share/xbps.d/10-repository-nonfree.conf
+			;;
+		*)
+			echo "repository=https://void.webconverger.org/current/nonfree" > \
+				${DESTDIR}/usr/share/xbps.d/10-repository-nonfree.conf
+			;;
+	esac
+}
