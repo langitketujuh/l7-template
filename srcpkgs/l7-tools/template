@@ -1,9 +1,9 @@
 # Template file for 'l7-tools'
 pkgname=l7-tools
 version=1.18.18
-revision=1
+revision=2
 build_style=gnu-makefile
-depends="wget unzip hosts-update l7-base-files l7-opendoas"
+depends="hosts-update wget l7-base-files l7-opendoas"
 short_desc="Configuring tool for update, chroot and grub installer"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-3.0-or-later"
