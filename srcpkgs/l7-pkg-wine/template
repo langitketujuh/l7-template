@@ -1,7 +1,7 @@
 # Template file for 'l7-pkg-wine'
 pkgname=l7-pkg-wine
 version=0.1.1
-revision=1
+revision=2
 build_style=meta
 short_desc="Run Microsoft Windows applications - meta package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
@@ -13,7 +13,7 @@ case "$XBPS_TARGET_MACHINE" in
 		depends="wine wine-gecko wine-mono wine-tools winetricks protontricks libgcc libstdc++ libdrm libglvnd mesa-dri"
 		;;
 	x86_64*)
-		depends="wine wine-gecko wine-mono wine-tools winetricks protontricks libgcc libstdc++ libdrm libglvnd mesa-dri wine-32bit libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit mesa-dri-32bit void-repo-multilib"
+		depends="wine wine-gecko wine-mono wine-tools winetricks protontricks libgcc libstdc++ libdrm libglvnd mesa-dri wine-32bit libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit mesa-dri-32bit"
 		;;
 	i686*)
 		depends="wine wine-gecko wine-mono wine-tools winetricks protontricks libgcc libstdc++ libdrm libglvnd mesa-dri"
