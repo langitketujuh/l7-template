@@ -12,16 +12,16 @@ SETUVAR _fish_abbr_chgrp:chgrp\x20\x2d\x2dpreserve\x2droot
 SETUVAR _fish_abbr_chmod:chmod\x20\x2d\x2dpreserve\x2droot
 SETUVAR _fish_abbr_chown:chown\x20\x2d\x2dpreserve\x2droot
 SETUVAR _fish_abbr_clone:git\x20clone\x20\x2d\x2ddepth\x201
-SETUVAR _fish_abbr_cp:cp\x20\x2dv
+SETUVAR _fish_abbr_cp:cp\x20\x2drdv
 SETUVAR _fish_abbr_deps:xbps\x2dquery\x20\x2dvRx
 SETUVAR _fish_abbr_df:df\x20\x2dH
 SETUVAR _fish_abbr_disk:lsblk\x20\x2df
 SETUVAR _fish_abbr_du:du\x20\x2dch
 SETUVAR _fish_abbr_e:exit\x200
 SETUVAR _fish_abbr_ff:fc\x2dcache\x20\x2dfv
+SETUVAR _fish_abbr_fget:doas\x20xbps\x2dinstall\x20\x2dSf
 SETUVAR _fish_abbr_filelist:xbps\x2dquery\x20\x2d\x2dregex\x20\x2dRf
 SETUVAR _fish_abbr_flathub:flatpak\x20remote\x2dadd\x20\x2d\x2dif\x2dnot\x2dexists\x20flathub\x20https\x3a//dl\x2eflathub\x2eorg/repo/flathub\x2eflatpakrepo
-SETUVAR _fish_abbr_fget:doas\x20xbps\x2dinstall\x20\x2dSf
 SETUVAR _fish_abbr_fremove:doas\x20xbps\x2dremove\x20\x2dRf
 SETUVAR _fish_abbr_g:git
 SETUVAR _fish_abbr_ga:git\x20add
@@ -48,7 +48,7 @@ SETUVAR _fish_abbr_mv:mv\x20\x2div
 SETUVAR _fish_abbr_reconfigure:doas\x20xbps\x2dreconfigure\x20\x2dv
 SETUVAR _fish_abbr_remove:doas\x20xbps\x2dremove\x20\x2dR
 SETUVAR _fish_abbr_repolist:xbps\x2dquery\x20\x2dLv
-SETUVAR _fish_abbr_rm:rm\x20\x2ddv
+SETUVAR _fish_abbr_rm:rm\x20\x2drdv
 SETUVAR _fish_abbr_search:xbps\x2dquery\x20\x2dvRs
 SETUVAR _fish_abbr_searchlocal:xbps\x2dquery\x20\x2dvs
 SETUVAR _fish_abbr_sudo:doas
