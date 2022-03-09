@@ -1,6 +1,6 @@
 # Template file for 'l7-falkon'
 pkgname=l7-falkon
-version=0.1.1
+version=0.1.2
 revision=1
 depends="falkon"
 short_desc="Additional configuration for falkon package"
@@ -9,6 +9,7 @@ license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 
 do_install() {
+	vmkdir etc/skel/.config/falkon/profiles
+	vcopy ${FILESDIR}/default etc/skel/.config/falkon/profiles
 	vinstall ${FILESDIR}/profiles.ini 0644 etc/skel/.config/falkon/profiles profiles.ini
-	vinstall ${FILESDIR}/settings.ini 0644 etc/skel/.config/falkon/profiles/default settings.ini
 }
