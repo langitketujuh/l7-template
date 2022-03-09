@@ -1,10 +1,10 @@
 Title: ABP filters
 Url: http://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt
 [Adblock Plus 3.1]
-! Checksum: qNCwN4KXVrgRmZkyDAItVA
-! Version: 202203091104
+! Checksum: FXULvshKy+lvR7piGCdRJA
+! Version: 202203092014
 ! Title: ABP filters
-! Last modified: 09 Mar 2022 11:04 UTC
+! Last modified: 09 Mar 2022 20:14 UTC
 ! Expires: 1 hours (update frequency)
 ! Homepage: https://github.com/abp-filters/abp-filters-anti-cv
 !
@@ -620,6 +620,7 @@ extremetube.com,pornhub.com,redtube.com,redtube.com.br,tube8.com,tube8.es,tube8.
 cine.to#$#abort-on-property-read document.head.appendChild
 nhentai.net#$#override-property-read _n_app.popunder null;
 masahub.net#$#abort-on-property-write zfgloadedpopup;
+hitomi.la#$#override-property-read popsource null; override-property-read adsdir null; override-property-read ad_cookieconsent false; override-property-read D4zz undefined; abort-on-property-read _pop; abort-on-property-read hitomi; abort-on-property-read open
 *$popup,third-party,domain=streamega.com|123putlocker.club|openloadmovies.bz
 about:blank$popup,domain=streamtape.cc|streamtape.net|streamtape.xyz|streamtape.com|strtapeadblock.me|slreamplay.cc
 /favicon.ico$popup,domain=vidshare.tv|vudeo.net

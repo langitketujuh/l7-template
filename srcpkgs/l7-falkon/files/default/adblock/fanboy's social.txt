@@ -1,10 +1,10 @@
-Title: Fanboy's Social Blocking List
+Title: Fanboy's Social
 Url: http://easylist-downloads.adblockplus.org/fanboy-social.txt
 [Adblock Plus 2.0]
-! Checksum: d9TFQDUEEPRztrR02XBWDA
-! Version: 202203091106
+! Checksum: P8RqaYwYHh4Sjf1v/4sf2g
+! Version: 202203092016
 ! Title: Fanboy's Social Blocking List
-! Last modified: 09 Mar 2022 11:06 UTC
+! Last modified: 09 Mar 2022 20:16 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -11856,6 +11856,7 @@ _youtube_social_
 ##.share-viber
 ##.share-video
 ##.share-video-link
+##.share-wa
 ##.share-wb
 ##.share-weather-fb
 ##.share-weibo
@@ -18539,7 +18540,7 @@ transfermarkt.nl##.header-social
 100p.nl##.holder-social
 iexprofs.nl,participaties.nl##.linkbar
 at5.nl,autoline-nl.be,autoline.nl,diningcity.nl,epochtimes.nl,gettyimages.nl,gids.tv,landrover.nl,nieuwsblad.be,nos.nl##.share
-europages.nl,knack.be,rtlnieuws.nl,voetbal24.be,voetbalnieuws.be##.social
+europages.nl,knack.be,rtlnieuws.nl,tweakers.net,voetbal24.be,voetbalnieuws.be##.social
 bricovideo.ovh##.social-icon
 az.nl##.socials
 knack.be##.toolbar

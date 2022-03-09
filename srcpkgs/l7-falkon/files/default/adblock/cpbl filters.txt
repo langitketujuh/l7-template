@@ -1,4 +1,4 @@
-Title: CPBL Filters for Adblock Plus
+Title: CPBL Filters
 Url: https://raw.githubusercontent.com/bongochong/CombinedPrivacyBlockLists/master/cpbl-abp-list.txt
 [Adblock Plus 2.0]
 ! Title: CPBL Filters for ABP & uBO
