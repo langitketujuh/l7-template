@@ -1,15 +1,15 @@
 # Template file for 'l7-tools'
 pkgname=l7-tools
-version=1.18.19
+version=1.18.20
 revision=1
 build_style=gnu-makefile
-depends="hosts-update wget l7-base-files l7-opendoas"
+depends="hblock wget l7-base-files l7-opendoas"
 short_desc="Configuring tool for update, chroot and grub installer"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-3.0-or-later"
 homepage="https://gitlab.com/langitketujuh/l7-tools"
 distfiles="https://gitlab.com/langitketujuh/l7-tools/-/archive/${version}/l7-tools-${version}.tar.gz"
-checksum="80ad675401d91569956a481ee7f347abf35013a9b465b19525a8db60d853c115"
+checksum="60f4f715c3d83258710dec93490aa5cb40c7f55d1876450569a526c4a7def654"
 
 post_install() {
 	vmkdir usr/share/applications
