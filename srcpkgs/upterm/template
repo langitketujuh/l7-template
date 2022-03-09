@@ -1,0 +1,25 @@
+# Template file for 'upterm'
+pkgname=upterm
+version=0.7.3
+revision=1
+wrksrc="upterm-$version"
+build_style=go
+go_import_path="github.com/owenthereal/upterm"
+go_package="${go_import_path}/cmd/upterm"
+hostmakedepends="git"
+short_desc="Secure Terminal Sharing"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="Apache-2.0"
+homepage="https://github.com/owenthereal/upterm/"
+distfiles="https://github.com/owenthereal/upterm/archive/refs/tags/v$version.tar.gz"
+checksum=cf68035db62f506c7043ab99f4533535b9c883b41f34cad7e2eda31705f90bb6
+
+post_install() {
+	vmkdir usr/share/zsh/site-functions
+	vinstall etc/completion/upterm.bash_completion.sh 644 usr/share/bash-completion/completions upterm
+	vmkdir usr/share/bash-completion/completions
+	vinstall etc/completion/upterm.zsh_completion 644 usr/share/zsh/site-functions _upterm
+	for man in etc/man/man1/*.1; do
+		vman "${man}"
+	done
+}
