@@ -1,10 +1,10 @@
 Title: EasyList
 Url: https://easylist-downloads.adblockplus.org/easylist.txt
 [Adblock Plus 2.0]
-! Checksum: wfkVmCZmHEv/rfnxXlvBfg
-! Version: 202203101005
+! Checksum: R4n7FgeSQuf2woZVMZvmyA
+! Version: 202203101215
 ! Title: EasyList
-! Last modified: 10 Mar 2022 10:05 UTC
+! Last modified: 10 Mar 2022 12:15 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -3206,7 +3206,7 @@ Url: https://easylist-downloads.adblockplus.org/easylist.txt
 /adwrapperiframe.
 /adwriter2.
 /adx-exchange.
-/adx.$domain=~adx.business|~adx.co.nz|~adx.cx|~adx.nz|~adx.ru|~adx.traveledge.com|~adx.tribefire.com|~adx.uk.com|~adx.world|~adx.wowfi.com|~journals.uchicago.edu
+/adx.$domain=~adx.business|~adx.co.nz|~adx.cx|~adx.nz|~adx.rs|~adx.ru|~adx.traveledge.com|~adx.tribefire.com|~adx.uk.com|~adx.world|~adx.wowfi.com|~journals.uchicago.edu
 /adx/ads?
 /adx/iframe.
 /adx/js/*

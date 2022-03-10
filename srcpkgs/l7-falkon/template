@@ -1,6 +1,6 @@
 # Template file for 'l7-falkon'
 pkgname=l7-falkon
-version=0.1.4
+version=0.1.5
 revision=1
 depends="falkon"
 short_desc="Additional configuration for falkon package"
