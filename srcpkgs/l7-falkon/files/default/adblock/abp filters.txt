@@ -1,10 +1,10 @@
 Title: ABP filters
 Url: http://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt
 [Adblock Plus 3.1]
-! Checksum: 1qBcUXaLqz0sOMfs0x2QJw
-! Version: 202203100954
+! Checksum: 8yBE7Gj1xvCniPRhiH+pSQ
+! Version: 202203101004
 ! Title: ABP filters
-! Last modified: 10 Mar 2022 09:54 UTC
+! Last modified: 10 Mar 2022 10:04 UTC
 ! Expires: 1 hours (update frequency)
 ! Homepage: https://github.com/abp-filters/abp-filters-anti-cv
 !
