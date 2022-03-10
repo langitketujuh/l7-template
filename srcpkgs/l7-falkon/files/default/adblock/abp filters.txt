@@ -1,10 +1,10 @@
 Title: ABP filters
 Url: http://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt
 [Adblock Plus 3.1]
-! Checksum: FXULvshKy+lvR7piGCdRJA
-! Version: 202203092014
+! Checksum: 1qBcUXaLqz0sOMfs0x2QJw
+! Version: 202203100954
 ! Title: ABP filters
-! Last modified: 09 Mar 2022 20:14 UTC
+! Last modified: 10 Mar 2022 09:54 UTC
 ! Expires: 1 hours (update frequency)
 ! Homepage: https://github.com/abp-filters/abp-filters-anti-cv
 !
@@ -1027,6 +1027,7 @@ gametv.vn#$#abort-current-inline-script $ homeModal
 mitom1.tv#$#abort-current-inline-script jQuery overlay
 mitom1.tv#$#abort-on-property-read adsRedirectPopups
 playmt.fastlycdn.xyz#$#override-property-read adsPlayer undefined;override-property-read adsTvc undefined;override-property-read adsButton undefined
+watchsb.com#$#abort-on-property-read __Y
 ! Popup/Popunder/Clickunder
 rphangs.com,mrcong.com#$#abort-on-property-read open; abort-on-property-write window.location.href
 fembed.com,femax20.com,zo3x.ml,mrdhan.com,lxhentai.com,m.blogtruyen.vn,ezphimmoi.net#$#abort-on-property-read open
