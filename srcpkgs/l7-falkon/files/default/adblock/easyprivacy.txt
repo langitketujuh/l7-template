@@ -1,10 +1,10 @@
 Title: EasyPrivacy
 Url: http://easylist-downloads.adblockplus.org/easyprivacy.txt
 [Adblock Plus 1.1]
-! Checksum: +KsmnFG457NR8pe3/04Zzg
-! Version: 202203101216
+! Checksum: qYpzc89xdR5eyGE1Jvd8cQ
+! Version: 202203110005
 ! Title: EasyPrivacy
-! Last modified: 10 Mar 2022 12:16 UTC
+! Last modified: 11 Mar 2022 00:05 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html

@@ -1,10 +1,10 @@
 Title: ABP filters
 Url: http://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt
 [Adblock Plus 3.1]
-! Checksum: QbWPyG8IweDB6fSk7BLa3g
-! Version: 202203101214
+! Checksum: EbZe2xEzBUB1ERm1AmTckg
+! Version: 202203110004
 ! Title: ABP filters
-! Last modified: 10 Mar 2022 12:14 UTC
+! Last modified: 11 Mar 2022 00:04 UTC
 ! Expires: 1 hours (update frequency)
 ! Homepage: https://github.com/abp-filters/abp-filters-anti-cv
 !
@@ -622,6 +622,7 @@ cine.to#$#abort-on-property-read document.head.appendChild
 nhentai.net#$#override-property-read _n_app.popunder null;
 masahub.net#$#abort-on-property-write zfgloadedpopup;
 hitomi.la#$#override-property-read popsource null; override-property-read adsdir null; override-property-read ad_cookieconsent false; override-property-read D4zz undefined; abort-on-property-read _pop; abort-on-property-read hitomi; abort-on-property-read open
+sbplay2.com,viewsb.com#$#abort-on-property-read __Y
 *$popup,third-party,domain=streamega.com|123putlocker.club|openloadmovies.bz
 about:blank$popup,domain=streamtape.cc|streamtape.net|streamtape.xyz|streamtape.com|strtapeadblock.me|slreamplay.cc
 /favicon.ico$popup,domain=vidshare.tv|vudeo.net

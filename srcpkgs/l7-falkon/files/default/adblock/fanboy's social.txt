@@ -1,10 +1,10 @@
 Title: Fanboy's Social
 Url: http://easylist-downloads.adblockplus.org/fanboy-social.txt
 [Adblock Plus 2.0]
-! Checksum: +Hekoox+uCe09+s/2a0g2A
-! Version: 202203101216
+! Checksum: 0ql/osi1TetegQ0uIUg/1Q
+! Version: 202203110005
 ! Title: Fanboy's Social Blocking List
-! Last modified: 10 Mar 2022 12:16 UTC
+! Last modified: 11 Mar 2022 00:05 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -16694,6 +16694,7 @@ mydorpie.com###bltw
 mydorpie.com###blwh
 cricketnetwork.co.uk,f1network.net,rugbynetwork.net,thefootballnetwork.net###bookmarks
 baystatebanner.com###bot-soc-icon-wrap
+antotunggal.com###box-message
 profitguide.com###builder-124
 slickdeals.net###buyNowShareContainer
 cambio.com###cambio-follow
@@ -19714,6 +19715,7 @@ digg.com#@#div[id^="digg-widget-"]
 @@||autorepairconnect.com/static/images/from_facebook.png$domain=autorepairconnect.com
 @@||azurewebsites.net/Plugins/ExternalAuth.Facebook/Content/images/facebook-signing.png
 @@||battleforthenet.com/images/logos/$domain=battleforthenet.com
+@@||bauen-und-heimwerken.de/plugins/content/myshariff/js/shariff.min.js
 @@||bdstatic.com^*/share_$domain=baidu.com
 @@||bento.de/upload/images/_*-Instagram.$domain=bento.de
 @@||bento.de/upload/images/_*/facebook-$domain=bento.de
