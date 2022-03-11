@@ -1,7 +1,7 @@
 # Template file for 'citramanik-qt'
 pkgname=citramanik-qt
-version=1.3.0
-revision=2
+version=1.3.2
+revision=1
 build_style=python3-module
 hostmakedepends="ghostscript intltool kconfig kcoreaddons python3 pkg-config python3-lxml
  python3-setuptools python3-PyQt5-devel-tools python3-Pillow qt5-host-tools"
@@ -14,7 +14,7 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-3.0-or-later"
 homepage="https://citramanik.dev.is.my.id/"
 distfiles="https://github.com/devlovers-id/${pkgname}/archive/refs/tags/${version}.tar.gz"
-checksum="3e203e8883f53d5efce94c23f3743ce2f54ea18ba22b9dbed81b290eabbb4fa5"
+checksum="c0017ddd23ba52a6bdd2ac3367a0100b2ac7f87610cca590a34b8a0ad5007545"
 
 python_version=3
 
