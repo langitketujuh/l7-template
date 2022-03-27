@@ -14,6 +14,8 @@ shift $((OPTIND - 1))
 [ ! -x build.sh ] && exit 0
 
 build_xbps(){
+  # clean
+  XBPS_TARGET_ARCH=$ARCH ./xbps-src clean
   # build masterdir
   XBPS_HOSTDIR="$HOST_DIR" ./xbps-src -m $MASTER_DIR pkg ${f}
   # add signed by
