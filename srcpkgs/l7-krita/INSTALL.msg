@@ -1,2 +1,3 @@
 Restore config (optional):
 cp -rfv /etc/skel/.config/kritarc ~/.config/
+cp -rfv /etc/skel/.local/share/krita/ ~/.local/share/

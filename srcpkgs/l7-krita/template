@@ -1,9 +1,9 @@
 # Template file for 'l7-krita'
 pkgname=l7-krita
 version=0.1.2
-revision=2
+revision=4
 build_style=meta
-depends="krita gmic"
+depends="krita gmic-krita"
 short_desc="Additional configuration for krita package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-3.0-or-later"
