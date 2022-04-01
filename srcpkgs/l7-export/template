@@ -1,6 +1,6 @@
 # Template file for 'l7-export'
 pkgname=l7-export
-version=1.16.20
+version=1.16.21
 revision=1
 build_style=gnu-makefile
 depends="colord ghostscript inkscape
@@ -10,7 +10,7 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-3.0-or-later"
 homepage="https://gitlab.com/langitketujuh/l7-export"
 distfiles="https://gitlab.com/langitketujuh/l7-export/-/archive/${version}/l7-export-${version}.tar.gz"
-checksum="7f81ba3e4f779af78824f5aed229f59032ab14eec4bcfbe75f3f07e32541e7cd"
+checksum="beb13a2a907f406ca48c2bcef5daefd6bdf9cc49743a4107228f5c56460bce33"
 
 pre_build() {
 	vmkdir usr/share/color/icc
