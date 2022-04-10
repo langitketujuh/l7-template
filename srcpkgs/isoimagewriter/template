@@ -11,5 +11,5 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-3.0-or-later"
 homepage="https://community.kde.org/ISOImageWriter"
 distfiles="https://download.kde.org/unstable/isoimagewriter/${version}/isoimagewriter-${version}.tar.xz"
-checksum="998d13364bf4c6f9a02483ccc1f7ee77ae27146c93109b9fa4ffca5abb290fe7"
+checksum=998d13364bf4c6f9a02483ccc1f7ee77ae27146c93109b9fa4ffca5abb290fe7
 python_version=3

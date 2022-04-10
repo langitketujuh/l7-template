@@ -9,7 +9,7 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="MIT"
 homepage="https://github.com/hectorm/hblock"
 distfiles="https://github.com/hectorm/${pkgname}/archive/v${version}.tar.gz"
-checksum="649ef980871d4be467a43edfa99c636b95b5af38ee976985082a65c4989eac01"
+checksum=649ef980871d4be467a43edfa99c636b95b5af38ee976985082a65c4989eac01
 
 do_install() {
 	make DESTDIR=$DESTDIR prefix=/usr install

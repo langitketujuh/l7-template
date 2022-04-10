@@ -10,7 +10,7 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-3.0-or-later"
 homepage="https://gitlab.com/langitketujuh/l7-export"
 distfiles="https://gitlab.com/langitketujuh/l7-export/-/archive/${version}/l7-export-${version}.tar.gz"
-checksum="8993c8b8f32f3b3c8beac4659a3de6fd758faf8f1e134b5530cc3312184967cd"
+checksum=8993c8b8f32f3b3c8beac4659a3de6fd758faf8f1e134b5530cc3312184967cd
 
 pre_build() {
 	vmkdir usr/share/color/icc
