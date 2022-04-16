@@ -1,0 +1,14 @@
+# Template file for 'l7-korganizer'
+pkgname=l7-korganizer
+version=0.1.1
+revision=1
+build_style=meta
+depends="korganizer"
+short_desc="Additional configuration for korganizer package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+license="GPL-3.0-or-later"
+homepage="https://langitketujuh.id"
+
+do_install() {
+	vinstall ${FILESDIR}/korgacrc 0644 etc/skel/.config korgacrc
+}
