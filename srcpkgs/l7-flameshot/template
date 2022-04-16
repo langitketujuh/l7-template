@@ -1,7 +1,7 @@
 # Template file for 'l7-flameshot'
 pkgname=l7-flameshot
 version=0.1.1
-revision=2
+revision=3
 build_style=meta
 depends="flameshot"
 short_desc="Additional configuration for flameshot package"
@@ -11,5 +11,5 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vinstall ${FILESDIR}/flameshot.ini 0644 etc/skel/.config/flameshot/
-	vinstall ${FILESDIR}/Flameshot.desktop 0644 etc/skel/.config/autostart
+	vinstall ${FILESDIR}/org.flameshot.Flameshot.desktop 0644 etc/skel/.config/autostart
 }
