@@ -1,10 +1,10 @@
 Title: Fanboy's Social
 Url: http://easylist-downloads.adblockplus.org/fanboy-social.txt
 [Adblock Plus 2.0]
-! Checksum: 5HNoLHQh1Eo9V2Dgch9VDw
-! Version: 202204160415
+! Checksum: AEZ0kFplMf+Yxkb5f3+IgA
+! Version: 202204171946
 ! Title: Fanboy's Social Blocking List
-! Last modified: 16 Apr 2022 04:15 UTC
+! Last modified: 17 Apr 2022 19:46 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -8794,6 +8794,7 @@ _youtube_social_
 ##.gpluslink
 ##.gplusone
 ##.gpsocial
+##.gr-panel--social
 ##.gr-twitter
 ##.grayShareBtn
 ##.greyContentShare
