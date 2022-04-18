@@ -465,12 +465,22 @@ setup_pkg() {
     DESTDIR=$XBPS_DESTDIR/$XBPS_CROSS_TRIPLET/${sourcepkg}-${version}
     PKGDESTDIR=$XBPS_DESTDIR/$XBPS_CROSS_TRIPLET/${pkg}-${version}
 
-    if [ -n "$disable_parallel_build" -o -z "$XBPS_MAKEJOBS" ]; then
+    : ${XBPS_MAKEJOBS:=1}
+    export XBPS_ORIG_MAKEJOBS=${XBPS_ORIG_MAKEJOBS:=$XBPS_MAKEJOBS}
+    if [ -n "$disable_parallel_build" ]; then
         XBPS_MAKEJOBS=1
     fi
     makejobs="-j$XBPS_MAKEJOBS"
     if [ -n "$XBPS_BINPKG_EXISTS" ]; then
-        local _binpkgver="$($XBPS_QUERY_XCMD -R -ppkgver $pkgver 2>/dev/null)"
+        local extraflags=""
+        if [ -n "$XBPS_SKIP_REMOTEREPOS" ]; then
+            extraflags="-i"
+            # filter out remote repositories
+            for repo in $(xbps-query -L | awk '{ print $2 }' | grep '^/host/'); do
+                extraflags+=" --repository=$repo"
+            done
+        fi
+        local _binpkgver="$($XBPS_QUERY_XCMD -R -ppkgver $pkgver $extraflags 2>/dev/null)"
         if [ "$_binpkgver" = "$pkgver" ]; then
             if [ -z "$XBPS_DEPENDENCY" ]; then
                 local _repo="$($XBPS_QUERY_XCMD -R -prepository $pkgver 2>/dev/null)"
