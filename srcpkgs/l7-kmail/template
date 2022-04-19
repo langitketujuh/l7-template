@@ -1,7 +1,7 @@
 # Template file for 'l7-kmail'
 pkgname=l7-kmail
 version=0.1.1
-revision=1
+revision=2
 build_style=meta
 depends="kmail bogofilter spamassassin"
 short_desc="Additional configuration for kmail package"
