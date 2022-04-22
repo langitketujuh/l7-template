@@ -5,6 +5,6 @@ revision=1
 build_style=meta
 depends="rust rust-analyzer rust-cargo-audit rust-cargo-bloat rust-doc rust-sccache rust-std cargo cargo-aoc cargo-geiger  racer"
 short_desc="Rust Programming and compiler - meta package"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="Public Domain"
 homepage="https://langitketujuh.id"

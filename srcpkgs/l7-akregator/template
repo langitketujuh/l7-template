@@ -5,7 +5,7 @@ revision=4
 build_style=meta
 depends="akregator"
 short_desc="Additional configuration for akregator package"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 

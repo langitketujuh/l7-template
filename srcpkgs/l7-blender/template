@@ -6,7 +6,7 @@ archs="x86_64 x86_64-musl"
 build_style=meta
 depends="blender"
 short_desc="Additional configuration for blender package"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-only"
 homepage="https://langitketujuh.id"
 

@@ -8,6 +8,6 @@ depends="xorg xf86-input-evdev xf86-input-joystick xf86-input-libinput
   xorg-minimal xorg-input-drivers xorg-video-drivers mesa-ati-dri mesa-intel-dri
   mesa-nouveau-dri intel-video-accel"
 short_desc="X.org including xorg-minimal - meta package"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="Public Domain"
 homepage="https://langitketujuh.id"

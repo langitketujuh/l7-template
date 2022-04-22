@@ -5,7 +5,7 @@ revision=2
 build_style=meta
 depends="shadow"
 short_desc="Additional configuration for shadow package"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="BSD-3-Clause"
 homepage="https://langitketujuh.id"
 

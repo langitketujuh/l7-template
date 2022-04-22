@@ -6,6 +6,6 @@ build_style=meta
 depends="automake bison fakeroot flex gdb libtool m4 patch pkg-config qemu-user-static
   scons yasm pkgconf gcc-objc++ xorgproto llvm clang icu cmake python3-pip"
 short_desc="Generic GNU Compiler - meta package"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="Public Domain"
 homepage="https://langitketujuh.id"

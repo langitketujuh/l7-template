@@ -5,6 +5,6 @@ revision=1
 build_style=meta
 depends="atool p7zip zip unzip lzop lzip dtrx file-roller liblz4 lz4 zlib bzip2 xz"
 short_desc="Compress Tool - meta package"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="Public Domain"
 homepage="https://langitketujuh.id"

@@ -6,7 +6,7 @@ build_style=gnu-makefile
 depends="colord ghostscript inkscape
 	ImageMagick libwebp-tools"
 short_desc="Yet Another CLI Exporter"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://gitlab.com/langitketujuh/l7-export"
 distfiles="https://gitlab.com/langitketujuh/l7-export/-/archive/${version}/l7-export-${version}.tar.gz"

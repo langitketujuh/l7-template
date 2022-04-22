@@ -10,7 +10,7 @@ depends="ghostscript inkscape libwebp-tools python3-appdirs python3-lxml python3
  python3-setuptools python3-Pillow pngquant"
 checkdepends="$depends xvfb-run"
 short_desc="Bulk SVG export tool"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://citramanik.dev.is.my.id/"
 distfiles="https://github.com/devlovers-id/${pkgname}/archive/refs/tags/${version}.tar.gz"

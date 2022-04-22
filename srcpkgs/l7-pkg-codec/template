@@ -12,6 +12,6 @@ depends="alsa-utils bluez-alsa paprefs pipewire alsa-pipewire
   xvidcore gstreamer-vaapi alsa-plugins-ffmpeg phonon-qt5-backend-vlc
   v4l2loopback v4l-utils"
 short_desc="Audio and Video codec - meta package"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="Public Domain"
 homepage="https://langitketujuh.id"
