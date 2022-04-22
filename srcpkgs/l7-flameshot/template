@@ -5,7 +5,7 @@ revision=3
 build_style=meta
 depends="flameshot"
 short_desc="Additional configuration for flameshot package"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 

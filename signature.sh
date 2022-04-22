@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 #-
-# Copyright (c) 2020-2021 Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>.
+# Copyright (c) 2020-2021 Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>.
 #
 # All rights reserved.
 #

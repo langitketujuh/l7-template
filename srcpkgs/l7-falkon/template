@@ -4,7 +4,7 @@ version=0.1.5
 revision=5
 depends="falkon"
 short_desc="Additional configuration for falkon package"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 

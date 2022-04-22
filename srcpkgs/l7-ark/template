@@ -5,7 +5,7 @@ revision=2
 build_style=meta
 depends="ark"
 short_desc="Additional configuration for ark package"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
 license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 
