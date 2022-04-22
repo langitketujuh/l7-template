@@ -1,11 +1,11 @@
 # Template file for 'runit-backlight'
 pkgname=runit-backlight
 version=0.01.0
-revision=1
+revision=2
 build_style=meta
 depends="runit"
 short_desc="Preserve the current display backlight level between reboots"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="CC0-1.0"
 homepage="https://github.com/madand/runit-services/tree/master/backlight"
 

@@ -1,11 +1,11 @@
 # Template file for 'l7-docs'
 pkgname=l7-docs
 version=1.0.5
-revision=1
+revision=2
 hostmakedepends="mdBook mdbook-linkcheck"
 depends="xdg-utils"
 short_desc="Documentation for LangitKetujuh OS"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="CC-BY-SA-4.0"
 homepage="https://gitlab.com/langitketujuh/l7-docs"
 distfiles="https://gitlab.com/langitketujuh/l7-docs/-/archive/${version}/l7-docs-${version}.tar.gz"

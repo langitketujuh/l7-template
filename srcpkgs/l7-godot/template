@@ -1,10 +1,10 @@
 # Template file for 'l7-godot'
 pkgname=l7-godot
 version=0.1.2
-revision=2
+revision=3
 depends="godot"
 short_desc="Additional configuration for godot package"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 

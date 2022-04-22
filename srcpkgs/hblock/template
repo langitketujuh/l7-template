@@ -1,11 +1,11 @@
 # Template file for 'hblock'
 pkgname=hblock
 version=3.3.1
-revision=1
+revision=2
 build_style=gnu-makefile
 depends="curl"
 short_desc="Adblocker that creates a hosts file from multiple sources"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="MIT"
 homepage="https://github.com/hectorm/hblock"
 distfiles="https://github.com/hectorm/${pkgname}/archive/v${version}.tar.gz"

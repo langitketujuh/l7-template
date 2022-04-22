@@ -1,11 +1,11 @@
 # Template file for 'l7-sddm'
 pkgname=l7-sddm
 version=0.1.2
-revision=3
+revision=4
 build_style=meta
 depends="sddm"
 short_desc="Additional configuration for sddm package"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 

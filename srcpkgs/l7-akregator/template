@@ -1,11 +1,11 @@
 # Template file for 'l7-akregator'
 pkgname=l7-akregator
 version=0.1.1
-revision=4
+revision=5
 build_style=meta
 depends="akregator"
 short_desc="Additional configuration for akregator package"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 

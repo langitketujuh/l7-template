@@ -1,11 +1,11 @@
 # Template file for 'l7-octoxbps'
 pkgname=l7-octoxbps
 version=0.1.1
-revision=2
+revision=3
 build_style=meta
 depends="octoxbps"
 short_desc="Additional configuration for octoxbps package"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-only"
 homepage="https://langitketujuh.id"
 

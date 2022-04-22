@@ -1,11 +1,11 @@
 # Template file for 'l7-v4l2loopback'
 pkgname=l7-v4l2loopback
 version=0.1.2
-revision=3
+revision=4
 build_style=meta
 depends="v4l2loopback"
 short_desc="Additional configuration for v4l2loopback package"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 

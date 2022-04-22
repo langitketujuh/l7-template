@@ -1,12 +1,12 @@
 # Template file for 'inkscape-generate-palette'
 pkgname=inkscape-generate-palette
 version=6.0
-revision=1
+revision=2
 wrksrc="inkscape-generate-palette-${version}"
 build_style=meta
 depends="inkscape"
 short_desc="Generate color palettes from selected objects"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/olibia/inkscape-generate-palette"
 distfiles="https://github.com/olibia/inkscape-generate-palette/archive/refs/tags/v${version}.tar.gz"

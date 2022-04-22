@@ -1,12 +1,12 @@
 # Template file for 'webapp-manager'
 pkgname=webapp-manager
 version=1.1.9
-revision=1
+revision=2
 hostmakedepends="gettext"
 depends="dconf python3-BeautifulSoup4 python3-configobj python3-gobject
  python3-Pillow python3-setproctitle python3-tldextract xapps"
 short_desc="Run websites as if they were apps"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/linuxmint/webapp-manager"
 distfiles="https://github.com/linuxmint/${pkgname}/archive/refs/tags/${version}.tar.gz"

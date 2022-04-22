@@ -1,13 +1,13 @@
 # Template file for 'inkscape-nextgenerator'
 pkgname=inkscape-nextgenerator
 version=1.1.1
-revision=1
+revision=2
 _githash=90be6967b7bea4600df9a360bd39e76922c4a842
 wrksrc="nextgenerator-${_githash}"
 build_style=meta
 depends="inkscape"
 short_desc="Replaces strings in template SVG files"
-maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@pm.me>"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://gitlab.com/Moini/nextgenerator"
 distfiles="https://gitlab.com/Moini/nextgenerator/-/archive/${_githash}/nextgenerator-${_githash}.tar.gz"
