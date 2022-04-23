@@ -9,7 +9,7 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://gitlab.com/langitketujuh/l7-tools"
 distfiles="https://gitlab.com/langitketujuh/l7-tools/-/archive/${version}/l7-tools-${version}.tar.gz"
-checksum=fcafb2733236a512689d075f6a7b51da6b8a39c78fc7fbb7e65ac90537826315
+checksum=3d2279e0c85e9943567e9c062fb124bc15ed5e2c04399f8a1b6ea3ae358c672a
 
 post_install() {
 	vmkdir usr/share/applications
