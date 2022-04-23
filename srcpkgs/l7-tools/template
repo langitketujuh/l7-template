@@ -1,7 +1,7 @@
 # Template file for 'l7-tools'
 pkgname=l7-tools
-version=1.18.25
-revision=2
+version=1.18.26
+revision=1
 build_style=gnu-makefile
 depends="hblock l7-base-files l7-opendoas upterm"
 short_desc="Configuring tool for update, remote, chroot and grub installer"
@@ -13,5 +13,5 @@ checksum=fcafb2733236a512689d075f6a7b51da6b8a39c78fc7fbb7e65ac90537826315
 
 post_install() {
 	vmkdir usr/share/applications
-	vinstall system.update.langitketujuh.desktop 644 usr/share/applications
+	vinstall langitketujuh.system.update.desktop 644 usr/share/applications
 }
