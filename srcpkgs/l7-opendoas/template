@@ -1,7 +1,7 @@
 # Template file for 'l7-opendoas'
 pkgname=l7-opendoas
 version=0.1.1
-revision=3
+revision=4
 build_style=meta
 depends="opendoas"
 short_desc="Additional configuration for opendoas package"
