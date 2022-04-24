@@ -1,6 +1,7 @@
 [Added Associations]
 application/pdf=org.kde.okular.desktop
 application/vnd.ms-publisher=org.kde.kate.desktop
+application/x-bittorrent=org.kde.ktorrent.desktop
 application/x-cd-image=
 application/x-desktop=
 application/x-extension-htm=org.kde.falkon.desktop
@@ -46,6 +47,7 @@ x-scheme-handler/tel=org.kde.kdeconnect.handler.desktop;
 [Default Applications]
 application/pdf=org.kde.okular.desktop
 application/vnd.ms-publisher=org.kde.kate.desktop
+application/x-bittorrent=org.kde.ktorrent.desktop
 application/x-cd-image=
 application/x-desktop=
 application/x-extension-htm=org.kde.falkon.desktop
