@@ -1,6 +1,6 @@
 # Template file for 'l7-docs'
 pkgname=l7-docs
-version=1.0.10
+version=1.0.11
 revision=1
 hostmakedepends="mdBook mdbook-linkcheck"
 depends="xdg-utils"
