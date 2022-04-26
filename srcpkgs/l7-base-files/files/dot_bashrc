@@ -13,21 +13,11 @@ fi
 # Disable beep
 xset b off
 
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-
-alias disk="lsblk -o NAME,TYPE,FSTYPE,FSAVAIL,FSUSED,FSUSE%,SIZE,LABEL,MOUNTPOINT"
-alias ll="ls -Nlh --color=auto --group-directories-first"
-alias pp="ping -c3 langitketujuh.id"
+alias disk="lsblk -o name,fstype,fsavail,fsused,fsuse%,size,label,mountpoint"
+alias ll="ls -Nlhg --color=auto"
 alias ffmpeg="ffmpeg -hide_banner"
-alias clone="git clone --depth 1"
-alias fontfresh="fc-cache -fv"
+alias ff="fc-cache -fv"
 alias mkd="mkdir -pv"
-alias cp="cp -iv"
-alias mv="mv -iv"
-alias rm="rm -Iv"
 alias e='exit 0'
 alias c='clear'
 alias h="history"
@@ -38,34 +28,15 @@ alias chown="chown --preserve-root"
 
 alias flathub="flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo"
 
-alias g="git"
-alias ga="git add"
-alias gcm="git commit -m"
-alias gco="git checkout"
-alias gcob="git checkout -b"
-alias gd="git diff --color=always"
-alias gi="git init"
-alias glg="git log --graph --oneline --decorate --all"
-alias gm="git merge"
-alias gp="git push"
-alias gpl="git pull"
-alias gs="git status -sbu"
-alias gst="git stash"
-alias gstl="git stash list"
-
-alias sudo="doas"
-alias sync="doas xbps-install -S"               # update the repodata
-alias update="doas xbps-install -SIu"           # update the package
+alias update="doas xbps-install -S"             # update the repodata
+alias upgrade="doas l7-tools --update"          # upgrade full system
 alias get="doas xbps-install"                   # install the package
-alias forceget="doas xbps-install -Sf"          # force install packages
 alias info="xbps-query -S"                      # information of packages
 alias remove="doas xbps-remove -R"              # remove some packages
-alias forceremove="doas xbps-remove -Rf"        # force remove some packages
 alias autoclean="doas xbps-remove -Oov"         # remove orphaned packages
 alias search="xbps-query -Rs"                   # search packages
-alias searchlocal="xbps-query -s"               # search local packages
 alias deps="xbps-query -Rx"                     # depedency of packages
 alias installed="xbps-query -lv"                # list installed
-alias filelist="xbps-query --regex -Rf"         # list of the packages
-alias repolist="xbps-query -Lv"                 # repo list
+alias list="xbps-query --regex -Rf"             # list of the packages
+alias repo="xbps-query -Lv"                     # repo list
 alias reconfigure="doas xbps-reconfigure -v"    # reconfigure packages
