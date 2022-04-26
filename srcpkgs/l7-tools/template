@@ -1,6 +1,6 @@
 # Template file for 'l7-tools'
 pkgname=l7-tools
-version=1.18.29
+version=1.18.30
 revision=1
 build_style=gnu-makefile
 depends="hblock upterm"
