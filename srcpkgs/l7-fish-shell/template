@@ -1,7 +1,7 @@
 # Template file for 'l7-fish-shell'
 pkgname=l7-fish-shell
 version=0.1.4
-revision=5
+revision=6
 build_style=meta
 depends="fish-shell"
 short_desc="Additional configuration for fish-shell package"
@@ -10,12 +10,10 @@ license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 
 post_install() {
-	vmkdir etc/skel/.config/fish/functions/
+	vmkdir usr/share/fish/
 }
 
 do_install() {
 	vinstall ${FILESDIR}/fish_variables 0644 etc/skel/.config/fish fish_variables
-	for f in fish_prompt vpsm_config; do
-		vinstall ${FILESDIR}/${f}.fish 0644 etc/skel/.config/fish/functions ${f}.fish
-	done
+	vcopy ${FILESDIR}/functions usr/share/fish/
 }
