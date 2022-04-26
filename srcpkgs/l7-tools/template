@@ -1,6 +1,6 @@
 # Template file for 'l7-tools'
 pkgname=l7-tools
-version=1.18.27
+version=1.18.28
 revision=1
 build_style=gnu-makefile
 depends="hblock l7-base-files l7-opendoas upterm"
@@ -13,5 +13,5 @@ checksum=99b0484ec123097f77921e9df045e88c1b4531e908313de7c3e97a9fa68683ee
 
 post_install() {
 	vmkdir usr/share/applications
-	vinstall langitketujuh.system.update.desktop 644 usr/share/applications
+	vinstall langitketujuh.system.upgrade.desktop 644 usr/share/applications
 }
