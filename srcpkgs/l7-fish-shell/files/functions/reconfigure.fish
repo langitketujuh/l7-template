@@ -1,4 +1,4 @@
-function configure --description 'Reconfigure installed packages from repositories'
+function reconfigure --description 'Reconfigure installed packages from repositories'
     if [ (id -u) -ne 0 ]
         doas xbps-reconfigure -v $argv
     else
