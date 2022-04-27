@@ -10,8 +10,3 @@ license="GPL-3.0-or-later"
 homepage="https://gitlab.com/langitketujuh/l7-tools"
 distfiles="https://gitlab.com/langitketujuh/l7-tools/-/archive/${version}/l7-tools-${version}.tar.gz"
 checksum=aacc6f12e1c7b0621f81466ab38b5083ab5384367cb0164864ad97bc7a50849a
-
-post_install() {
-	vmkdir usr/share/applications
-	vinstall langitketujuh.system.upgrade.desktop 644 usr/share/applications
-}
