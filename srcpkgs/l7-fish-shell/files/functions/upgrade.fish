@@ -1,6 +1,12 @@
 function upgrade --description 'Upgrade packages from XBPS repositories'
     if [ (id -u) -ne 0 ]
-        doas l7-tools --upgrade
+        if command -v doas >/dev/null && [ -f /etc/doas.conf ]
+            set SUDO 'doas'
+        else
+            command -v sudo >/dev/null
+            set SUDO 'sudo'
+        end
+        $SUDO l7-tools --upgrade
     else
         l7-tools --upgrade
     end
