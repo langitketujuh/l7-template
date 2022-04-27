@@ -1,0 +1,7 @@
+#!/usr/bin/env fish
+
+if [ (id -u) -ne 0 ]
+    doas xbps-reconfigure -v $argv
+    else
+    xbps-reconfigure -v $argv
+end

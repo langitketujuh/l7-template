@@ -1,0 +1,7 @@
+#!/usr/bin/env fish
+
+if [ (id -u) -ne 0 ]
+    doas xbps-install $argv
+else
+    xbps-install $argv
+end
