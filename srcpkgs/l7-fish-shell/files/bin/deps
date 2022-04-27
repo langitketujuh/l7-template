@@ -1,5 +1,3 @@
 #!/usr/bin/env fish
 
-if [ (id -u) -ne 0 ]
-    xbps-query -vRx $argv
-end
+xbps-query -vRx $argv
