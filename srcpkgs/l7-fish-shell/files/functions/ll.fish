@@ -1,3 +1,3 @@
 function ll --description 'List of directory and files'
-    ls -Nlhg --color=auto
+    ls -Nlhg --color=auto $argv
 end
