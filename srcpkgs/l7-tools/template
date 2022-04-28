@@ -1,6 +1,6 @@
 # Template file for 'l7-tools'
 pkgname=l7-tools
-version=1.18.32
+version=1.18.33
 revision=1
 build_style=gnu-makefile
 depends="hblock upterm l7-base-files"
@@ -9,4 +9,4 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://gitlab.com/langitketujuh/l7-tools"
 distfiles="https://gitlab.com/langitketujuh/l7-tools/-/archive/${version}/l7-tools-${version}.tar.gz"
-checksum=71b9825fa12f4bd6564da030aeeb34861d3445b4fe6eb66531e8d43280bb7a7f
+checksum=1bedbeab7834d37891322eee81bc431c55f8d7fa288fa0a1367ee47e8aa04207
