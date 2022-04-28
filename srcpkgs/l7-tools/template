@@ -1,7 +1,7 @@
 # Template file for 'l7-tools'
 pkgname=l7-tools
-version=1.18.33
-revision=2
+version=1.18.34
+revision=1
 build_style=gnu-makefile
 depends="hblock upterm l7-base-files l7-opendoas"
 short_desc="Configuring tool for update, remote, chroot and grub installer"
@@ -9,4 +9,4 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://gitlab.com/langitketujuh/l7-tools"
 distfiles="https://gitlab.com/langitketujuh/l7-tools/-/archive/${version}/l7-tools-${version}.tar.gz"
-checksum=1bedbeab7834d37891322eee81bc431c55f8d7fa288fa0a1367ee47e8aa04207
+checksum=33dec835e59386f7cc49929cf7ba98b7c4cb6c575f41af8ab9565c06081837fb
