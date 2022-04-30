@@ -1,9 +1,9 @@
 # Template file for 'l7-tools'
 pkgname=l7-tools
 version=1.18.34
-revision=1
+revision=2
 build_style=gnu-makefile
-depends="hblock upterm l7-base-files l7-opendoas"
+depends="hblock upterm l7-base-files l7-opendoas l7-xbps"
 short_desc="Configuring tool for update, remote, chroot and grub installer"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"

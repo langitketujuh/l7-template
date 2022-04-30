@@ -1,9 +1,9 @@
-# Template file for 'l7-repo'
-pkgname=l7-repo
-version=0.2
-revision=5
+# Template file for 'l7-xbps'
+pkgname=l7-xbps
+version=0.1.0
+revision=1
 build_style=meta
-short_desc="Langitketujuh drop-in file for the main repository"
+short_desc="Additional configuration for xbps package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
