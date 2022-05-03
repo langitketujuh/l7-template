@@ -19,13 +19,13 @@ build_xbps(){
   # build masterdir
   XBPS_HOSTDIR="$HOST_DIR" ./xbps-src -m $MASTER_DIR pkg ${f}
   # add signed by
-  XBPS_TARGET_ARCH=$ARCH xbps-rindex --privkey ~/.ssh/privkey.pem --sign --signedby "LangitKetujuh Linux" $HOST_DIR/binpkgs/
+  XBPS_TARGET_ARCH=$ARCH xbps-rindex --privkey ~/.ssh/privkey.pem --sign --signedby "LangitKetujuh Linux" $HOST_DIR/binpkgs/main
   # generate signature
-  XBPS_TARGET_ARCH=$ARCH xbps-rindex --privkey ~/.ssh/privkey.pem --sign-pkg $HOST_DIR/binpkgs/${f}*.xbps
+  XBPS_TARGET_ARCH=$ARCH xbps-rindex --privkey ~/.ssh/privkey.pem --sign-pkg $HOST_DIR/binpkgs/main/${f}*.xbps
 }
 
 generate_repodata(){
-  XBPS_TARGET_ARCH=$ARCH xbps-rindex -a $HOST_DIR/binpkgs/*.xbps -f
+  XBPS_TARGET_ARCH=$ARCH xbps-rindex -a $HOST_DIR/binpkgs/main/*.xbps -f
 }
 
 if [ "$ARCH" = x86_64 ]; then
