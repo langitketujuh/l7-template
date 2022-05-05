@@ -8,15 +8,15 @@
   <group name="General">
     <entry name="icon" type="String">
       <label>The name of the icon to use for the compact representation (e.g. on a small panel).</label>
-      <default>langitketujuh-start-here-symbolic</default>
+      <default>distributor-logo-langitketujuh</default>
     </entry>
     <entry name="useCustomButtonImage" type="Bool">
       <label>Whether to use a custom image instead of an icon in the compact representation (e.g. on a small panel).</label>
-      <default>true</default>
+      <default>false</default>
     </entry>
     <entry name="customButtonImage" type="Url">
       <label>The URL of the custtom image to use instead of an icon in the compact representation (e.g. on a small panel).</label>
-      <default>langitketujuh-start-here-symbolic</default>
+      <default></default>
     </entry>
 
     <entry name="appNameFormat" type="Int">
@@ -38,7 +38,7 @@
     </entry>
     <entry name="favoriteApps" type="StringList">
       <label>List of general favorites. Supported values are menu id's (usually .desktop file names), special URLs that expand into default applications (e.g. preferred://browser), document URLs and KPeople contact URIs.</label>
-      <default>preferred://browser,org.kde.dolphin.desktop,ardour6.desktop,audacity.desktop,blender.desktop,converseen.desktop,displaycal.desktop,org.kde.digikam.desktop,org.fontforge.FontForge.desktop,org.freecadweb.FreeCAD.desktop,gmic_qt.desktop,gimp.desktop,godot.desktop,fr.handbrake.ghb.desktop,hugin.desktop,org.inkscape.Inkscape.desktop,org.kde.kdenlive.desktop,org.kde.krita.desktop,librecad.desktop,lmms.desktop,org.bunkus.mkvtoolnix-gui.desktop,com.obsproject.Studio.desktop,io.github.OpenToonz.desktop,rawtherapee.desktop,scribus.desktop,org.synfig.SynfigStudio.desktop,org.kde.kdeconnect.app.desktop,org.kde.kontact.desktop,libreoffice-startcenter.desktop,octoxbps.desktop,simplescreenrecorder.desktop,langitketujuh.system.upgrade.desktop</default>
+      <default>preferred://browser,org.kde.dolphin.desktop,ardour6.desktop,audacity.desktop,blender.desktop,converseen.desktop,displaycal.desktop,org.kde.digikam.desktop,org.fontforge.FontForge.desktop,org.freecadweb.FreeCAD.desktop,gmic_qt.desktop,gimp.desktop,godot.desktop,fr.handbrake.ghb.desktop,hugin.desktop,org.inkscape.Inkscape.desktop,org.kde.kdenlive.desktop,org.kde.krita.desktop,librecad.desktop,lmms.desktop,org.bunkus.mkvtoolnix-gui.desktop,com.obsproject.Studio.desktop,io.github.OpenToonz.desktop,rawtherapee.desktop,scribus.desktop,org.synfig.SynfigStudio.desktop,org.kde.kontact.desktop,libreoffice-startcenter.desktop,octoxbps.desktop,langitketujuh.system.upgrade.desktop</default>
     </entry>
     <entry name="favoriteSystemActions" type="StringList">
       <label>List of system action favorites.</label>
@@ -55,7 +55,7 @@
 
     <entry name="showRecentApps" type="Bool">
       <label>Whether to show the "Recent Applications" category.</label>
-      <default>true</default>
+      <default>false</default>
     </entry>
     <entry name="showRecentDocs" type="Bool">
       <label>Whether to show the "Recent Files" category.</label>
