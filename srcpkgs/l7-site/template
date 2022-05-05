@@ -1,0 +1,15 @@
+# Template file for 'l7-site'
+pkgname=l7-site
+version=0.1.0
+revision=1
+depends="xdg-utils"
+short_desc="LangitKetujuh OS Website"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="CC-BY-SA-4.0"
+homepage="https://langitketujuh.org"
+
+do_install() {
+	vinstall ${FILESDIR}/langitketujuh.community.desktop 0644 usr/share/applications
+	vinstall ${FILESDIR}/langitketujuh.donate.desktop 0644 usr/share/applications
+	vinstall ${FILESDIR}/langitketujuh.homepage.desktop 0644 usr/share/applications
+}

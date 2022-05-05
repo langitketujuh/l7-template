@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[en_US]=Support us to keep growing
+Comment[id]=Dukung kami agar terus berkembang
+Comment=Support us to keep growing
+Exec=xdg-open "https://langitketujuh.id/donasi"
+GenericName[en_US]=Support us to keep growing
+GenericName[id]=Dukung kami agar terus berkembang
+GenericName=Support us to keep growing
+Icon=love
+Name[en_US]=Why Donate?
+Name[id]=Mengapa Berdonasi?
+Name=Why Donate?
+NoDisplay=false
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+Categories=LangitKetujuh;
+X-KDE-SubstituteUID=false
+X-KDE-Username=

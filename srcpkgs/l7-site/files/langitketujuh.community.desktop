@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[en_US]=Share inspiration in the community
+Comment[id]=Berbagi inspirasi di komunitas
+Comment=Share inspiration in the community
+Exec=xdg-open "https://langitketujuh.id/komunitas"
+GenericName[en_US]=Share inspiration in the community
+GenericName[id]=Berbagi inspirasi di komunitas
+GenericName=Share inspiration in the community
+Icon=irccloud
+Name[en_US]=Join Community
+Name[id]=Gabung Komunitas
+Name=Join Community
+NoDisplay=false
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+Categories=LangitKetujuh;
+X-KDE-SubstituteUID=false
+X-KDE-Username=
