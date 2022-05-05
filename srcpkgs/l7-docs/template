@@ -1,7 +1,7 @@
 # Template file for 'l7-docs'
 pkgname=l7-docs
 version=1.0.14
-revision=1
+revision=2
 hostmakedepends="mdBook mdbook-linkcheck"
 depends="xdg-utils"
 short_desc="Documentation for LangitKetujuh OS"
@@ -18,5 +18,6 @@ do_build() {
 do_install() {
 	vmkdir usr/share/doc/langitketujuh/docs
 	vcopy ${wrksrc}/docs/html/* usr/share/doc/langitketujuh/docs
-	vinstall ${FILESDIR}/langitketujuh.docs.desktop 0644 usr/share/applications langitketujuh.docs.desktop
+	vinstall ${FILESDIR}/docs.desktop 0644 usr/share/applications langitketujuh.docs.desktop
+	vinstall ${FILESDIR}/docs.online.desktop 0644 usr/share/applications langitketujuh.docs.online.desktop
 }

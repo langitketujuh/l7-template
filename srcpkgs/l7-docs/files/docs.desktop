@@ -1,11 +1,11 @@
 [Desktop Entry]
-Comment[en_US]=Documentation for LangitKetujuh OS
-Comment[id]=Dokumentasi untuk LangitKetujuh OS
-Comment=Documentation for LangitKetujuh OS
+Comment[en_US]=Documentation
+Comment[id]=Dokumentasi
+Comment=Documentation
 Exec=xdg-open /usr/share/doc/langitketujuh/docs/index.html
-GenericName[en_US]=Documentation for LangitKetujuh OS
-GenericName[id]=Dokumentasi untuk LangitKetujuh OS
-GenericName=Documentation for LangitKetujuh OS
+GenericName[en_US]=Documentation
+GenericName[id]=Dokumentasi
+GenericName=Documentation
 Icon=calibre-ebook-edit
 Name[en_US]=Guide Book
 Name[id]=Buku Petunjuk

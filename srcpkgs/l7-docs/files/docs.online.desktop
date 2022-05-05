@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[en_US]=Online documentation
+Comment[id]=Dokumentasi daring
+Comment=Online documentation
+Exec=xdg-open "https://panduan.langitketujuh.id/"
+GenericName[en_US]=Online documentation
+GenericName[id]=Dokumentasi daring
+GenericName=Online documentation
+Icon=calibre-ebook-edit
+Name[en_US]=Guide Book Online
+Name[id]=Buku Petunjuk Daring
+Name=Guide Book Online
+NoDisplay=false
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+Categories=LangitKetujuh;
+X-KDE-SubstituteUID=false
+X-KDE-Username=
