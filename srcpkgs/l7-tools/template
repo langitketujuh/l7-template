@@ -9,4 +9,4 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://gitlab.com/langitketujuh/l7-tools"
 distfiles="https://gitlab.com/langitketujuh/l7-tools/-/archive/${version}/l7-tools-${version}.tar.gz"
-checksum=f4f06c7f4af594dd40e6a05f517d34c613fdbd01bba54f9e45b71b785f12794a
+checksum=851271f9804d213620cc3b2c2d64df22bb2a015450b14dbe46e6f4c21c55ae53
