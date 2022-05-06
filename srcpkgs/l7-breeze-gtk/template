@@ -1,7 +1,7 @@
 # Template file for 'l7-breeze-gtk'
 pkgname=l7-breeze-gtk
 version=0.1.1
-revision=4
+revision=5
 build_style=meta
 depends="breeze-gtk"
 short_desc="Additional configuration for breeze-gtk package"
@@ -11,7 +11,8 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	# file modified
-	vinstall ${FILESDIR}/dot_gtkrc-2.0 0644 etc/skel .gtkrc-2.0
+	vmkdir etc/skel/.config
 	vcopy ${FILESDIR}/gtk-3.0 etc/skel/.config
 	vcopy ${FILESDIR}/gtk-4.0 etc/skel/.config
+	vinstall ${FILESDIR}/dot_gtkrc-2.0 0644 etc/skel .gtkrc-2.0
 }
