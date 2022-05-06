@@ -8,9 +8,14 @@ short_desc="Additional configuration for sddm package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
+conf_files="
+	/etc/sddm.conf
+	/etc/sddm.conf.d/kde_settings.conf
+	/etc/sddm.conf.d/touchpad.conf"
 
 do_install() {
 	vmkdir usr/share/sddm/themes
+	vinstall ${FILESDIR}/sddm.conf 0644 etc
 	vcopy ${FILESDIR}/langitketujuh usr/share/sddm/themes
 	vcopy ${FILESDIR}/sddm.conf.d etc
 }
