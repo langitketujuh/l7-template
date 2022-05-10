@@ -1,0 +1,15 @@
+# Template file for 'l7-carla'
+pkgname=l7-carla
+version=0.1.0
+revision=1
+build_style=meta
+depends="Carla"
+short_desc="Additional configuration for carla package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="GPL-3.0-or-later"
+homepage="https://langitketujuh.id"
+
+do_install() {
+	vmkdir etc/skel/.config
+	vcopy ${FILESDIR}/falkTX etc/skel/.config
+}
