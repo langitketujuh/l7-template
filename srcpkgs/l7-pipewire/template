@@ -1,17 +1,19 @@
 # Template file for 'l7-pipewire'
 pkgname=l7-pipewire
 version=0.1.2
-revision=4
+revision=5
 build_style=meta
-depends="pipewire"
+depends="pipewire wireplumber"
 short_desc="Additional configuration for pipewire package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
+conf_files="/etc/pipewire/pipewire.conf"
 
 do_install() {
 	vmkdir etc/alsa
 	vcopy ${FILESDIR}/conf.d etc/alsa
+	vinstall ${FILESDIR}/pipewire.conf 0644 etc/pipewire
 	vinstall ${FILESDIR}/PipeWire.desktop 0644 etc/skel/.config/autostart
 	vinstall ${FILESDIR}/"PipeWire Pulse.desktop" 0644 etc/skel/.config/autostart
 }
