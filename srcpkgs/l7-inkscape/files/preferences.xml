@@ -8,23 +8,28 @@
     <eventcontext
        id="text"
        show_sample_in_list="0"
+       use_svg2="1"
        selcue="1" />
   </group>
   <group
      id="options">
     <group
        id="boot"
+       theme="system"
        canvas="dark-check">
+      <group
+         id="shown"
+         ver1.2="1" />
     </group>
     <group
        id="softproof"
-       uri="/usr/share/color/icc/krita/cmyk.icm" />
+       uri="/usr/share/color/icc/profiles/ghostscript/default_cmyk.icc" />
     <group
        id="displayprofile"
        enable="1"
        from_display="1"
        intent="0"
-       uri="/usr/share/color/icc/krita/sRGB-elle-V2-srgbtrc.icc" />
+       uri="/usr/share/color/icc/profiles/ghostscript/default_rgb.icc" />
     <group
        id="autosave"
        enable="1"
@@ -37,8 +42,9 @@
   <group
      id="theme"
      defaultPreferDarkTheme="1"
-     defaultGtkTheme="Breeze-Dark"
      defaultIconTheme="Papirus-Dark"
+     defaultGtkTheme="Breeze"
+     narrowSpinButton="1"
      preferDarkTheme="1"
      darkTheme="1"/>
   <group
@@ -81,7 +87,7 @@
      id="template">
     <sodipodi:namedview
        id="base"
-       pagecolor="#505050"
+       pagecolor="#666666"
        pageopacity="0"
        pagecheckerboard="1"
        bordercolor="#ffffff"
