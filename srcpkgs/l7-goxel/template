@@ -1,0 +1,15 @@
+# Template file for 'l7-goxel'
+pkgname=l7-goxel
+version=0.1.0
+revision=1
+build_style=meta
+depends="goxel"
+short_desc="Additional configuration for goxel package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="GPL-3.0-or-later"
+homepage="https://langitketujuh.id"
+
+do_install() {
+	vinstall ${FILESDIR}/settings.ini 0644 etc/skel/.config/goxel settings.ini
+	vinstall ${FILESDIR}/goxel.desktop 0644 /usr/share/applications goxel.desktop
+}

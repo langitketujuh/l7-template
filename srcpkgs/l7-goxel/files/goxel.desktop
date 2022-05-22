@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Goxel
+GenericName=Voxel graphics editor
+Comment=3D Voxel Editor
+Exec=goxel
+Icon=goxel
+Type=Application
+Categories=Graphics;3DGraphics;
