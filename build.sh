@@ -16,7 +16,7 @@ shift $((OPTIND - 1))
 build_xbps(){
   # clean
   XBPS_TARGET_ARCH=$ARCH ./xbps-src clean
-  # build masterdir
+  # build packages
   XBPS_HOSTDIR="$HOST_DIR" ./xbps-src -m $MASTER_DIR pkg ${f}
   # add signed by
   XBPS_TARGET_ARCH=$ARCH xbps-rindex --privkey ~/.ssh/privkey.pem --sign --signedby "LangitKetujuh Linux" $HOST_DIR/binpkgs/main
