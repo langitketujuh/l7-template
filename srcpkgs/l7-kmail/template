@@ -1,7 +1,7 @@
 # Template file for 'l7-kmail'
 pkgname=l7-kmail
 version=0.1.1
-revision=4
+revision=5
 build_style=meta
 depends="kmail bogofilter"
 short_desc="Additional configuration for kmail package"
@@ -11,4 +11,5 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vinstall ${FILESDIR}/kmail2rc 0644 etc/skel/.config kmail2rc
+	vinstall ${FILESDIR}/org.kde.kmail2.desktop 0644 etc/skel/.config/autostart
 }
