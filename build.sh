@@ -32,6 +32,7 @@ if [ "$ARCH" = i686 ]; then
   done
   # generate repodata
   XBPS_TARGET_ARCH=$ARCH xbps-rindex -a $PWD/hostdir/binpkgs/main/*.xbps -f
+  chmod --preserve-root 644 $PWD/hostdir/binpkgs/main/${f}*.sig
 elif [ "$ARCH" = x86_64 ]; then
   # build packages
   for f in $PACKAGES; do
@@ -40,16 +41,18 @@ elif [ "$ARCH" = x86_64 ]; then
   done
   # generate repodata
   XBPS_TARGET_ARCH=$ARCH xbps-rindex -a $PWD/hostdir/binpkgs/main/*.xbps -f
+  chmod --preserve-root 644 $PWD/hostdir/binpkgs/main/${f}*.sig
 elif [ "$ARCH" = x86_64-musl ]; then
   # build packages
   for f in $PACKAGES; do
     MASTER_DIR="masterdir-x86_64-musl"
     build_xbps
   done
+  chmod --preserve-root 644 $PWD/hostdir/binpkgs/main/${f}*.sig
   # moving to musl dir
   mkdir -pv $PWD/hostdir/binpkgs/main/musl
-  for f in $(ls $PWD/hostdir/binpkgs/main/ | grep "x86_64-musl" | xargs); do
-    mv $PWD/hostdir/binpkgs/main/${f} $PWD/hostdir/binpkgs/main/musl
+  for m in $(ls $PWD/hostdir/binpkgs/main/ | grep "x86_64-musl" | xargs); do
+    mv $PWD/hostdir/binpkgs/main/${m} $PWD/hostdir/binpkgs/main/musl
   done
   # generate repodata
   XBPS_TARGET_ARCH=$ARCH xbps-rindex -a $PWD/hostdir/binpkgs/main/musl/*.xbps -f
