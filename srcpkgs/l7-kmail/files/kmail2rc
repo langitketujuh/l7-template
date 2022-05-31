@@ -17,7 +17,7 @@ AskEnableUnifiedMailboxes=false
 Recent Addresses=
 StartInTray=true
 SystemTrayEnabled=true
-first-start=true
+first-start=false
 
 [Geometry]
 readerWindowMode=right
