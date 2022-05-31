@@ -1,0 +1,14 @@
+# Template file for 'l7-krunner'
+pkgname=l7-krunner
+version=0.1.0
+revision=1
+build_style=meta
+depends="krunner"
+short_desc="Additional configuration for krunner package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="GPL-3.0-later"
+homepage="https://langitketujuh.id"
+
+do_install() {
+	vinstall ${FILESDIR}/krunnerrc 0644 etc/skel/.config/
+}
