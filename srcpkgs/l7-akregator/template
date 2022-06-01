@@ -1,7 +1,7 @@
 # Template file for 'l7-akregator'
 pkgname=l7-akregator
 version=0.1.1
-revision=5
+revision=6
 build_style=meta
 depends="akregator"
 short_desc="Additional configuration for akregator package"
@@ -11,5 +11,6 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vinstall ${FILESDIR}/akregatorrc 0644 etc/skel/.config akregatorrc
+	vinstall ${FILESDIR}/org.kde.akregator.desktop 0644 etc/skel/.config/autostart
 	vinstall ${FILESDIR}/feeds.opml 0644 etc/skel/.local/share/akregator/data/ feeds.opml
 }

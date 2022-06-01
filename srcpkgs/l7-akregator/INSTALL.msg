@@ -1,3 +1,5 @@
 Restore config (optional):
+mkdir -pv ~/.config/autostart/
 cp -rfv /etc/skel/.config/akregatorrc ~/.config/
 cp -rfv /etc/skel/.local/share/akregator/ ~/.local/share/
+cp -rfv /etc/skel/.config/autostart/org.kde.akregator.desktop ~/.config/autostart/
