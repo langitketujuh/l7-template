@@ -25,8 +25,8 @@ do_check() {
 pre_build() {
 	vmkdir usr/share/applications
 
-	for s in 16x16 22x22 24x24 32x32 48x48 64x64; do
-		vmkdir usr/share/icons/Papirus/${s}/apps
+	for s in 16 22 24 32 48 64; do
+		vmkdir usr/share/icons/Papirus/${s}x${s}/apps
 	done
 
 	for f in 16 22 24 32 48 64; do
