@@ -96,8 +96,5 @@ if (langIds.indexOf(languageId) != -1) {
 
 panel.addWidget("org.kde.plasma.colorpicker")
 panel.addWidget("org.kde.plasma.systemtray")
-panel.addWidget("org.kde.plasma.systemmonitor.cpu")
-panel.addWidget("org.kde.plasma.systemmonitor.memory")
 panel.addWidget("org.kde.plasma.digitalclock")
-panel.addWidget("org.kde.plasma.showdesktop")
 
