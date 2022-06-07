@@ -2,7 +2,7 @@
 Comment[en_US]=Support us to keep growing
 Comment[id]=Dukung kami agar terus berkembang
 Comment=Support us to keep growing
-Exec=xdg-open "https://langitketujuh.id/donasi"
+Exec=xdg-open "https://langitketujuh.id/kontribusi"
 GenericName[en_US]=Support us to keep growing
 GenericName[id]=Dukung kami agar terus berkembang
 GenericName=Support us to keep growing
