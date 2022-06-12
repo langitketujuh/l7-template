@@ -18,16 +18,16 @@ ssh-keygen -t rsa -b 4096 -m PEM -f ~/.ssh/privkey.pem
 
 Skip/empty your private password.
 
-## Compile packages
+## Compile packages (all architecture)
 
 ```
-./build.sh -a <arch> -p "<packages>"
+./build.sh -p "<packages> <packages>"
 ```
 
 Examples:
 
 ```
-./build.sh -a x86_64 -p "l7-tools l7-export"
+./build.sh -p "l7-tools l7-export"
 ```
 
 ## Update boostrap (optional)
