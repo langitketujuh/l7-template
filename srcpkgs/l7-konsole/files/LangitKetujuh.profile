@@ -1,11 +1,11 @@
 [Appearance]
-ColorScheme=breeze-dark
+ColorScheme=Breeze
 Font=Hack,9,-1,5,50,0,0,0,0,0
 
 [Encoding Options]
 DefaultEncoding=UTF-8
 
 [General]
-Name=langitketujuh
+Name=LangitKetujuh
 Parent=FALLBACK/
-TerminalMargin=8
+TerminalMargin=12
