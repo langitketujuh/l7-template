@@ -16,7 +16,7 @@ shift $((OPTIND - 1))
 for a in i686 x86_64 x86_64-musl; do
   for p in $PACKAGES; do
     # clean
-    XBPS_TARGET_ARCH=${a} ./xbps-src clean
+    XBPS_TARGET_ARCH=${a} ./xbps-src clean -m masterdir-${a}
     # build packages
     ./xbps-src -m masterdir-${a} pkg ${p}
     # add signed by
