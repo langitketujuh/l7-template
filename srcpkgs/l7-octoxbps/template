@@ -1,7 +1,7 @@
 # Template file for 'l7-octoxbps'
 pkgname=l7-octoxbps
 version=0.1.1
-revision=3
+revision=4
 build_style=meta
 depends="octoxbps"
 short_desc="Additional configuration for octoxbps package"
@@ -11,4 +11,5 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vinstall ${FILESDIR}/octoxbps.conf 0644 etc/skel/.config/octoxbps octoxbps.conf
+	vdoc ${FILESDIR}/README
 }

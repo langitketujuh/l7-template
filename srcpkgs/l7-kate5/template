@@ -1,7 +1,7 @@
 # Template file for 'l7-kate5'
 pkgname=l7-kate5
 version=0.1.1
-revision=3
+revision=4
 build_style=meta
 depends="kate5"
 short_desc="Additional configuration for kate5 package"
@@ -13,4 +13,5 @@ do_install() {
 	vinstall ${FILESDIR}/katerc 0644 etc/skel/.config katerc
 	vinstall ${FILESDIR}/kateschemarc 0644 etc/skel/.config kateschemarc
 	vinstall ${FILESDIR}/katesyntaxhighlightingrc 0644 etc/skel/.config katesyntaxhighlightingrc
+	vdoc ${FILESDIR}/README
 }

@@ -1,7 +1,7 @@
 # Template file for 'l7-carla'
 pkgname=l7-carla
 version=0.1.0
-revision=1
+revision=2
 build_style=meta
 depends="Carla"
 short_desc="Additional configuration for carla package"
@@ -12,4 +12,5 @@ homepage="https://langitketujuh.id"
 do_install() {
 	vmkdir etc/skel/.config
 	vcopy ${FILESDIR}/falkTX etc/skel/.config
+	vdoc ${FILESDIR}/README
 }

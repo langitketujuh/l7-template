@@ -1,7 +1,7 @@
 # Template file for 'l7-audacity'
 pkgname=l7-audacity
 version=0.1.1
-revision=3
+revision=4
 depends="audacity"
 short_desc="Additional configuration for audacity package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
@@ -11,4 +11,5 @@ homepage="https://langitketujuh.id"
 do_install() {
 	vinstall ${FILESDIR}/audacity.cfg 0644 etc/skel/.audacity-data audacity.cfg
 	vinstall ${FILESDIR}/ImageCache.png 0644 etc/skel/.audacity-data/Theme ImageCache.png
+	vdoc ${FILESDIR}/README
 }

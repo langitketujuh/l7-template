@@ -1,7 +1,7 @@
 # Template file for 'l7-falkon'
 pkgname=l7-falkon
 version=0.1.5
-revision=8
+revision=9
 depends="falkon"
 short_desc="Additional configuration for falkon package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
@@ -12,4 +12,5 @@ do_install() {
 	vmkdir etc/skel/.config/falkon/profiles
 	vcopy ${FILESDIR}/default etc/skel/.config/falkon/profiles
 	vinstall ${FILESDIR}/profiles.ini 0644 etc/skel/.config/falkon/profiles profiles.ini
+	vdoc ${FILESDIR}/README
 }

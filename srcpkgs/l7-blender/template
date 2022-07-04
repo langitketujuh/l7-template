@@ -1,7 +1,7 @@
 # Template file for 'l7-blender'
 pkgname=l7-blender
 version=0.1.2
-revision=3
+revision=4
 archs="~i686*"
 build_style=meta
 depends="blender"
@@ -13,4 +13,5 @@ homepage="https://langitketujuh.id"
 do_install() {
 	vinstall ${FILESDIR}/Breeze_Dark.xml 0644 usr/share/blender/3.0/scripts/presets/interface_theme Breeze_Dark.xml
 	vinstall ${FILESDIR}/userpref.blend 0644 etc/skel/.config/blender/3.0/config userpref.blend
+	vdoc ${FILESDIR}/README
 }

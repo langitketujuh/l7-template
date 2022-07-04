@@ -1,7 +1,7 @@
 # Template file for 'l7-inkscape'
 pkgname=l7-inkscape
 version=0.1.2
-revision=3
+revision=4
 build_style=meta
 depends="inkscape"
 short_desc="Additional configuration for inkscape package"
@@ -11,4 +11,5 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vinstall ${FILESDIR}/preferences.xml 0644 etc/skel/.config/inkscape preferences.xml
+	vdoc ${FILESDIR}/README
 }

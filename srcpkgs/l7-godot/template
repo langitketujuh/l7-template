@@ -1,7 +1,7 @@
 # Template file for 'l7-godot'
 pkgname=l7-godot
 version=0.1.2
-revision=3
+revision=4
 depends="godot"
 short_desc="Additional configuration for godot package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
@@ -10,4 +10,5 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vinstall ${FILESDIR}/editor_settings-3.tres 0644 etc/skel/.config/godot editor_settings-3.tres
+	vdoc ${FILESDIR}/README
 }

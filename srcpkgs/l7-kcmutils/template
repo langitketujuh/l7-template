@@ -1,7 +1,7 @@
 # Template file for 'l7-kcmutils'
 pkgname=l7-kcmutils
 version=0.1.1
-revision=3
+revision=4
 build_style=meta
 depends="kcmutils"
 short_desc="Additional configuration for kcmutils package"
@@ -11,4 +11,5 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vinstall ${FILESDIR}/kcminputrc 0644 etc/skel/.config kcminputrc
+	vdoc ${FILESDIR}/README
 }

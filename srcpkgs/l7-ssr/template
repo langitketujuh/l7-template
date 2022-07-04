@@ -1,7 +1,7 @@
 # Template file for 'l7-ssr'
 pkgname=l7-ssr
 version=0.1.1
-revision=3
+revision=4
 build_style=meta
 depends="ssr"
 short_desc="Additional configuration for ssr package"
@@ -15,4 +15,5 @@ do_install() {
 		vcopy ${FILESDIR}/${f}-profiles usr/share/simplescreenrecorder
 	done
 	vinstall ${FILESDIR}/settings.conf 0644 etc/skel/.ssr settings.conf
+	vdoc ${FILESDIR}/README
 }

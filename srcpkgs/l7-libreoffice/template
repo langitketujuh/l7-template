@@ -1,7 +1,7 @@
 # Template file for 'l7-libreoffice'
 pkgname=l7-libreoffice
 version=0.1.1
-revision=3
+revision=4
 build_style=meta
 depends="libreoffice breeze"
 short_desc="Additional configuration for libreoffice package"
@@ -11,4 +11,5 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vinstall ${FILESDIR}/registrymodifications.xcu 0600 etc/skel/.config/libreoffice/4/user
+	vdoc ${FILESDIR}/README
 }

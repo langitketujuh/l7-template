@@ -1,7 +1,7 @@
 # Template file for 'l7-gwenview'
 pkgname=l7-gwenview
 version=0.1.1
-revision=3
+revision=4
 build_style=meta
 depends="gwenview"
 short_desc="Additional configuration for gwenview package"
@@ -11,4 +11,5 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vinstall ${FILESDIR}/gwenviewrc 0644 etc/skel/.config gwenviewrc
+	vdoc ${FILESDIR}/README
 }

@@ -1,7 +1,7 @@
 # Template file for 'l7-openscad'
 pkgname=l7-openscad
 version=0.1.0
-revision=1
+revision=2
 build_style=meta
 depends="openscad"
 short_desc="Additional configuration for openscad package"
@@ -11,4 +11,5 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vinstall ${FILESDIR}/OpenSCAD.conf 0644 etc/skel/.config/OpenSCAD OpenSCAD.conf
+	vdoc ${FILESDIR}/README
 }

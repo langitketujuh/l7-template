@@ -1,7 +1,7 @@
 # Template file for 'l7-key-mon'
 pkgname=l7-key-mon
 version=0.1.0
-revision=1
+revision=2
 build_style=meta
 depends="key-mon"
 short_desc="Additional configuration for key-mon package"
@@ -11,4 +11,5 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vinstall ${FILESDIR}/config 0644 etc/skel/.config/key-mon config
+	vdoc ${FILESDIR}/README
 }

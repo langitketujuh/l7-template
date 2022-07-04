@@ -1,7 +1,7 @@
 # Template file for 'l7-base-files'
 pkgname=l7-base-files
 version=0.1.2
-revision=4
+revision=5
 build_style=meta
 short_desc="Additional configuration for base-files package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
@@ -15,4 +15,5 @@ do_install() {
 	vbin "${FILESDIR}/lsb_release"
 	# file modified
 	vinstall ${FILESDIR}/dot_bashrc 0644 etc/skel .bashrc
+	vdoc ${FILESDIR}/README
 }

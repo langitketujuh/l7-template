@@ -1,7 +1,7 @@
 # Template file for 'l7-dconf'
 pkgname=l7-dconf
 version=0.1.0
-revision=1
+revision=2
 build_style=meta
 depends="dconf"
 short_desc="Additional configuration for dconf package"
@@ -11,4 +11,5 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vinstall ${FILESDIR}/user 0644 etc/skel/.config/dconf
+	vdoc ${FILESDIR}/README
 }
