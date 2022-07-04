@@ -1,3 +1,0 @@
-Restore config (optional):
-cp -rfv /etc/skel/.config/konsolerc ~/.config/
-cp -rfv /etc/skel/.local/share/konsole ~/.local/share/

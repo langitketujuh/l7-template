@@ -1,3 +1,0 @@
-Restore config (optional):
-cp -rfv /etc/skel/.gtkrc-2.0 ~/
-cp -rfv /etc/skel/.config/gtk-{3,4}.0 ~/.config/

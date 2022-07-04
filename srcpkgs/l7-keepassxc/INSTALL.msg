@@ -1,3 +1,0 @@
-Restore config (optional):
-cp -rfv /etc/skel/.config/keepassxc/ ~/.config/
-cp -rfv /etc/skel/.config/autostart/org.keepassxc.KeePassXC.desktop ~/.config/autostart/

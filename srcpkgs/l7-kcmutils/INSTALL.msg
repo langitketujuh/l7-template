@@ -1,2 +1,0 @@
-Restore config (optional):
-cp -rfv /etc/skel/.config/kcminputrc ~/.config/
