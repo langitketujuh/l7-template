@@ -66,7 +66,7 @@
    <stop stop-color="#133390" offset="1"/>
   </linearGradient>
  </defs>
- <rect width="190.5" height="381" fill="#2a2e32" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+ <rect width="190.5" height="381" fill="#1b1e20" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
  <g transform="matrix(.53538 .26412 -.26412 .53538 89.366 124.75)" opacity=".03">
   <path d="m54.659 197.53 40.004 40.455c114.11-108.89 302.47-104.88 435.19-44.735l90.16-150.96c-167.99-66.143-438.18-23.396-565.35 155.24z" fill="url(#linearGradient59750)"/>
   <path d="m54.659 197.53 14.519 21.359c114.11-108.89 308.46-174.04 441.18-113.9l98.004-58.271c-198.14-72.309-440.27 4.2929-553.7 150.81z" fill="#6ea8f1"/>
