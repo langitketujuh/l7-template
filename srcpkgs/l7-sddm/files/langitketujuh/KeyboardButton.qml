@@ -1,7 +1,7 @@
 import QtQuick 2.2
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 2.0 as PlasmaComponents // Because PC3 ToolButton can't take a menu
 
 import QtQuick.Controls 1.3 as QQC
 
@@ -12,7 +12,6 @@ PlasmaComponents.ToolButton {
 
     text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Keyboard Layout: %1", instantiator.objectAt(currentIndex).shortName)
     implicitWidth: minimumWidth
-    font.pointSize: config.fontSize
 
     visible: menu.items.length > 1
 

@@ -4,7 +4,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.2
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 SessionManagementScreen {
     id: root
@@ -17,9 +17,9 @@ SessionManagementScreen {
 
     //the y position that should be ensured visible when the on screen keyboard is visible
     property int visibleBoundary: mapFromItem(loginButton, 0, 0).y
-    onHeightChanged: visibleBoundary = mapFromItem(loginButton, 0, 0).y + loginButton.height + units.smallSpacing
+    onHeightChanged: visibleBoundary = mapFromItem(loginButton, 0, 0).y + loginButton.height + PlasmaCore.Units.smallSpacing
 
-    property int fontSize: config.fontSize
+    property int fontSize: parseInt(config.fontSize) + 2
 
     signal loginRequest(string username, string password)
 
@@ -48,7 +48,7 @@ SessionManagementScreen {
         loginRequest(username, password);
     }
 
-    PlasmaComponents.TextField {
+    PlasmaComponents3.TextField {
         id: userNameInput
         font.pointSize: fontSize + 1
         Layout.fillWidth: true
@@ -67,7 +67,7 @@ SessionManagementScreen {
     RowLayout {
         Layout.fillWidth: true
 
-        PlasmaComponents.TextField {
+        PlasmaComponents3.TextField {
             id: passwordBox
             font.pointSize: fontSize + 1
             Layout.fillWidth: true
@@ -82,6 +82,8 @@ SessionManagementScreen {
                     startLogin();
                 }
             }
+
+            visible: root.showUsernamePrompt || userList.currentItem.needsPassword
 
             Keys.onEscapePressed: {
                 mainStack.currentItem.forceActiveFocus();
@@ -102,24 +104,22 @@ SessionManagementScreen {
 
             Connections {
                 target: sddm
-                onLoginFailed: {
+                function onLoginFailed() {
                     passwordBox.selectAll()
                     passwordBox.forceActiveFocus()
                 }
             }
         }
 
-        PlasmaComponents.Button {
+        PlasmaComponents3.Button {
             id: loginButton
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log In")
-            implicitHeight: passwordBox.height - units.smallSpacing * 0.5 // otherwise it comes out taller than the password field
-            Layout.rightMargin: 1 // prevents it from extending beyond the username field
+            Layout.preferredHeight: passwordBox.implicitHeight
+            Layout.preferredWidth: text.length == 0 ? loginButton.Layout.preferredHeight : -1
 
-            PlasmaCore.IconItem { // no iconSource because if you take away half a unit (implicitHeight), "go-next" gets cut off
-                anchors.fill: parent
-                anchors.margins: units.smallSpacing
-                source: "go-next"
-            }
+            icon.name: text.length == 0 ? (root.LayoutMirroring.enabled ? "go-previous" : "go-next") : ""
+
+            text: root.showUsernamePrompt || userList.currentItem.needsPassword ? "" : i18n("Log In")
             onClicked: startLogin();
         }
     }

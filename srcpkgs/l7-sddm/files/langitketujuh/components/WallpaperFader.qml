@@ -1,21 +1,8 @@
-/********************************************************************
- This file is part of the KDE project.
+/*
+    SPDX-FileCopyrightText: 2014 Aleix Pol Gonzalez <aleixpol@blue-systems.com>
 
-Copyright (C) 2014 Aleix Pol Gonzalez <aleixpol@blue-systems.com>
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*********************************************************************/
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
 
 import QtQuick 2.6
 import QtQuick.Controls 1.1
@@ -23,7 +10,6 @@ import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.plasma.private.sessions 2.0
 import "../components"
@@ -38,13 +24,13 @@ Item {
     property real factor: 0
     readonly property bool lightBackground: Math.max(PlasmaCore.ColorScope.backgroundColor.r, PlasmaCore.ColorScope.backgroundColor.g, PlasmaCore.ColorScope.backgroundColor.b) > 0.5
 
-    property bool alwaysShowClock: typeof config === "undefined" || config.alwaysShowClock === true
+    property bool alwaysShowClock: typeof config === "undefined" || typeof config.alwaysShowClock === "undefined" || config.alwaysShowClock === true
 
     Behavior on factor {
         NumberAnimation {
             target: wallpaperFader
             property: "factor"
-            duration: 1000
+            duration: PlasmaCore.Units.veryLongDuration * 2
             easing.type: Easing.InOutQuad
         }
     }
@@ -158,7 +144,7 @@ Item {
             NumberAnimation {
                 targets: [mainStack, footer, clock]
                 property: "opacity"
-                duration: units.longDuration
+                duration: PlasmaCore.Units.veryLongDuration
                 easing.type: Easing.InOutQuad
             }
         },
@@ -168,7 +154,7 @@ Item {
             NumberAnimation {
                 targets: [mainStack, footer, clock]
                 property: "opacity"
-                duration: 500
+                duration: PlasmaCore.Units.veryLongDuration
                 easing.type: Easing.InOutQuad
             }
         }
