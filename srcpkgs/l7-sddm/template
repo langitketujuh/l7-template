@@ -1,15 +1,19 @@
 # Template file for 'l7-sddm'
 pkgname=l7-sddm
 version=0.1.3
-revision=3
+revision=4
 build_style=meta
 depends="sddm"
 short_desc="Additional configuration for sddm package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
+conf_files="
+	/etc/sddm.conf.d/kde_settings.conf"
 
 do_install() {
+	vmkdir etc
+	vcopy ${FILESDIR}/sddm.conf.d etc
 	vmkdir usr/share/sddm/themes
 	vcopy ${FILESDIR}/langitketujuh usr/share/sddm/themes
 }
