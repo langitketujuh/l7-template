@@ -1,0 +1,25 @@
+# Template file for 'inkscape-incadiff'
+pkgname=inkscape-incadiff
+version=0.2
+revision=1
+_githash=8a61b3f0d590935de8baaa2bd6305ad7ca93acc7
+wrksrc="incadiff-${_githash}"
+build_style=meta
+depends="inkscape"
+short_desc="Apply successive difference operations on superimposed paths"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="GPL-2.0-or-later"
+homepage="https://github.com/incaya/incadiff"
+distfiles="https://github.com/incaya/incadiff/archive/${_githash}.tar.gz"
+checksum=c4a32807526c4534f01a00b69b9aabd4d472d3865d61afcde1559c0e70110c37
+
+python_version=3
+
+do_install() {
+	vmkdir usr/share/inkscape/extensions
+	vsed -i src/incadiff.inx -e 's/name="Incaya"/name="Modify Path"/'
+	for f in inx py; do
+		vinstall src/incadiff.${f} 0644 usr/share/inkscape/extensions incadiff.${f}
+	done
+	vdoc README.md
+}
