@@ -70,6 +70,7 @@ hook() {
 		*.7z)	      cursufx="7z";;
 		*.gem)	      cursufx="gem";;
 		*.crate)      cursufx="crate";;
+		*.ayt)        cursufx="zip";;
 		*) msg_error "$pkgver: unknown distfile suffix for $curfile.\n";;
 		esac
 
