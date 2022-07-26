@@ -1,0 +1,22 @@
+# Template file for 'ayat-tafasir'
+pkgname=ayat-tafasir
+version=0.0.1
+revision=1
+wrksrc="tafasir"
+short_desc="Quran interpretation data from KSU-Electronic Mosshaf project"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="CC-BY-3.0"
+homepage="https://quran.ksu.edu.sa/ayat/"
+distfiles="http://quran.ksu.edu.sa/ayat/tafasir.ayt"
+checksum=1e96839de6ee8103ec19167f1e9668b9c44084cd0a4e7d7a33d1e05aa4e9b05d
+
+do_install() {
+	for i in *.ayt ; do
+		mv ${i} $(basename -s .ayt ${i}).db
+	done
+
+	vmkdir usr/share/ayat/tafasir
+
+	vcopy *.db usr/share/ayat/tafasir
+	vinstall ${FILESDIR}/tafasirInfo 0644 usr/share/ayat/tafasir
+}
