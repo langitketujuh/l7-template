@@ -1,0 +1,16 @@
+# Template file for 'ayat-recit-ghamadi'
+pkgname=ayat-recit-ghamadi
+version=0.0.1
+revision=1
+wrksrc="audio"
+short_desc="Ayat data recitation from Sheikh Saad Al-Gamdi"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="CC-BY-3.0"
+homepage="https://quran.ksu.edu.sa/ayat/?l=en"
+distfiles="http://quran.ksu.edu.sa/ayat/download/telawat/Ghamadi_40kbps.cq.ayt"
+checksum=c2f70c9a77b120ababb2d8680d356e7fe71615da57bd8b15b177f14b60e91430
+
+do_install() {
+	vmkdir usr/share/ayat/audio
+	vcopy Ghamadi_40kbps usr/share/ayat/audio
+}
