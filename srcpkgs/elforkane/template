@@ -1,0 +1,28 @@
+# Template file for 'elforkane'
+pkgname=elforkane
+version=1.2
+revision=1
+build_style=qmake
+hostmakedepends="qt5-qmake qt5-host-tools"
+makedepends="qt5-declarative-devel qt5-multimedia-devel gstreamer1-devel qt5-svg-devel"
+depends="qt5-multimedia qt5-svg ayat-recit-ghamadi ayat-tafasir ayat-tarajem"
+short_desc="The electronic Holly Quran browser Elforkane"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/zakariakov/elforkane"
+distfiles="https://github.com/zakariakov/elforkane/archive/refs/tags/${version}.tar.gz"
+checksum=25f5352472e99e6dd018f6003408a793ee85f140a381d58b7de463e9b0bc2003
+
+pre_build() {
+	vsed -i elforkane.desktop -e 's/Name\[en_US\]=elforkane/Name\[en_US\]=Elforkane/g'
+	vsed -i elforkane.desktop -e 's/Name=elforkane/Name=Elforkane/g'
+}
+
+post_install() {
+	rm -rf $DESTDIR/usr/share/elforkane/tafasir
+	rm -rf $DESTDIR/usr/share/elforkane/translat
+
+	ln -s /usr/share/ayat/tafasir $DESTDIR/usr/share/elforkane/tafasir
+	ln -s /usr/share/ayat/tarajem $DESTDIR/usr/share/elforkane/translat
+	ln -s /usr/share/ayat/audio $DESTDIR/usr/share/elforkane/audio
+}
