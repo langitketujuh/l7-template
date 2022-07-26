@@ -1,0 +1,14 @@
+# Template file for 'elokab-adhan'
+pkgname=elokab-adhan
+version=0.2
+revision=1
+build_style=qmake
+hostmakedepends="qt5-qmake qt5-host-tools"
+makedepends="qt5-declarative-devel qt5-multimedia-devel gstreamer1-devel qt5-svg-devel qt5-x11extras-devel"
+depends="qt5-multimedia qt5-svg gst-plugins-good1 gst-plugins-bad1 gst-plugins-good1 gst-libav"
+short_desc="System tray prayer time built in Qt"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/zakariakov/elokab-adhan"
+distfiles="https://github.com/zakariakov/elokab-adhan/archive/refs/tags/${version}.tar.gz"
+checksum=a444fea51aee432d2c63cc3dbf20726219b8873b88093add01e9142c051414f1
