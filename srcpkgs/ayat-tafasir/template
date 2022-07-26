@@ -19,4 +19,5 @@ do_install() {
 
 	vcopy *.db usr/share/ayat/tafasir
 	vinstall ${FILESDIR}/tafasirInfo 0644 usr/share/ayat/tafasir
+	vinstall ${FILESDIR}/ar_muyassar.db 0644 usr/share/ayat/tafasir
 }
