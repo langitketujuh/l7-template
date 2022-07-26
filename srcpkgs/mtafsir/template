@@ -1,0 +1,31 @@
+# Template file for 'mtafsir'
+pkgname=mtafsir
+version=0.2
+revision=1
+build_style=qmake
+hostmakedepends="qt5-qmake qt5-host-tools"
+makedepends="qt5-declarative-devel"
+depends="amiri-font ayat-tafasir"
+short_desc="Interpretation of the holy Quran"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/zakariakov/mtafsir"
+distfiles="https://github.com/zakariakov/mtafsir/archive/refs/tags/${version}.tar.gz"
+checksum=1e0dfbee7a6ef8cda68a070aeaba2075e5d9be6e1c6428d55925f1bb19d47a6a
+
+pre_build() {
+	vsed -i dialogoptions.cpp -e 's/Traditional Arabic/Amiri/g'
+	vsed -i mainwindow.cpp -e 's/Traditional Arabic/Amiri/g'
+}
+
+post_install() {
+	rm -f $DESTDIR/usr/share/mtafsir/amiri-quran.ttf
+	rm -rf $DESTDIR/usr/share/mtafsir/tafasir
+
+	vmkdir usr/share/fonts/TTF
+	for i in ttf TTF; do
+		mv $DESTDIR/usr/share/mtafsir/*.${i} $DESTDIR/usr/share/fonts/TTF
+	done
+
+	ln -s /usr/share/ayat/tafasir $DESTDIR/usr/share/mtafsir/
+}
