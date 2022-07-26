@@ -6,7 +6,7 @@ wrksrc="tafasir"
 short_desc="Quran interpretation data from KSU-Electronic Mosshaf project"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="CC-BY-3.0"
-homepage="https://quran.ksu.edu.sa/ayat/"
+homepage="https://quran.ksu.edu.sa/ayat/?l=en"
 distfiles="http://quran.ksu.edu.sa/ayat/tafasir.ayt"
 checksum=1e96839de6ee8103ec19167f1e9668b9c44084cd0a4e7d7a33d1e05aa4e9b05d
 
