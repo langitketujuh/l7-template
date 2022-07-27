@@ -17,6 +17,8 @@ for a in i686 x86_64 x86_64-musl; do
   for p in $PACKAGES; do
     # clean
     XBPS_TARGET_ARCH=${a} ./xbps-src clean -m masterdir-${a}
+    # new masterdir
+    ./xbps-src -m masterdir-${a} binary-bootstrap ${a}
     # build packages
     ./xbps-src -m masterdir-${a} pkg ${p}
     # add signed by
