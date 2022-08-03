@@ -1,0 +1,22 @@
+# Template file for 'fastfetch'
+pkgname=fastfetch
+version=1.6.1
+revision=1
+build_style=cmake
+configure_args="-DBUILD_TESTS=ON"
+conf_files="/etc/fastfetch/config.conf"
+hostmakedepends="pkg-config"
+makedepends="chafa-devel dbus-devel dconf-devel glib-devel libmagick-devel
+librpm-devel libxcb-devel libXrandr-devel MesaLib-devel ocl-icd-devel
+pciutils-devel sqlite-devel Vulkan-Headers wayland-devel xfconf-devel zlib-devel"
+short_desc="Like neofetch, but much faster"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="MIT"
+homepage="https://github.com/LinusDierheimer/fastfetch"
+changelog="https://raw.githubusercontent.com/LinusDierheimer/fastfetch/master/CHANGELOG.md"
+distfiles="https://github.com/LinusDierheimer/fastfetch/archive/${version}.tar.gz"
+checksum=59eb19b5a1c7f8e29831d8a215d7a58eb88f269362cca4b8c4add5ae672c6f29
+
+post_install() {
+	vlicense LICENSE
+}
