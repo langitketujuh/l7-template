@@ -1,8 +1,7 @@
 # Template file for 'fastfetch'
 pkgname=fastfetch
 version=1.6.1
-revision=1
-archs="i686 x86_64"
+revision=2
 build_style=cmake
 configure_args="-DBUILD_TESTS=ON"
 conf_files="/etc/fastfetch/config.conf"
