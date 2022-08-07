@@ -1,7 +1,7 @@
 # Template file for 'l7-export'
 pkgname=l7-export
-version=1.16.22
-revision=2
+version=1.16.23
+revision=1
 build_style=gnu-makefile
 depends="colord ghostscript inkscape
 	ImageMagick libwebp-tools"
@@ -10,4 +10,4 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://gitlab.com/langitketujuh/l7-export"
 distfiles="https://gitlab.com/langitketujuh/l7-export/-/archive/${version}/l7-export-${version}.tar.gz"
-checksum=8993c8b8f32f3b3c8beac4659a3de6fd758faf8f1e134b5530cc3312184967cd
+checksum=156e5dd76cba4211f0d04b032bfce50d39848774cc3e95452b2a03efc3c21ac7
