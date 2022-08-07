@@ -16,18 +16,20 @@
     <group
        id="boot"
        theme="system"
-       canvas="dark-check">
+       canvas="light">
       <group
          id="shown"
          ver1.2="1" />
     </group>
     <group
        id="softproof"
+       enable="1"
+       gamutwarn="1"
        uri="/usr/share/color/icc/profiles/ghostscript/default_cmyk.icc" />
     <group
        id="displayprofile"
-       enable="1"
-       from_display="1"
+       enable="0"
+       from_display="0"
        intent="0"
        uri="/usr/share/color/icc/profiles/ghostscript/default_rgb.icc" />
     <group
@@ -55,9 +57,6 @@
     <group
        id="rulers"
        state="0" />
-    <group
-       id="scrollbars"
-       state="0" />
   </group>
   <group
      id="fullscreen">
@@ -66,9 +65,6 @@
        state="0" />
     <group
        id="rulers"
-       state="0" />
-    <group
-       id="scrollbars"
        state="0" />
   </group>
   <group
@@ -79,22 +75,5 @@
     <group
        id="rulers"
        state="0" />
-    <group
-       id="scrollbars"
-       state="0" />
-  </group>
-  <group
-     id="template">
-    <sodipodi:namedview
-       id="base"
-       pagecolor="#666666"
-       pageopacity="0"
-       pagecheckerboard="1"
-       bordercolor="#ffffff"
-       borderopacity="1"
-       objecttolerance="10.0"
-       gridtolerance="10.0"
-       guidetolerance="10.0"
-       pageshadow="0" />
   </group>
 </inkscape>
