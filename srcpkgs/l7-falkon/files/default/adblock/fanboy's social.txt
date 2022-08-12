@@ -1,10 +1,10 @@
 Title: Fanboy's Social
 Url: http://easylist-downloads.adblockplus.org/fanboy-social.txt
 [Adblock Plus 2.0]
-! Checksum: PKFJooBMMrQH2oJ8V7wruQ
-! Version: 202208070221
+! Checksum: sM6tFSOtXU3VvTVxinC92g
+! Version: 202208120921
 ! Title: Fanboy's Social Blocking List
-! Last modified: 07 Aug 2022 02:21 UTC
+! Last modified: 12 Aug 2022 09:21 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -11512,9 +11512,6 @@ _youtube_social_
 ##.share-comment-etc
 ##.share-component
 ##.share-contain
-##.share-control
-##.share-controls
-##.share-controls__container
 ##.share-count
 ##.share-count-container
 ##.share-counters
@@ -16810,8 +16807,10 @@ haaretz.com###mobiles-buttons-wrapper
 list25.com###modal
 visiontimes.com###modal-toggle
 huffpost.com###most_popular_social
+sammyfans.com###mvp-content-main > h4 > [href]
 playforukraine.life,playforukraine.live,ryot.org###myModal
 gadgetose.com###my_badge
+timesnownews.com###native-share
 bharatmarg.com###nav_menu-4
 ncaa.com###ncaa-share-hanger
 testtube.com###network-list
@@ -17344,10 +17343,12 @@ avaaz.org##.global-footer-connect
 linkis.com##.global-modal-popup
 gloucesterrugby.co.uk##.gloucester_container_home_middle_social
 click2houston.com,clickondetroit.com,clickorlando.com,ksat.com,news4jax.com,wsls.com##.gmg-vf
+givemesport.com##.gms-share
 gamepressure.com##.go-face
 gamepressure.com##.go-plus
 good.is##.good-popup
 belfasttelegraph.co.uk,cadenaazul.com,crosscut.com,dailystar.co.uk,fixya.com,flippinawesome.org,forbes.com,freebeacon.com,geeksandbeats.com,independent.ie,lapoderosa.com,latintimes.com,ludokado.com,nationofchange.org,scroll.in,thenewstribe.com##.google
+latestly.com##.google-news-btn
 alarabiya.net##.google-news-callout
 hughesnet.com##.googleImage
 coinpedia.org##.google_news-space
@@ -17437,6 +17438,7 @@ celebrations.com##.join_party
 thejakartapost.com##.jplus-follow-sosmed
 bleacherreport.com##.jqmOverlay
 bleacherreport.com##.jqmWindow
+gagadget.com##.js-toplink-container
 itnwwe.com##.kadence-column_09a01f-df
 kdnuggets.com##.kd_bottom
 francemusique.com##.keep-in-touch-blocks
@@ -17506,6 +17508,7 @@ cnn.com##.metadata-header__follow-links
 washingtonian.com##.min-height-800
 whatuni.com##.mn_icons
 dispatchtribunal.com,thelincolnianonline.com,weekherald.com##.mobile-hide
+thehackernews.com##.mobile-share
 space.com##.mod-hdr
 watchfree.to##.modal
 cpuboss.com,ssdboss.com,url-encode-decode.com##.modal-backdrop
@@ -17655,6 +17658,7 @@ guff.com,quickanddirtytips.com,tvline.com##.share-container
 nymag.com##.share-link
 xvideos.com##.share-small
 wrif.com##.share-wrap
+kuow.org##.share_actions_wrapper
 vimeo.com##.share_body
 livestream.com##.share_event
 boardgamegeek.com##.sharecontrols
@@ -17679,6 +17683,7 @@ filmofilia.com##.sidebar_top
 hotklix.com##.signinStrip
 patheos.com##.simple-follow
 dhakatribune.com##.single-artical-page-shear-section-shear-section
+me.me##.single-item-share
 japantimes.co.jp##.single-sns-area
 247sports.com##.site-header
 eveningecho.ie##.site-nav-facebook
@@ -17717,7 +17722,7 @@ yourdailypornmovies.ws##.soci
 konami.com##.social-account
 tgdaily.com##.social-actions
 marketplace.org##.social-bottom
-boredpanda.com,criticalthreats.org##.social-box
+boredpanda.com,criticalthreats.org,thesun.co.uk##.social-box
 vaticannews.va##.social-btn
 voiceofsandiego.org##.social-cell
 dibujos.net,time.com##.social-container
@@ -17729,7 +17734,7 @@ abc13.com,blizzardwatch.com,changer4u.com,davidwalsh.name,dcrainmaker.com,ijr.co
 gaystarnews.com##.social-images
 cinenews.be##.social-line
 fullfact.org,metro.us,screencrush.com,skinnyms.com,stoneyroads.com,thedailystar.net,thepostmillennial.com##.social-links
-gamerant.com##.social-list
+gamerant.com,latestly.com##.social-list
 system-ns.com##.social-login
 trumparea.com##.social-media-top
 autotrader.ca,clickhole.com,gbtimes.com,metascan-online.com,uanews.org##.social-network
@@ -17737,6 +17742,7 @@ facethefactsusa.org##.social-profiles
 mintpressnews.com##.social-signup
 mirror.co.uk##.social-sites
 bnnbloomberg.ca,canoe.com,theprovince.com,torontosun.com##.social-text
+politico.com##.social-tools
 politico.com##.social-tools__list
 twitch.tv##.social-twitch-prime
 mmorpg.com##.social-web
@@ -17815,6 +17821,7 @@ ziddu.com##.tablebg[width="443"]
 okgoals.com##.tabrow
 theintercept.com##.talk-slot-comment-actions
 freeudemycourses.me##.tds_icon_box2_wrap.tdm-content-horiz-left
+latestly.com##.telegram-bot-btn
 playboy.com##.tell-your-friends
 itproportal.com##.tenancy-buttons
 razorianfly.com##.textwidget > .social_profile
@@ -18612,7 +18619,6 @@ mobiili.fi##.mobsome_icons
 ampparit.com##.social-media-links > .sidebox-content
 ampparit.com##.social-media-links > h3[class="sidebox-header"]
 forssanlehti.fi#?#.herald-single-sticky:-abp-has(.herald-share)
-||rd.fi/sites/default/files/vp-fbssa-banner$image
 !
 !---------- Greek Specific Social Media Elements ----------
 !
