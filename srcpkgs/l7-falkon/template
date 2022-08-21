@@ -1,7 +1,7 @@
 # Template file for 'l7-falkon'
 pkgname=l7-falkon
 version=0.1.5
-revision=13
+revision=14
 depends="falkon"
 short_desc="Additional configuration for falkon package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

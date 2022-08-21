@@ -3,3 +3,4 @@ Url:
 [Adblock Plus 1.1.1]
 duckduckgo.com#@#.has-ad
 @@||duckduckgo.com^$document
+@@||real.discount^$document

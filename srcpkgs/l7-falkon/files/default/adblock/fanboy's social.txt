@@ -1,10 +1,10 @@
 Title: Fanboy's Social
 Url: http://easylist-downloads.adblockplus.org/fanboy-social.txt
 [Adblock Plus 2.0]
-! Checksum: sM6tFSOtXU3VvTVxinC92g
-! Version: 202208120921
+! Checksum: u5v4lARwLGvbJ5a66edUGQ
+! Version: 202208210641
 ! Title: Fanboy's Social Blocking List
-! Last modified: 12 Aug 2022 09:21 UTC
+! Last modified: 21 Aug 2022 06:41 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://easylist.to/
 ! License: http://creativecommons.org/licenses/by/3.0/
@@ -2763,6 +2763,7 @@ _youtube_social_
 ###as_facebook_mem_likebox_widgets
 ###as_facebook_recommend
 ###asd_share_buttons
+###aside-social-links-container
 ###asidesociallinks
 ###at-instapaper
 ###at4-share
@@ -5768,6 +5769,7 @@ _youtube_social_
 ##.acticle__social
 ##.action--share
 ##.action-box-social
+##.action.mailto.friend
 ##.actionlinks__shares
 ##.actionlinks__title
 ##.actions-bar-share
@@ -6347,6 +6349,7 @@ _youtube_social_
 ##.bestwp-share-buttons
 ##.better-social-counter
 ##.bg-button-twitter
+##.bg-share
 ##.bg_popup-social__wrap
 ##.bi-share
 ##.big-pinterest-icon
@@ -8318,6 +8321,7 @@ _youtube_social_
 ##.footerShare
 ##.footerSocial
 ##.footerSocialIcons
+##.footerSocialShares
 ##.footerSocials
 ##.footerYouTube
 ##.footer_NewsletterSocialIcon
@@ -10165,6 +10169,7 @@ _youtube_social_
 ##.mdi-share-variant
 ##.mdi-twitter
 ##.mdl_followUs
+##.media-engage-share
 ##.media-menu-sharemenu
 ##.media-object__social
 ##.media-share
@@ -10233,6 +10238,7 @@ _youtube_social_
 ##.message-share
 ##.messageShareButtons
 ##.messenger-barra
+##.meta-articles__social
 ##.meta-panel__social
 ##.meta-share
 ##.meta-share-bottom
@@ -10581,6 +10587,7 @@ _youtube_social_
 ##.nn-header-main__social
 ##.nn-social-icons-header
 ##.nn-social-list
+##.node-content-body-share
 ##.node-share
 ##.node-share-buttons
 ##.node-share-sm
@@ -11711,6 +11718,7 @@ _youtube_social_
 ##.share-sm-icons
 ##.share-socBtns
 ##.share-social
+##.share-social-bottom
 ##.share-social-box
 ##.share-social-icon
 ##.share-social-link
@@ -12555,6 +12563,7 @@ _youtube_social_
 ##.singlePostShare
 ##.singlePostShareButton
 ##.singlePostShareButtonTwitter
+##.singleSocialShares
 ##.single__floating-share
 ##.single__share__label
 ##.single__social
@@ -12827,6 +12836,7 @@ _youtube_social_
 ##.social-Twitter
 ##.social-action
 ##.social-actions__button--twitter
+##.social-addthis
 ##.social-align-default
 ##.social-apps
 ##.social-area
@@ -14287,6 +14297,7 @@ _youtube_social_
 ##.ssochial
 ##.ssocial
 ##.sss_shares_block
+##.sst-social-share
 ##.ssto-share-buttons
 ##.st-custom-button
 ##.st-social-block
@@ -14406,6 +14417,7 @@ _youtube_social_
 ##.str-social-sidebar
 ##.strapline__social
 ##.stream-social-cta
+##.stripe-social
 ##.stripped-down-sharebar
 ##.strx-simple-sharing-sidebar-buttons
 ##.stt-share
@@ -16901,7 +16913,7 @@ prlog.org###smx
 prlog.org###smx2
 worldreview.info###sn
 play-asia.com###soc
-amartus.com,amazinglytimedphotos.com,androidzoom.com,ask.com,atomic-robo.com,barneys.com,beefjack.com,bitcoinblackfriday.com,bubblews.com,businessinsider.com,businessinsider.com.au,chnetwork.org,classicreload.com,cmt.com,cnalicense.org,consumerist.com,distance-calculator.co.uk,dogandponyshowwebsite.com,donnahay.com.au,ekathimerini.com,electrictoolbox.com,g2a.com,gamingonlinux.com,gamrreview.com,giantfreakinrobot.com,gizmodo.com.au,globes.co.il,goutsa.com,haydenplanetarium.org,hccs.edu,highlandcapital.com,hollywire.com,hostcabi.net,hotscripts.com,humorhub.org,humourtube.org,imgur.com,ini.tv,inkscape.org,joburg.org.za,justrewards.co.za,kinguin.net,kotaku.com.au,latimes.com,lawyersweekly.com.au,ledpros.ca,legitreviews.com,lifehacker.com.au,mail.opera.com,makeuseof.com,mayoclinic.com,meteoblue.com,meteovista.co.uk,meteovista.com,mtv.com,musicfeeds.com.au,namecheap.com,nzmusicmonth.co.nz,onlineeducation.net,openculture.com,penny-arcade.com,phoronix.com,pixiq.com,play-asia.com,presidenthotel.co.za,producersguild.org,radiovaticana.va,ratemyprofessors.com,ryot.org,sfchamber.com,skift.com,smhlmao.com,stileproject.com,stoppress.co.nz,swapit.co.uk,systemrequirementslab.com,talkingpointsmemo.com,tesco.com,the-diplomat.com,theedge.co.nz,theepochtimes.com,theparisreview.org,thepiratebay.org,theroar.com.au,ucl.ac.uk,vimeopro.com,virginactive.co.uk,virginactive.co.za,washingtonblade.com,waterfoxproject.org,wbs-law.de,webglearth.com,whatpeoplesayonline.com,whimn.com.au,whtop.com,wired.com,xda-developers.com###social
+amartus.com,amazinglytimedphotos.com,androidzoom.com,ask.com,atomic-robo.com,barneys.com,beefjack.com,bitcoinblackfriday.com,bubblews.com,businessinsider.com,businessinsider.com.au,chnetwork.org,classic105.com,classicreload.com,cmt.com,cnalicense.org,consumerist.com,distance-calculator.co.uk,dogandponyshowwebsite.com,donnahay.com.au,ekathimerini.com,electrictoolbox.com,g2a.com,gamingonlinux.com,gamrreview.com,giantfreakinrobot.com,gizmodo.com.au,globes.co.il,goutsa.com,haydenplanetarium.org,hccs.edu,highlandcapital.com,hollywire.com,hostcabi.net,hotscripts.com,humorhub.org,humourtube.org,imgur.com,ini.tv,inkscape.org,joburg.org.za,justrewards.co.za,kinguin.net,kotaku.com.au,latimes.com,lawyersweekly.com.au,ledpros.ca,legitreviews.com,lifehacker.com.au,mail.opera.com,makeuseof.com,mayoclinic.com,meteoblue.com,meteovista.co.uk,meteovista.com,mtv.com,musicfeeds.com.au,namecheap.com,nzmusicmonth.co.nz,onlineeducation.net,openculture.com,penny-arcade.com,phoronix.com,pixiq.com,play-asia.com,presidenthotel.co.za,producersguild.org,radiovaticana.va,ratemyprofessors.com,ryot.org,sfchamber.com,skift.com,smhlmao.com,stileproject.com,stoppress.co.nz,swapit.co.uk,systemrequirementslab.com,talkingpointsmemo.com,tesco.com,the-diplomat.com,theedge.co.nz,theepochtimes.com,theparisreview.org,thepiratebay.org,theroar.com.au,ucl.ac.uk,vimeopro.com,virginactive.co.uk,virginactive.co.za,washingtonblade.com,waterfoxproject.org,wbs-law.de,webglearth.com,whatpeoplesayonline.com,whimn.com.au,whtop.com,wired.com,xda-developers.com###social
 christianpost.com###social-apps
 animenewsnetwork.com###social-bookmarks
 cafemom.com###social-comment
@@ -16995,6 +17007,7 @@ cnn.com##.Footer__aside
 socialblade.com##.GoogleButton
 gadgetsnow.com##.KkbaU
 thegrio.com##.Modal
+thecity.nyc##.Navigation-items-social
 alwaght.com##.NewSoial
 weeklystandard.com##.Page-social
 forbesafrica.com##.Post-metaHead--right
@@ -17063,6 +17076,7 @@ telegraph.co.uk##.article__actions
 techcrunch.com##.article__floating-wrap
 u.today##.article__gnews
 rt.com,sputniknews.com##.article__google-news
+wnep.com##.article__sharing
 salemnews.net##.article_details_icons
 goodnet.org##.article_like
 nybooks.com##.article_toolbar
@@ -17368,7 +17382,7 @@ cgtn.com##.header-follow
 opposingviews.com##.header-icons
 nova-magazine.net##.header-info-text
 shelovesporn.com,themarshallproject.org##.header-link
-aljazeera.com,avn.com,bostonmagazine.com,calvertjournal.com,cloth5.com,gaystarnews.com,hothardware.com,livingly.com,lonny.com,lovenature.com,malwaretips.com,musicfeeds.com.au,sneakernews.com,sourcefed.com,stylebistro.com,thedailybeast.com,thinkprogress.org,transfermarkt.co.uk,transfermarkt.com,wowhead.com,zimbio.com##.header-social
+aljazeera.com,avn.com,bostonmagazine.com,calvertjournal.com,cloth5.com,gaystarnews.com,hothardware.com,kiss100.co.ke,livingly.com,lonny.com,lovenature.com,malwaretips.com,mpasho.co.ke,musicfeeds.com.au,sneakernews.com,sourcefed.com,stylebistro.com,the-star.co.ke,thedailybeast.com,thinkprogress.org,transfermarkt.co.uk,transfermarkt.com,wowhead.com,zimbio.com##.header-social
 visual.ly##.headerCallToActionContainer
 pulse.com.gh,pulse.ng##.headerSocials
 tilifony.com##.header_google_button
@@ -17524,7 +17538,9 @@ hulu.com##.more[toggle-type="share"]
 motherboard.vice.com##.motherboard-widget-connect
 pgatour.com##.mr-space
 technobuzz.net##.mtsnb
-ambcrypto.com##.mvp-nav-soc-wrap
+bnonews.com##.mvp-foot-soc-list
+ambcrypto.com,bnonews.com##.mvp-nav-soc-wrap
+bnonews.com##.mvp-post-soc-wrap
 sammyfans.com##.mvp-soc-mob-up
 a-ha.com##.myspace
 worldofgnome.org##.mywell-green
@@ -17820,6 +17836,7 @@ upi.com##.t
 ziddu.com##.tablebg[width="443"]
 okgoals.com##.tabrow
 theintercept.com##.talk-slot-comment-actions
+opindia.com##.tdi_134
 freeudemycourses.me##.tds_icon_box2_wrap.tdm-content-horiz-left
 latestly.com##.telegram-bot-btn
 playboy.com##.tell-your-friends
@@ -17835,6 +17852,7 @@ medicaldaily.com##.tm_overdiv
 medicaldaily.com##.tm_square
 telegraph.co.uk##.tmg-amp-follow-platforms
 thenextweb.com##.tnwg2-header-follow
+truthout.org##.to4-social
 moviesdbz.com##.toPopup
 todayonline.com##.today-news-subscription-v2__telegram
 xbiz.com##.tool-list
@@ -18174,7 +18192,7 @@ meteovista.si,tvsa.ba###social
 delfi.ee##.article__info > .article-utility
 delfi.ee##.article__social
 360.cymru##.buttons
-cas.sk,vijesti.ba##.header-social
+cas.sk,radiojambo.co.ke,vijesti.ba##.header-social
 autoline-eu.rs,autoline.lt,autoline.mk,autoline.si,autoline.sk,blic.rs,gettyimages.fi,hrt.hr,landrover.cz,landrover.ee,landrover.fi,landrover.lt,landrover.ua,landroverarmenia.am,ohtuleht.ee##.share
 europages.ee,europages.eu,europages.fi,europages.lt,europages.si,football.ir,republikein.com.na,rts.rs,sanook.com##.social
 irinn.ir##.social-network
@@ -18618,6 +18636,7 @@ is.fi##.ab-test-article-sharing
 mobiili.fi##.mobsome_icons
 ampparit.com##.social-media-links > .sidebox-content
 ampparit.com##.social-media-links > h3[class="sidebox-header"]
+suomela.fi##.some-icons
 forssanlehti.fi#?#.herald-single-sticky:-abp-has(.herald-share)
 !
 !---------- Greek Specific Social Media Elements ----------
@@ -19028,6 +19047,7 @@ uol.com.br##.likebox
 recordeuropa.com##.partilha
 tvcultura.com.br##.redes
 abril.com.br,administradores.com.br,autoline-br.com,autoline.pt,epochtimes.com.br,gettyimages.pt,landrover.com.br,landrover.pt,oantagonista.com,r7.com##.share
+netcine.to##.soci
 abola.pt,conjur.com.br,europages.pt,jornaldenegocios.pt,record.pt,uol.com.br##.social
 epochtimes.com.br##.tools
 ||trrsf.com/transversais/trr_bar/$script
@@ -19779,6 +19799,7 @@ digg.com#@#div[id^="digg-widget-"]
 @@||asos.com/Content/images/*-ico
 @@||assets.civilcomments.com/v1/images/facebook_$image
 @@||assets.civilcomments.com/v1/images/twitter_$image
+@@||assets.kasperskycontenthub.com/wp-content/plugins/$script,domain=securelist.com
 @@||assets.pinterest.com/js/pinit.js$domain=domolubni.pl|rafflecopter.com
 @@||assets.pinterest.com/js/pinit_main.js$domain=domolubni.pl
 @@||assets.pinterest.com/pidget.html$domain=rafflecopter.com
