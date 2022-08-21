@@ -5,4 +5,5 @@ function vpsmconf --description 'Install VPSM binbootstrap'
     vpsm binbootstrap
     vpsm update-repo
     vpsm bootstrap-up
+    echo XBPS_ALLOW_RESTRICTED=yes > $XBPS_DISTDIR/etc/conf
 end
