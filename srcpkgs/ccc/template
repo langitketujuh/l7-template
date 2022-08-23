@@ -1,0 +1,12 @@
+# Template file for 'ccc'
+pkgname=ccc
+version=0.0.1
+revision=1
+build_style=gnu-makefile
+depends="ImageMagick ghostscript l7-export"
+short_desc="CMYK color converter"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="GPL-3.0-or-later"
+homepage="https://gitlab.com/langitketujuh/ccc"
+distfiles="https://gitlab.com/langitketujuh/ccc/-/archive/${version}/ccc-${version}.tar.gz"
+checksum=38691f2973111876506713d4bd776a91206c76882add48b1492fc26ef89242e5
