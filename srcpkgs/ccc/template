@@ -1,6 +1,6 @@
 # Template file for 'ccc'
 pkgname=ccc
-version=0.0.1
+version=0.0.2
 revision=1
 build_style=gnu-makefile
 depends="ImageMagick ghostscript l7-export"
@@ -9,4 +9,4 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://gitlab.com/langitketujuh/ccc"
 distfiles="https://gitlab.com/langitketujuh/ccc/-/archive/${version}/ccc-${version}.tar.gz"
-checksum=38691f2973111876506713d4bd776a91206c76882add48b1492fc26ef89242e5
+checksum=3b8f44886321430cbfb054ecf2dc98e1f35174378befd5b71a0ed5f9c7f53017
