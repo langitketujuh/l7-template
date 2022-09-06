@@ -1,0 +1,15 @@
+# Template file for 'l7-qownnotes'
+pkgname=l7-qownnotes
+version=0.1.0
+revision=1
+build_style=meta
+depends="qownnotes"
+short_desc="Additional configuration for qownnotes package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="GPL-3.0-or-later"
+homepage="https://langitketujuh.id"
+
+do_install() {
+	vinstall ${FILESDIR}/QOwnNotes.conf 0644 etc/skel/.config/PBE/
+	vdoc ${FILESDIR}/README
+}
