@@ -1,0 +1,15 @@
+# Template file for 'l7-helix'
+pkgname=l7-helix
+version=0.1.0
+revision=1
+build_style=meta
+depends="helix"
+short_desc="Additional configuration for helix package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="GPL-3.0-or-later"
+homepage="https://langitketujuh.id"
+
+do_install() {
+	vinstall ${FILESDIR}/config.toml 0644 etc/skel/.config/helix/
+	vdoc ${FILESDIR}/README
+}
