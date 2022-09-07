@@ -1,6 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export EDITOR:vim
+SETUVAR --export EDITOR:helix
 SETUVAR --export GTK_IM_MODULE:ibus
 SETUVAR --export QT_IM_MODULE:ibus
 SETUVAR --export XMODIFIERS:\x40im\x3dibus
