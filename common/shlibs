@@ -217,6 +217,7 @@ libgirepository-everything-1.0.so libgirepository-1.30_1
 libgirepository-1.0.so.1 libgirepository-1.30_1
 libudev.so.1 eudev-libudev-1.6_1
 libgudev-1.0.so.0 libgudev-230_1
+libumockdev.so.0 libumockdev-0.17.6_1
 libext2fs.so.2 e2fsprogs-libs-1.41.5_1
 libcom_err.so.2 e2fsprogs-libs-1.41.5_1
 libe2p.so.2 e2fsprogs-libs-1.41.5_1
@@ -1418,7 +1419,7 @@ libgpaste-gtk4.so.0 libgpaste-42.1_1
 libthreadutil.so.6 libupnp-1.6.18_1
 libupnp.so.17 libupnp-1.14.0_1
 libixml.so.11 libupnp-1.14.0_1
-libupnpp.so.11 libupnpp-0.21.0_1
+libupnpp.so.12 libupnpp-0.22.2_1
 libgeocode-glib.so.0 geocode-glib-3.10.0_1
 libzeitgeist-2.0.so.0 libzeitgeist2-0.9.14_1
 libpotrace.so.0 libpotrace-1.11_1
@@ -2082,7 +2083,7 @@ libQt6MultimediaWidgets.so.6 qt6-multimedia-6.3.1_1
 libQt6MultimediaQuick.so.6 qt6-multimedia-6.3.1_1
 libQt6Multimedia.so.6 qt6-multimedia-6.3.1_1
 libnpth.so.0 npth-1.1_1
-libnpupnp.so.4 libnpupnp-4.0.2_1
+libnpupnp.so.9 libnpupnp-5.0.0_1
 libglfw.so.3 glfw-3.0.4_1
 libusbmuxd-2.0.so.6 libusbmuxd-2.0.2_1
 libimobiledevice-1.0.so.6 libimobiledevice-1.3.0_2
@@ -2092,7 +2093,7 @@ libldns.so.3 libldns-1.7.1_4
 libopenjpeg.so.5 libopenjpeg-1.5.2_1
 liboping.so.0 liboping-1.8.0_1
 libloudmouth-1.so.0 loudmouth-1.5.3_12
-libtorrent-rasterbar.so.10 libtorrent-rasterbar-1.2.12_2
+libtorrent-rasterbar.so.10 libtorrent-rasterbar-1.2.17_1
 libcapstone.so.4 capstone-4.0_1
 libhavege.so.2 libhaveged-1.9.11_1
 libnih.so.1 libnih-1.0.3_1
@@ -3466,9 +3467,10 @@ liblinphone++.so.10 linphone-4.4.0_1
 libbelr.so.1 belr-0.1.3_1
 libbelcard.so.1 belcard-1.0.2_1
 libshaderc_shared.so.1 shaderc-2018.0_1
-libglslang.so glslang-6.2.2596_1
-libHLSL.so glslang-8.13.3743_1
-libSPIRV.so glslang-6.2.2596_1
+libglslang.so.11 glslang-11.11.0_1
+libHLSL.so glslang-11.11.0_1
+libSPIRV.so glslang-11.11.0_1
+libSPIRV-Tools-shared.so SPIRV-Tools-2022.3_1
 libmaxminddb.so.0 libmaxminddb-1.3.2_1
 libmysqlpp.so.3 mysql++-3.2.5_1
 libKF5Syndication.so.5 syndication-5.50.0_1
@@ -4153,8 +4155,9 @@ libopensmtpd.so.0 libopensmtpd-0.7_1
 libiio.so.0 libiio-0.23_1
 libqtforkawesome.so.0.0.4 qtforkawesome-0.0.4_1
 libqtquickforkawesome.so.0.0.4 qtforkawesome-0.0.4_1
-libsyncthingwidgets.so.1.2.2 syncthingtray-1.2.2_1
-libsyncthingmodel.so.1.2.2 syncthingtray-1.2.2_1
-libsyncthingconnector.so.1.2.2 syncthingtray-1.2.2_1
+libsyncthingwidgets.so.1.2.3 syncthingtray-1.2.3_1
+libsyncthingmodel.so.1.2.3 syncthingtray-1.2.3_1
+libsyncthingconnector.so.1.2.3 syncthingtray-1.2.3_1
 libglibutil.so.1 libglibutil-1.0.64_1
 libgbinder.so.1 libgbinder-1.1.20_1
+libsunpinyin.so.3 libsunpinyin-3.0.0rc2_1
