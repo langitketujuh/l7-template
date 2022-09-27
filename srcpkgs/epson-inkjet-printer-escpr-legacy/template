@@ -1,0 +1,19 @@
+# Template file for 'epson-inkjet-printer-escpr-legacy'
+pkgname=epson-inkjet-printer-escpr-legacy
+version=3.9.7
+revision=1
+wrksrc="epson-inkjet-printer-Release_${version}"
+depends="epson-inkjet-printer-escpr"
+short_desc="Legacy Epson Inkjet Printer Driver (ESC/P-R)"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="GPL-2.0-or-later"
+homepage="https://github.com/endlessm/epson-inkjet-printer"
+distfiles="https://github.com/endlessm/epson-inkjet-printer/archive/refs/tags/Release_${version}.tar.gz"
+checksum=205cc1501683514243db56aa32c38098185cddc62af5b014c4bde785c43e18b8
+
+do_install() {
+	vmkdir usr/share/ppd/epson-inkjet-printer-escpr
+	for f in 201207w 201215w 201310w 201401w 201601w l100l200; do
+		vcopy ${wrksrc}/${f}/ppds/* usr/share/ppd/epson-inkjet-printer-escpr/
+	done
+}
