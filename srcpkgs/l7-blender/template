@@ -2,17 +2,17 @@
 pkgname=l7-blender
 version=0.1.2
 revision=7
-_blender_ver=3.3
+_config_ver=3.3
 archs="~i686*"
 build_style=meta
-depends="blender"
+depends="blender>=3.3.0_1"
 short_desc="Additional configuration for blender package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-only"
 homepage="https://langitketujuh.id"
 
 do_install() {
-	vinstall ${FILESDIR}/Breeze_Dark.xml 0644 usr/share/blender/${_blender_ver}/scripts/presets/interface_theme Breeze_Dark.xml
-	vinstall ${FILESDIR}/userpref.blend 0644 etc/skel/.config/blender/${_blender_ver}/config userpref.blend
+	vinstall ${FILESDIR}/Breeze_Dark.xml 0644 usr/share/blender/${_config_ver}/scripts/presets/interface_theme Breeze_Dark.xml
+	vinstall ${FILESDIR}/userpref.blend 0644 etc/skel/.config/blender/${_config_ver}/config userpref.blend
 	vdoc ${FILESDIR}/README
 }
