@@ -15,6 +15,7 @@ checksum=4c54e6e6b38c0928c3da1e71c4865847353fc96ee4f9d73f483f1a1866ffb246
 
 pre_build() {
 	vsed -i package/metadata.desktop -e 's/X-KDE-PluginInfo-Name=OnzeMenu/X-KDE-PluginInfo-Name=org.kde.plasma.onzemenu/g'
+	vsed -i package/contents/config/main.xml -e 's/start-here-kde/distributor-logo-langitketujuh/g'
 }
 
 do_install() {
