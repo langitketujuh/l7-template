@@ -13,6 +13,10 @@ homepage="https://github.com/adhec/OnzeMenuKDE"
 distfiles="https://github.com/adhec/OnzeMenuKDE/archive/${_githash}.tar.gz"
 checksum=4c54e6e6b38c0928c3da1e71c4865847353fc96ee4f9d73f483f1a1866ffb246
 
+pre_build() {
+	vsed -i package/metadata.desktop -e 's/X-KDE-PluginInfo-Name=OnzeMenu/X-KDE-PluginInfo-Name=org.kde.plasma.onzemenu/g'
+}
+
 do_install() {
 	vmkdir usr/share/plasma/plasmoids/org.kde.plasma.onzemenu
 	vcopy package/* usr/share/plasma/plasmoids/org.kde.plasma.onzemenu
