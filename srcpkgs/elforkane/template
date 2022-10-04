@@ -19,10 +19,10 @@ pre_build() {
 }
 
 post_install() {
-	rm -rf $DESTDIR/usr/share/elforkane/tafasir
-	rm -rf $DESTDIR/usr/share/elforkane/translat
+	rm -rf ${DESTDIR}/usr/share/elforkane/tafasir
+	rm -rf ${DESTDIR}/usr/share/elforkane/translat
 
-	ln -s /usr/share/ayat/tafasir $DESTDIR/usr/share/elforkane/tafasir
-	ln -s /usr/share/ayat/tarajem $DESTDIR/usr/share/elforkane/translat
-	ln -s /usr/share/ayat/audio $DESTDIR/usr/share/elforkane/audio
+	ln -s /usr/share/ayat/tafasir ${DESTDIR}/usr/share/elforkane/tafasir
+	ln -s /usr/share/ayat/tarajem ${DESTDIR}/usr/share/elforkane/translat
+	ln -s /usr/share/ayat/audio ${DESTDIR}/usr/share/elforkane/audio
 }

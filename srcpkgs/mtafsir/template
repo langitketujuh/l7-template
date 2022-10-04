@@ -19,13 +19,13 @@ pre_build() {
 }
 
 post_install() {
-	rm -f $DESTDIR/usr/share/mtafsir/amiri-quran.ttf
-	rm -rf $DESTDIR/usr/share/mtafsir/tafasir
+	rm -f ${DESTDIR}/usr/share/mtafsir/amiri-quran.ttf
+	rm -rf ${DESTDIR}/usr/share/mtafsir/tafasir
 
 	vmkdir usr/share/fonts/TTF
 	for i in ttf TTF; do
-		mv $DESTDIR/usr/share/mtafsir/*.${i} $DESTDIR/usr/share/fonts/TTF
+		mv ${DESTDIR}/usr/share/mtafsir/*.${i} ${DESTDIR}/usr/share/fonts/TTF
 	done
 
-	ln -s /usr/share/ayat/tafasir $DESTDIR/usr/share/mtafsir/
+	ln -s /usr/share/ayat/tafasir ${DESTDIR}/usr/share/mtafsir/
 }
