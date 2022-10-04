@@ -1,7 +1,7 @@
 # Template file for 'plasma-onzemenu'
 pkgname=plasma-onzemenu
 version=0.281
-revision=1
+revision=2
 _githash=6d6621ee1c572ea0983972f9d59b579db90f8851
 wrksrc="OnzeMenuKDE-${_githash}"
 build_style=meta
@@ -14,13 +14,13 @@ distfiles="https://github.com/adhec/OnzeMenuKDE/archive/${_githash}.tar.gz"
 checksum=4c54e6e6b38c0928c3da1e71c4865847353fc96ee4f9d73f483f1a1866ffb246
 
 do_install() {
-	vmkdir usr/share/plasma/plasmoids/org.kde.onzemenu
-	vcopy package/* usr/share/plasma/plasmoids/org.kde.onzemenu
+	vmkdir usr/share/plasma/plasmoids/org.kde.plasma.onzemenu
+	vcopy package/* usr/share/plasma/plasmoids/org.kde.plasma.onzemenu
 	vdoc README.md
 }
 
 post_install() {
 	for f in COPYING LICENSE README.md ; do
-		rm -rf ${DESTDIR}/usr/share/plasma/plasmoids/org.kde.onzemenu/${f}
+		rm -rf ${DESTDIR}/usr/share/plasma/plasmoids/org.kde.plasma.onzemenu/${f}
 	done
 }
