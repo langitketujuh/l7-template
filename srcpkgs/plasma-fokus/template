@@ -1,0 +1,29 @@
+# Template file for 'plasma-fokus'
+pkgname=plasma-fokus
+version=1.5.5
+revision=1
+wrksrc="focus-plasmoid-v${version}"
+build_style=meta
+depends="plasma-desktop"
+short_desc="Simple pomodoro KDE plasmoid"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="GPL-3.0-or-later"
+homepage="https://gitlab.com/divinae/focus-plasmoid"
+distfiles="https://gitlab.com/divinae/focus-plasmoid/-/archive/v${version}/focus-plasmoid-v${version}.tar.gz"
+checksum=0c094fe112f626f35588f9ec41bbeb7bd56cb632c96d98a366c707fb88b60a33
+
+pre_build() {
+	vsed -i package/metadata.desktop -e 's/X-KDE-PluginInfo-Name=fokus/X-KDE-PluginInfo-Name=org.kde.plasma.fokus/g'
+}
+
+do_install() {
+	vmkdir usr/share/plasma/plasmoids/org.kde.plasma.fokus
+	vcopy package/* usr/share/plasma/plasmoids/org.kde.plasma.fokus
+	vdoc README.md
+}
+
+post_install() {
+	for f in CMakeLists.txt ; do
+		rm -rf ${DESTDIR}/usr/share/plasma/plasmoids/org.kde.plasma.fokus/${f}
+	done
+}
