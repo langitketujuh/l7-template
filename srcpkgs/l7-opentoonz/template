@@ -2,7 +2,6 @@
 pkgname=l7-opentoonz
 version=0.1.1
 revision=2
-build_style=meta
 depends="opentoonz"
 short_desc="Additional configuration for opentoonz package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

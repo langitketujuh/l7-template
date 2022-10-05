@@ -2,7 +2,6 @@
 pkgname=l7-qownnotes
 version=0.1.0
 revision=1
-build_style=meta
 depends="qownnotes"
 short_desc="Additional configuration for qownnotes package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

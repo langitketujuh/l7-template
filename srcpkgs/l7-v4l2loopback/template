@@ -2,7 +2,6 @@
 pkgname=l7-v4l2loopback
 version=0.1.2
 revision=4
-build_style=meta
 depends="v4l2loopback"
 short_desc="Additional configuration for v4l2loopback package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

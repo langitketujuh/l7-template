@@ -2,7 +2,6 @@
 pkgname=l7-goxel
 version=0.1.0
 revision=3
-build_style=meta
 depends="goxel"
 short_desc="Additional configuration for goxel package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

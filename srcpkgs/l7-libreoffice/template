@@ -2,7 +2,6 @@
 pkgname=l7-libreoffice
 version=0.1.1
 revision=4
-build_style=meta
 depends="libreoffice breeze"
 short_desc="Additional configuration for libreoffice package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

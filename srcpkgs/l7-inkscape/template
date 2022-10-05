@@ -2,7 +2,6 @@
 pkgname=l7-inkscape
 version=0.1.2
 revision=5
-build_style=meta
 depends="inkscape"
 short_desc="Additional configuration for inkscape package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

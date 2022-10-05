@@ -2,7 +2,6 @@
 pkgname=l7-helix
 version=0.1.0
 revision=1
-build_style=meta
 depends="helix"
 short_desc="Additional configuration for helix package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

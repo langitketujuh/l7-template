@@ -2,7 +2,6 @@
 pkgname=l7-ssr
 version=0.1.1
 revision=4
-build_style=meta
 depends="ssr"
 short_desc="Additional configuration for ssr package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

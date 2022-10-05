@@ -2,7 +2,6 @@
 pkgname=l7-krunner
 version=0.1.0
 revision=2
-build_style=meta
 depends="krunner"
 short_desc="Additional configuration for krunner package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

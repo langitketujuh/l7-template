@@ -3,7 +3,6 @@ pkgname=plasma-panel-transparency-button
 version=0.2.0
 revision=3
 wrksrc="paneltransparencybutton-${version}"
-build_style=meta
 depends="plasma-workspace"
 short_desc="Button to enable/disable transparency for specific plasma panels"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

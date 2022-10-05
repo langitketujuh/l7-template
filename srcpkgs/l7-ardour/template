@@ -2,7 +2,6 @@
 pkgname=l7-ardour
 version=0.1.1
 revision=3
-build_style=meta
 depends="ardour"
 short_desc="Additional configuration for ardour package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

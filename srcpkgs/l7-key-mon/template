@@ -2,7 +2,6 @@
 pkgname=l7-key-mon
 version=0.1.0
 revision=2
-build_style=meta
 depends="key-mon"
 short_desc="Additional configuration for key-mon package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

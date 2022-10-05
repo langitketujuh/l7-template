@@ -4,7 +4,6 @@ version=0.2
 revision=1
 _githash=8a61b3f0d590935de8baaa2bd6305ad7ca93acc7
 wrksrc="incadiff-${_githash}"
-build_style=meta
 depends="inkscape"
 short_desc="Apply successive difference operations on superimposed paths"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

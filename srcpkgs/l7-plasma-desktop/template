@@ -2,7 +2,6 @@
 pkgname=l7-plasma-desktop
 version=0.1.7
 revision=6
-build_style=meta
 depends="plasma-desktop l7-plasma-framework l7-papirus-icon-theme"
 short_desc="Additional configuration for plasma-desktop package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

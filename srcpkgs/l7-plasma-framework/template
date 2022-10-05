@@ -2,7 +2,6 @@
 pkgname=l7-plasma-framework
 version=0.1.2
 revision=5
-build_style=meta
 depends="plasma-framework l7-kservice"
 short_desc="Additional configuration for plasma-framework package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

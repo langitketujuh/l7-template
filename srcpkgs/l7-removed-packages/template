@@ -2,7 +2,6 @@
 pkgname=l7-removed-packages
 version=0.1
 revision=2
-build_style=meta
 short_desc="Uninstalls packages removed from LangitKetujuh repository"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="Public Domain"

@@ -3,7 +3,6 @@ pkgname=plasma-minimalistclock
 version=0.1.0
 revision=3
 wrksrc="kde_minimalistclock-${version}"
-build_style=meta
 depends="plasma-workspace"
 short_desc="Minimalist looking clock for KDE plasma"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

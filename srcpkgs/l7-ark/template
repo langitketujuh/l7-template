@@ -2,7 +2,6 @@
 pkgname=l7-ark
 version=0.1.1
 revision=5
-build_style=meta
 depends="ark"
 short_desc="Additional configuration for ark package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

@@ -2,7 +2,6 @@
 pkgname=l7-carla
 version=0.1.0
 revision=2
-build_style=meta
 depends="Carla"
 short_desc="Additional configuration for carla package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

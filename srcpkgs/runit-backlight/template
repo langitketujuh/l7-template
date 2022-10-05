@@ -2,7 +2,6 @@
 pkgname=runit-backlight
 version=0.01.0
 revision=2
-build_style=meta
 depends="runit"
 short_desc="Preserve the current display backlight level between reboots"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

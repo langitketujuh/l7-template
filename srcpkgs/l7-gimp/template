@@ -2,7 +2,6 @@
 pkgname=l7-gimp
 version=0.1.2
 revision=5
-build_style=meta
 depends="gimp"
 short_desc="Additional configuration for gimp package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

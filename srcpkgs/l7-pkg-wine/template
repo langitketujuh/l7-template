@@ -2,7 +2,6 @@
 pkgname=l7-pkg-wine
 version=0.1.1
 revision=3
-build_style=meta
 short_desc="Run Microsoft Windows applications - meta package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="Public Domain"

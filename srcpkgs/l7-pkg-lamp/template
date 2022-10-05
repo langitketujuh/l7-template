@@ -2,7 +2,6 @@
 pkgname=l7-pkg-lamp
 version=0.1.1
 revision=2
-build_style=meta
 depends="php php-apache php-cgi php-fpm php-gd php-embed
   php-intl php-snmp phpMyAdmin nginx apache mariadb"
 short_desc="LAMP Web server - meta package"

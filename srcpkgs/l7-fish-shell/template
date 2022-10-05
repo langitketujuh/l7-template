@@ -2,7 +2,6 @@
 pkgname=l7-fish-shell
 version=0.1.4
 revision=19
-build_style=meta
 depends="fish-shell"
 short_desc="Additional configuration for fish-shell package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

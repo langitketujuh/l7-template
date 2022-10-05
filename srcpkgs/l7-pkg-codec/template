@@ -2,7 +2,6 @@
 pkgname=l7-pkg-codec
 version=0.1.1
 revision=2
-build_style=meta
 depends="alsa-utils bluez-alsa paprefs pipewire alsa-pipewire 
   libjack-pipewire libspa-bluetooth libspa-jack libspa-v4l2
   gstreamer1-pipewire pulseaudio-utils gst-plugins-base1

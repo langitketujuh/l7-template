@@ -2,7 +2,6 @@
 pkgname=l7-kate5
 version=0.1.1
 revision=4
-build_style=meta
 depends="kate5"
 short_desc="Additional configuration for kate5 package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

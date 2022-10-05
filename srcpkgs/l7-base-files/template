@@ -2,7 +2,6 @@
 pkgname=l7-base-files
 version=0.1.2
 revision=5
-build_style=meta
 short_desc="Additional configuration for base-files package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"

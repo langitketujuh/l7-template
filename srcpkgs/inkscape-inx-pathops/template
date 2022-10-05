@@ -4,7 +4,6 @@ version=1.2
 revision=3
 _githash=b18c2b039744d1682aed620f5bac88d615dde10e
 wrksrc="inx-pathops-${_githash}"
-build_style=meta
 depends="inkscape"
 short_desc="Path operation multiple times for Inkscape"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

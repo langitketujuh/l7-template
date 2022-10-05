@@ -2,7 +2,6 @@
 pkgname=l7-breeze-gtk
 version=0.1.1
 revision=8
-build_style=meta
 depends="breeze-gtk l7-dconf"
 short_desc="Additional configuration for breeze-gtk package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

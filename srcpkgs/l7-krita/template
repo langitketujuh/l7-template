@@ -2,7 +2,6 @@
 pkgname=l7-krita
 version=0.1.2
 revision=6
-build_style=meta
 depends="krita gmic-krita"
 short_desc="Additional configuration for krita package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

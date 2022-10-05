@@ -2,7 +2,6 @@
 pkgname=l7-pkg-kde
 version=0.1.1
 revision=2
-build_style=meta
 depends="xdg-utils xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-kde
   xdg-user-dirs xdg-user-dirs-gtk libappindicator sddm kde5 kdesu kde5-baseapps
   kaccounts-integration kaccounts-providers kimageformats plasma-browser-integration

@@ -4,7 +4,6 @@ version=0.32
 revision=3
 _githash=ca85923a0a00cf1421be57e11e731fd11abb148b
 wrksrc="dittoMenuKDE-${_githash}"
-build_style=meta
 depends="plasma-workspace"
 short_desc="Menu launcher for KDE plasma"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

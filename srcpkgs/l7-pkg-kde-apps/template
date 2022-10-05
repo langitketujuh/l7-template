@@ -2,7 +2,6 @@
 pkgname=l7-pkg-kde-apps
 version=0.1.1
 revision=2
-build_style=meta
 depends="konsole dolphin filelight kdeconnect print-manager spectacle
   ark k3b kwalletmanager kcalc kget okular ssr kmediaplayer elisa
   gwenview partitionmanager vlc bup kup kamoso skanlite krfb krdc

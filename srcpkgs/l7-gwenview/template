@@ -2,7 +2,6 @@
 pkgname=l7-gwenview
 version=0.1.1
 revision=4
-build_style=meta
 depends="gwenview"
 short_desc="Additional configuration for gwenview package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

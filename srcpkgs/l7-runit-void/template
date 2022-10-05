@@ -2,7 +2,6 @@
 pkgname=l7-runit-void
 version=0.1.1
 revision=6
-build_style=meta
 depends="runit-void"
 short_desc="Additional configuration for runit-void package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

@@ -2,7 +2,6 @@
 pkgname=l7-kget
 version=0.1.1
 revision=8
-build_style=meta
 depends="kget"
 short_desc="Additional configuration for kget package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

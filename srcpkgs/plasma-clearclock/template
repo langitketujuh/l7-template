@@ -4,7 +4,6 @@ version=0.4
 revision=3
 _githash=168c07824a122e7dcde53790766f5f163a8f1a38
 wrksrc="ClearClock-${_githash}"
-build_style=meta
 depends="plasma-workspace"
 short_desc="Simple and clean date/time plasmoid for KDE plasma"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

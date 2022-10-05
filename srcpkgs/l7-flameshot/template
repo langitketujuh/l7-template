@@ -2,7 +2,6 @@
 pkgname=l7-flameshot
 version=0.1.1
 revision=5
-build_style=meta
 depends="flameshot"
 short_desc="Additional configuration for flameshot package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

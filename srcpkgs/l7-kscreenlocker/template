@@ -2,7 +2,6 @@
 pkgname=l7-kscreenlocker
 version=0.1.1
 revision=4
-build_style=meta
 depends="kscreenlocker"
 short_desc="Additional configuration for kscreenlocker package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

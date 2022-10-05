@@ -2,7 +2,6 @@
 pkgname=l7-systemsettings
 version=0.1.1
 revision=4
-build_style=meta
 depends="systemsettings"
 short_desc="Additional configuration for systemsettings package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

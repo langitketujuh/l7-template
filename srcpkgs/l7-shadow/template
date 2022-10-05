@@ -2,7 +2,6 @@
 pkgname=l7-shadow
 version=0.1.1
 revision=3
-build_style=meta
 depends="shadow"
 short_desc="Additional configuration for shadow package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

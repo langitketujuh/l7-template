@@ -2,7 +2,6 @@
 pkgname=l7-scribus
 version=0.1.1
 revision=5
-build_style=meta
 depends="scribus"
 short_desc="Additional configuration for scribus package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"

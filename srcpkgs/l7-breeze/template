@@ -2,7 +2,6 @@
 pkgname=l7-breeze
 version=0.1.3
 revision=2
-build_style=meta
 depends="breeze l7-breeze-gtk l7-breeze-icons"
 short_desc="Additional configuration for breeze package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
