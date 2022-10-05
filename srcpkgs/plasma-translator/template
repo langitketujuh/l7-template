@@ -1,0 +1,19 @@
+# Template file for 'plasma-translator'
+pkgname=plasma-translator
+version=0.8
+revision=1
+wrksrc="org.kde.plasma.translator"
+depends="plasma-workspace qt5-xmlpatterns translate-shell"
+short_desc="Easy to use translation for KDE plasmoid"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="MIT"
+homepage="https://store.kde.org/p/1395666"
+distfiles="https://qml.i-glu4it.ru/org.kde.plasma.translator_${version}.tar.gz"
+checksum=fec4b01ea5b0b32173ffd2708965b907565f8ad3ad0b378b203c1ef1b2e00ba4
+
+do_install() {
+	vmkdir usr/share/plasma/plasmoids/org.kde.plasma.translator
+	vcopy contents usr/share/plasma/plasmoids/org.kde.plasma.translator
+	vinstall metadata.desktop 0644 usr/share/plasma/plasmoids/org.kde.plasma.translator
+	vlicense LICENSE
+}
