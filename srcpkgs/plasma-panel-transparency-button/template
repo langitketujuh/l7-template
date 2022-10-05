@@ -1,7 +1,7 @@
 # Template file for 'plasma-panel-transparency-button'
 pkgname=plasma-panel-transparency-button
 version=0.2.0
-revision=2
+revision=3
 wrksrc="paneltransparencybutton-${version}"
 build_style=meta
 depends="plasma-workspace"

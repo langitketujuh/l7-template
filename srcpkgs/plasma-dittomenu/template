@@ -1,7 +1,7 @@
 # Template file for 'plasma-dittomenu'
 pkgname=plasma-dittomenu
 version=0.32
-revision=2
+revision=3
 _githash=ca85923a0a00cf1421be57e11e731fd11abb148b
 wrksrc="dittoMenuKDE-${_githash}"
 build_style=meta

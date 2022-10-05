@@ -1,7 +1,7 @@
 # Template file for 'plasma-fokus'
 pkgname=plasma-fokus
 version=1.5.5
-revision=2
+revision=3
 wrksrc="focus-plasmoid-v${version}"
 build_style=meta
 depends="plasma-workspace"

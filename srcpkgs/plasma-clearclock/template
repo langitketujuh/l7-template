@@ -1,7 +1,7 @@
 # Template file for 'plasma-clearclock'
 pkgname=plasma-clearclock
 version=0.4
-revision=2
+revision=3
 _githash=168c07824a122e7dcde53790766f5f163a8f1a38
 wrksrc="ClearClock-${_githash}"
 build_style=meta
