@@ -1,0 +1,23 @@
+# Template file for 'plasma-minimalistclock'
+pkgname=plasma-minimalistclock
+version=0.1.0
+revision=1
+wrksrc="kde_minimalistclock-${version}"
+build_style=meta
+depends="plasma-desktop"
+short_desc="Minimalist looking clock for KDE"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/Prayag"
+distfiles="https://github.com/Prayag2/kde_minimalistclock/archive/refs/tags/${version}.tar.gz"
+checksum=1d2340d604f48be5877907d777e39f47f4599ce6654046de2ca35ca641bee6a3
+
+pre_build() {
+	vsed -i package/metadata.json -e 's/com.github.prayag2/org.kde.plasma/g'
+}
+
+do_install() {
+	vmkdir usr/share/plasma/plasmoids/org.kde.plasma.minimalistclock
+	vcopy package/* usr/share/plasma/plasmoids/org.kde.plasma.minimalistclock
+	vdoc README.md
+}
