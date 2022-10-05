@@ -1,11 +1,11 @@
 # Template file for 'plasma-minimalistclock'
 pkgname=plasma-minimalistclock
 version=0.1.0
-revision=1
+revision=2
 wrksrc="kde_minimalistclock-${version}"
 build_style=meta
 depends="plasma-desktop"
-short_desc="Minimalist looking clock for KDE"
+short_desc="Minimalist looking clock for KDE plasma"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/Prayag"

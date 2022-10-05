@@ -1,11 +1,11 @@
 # Template file for 'plasma-fokus'
 pkgname=plasma-fokus
 version=1.5.5
-revision=1
+revision=2
 wrksrc="focus-plasmoid-v${version}"
 build_style=meta
 depends="plasma-desktop"
-short_desc="Simple pomodoro KDE plasmoid"
+short_desc="Simple pomodoro for KDE plasmoid"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://gitlab.com/divinae/focus-plasmoid"

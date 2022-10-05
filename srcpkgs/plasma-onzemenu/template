@@ -1,12 +1,12 @@
 # Template file for 'plasma-onzemenu'
 pkgname=plasma-onzemenu
 version=0.281
-revision=2
+revision=3
 _githash=6d6621ee1c572ea0983972f9d59b579db90f8851
 wrksrc="OnzeMenuKDE-${_githash}"
 build_style=meta
 depends="plasma-desktop"
-short_desc="Menu for kde inspired by windows 11"
+short_desc="Menu for KDE plasma inspired by Windows 11"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/adhec/OnzeMenuKDE"
