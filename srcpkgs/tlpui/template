@@ -1,7 +1,7 @@
 # Template file for 'tlpui'
 pkgname=tlpui
 version=1.5.0+5
-revision=1
+revision=2
 wrksrc="TLPUI-${pkgname}-${version/+/-}"
 build_style="python3-module"
 hostmakedepends="python3-setuptools"
@@ -14,6 +14,8 @@ distfiles="https://github.com/d4nj1/TLPUI/archive/refs/tags/tlpui-${version/+/-}
 checksum=563794d142acb79d5654aca70af52c5e8da4cf9677e5058d151474d0af47ea77
 make_check=no #tests fail inside chroot
 
-pre_build() {
-	vsed -i tlpui.desktop -e 's/Icon=tlpui/Icon=preferences-system-power-management/g'
+post_install() {
+	vmkdir usr/share/icons/hicolor/scalable/apps
+	vcopy ${FILESDIR}/hicolor ${py3_sitelib}/tlpui/icons/themeable
+	vcopy ${FILESDIR}/hicolor/scalable/apps/tlpui.svg usr/share/icons/hicolor/scalable/apps
 }

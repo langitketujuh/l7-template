@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" version="1" xmlns="http://www.w3.org/2000/svg">
+ <rect transform="matrix(0,-1,-1,0,0,0)" x="-50.049" y="-61.5" width="42.623" height="59" rx="2.8" ry="2.95" opacity=".2"/>
+ <rect x="2.4998" y="53.165" width="59" height="4.6744" ry="2.3372" opacity=".2" stop-color="#000000" stroke-width="0" style="paint-order:stroke fill markers"/>
+ <rect transform="matrix(0,-1,-1,0,0,0)" x="-48.784" y="-61.5" width="42.623" height="59" rx="2.8" ry="2.95" fill="#4f4f4f"/>
+ <path d="m5.449 6.1605c-1.6343 0-2.9492 1.2496-2.9492 2.8008v1.2977c0-1.5512 1.3149-2.8008 2.9492-2.8008h53.102c1.6343 0 2.9492 1.2496 2.9492 2.8008v-1.2977c0-1.5512-1.3149-2.8008-2.9492-2.8008z" fill="#fff" opacity=".1"/>
+ <path d="m34.786 14.843-14.334 16.878 11.833 0.06546-2.3652 11.976 13.326-16.432-11.569 0.06546zm-22.903 4.279v19.058h5.2937v-19.058zm8.7338 0v8.8492l5.2954-6.2721v-2.5771zm17.471 0v5.8225h5.2937v-5.8225zm8.7355 0v19.058h5.2937v-19.058zm-3.4418 12.338-5.2937 6.2119v0.50818h5.2937zm-22.765 2.5805v4.1395h5.2954v-4.1395z" enable-background="new" opacity=".2" style="paint-order:fill markers stroke"/>
+ <g transform="matrix(1.2323 0 0 1.2323 -9.3703 -3.735)">
+  <path d="m24.335 17.494v7.1806l4.2959-5.0897v-2.0909zm0 12.106v3.3595h4.2959v-3.3595z" enable-background="new" fill="#f57524" style="paint-order:fill markers stroke"/>
+  <path d="m38.512 17.494v4.7255h4.2959v-4.7255zm4.2959 10.012-4.2959 5.041v0.41281h4.2959z" enable-background="new" fill="#16be71" style="paint-order:fill markers stroke"/>
+  <path d="m35.832 14.021-11.632 13.697 9.6031 0.0537-1.9193 9.7188 10.814-13.336-9.3883 0.0537z" fill="#f6a500" stroke-width="0"/>
+  <rect transform="rotate(90)" x="17.493" y="-21.544" width="15.465" height="4.2959" enable-background="new" fill="#e74b32" style="paint-order:fill markers stroke"/>
+  <rect transform="rotate(90)" x="17.493" y="-49.897" width="15.465" height="4.2959" enable-background="new" fill="#05ac9c" style="paint-order:fill markers stroke"/>
+ </g>
+ <path d="m34.785 13.544-14.334 16.879 0.81445 0.0039 13.182-15.521zm-22.902 4.2793v0.96289h5.2949v-0.96289zm8.7344 0v0.96484h5.2949v-0.96484zm17.471 0v0.96484h5.293v-0.96484zm8.7344 0v0.96289h5.2949v-0.96289zm-3.5781 8.207-11.328 0.06445-0.24024 0.9668 10.783-0.0625zm0.13672 4.1289-5.293 6.2129v0.50781h0.38867l4.9043-5.7559zm-11.285 1.291-2.1758 11.014 0.25195-0.31055 2.1133-10.701zm-11.479 1.291v0.96484h5.2949v-0.96484z" enable-background="new" fill="#fff" opacity=".2" style="paint-order:fill markers stroke"/>
+ <rect x="2.4998" y="51.9" width="59" height="4.6744" ry="2.3372" fill="#4f4f4f" stop-color="#000000" stroke-width="0" style="paint-order:stroke fill markers"/>
+</svg>
