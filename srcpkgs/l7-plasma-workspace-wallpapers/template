@@ -1,8 +1,8 @@
-# Template file for 'l7-breeze'
-pkgname=l7-breeze
-version=0.1.3
-revision=3
-depends="breeze l7-breeze-gtk l7-breeze-icons"
+# Template file for 'l7-plasma-workspace-wallpapers'
+pkgname=l7-plasma-workspace-wallpapers
+version=0.1.0
+revision=1
+depends="plasma-workspace-wallpapers"
 short_desc="Additional configuration for breeze package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
