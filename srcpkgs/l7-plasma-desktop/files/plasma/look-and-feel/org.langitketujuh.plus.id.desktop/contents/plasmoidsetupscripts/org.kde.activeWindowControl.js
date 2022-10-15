@@ -1,0 +1,17 @@
+applet.currentConfigGroup = new Array("General");
+applet.writeConfig("horizontalScreenWidthPercent","0.11");
+applet.writeConfig("buttonsStandalone","true");
+applet.writeConfig("doNotHideControlButtons","true");
+applet.writeConfig("boldFontWeight","true");
+applet.writeConfig("textType","0");
+applet.writeConfig("showMinimize","true");
+applet.writeConfig("showMaximize","true");
+applet.writeConfig("buttonsVerticalCenter","true");
+applet.writeConfig("showButtonOnlyWhenMaximized","true");
+applet.writeConfig("slidingIconAndText","true");
+applet.writeConfig("noWindowText","LangitKetujuh");
+applet.writeConfig("noWindowIcon","distributor-logo-langitketujuh");
+applet.writeConfig("iconAndTextSpacing","6");
+applet.writeConfig("buttonSize","1.0");
+applet.writeConfig("controlButtonsSpacing","4");
+applet.reloadConfig();
