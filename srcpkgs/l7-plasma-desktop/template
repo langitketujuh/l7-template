@@ -2,9 +2,9 @@
 pkgname=l7-plasma-desktop
 version=0.1.7
 revision=7
-depends="plasma-desktop l7-appmenu-gtk3-module l7-plasma-framework
- l7-papirus-icon-theme plasma-applet-active-window-control
- plasma-panel-transparency-button plasma-onzemenu"
+depends="plasma-desktop l7-plasma-framework l7-papirus-icon-theme
+ plasma-applet-active-window-control plasma-panel-transparency-button
+ plasma-onzemenu"
 short_desc="Additional configuration for plasma-desktop package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
