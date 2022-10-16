@@ -9,7 +9,7 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="CC-BY-SA-4.0"
 homepage="https://gitlab.com/langitketujuh/l7-docs"
 distfiles="https://gitlab.com/langitketujuh/l7-docs/-/archive/${version}/l7-docs-${version}.tar.gz"
-checksum=17d510207c984d25480fcbe43c8cf862de0b3971885f4f19550096e7d8f632c4
+checksum=781d2c78d0faf6ab70cc9dac1ca2a3e2e82aafcdfded49159bc7939a1b89d94f
 
 do_build() {
 	mdbook build
