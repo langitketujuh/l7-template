@@ -1,7 +1,7 @@
 # Template file for 'isoimagewriter'
 pkgname=isoimagewriter
 version=0.8
-revision=2
+revision=3
 build_style=cmake
 hostmakedepends="python3 extra-cmake-modules kworkspace gettext"
 makedepends="qt5-devel kcoreaddons-devel ki18n-devel kwidgetsaddons-devel kiconthemes-devel gpgmepp-devel gpgmeqt-devel"
