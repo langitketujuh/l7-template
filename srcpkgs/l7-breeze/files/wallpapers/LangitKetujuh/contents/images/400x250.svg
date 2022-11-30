@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg width="1440" height="900" version="1.1" viewBox="0 0 381 238.13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="400" height="250" version="1.1" viewBox="0 0 105.83 66.146" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <linearGradient id="linearGradient808878">
    <stop stop-color="#5a5df1" offset="0"/>
@@ -97,7 +97,7 @@
   <linearGradient id="linearGradient2775" x1="2539.8" x2="2563.8" y2="2880" gradientTransform="matrix(.26133 0 0 1.5153 2247.1 2840.5)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient775205"/>
   <linearGradient id="linearGradient2777" x1="2539.8" x2="2563.8" y2="2880" gradientTransform="matrix(.62685 0 0 1.5153 1504.5 -7204.7)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient803765"/>
   <linearGradient id="linearGradient2779" x1="2539.8" x2="2563.8" y2="2880" gradientTransform="matrix(.47814 0 0 1.5153 730.97 2840.5)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient785891"/>
-  <linearGradient id="linearGradient2781" x1="2338.3" x2="2338.3" y1="2879.9" y2=".75587" gradientTransform="matrix(1 0 0 1.5153 9.3945 2840.5)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient807681"/>
+  <linearGradient id="linearGradient2781" x1="2338.3" x2="2338.3" y1="2879.9" y2=".75587" gradientTransform="matrix(1,0,0,1.5153,9.3945,2840.5)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient807681"/>
   <linearGradient id="linearGradient2783" x1="2539.8" x2="2563.8" y2="2880" gradientTransform="matrix(.21666 0 0 1.5153 2063.7 2840.5)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient806284"/>
   <linearGradient id="linearGradient2785" x1="2539.8" x2="2563.8" y2="2880" gradientTransform="matrix(.17227 0 0 1.5153 2358.5 2840.5)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient806596"/>
   <linearGradient id="linearGradient2787" x1="2539.8" x2="2563.8" y2="2880" gradientTransform="matrix(.088018 0 0 1.5153 1988.7 -7204.7)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient808359"/>
@@ -121,13 +121,13 @@
   <linearGradient id="linearGradient2823" x1="2539.8" x2="2539.8" y2="2329.6" gradientTransform="matrix(1.0036 0 0 .32783 -5307.9 4692)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient3673"/>
   <linearGradient id="linearGradient2825" x1="2539.8" x2="2539.8" y2="2329.6" gradientTransform="matrix(1.0036 0 0 .32783 -160.12 6429.1)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient5962"/>
   <linearGradient id="linearGradient2827" x1="2539.8" x2="2539.8" y2="2329.6" gradientTransform="matrix(1.0036 0 0 .32783 -5790.7 4525)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient5962"/>
-  <clipPath id="clipPath4294">
-   <rect x="2.581e-5" y="1.9634e-5" width="1354.7" height="846.67" stroke-width=".2789"/>
+  <clipPath id="clipPath1526">
+   <rect x="-1.2929e-5" y="-2.5402e-5" width="4517.6" height="2823.5" stroke-width=".93008"/>
   </clipPath>
  </defs>
- <g transform="matrix(.28126 0 0 .28126 -.0040073 -5.5223e-6)" clip-path="url(#clipPath4294)">
-  <rect x="-3.8037e-6" y="4.9487e-7" width="1354.7" height="846.67" fill="#1b1e20" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
-  <g transform="matrix(.25557 .068479 -.068479 .25557 395.35 -132.16)">
+ <g transform="matrix(.023427 0 0 .023427 -.0018627 5.9509e-7)" clip-path="url(#clipPath1526)">
+  <rect x="-3.8037e-6" y="4.9487e-7" width="4517.6" height="2823.5" fill="#1b1e20" stop-color="#000000" stroke-width=".99014" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+  <g transform="matrix(.72463 .19416 -.19416 .72463 1548.3 163.73)">
    <g transform="matrix(-1 .0015931 .0015931 1 3473 -3132.5)" opacity=".03">
     <rect transform="matrix(1 -.0007169 -.0013034 1 0 0)" x="2347.7" y="2840.5" width="296.56" height="4364.2" fill="url(#linearGradient2761)" opacity="1" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
     <rect transform="matrix(1 -.0007169 -.0013034 1 0 0)" x="2658.9" y="2840.5" width="159.35" height="4364.2" fill="url(#linearGradient2763)" opacity="1" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
