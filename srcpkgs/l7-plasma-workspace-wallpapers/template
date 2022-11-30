@@ -1,6 +1,6 @@
 # Template file for 'l7-plasma-workspace-wallpapers'
 pkgname=l7-plasma-workspace-wallpapers
-version=0.1.0
+version=0.1.1
 revision=1
 depends="plasma-workspace-wallpapers"
 short_desc="Additional configuration for plasma-workspace-wallpapers package"
