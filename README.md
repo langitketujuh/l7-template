@@ -2,12 +2,11 @@
 
 Template of packages LangitKetujuh OS
 
-## Build boostrap every architecture (x86_64-musl, x86_64 & i686)
+## Build boostrap every architecture (x86_64-musl & x86_64)
 
 ```
 ./xbps-src -m masterdir-x86_64-musl binary-bootstrap x86_64-musl
 ./xbps-src -m masterdir-x86_64 binary-bootstrap x86_64
-./xbps-src -m masterdir-i686 binary-bootstrap i686
 ```
 
 ## Generate privat key to signature xbps packages (one time)

@@ -5,7 +5,7 @@
 while getopts "p:h:" opt; do
 case $opt in
 	p) PACKAGES="$OPTARG";;
-	h) echo "${0#/*}: [-a i686|x86_64|x86_64-musl|all] [-p packages]" >&2; exit 1;;
+	h) echo "${0#/*}: [-a x86_64|x86_64-musl|all] [-p packages]" >&2; exit 1;;
 esac
 done
 shift $((OPTIND - 1))
@@ -13,7 +13,7 @@ shift $((OPTIND - 1))
 [ ! -x build.sh ] && exit 0
 
 # build packages
-for a in i686 x86_64 x86_64-musl; do
+for a in x86_64 x86_64-musl; do
   for p in $PACKAGES; do
     # clean
     XBPS_TARGET_ARCH=${a} ./xbps-src clean -m masterdir-${a}
