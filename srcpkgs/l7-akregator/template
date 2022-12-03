@@ -1,7 +1,7 @@
 # Template file for 'l7-akregator'
 pkgname=l7-akregator
 version=0.1.1
-revision=7
+revision=8
 depends="akregator"
 short_desc="Additional configuration for akregator package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
@@ -9,8 +9,7 @@ license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 
 do_install() {
-	vinstall ${FILESDIR}/akregatorrc 0644 etc/skel/.config akregatorrc
-	vinstall ${FILESDIR}/org.kde.akregator.desktop 0644 etc/skel/.config/autostart
-	vinstall ${FILESDIR}/feeds.opml 0644 etc/skel/.local/share/akregator/data/ feeds.opml
-	vdoc ${FILESDIR}/README
+	vinstall ${FILESDIR}/akregatorrc 0644 etc/xdg
+	vinstall ${FILESDIR}/autostart/* 0644 etc/xdg/autostart
+	vinstall ${FILESDIR}/feeds.opml 0644 etc/skel/.local/share/akregator/data
 }

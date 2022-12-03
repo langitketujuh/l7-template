@@ -1,5 +1,0 @@
-Restore config (optional):
-
-mkdir -pv ~/.config/autostart/
-cp -rfv /etc/skel/.config/autostart/org.kde.kmail2.desktop ~/.config/autostart/
-cp -rfv /etc/skel/.config/kmail2rc ~/.config/

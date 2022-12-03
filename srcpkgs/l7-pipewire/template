@@ -1,7 +1,7 @@
 # Template file for 'l7-pipewire'
 pkgname=l7-pipewire
 version=0.1.2
-revision=7
+revision=8
 depends="pipewire"
 short_desc="Additional configuration for pipewire package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
@@ -11,7 +11,5 @@ homepage="https://langitketujuh.id"
 do_install() {
 	vmkdir etc/alsa
 	vcopy ${FILESDIR}/conf.d etc/alsa
-	vinstall ${FILESDIR}/PipeWire.desktop 0644 etc/skel/.config/autostart
-	vinstall ${FILESDIR}/"PipeWire Pulse.desktop" 0644 etc/skel/.config/autostart
-	vdoc ${FILESDIR}/README
+	vinstall ${FILESDIR}/autostart/* 0644 etc/xdg/autostart
 }

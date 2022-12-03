@@ -1,7 +1,7 @@
 # Template file for 'l7-kscreenlocker'
 pkgname=l7-kscreenlocker
 version=0.1.1
-revision=4
+revision=5
 depends="kscreenlocker"
 short_desc="Additional configuration for kscreenlocker package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
@@ -9,6 +9,5 @@ license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 
 do_install() {
-	vinstall ${FILESDIR}/kscreenlockerrc 0644 etc/skel/.config kscreenlockerrc
-	vdoc ${FILESDIR}/README
+	vinstall ${FILESDIR}/kscreenlockerrc 0644 etc/xdg
 }

@@ -1,7 +1,7 @@
 # Template file for 'l7-keepassxc'
 pkgname=l7-keepassxc
 version=0.1.1
-revision=7
+revision=8
 depends="keepassxc"
 short_desc="Additional configuration for keepassxc package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
@@ -10,6 +10,6 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vinstall ${FILESDIR}/keepassxc.ini 0644 etc/skel/.config/keepassxc keepassxc.ini
-	vinstall ${FILESDIR}/org.keepassxc.KeePassXC.desktop 0644 etc/skel/.config/autostart
+	vinstall ${FILESDIR}/autostart/* 0644 etc/xdg/autostart
 	vdoc ${FILESDIR}/README
 }

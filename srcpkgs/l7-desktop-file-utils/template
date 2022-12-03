@@ -1,7 +1,7 @@
 # Template file for 'l7-desktop-file-utils'
 pkgname=l7-desktop-file-utils
 version=0.1.3
-revision=16
+revision=17
 depends="desktop-file-utils"
 short_desc="Additional configuration for desktop-file-utils package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
@@ -9,6 +9,5 @@ license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 
 do_install() {
-	vinstall ${FILESDIR}/mimeapps.list 0644 etc/skel/.config mimeapps.list
-	vdoc ${FILESDIR}/README
+	vinstall ${FILESDIR}/mimeapps.list 0644 etc/xdg
 }

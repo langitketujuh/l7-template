@@ -1,3 +1,0 @@
-Restore config (optional):
-
-cp -rfv /etc/skel/.config/{baloofilerc,baloorc} ~/.config/

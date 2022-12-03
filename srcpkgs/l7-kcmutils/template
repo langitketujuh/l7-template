@@ -1,7 +1,7 @@
 # Template file for 'l7-kcmutils'
 pkgname=l7-kcmutils
 version=0.1.1
-revision=4
+revision=5
 depends="kcmutils"
 short_desc="Additional configuration for kcmutils package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
@@ -9,6 +9,5 @@ license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 
 do_install() {
-	vinstall ${FILESDIR}/kcminputrc 0644 etc/skel/.config kcminputrc
-	vdoc ${FILESDIR}/README
+	vinstall ${FILESDIR}/kcminputrc 0644 etc/xdg
 }

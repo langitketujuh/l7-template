@@ -1,7 +1,7 @@
 # Template file for 'l7-ark'
 pkgname=l7-ark
 version=0.1.1
-revision=5
+revision=6
 depends="ark"
 short_desc="Additional configuration for ark package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
@@ -9,6 +9,5 @@ license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 
 do_install() {
-	vinstall ${FILESDIR}/arkrc 0644 etc/skel/.config arkrc
-	vdoc ${FILESDIR}/README
+	vinstall ${FILESDIR}/arkrc 0644 etc/xdg
 }
