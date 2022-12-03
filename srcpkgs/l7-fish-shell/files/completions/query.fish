@@ -1,7 +1,7 @@
-# Completions for info
+# Completions for query
 # Author: Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>
 
-set -l progname info
+set -l progname query
 
 set -l listall "(__fish_print_xbps_packages)"
 set -l listinstalled "(__fish_print_xbps_packages -i)"
