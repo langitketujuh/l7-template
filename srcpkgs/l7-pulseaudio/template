@@ -9,5 +9,5 @@ license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 
 do_install() {
-	vinstall ${FILESDIR}/autostart/* 0644 etc/xdg/autostart
+	vinstall ${FILESDIR}/autostart/pulseaudio.desktop 0644 etc/xdg/autostart
 }

@@ -10,6 +10,6 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vinstall ${FILESDIR}/akregatorrc 0644 etc/xdg
-	vinstall ${FILESDIR}/autostart/* 0644 etc/xdg/autostart
+	vinstall ${FILESDIR}/autostart/org.kde.akregator.desktop 0644 etc/xdg/autostart
 	vinstall ${FILESDIR}/feeds.opml 0644 etc/skel/.local/share/akregator/data
 }

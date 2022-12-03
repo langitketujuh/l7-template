@@ -10,5 +10,5 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vinstall ${FILESDIR}/kmail2rc 0644 etc/xdg
-	vinstall ${FILESDIR}/autostart/* 0644 etc/xdg/autostart
+	vinstall ${FILESDIR}/autostart/org.kde.kmail2.desktop 0644 etc/xdg/autostart
 }

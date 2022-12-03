@@ -11,5 +11,6 @@ homepage="https://langitketujuh.id"
 do_install() {
 	vmkdir etc/alsa
 	vcopy ${FILESDIR}/conf.d etc/alsa
-	vinstall ${FILESDIR}/autostart/* 0644 etc/xdg/autostart
+	vinstall ${FILESDIR}/autostart/pipewire.desktop 0644 etc/xdg/autostart
+	vinstall ${FILESDIR}/autostart/pipewire-pulse.desktop 0644 etc/xdg/autostart
 }

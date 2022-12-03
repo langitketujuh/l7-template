@@ -10,6 +10,6 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vinstall ${FILESDIR}/keepassxc.ini 0644 etc/skel/.config/keepassxc keepassxc.ini
-	vinstall ${FILESDIR}/autostart/* 0644 etc/xdg/autostart
+	vinstall ${FILESDIR}/autostart/org.keepassxc.KeePassXC.desktop 0644 etc/xdg/autostart
 	vdoc ${FILESDIR}/README
 }
