@@ -1,7 +1,7 @@
 # Template file for 'l7-plasma-desktop'
 pkgname=l7-plasma-desktop
 version=0.1.8
-revision=3
+revision=4
 depends="plasma-desktop l7-appmenu-gtk3-module l7-plasma-framework
  l7-papirus-icon-theme plasma-applet-active-window-control
  plasma-panel-transparency-button plasma-onzemenu"
@@ -13,7 +13,5 @@ homepage="https://langitketujuh.id"
 do_install() {
 	vmkdir usr/share
 	vcopy ${FILESDIR}/plasma usr/share
-	vinstall ${FILESDIR}/kdeglobals 0644 etc/skel/.config kdeglobals
-	vinstall ${FILESDIR}/touchpadrc 0644 etc/skel/.config touchpadrc
-	vdoc ${FILESDIR}/README
+	vinstall ${FILESDIR}/kdeglobals 0644 etc/xdg
 }
