@@ -59,7 +59,6 @@ if (langIds.indexOf(languageId) != -1) {
     panel.addWidget("org.kde.plasma.kimpanel");
 }
 
-panel.addWidget("org.kde.paneltransparencybutton")
 panel.addWidget("org.kde.plasma.colorpicker")
 panel.addWidget("org.kde.plasma.systemtray")
 panel.addWidget("org.kde.plasma.digitalclock")
