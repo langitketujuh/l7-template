@@ -1,7 +1,7 @@
 # Template file for 'l7-pipewire'
 pkgname=l7-pipewire
 version=0.1.2
-revision=8
+revision=9
 depends="pipewire"
 short_desc="Additional configuration for pipewire package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
@@ -9,8 +9,11 @@ license="GPL-3.0-or-later"
 homepage="https://langitketujuh.id"
 
 do_install() {
-	vmkdir etc/alsa
-	vcopy ${FILESDIR}/conf.d etc/alsa
-	vinstall ${FILESDIR}/autostart/pipewire.desktop 0644 etc/xdg/autostart
-	vinstall ${FILESDIR}/autostart/pipewire-pulse.desktop 0644 etc/xdg/autostart
+	vmkdir etc/alsa/conf.d
+	ln -s /usr/share/alsa/alsa.conf.d/50-pipewire.conf ${DESTDIR}/etc/alsa/conf.d/
+	ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf ${DESTDIR}/etc/alsa/conf.d/
+
+	vmkdir etc/xdg/autostart
+	ln -s /usr/share/applications/pipewire.desktop ${DESTDIR}/etc/xdg/autostart/
+	ln -s /usr/share/applications/pipewire-pulse.desktop ${DESTDIR}/etc/xdg/autostart/
 }
