@@ -1,7 +1,7 @@
 # Template file for 'l7-plasma-desktop'
 pkgname=l7-plasma-desktop
 version=0.1.8
-revision=6
+revision=7
 depends="plasma-desktop l7-appmenu-gtk3-module l7-plasma-framework
  l7-papirus-icon-theme plasma-applet-active-window-control
  plasma-panel-transparency-button plasma-onzemenu"
