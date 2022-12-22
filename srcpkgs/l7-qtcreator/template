@@ -1,0 +1,14 @@
+# Template file for 'l7-qtcreator'
+pkgname=l7-qtcreator
+version=0.1.1
+revision=1
+depends="qtcreator"
+short_desc="Additional configuration for qtcreator package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="GPL-3.0-or-later"
+homepage="https://langitketujuh.id"
+
+do_install() {
+	vinstall ${FILESDIR}/QtCreator.ini 0644 etc/skel/.config/QtProject
+	vdoc ${FILESDIR}/README
+}
