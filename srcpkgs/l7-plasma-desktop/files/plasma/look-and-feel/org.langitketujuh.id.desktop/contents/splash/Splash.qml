@@ -43,15 +43,15 @@ Rectangle {
         }
 
         Rectangle {
-            radius: 3
-            color: "#55555574"
+            radius: 5
+            color: "#1b1e20"
             anchors {
                 bottom: parent.bottom
                 topMargin: 50
                 horizontalCenter: parent.horizontalCenter
             }
             height: 6
-            width: height*36
+            width: height*40
 
             Rectangle {
                 radius: 3
@@ -60,11 +60,11 @@ Rectangle {
                     top: parent.top
                     bottom: parent.bottom
                 }
-                width: (parent.width / 6) * (stage - 1)
+                width: (parent.width / 5) * (stage - 1)
                 color: "#3daee9"
                 Behavior on width {
                     PropertyAnimation {
-                        duration: 250
+                        duration: 1500
                         easing.type: Easing.InOutQuad
                     }
                 }
