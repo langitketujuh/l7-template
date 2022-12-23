@@ -28,78 +28,73 @@ Rectangle {
 
     onStageChanged: {
         if (stage == 1) {
-            introAnimation.running = true;
-        } else if (stage == 5) {
-            introAnimation.target = busyIndicator;
-            introAnimation.from = 1;
-            introAnimation.to = 0;
-            introAnimation.running = true;
+            introAnimation.running = true
         }
     }
+    Image {
+        id: topRect
+        anchors.horizontalCenter: parent.horizontalCenter
+        y: root.height /3
+        source: "images/rectangle.svg"
 
-    Item {
-        id: content
-        anchors.fill: parent
-        opacity: 0
-        TextMetrics {
-            id: units
-            text: "M"
-            property int gridUnit: boundingRect.height
-            property int largeSpacing: units.gridUnit
-            property int smallSpacing: Math.max(2, gridUnit/4)
+        Image {
+            source: "images/splash.svg"
+            anchors.centerIn: parent
         }
 
         Rectangle {
+            radius: 3
+            color: "#55555574"
+            anchors {
+                bottom: parent.bottom
+                topMargin: 50
+                horizontalCenter: parent.horizontalCenter
+            }
+            height: 6
+            width: height*36
 
-        property int sizeAnim: 350
-
-        id: imageSource
-        width:  sizeAnim
-        height: sizeAnim
-        color:  "transparent"
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.verticalCenter: parent.verticalCenter
-        clip: true;
-
-        AnimatedImage {
-            id: face
-            source: "images/splash.gif"
-            paused: false
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.verticalCenter: parent.verticalCenter
-            width:  imageSource.sizeAnim - 7
-            height: imageSource.sizeAnim  - 7
-            smooth: true
-            visible: true
-         }
-    }
-
-       Image {
-            id: busyIndicator
-            //in the middle of the remaining space
-            y: parent.height - 150
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.margins: units.gridUnit
-            source: "images/busywidget.svgz"
-            sourceSize.height: units.gridUnit * 2
-            sourceSize.width: units.gridUnit * 2
-            RotationAnimator on rotation {
-                id: rotationAnimator
-                from: 0
-                to: 360
-                duration: 1500
-                loops: Animation.Infinite
+            Rectangle {
+                radius: 3
+                anchors {
+                    left: parent.left
+                    top: parent.top
+                    bottom: parent.bottom
+                }
+                width: (parent.width / 6) * (stage - 1)
+                color: "#3daee9"
+                Behavior on width {
+                    PropertyAnimation {
+                        duration: 250
+                        easing.type: Easing.InOutQuad
+                    }
+                }
             }
         }
     }
 
-    OpacityAnimator {
+    SequentialAnimation {
         id: introAnimation
         running: false
-        target: content
-        from: 0
-        to: 1
-        duration: 1000
-        easing.type: Easing.InOutQuad
+        ParallelAnimation {
+            PropertyAnimation {
+                property: "opacity"
+                target: topRect
+                from: 0
+                to: 1
+                duration: 1000
+                easing.type: Easing.InOutBack
+                easing.overshoot: 1.0
+            }
+
+            PropertyAnimation {
+                property: "opacity"
+                target: bottomRect
+                from: 0
+                to: 1
+                duration: 1000
+                easing.type: Easing.InOutBack
+                easing.overshoot: 1.0
+            }
+        }
     }
 }

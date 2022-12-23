@@ -82,6 +82,7 @@ var kickoff = panel.addWidget("org.kde.plasma.kickerdash")
 kickoff.currentConfigGroup = ["Shortcuts"]
 kickoff.writeConfig("global", "Alt+F1")
 
+panel.addWidget("org.kde.plasma.marginsseparator")
 panel.addWidget("org.kde.plasma.icontasks")
 panel.addWidget("org.kde.plasma.trash")
 panel.addWidget("org.kde.paneltransparencybutton")

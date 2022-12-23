@@ -7,7 +7,9 @@ panel.alignment = "center"
 panel.offset = 0
 
 panel.addWidget("org.kde.plasma.onzemenu")
+panel.addWidget("org.kde.plasma.marginsseparator")
 panel.addWidget("org.kde.plasma.icontasks")
+panel.addWidget("org.kde.plasma.marginsseparator")
 panel.addWidget("org.kde.plasma.trash")
 panel.addWidget("org.kde.paneltransparencybutton")
 
