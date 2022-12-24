@@ -38,6 +38,7 @@ Rectangle {
         source: "images/rectangle.svg"
 
         Image {
+            id: logo
             source: "images/splash.svg"
             anchors.centerIn: parent
         }
@@ -60,7 +61,7 @@ Rectangle {
                     top: parent.top
                     bottom: parent.bottom
                 }
-                width: (parent.width / 5) * (stage - 1)
+                width: (parent.width / 6) * (stage)
                 color: "#3daee9"
                 Behavior on width {
                     PropertyAnimation {
