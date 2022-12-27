@@ -1,7 +1,7 @@
 # Template file for 'l7-ardour'
 pkgname=l7-ardour
 version=0.1.1
-revision=3
+revision=4
 depends="ardour"
 short_desc="Additional configuration for ardour package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
@@ -9,5 +9,7 @@ license="GPL-2.0-or-later"
 homepage="https://langitketujuh.id"
 
 do_install() {
-	vinstall ${FILESDIR}/dark-ardour.colors 0644 usr/share/ardour6/themes dark-ardour.colors
+	vinstall ${FILESDIR}/langitketujuh-ardour.colors 0644 usr/share/ardour7/themes
+	vinstall ${FILESDIR}/default_ui_config 0644 etc/ardour7
 }
+
