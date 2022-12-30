@@ -1,0 +1,19 @@
+[org.gnome.desktop.interface]
+cursor-size=24
+cursor-theme='breeze_cursors'
+document-font-name='Noto Sans 9'
+enable-animations=true
+font-name='Noto Sans 9'
+gtk-theme='Breeze'
+icon-theme='Papirus-Dark'
+toolbar-style='text'
+
+[org.gnome.desktop.peripherals.touchpad]
+tap-to-click=true
+natural-scroll=false
+
+[org.gtk.Settings.FileChooser]
+sort-directories-first=true
+
+[org.gtk.gtk4.Settings.FileChooser]
+sort-directories-first=true

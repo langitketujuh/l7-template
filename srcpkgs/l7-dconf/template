@@ -1,7 +1,7 @@
 # Template file for 'l7-dconf'
 pkgname=l7-dconf
 version=0.1.0
-revision=2
+revision=3
 depends="dconf"
 short_desc="Additional configuration for dconf package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
