@@ -1,6 +1,6 @@
 # Template file for 'pdfarranger'
 pkgname=pdfarranger
-version=1.9.1
+version=1.9.2
 revision=1
 build_style=python3-module
 hostmakedepends="ghostscript intltool python3-setuptools python3-distutils-extra
@@ -15,7 +15,7 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/jeromerobert/pdfarranger"
 distfiles="https://github.com/jeromerobert/pdfarranger/archive/${version}.tar.gz"
-checksum=a0d91226d19977c5e12fdaac5c1e65dbd0685ef75d1be545f1a595bf020c9894
+checksum=e0e08ddc3a323940d7f05cc0e996484775ad7a0a6cbfc197b07473c452c43f66
 
 python_version=3
 
