@@ -1,0 +1,17 @@
+# Template file for 'xdeb'
+pkgname=xdeb
+version=1.3
+revision=1
+archs="~*musl"
+depends="xz"
+short_desc="Convert deb packages to xbps"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="MIT"
+homepage="https://github.com/toluschr/xdeb"
+distfiles="https://github.com/toluschr/xdeb/archive/refs/tags/${version}.tar.gz"
+checksum=3fd62b6c1d3c18b3b408a64a82e264d3d54f8cdce1119733ba32b41249bb1678
+
+do_install() {
+	vbin xdeb
+	vlicense LICENSE
+}
