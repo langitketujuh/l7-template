@@ -13,10 +13,6 @@ distfiles="https://github.com/linuxmint/webapp-manager/archive/refs/tags/${versi
 checksum=96b3c1886981e24b8704d85168f1ed7459b1a76820af031a28242e22178391c8
 
 pre_build() {
-	# Fix browser names
-	vsed "s|brave-browser|brave|" -i usr/lib/${pkgname}/common.py
-	vsed "s|epiphany-browser|epiphany|" -i usr/lib/${pkgname}/common.py
-
 	# Fix license path
 	vsed "s|common-licenses/GPL|license/GPL-3|" -i usr/lib/${pkgname}/${pkgname}.py
 
