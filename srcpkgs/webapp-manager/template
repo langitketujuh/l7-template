@@ -1,6 +1,6 @@
 # Template file for 'webapp-manager'
 pkgname=webapp-manager
-version=1.2.5
+version=1.2.8
 revision=1
 hostmakedepends="gettext"
 depends="dconf python3-BeautifulSoup4 python3-configobj python3-gobject
@@ -9,8 +9,8 @@ short_desc="Run websites as if they were apps"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/linuxmint/webapp-manager"
-distfiles="https://github.com/linuxmint/${pkgname}/archive/refs/tags/${version}.tar.gz"
-checksum=a47979506333b843664eec7d5a03c83373629c01088a132670bbab6abdb7b786
+distfiles="https://github.com/linuxmint/webapp-manager/archive/refs/tags/${version}.tar.gz"
+checksum=96b3c1886981e24b8704d85168f1ed7459b1a76820af031a28242e22178391c8
 
 pre_build() {
 	# Fix browser names
