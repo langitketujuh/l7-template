@@ -1,11 +1,11 @@
 # Template file for 'elforkane'
 pkgname=elforkane
 version=1.2
-revision=1
+revision=2
 build_style=qmake
 hostmakedepends="qt5-qmake qt5-host-tools"
 makedepends="qt5-declarative-devel qt5-multimedia-devel gstreamer1-devel qt5-svg-devel"
-depends="qt5-multimedia qt5-svg ayat-recit-ghamadi ayat-tafasir ayat-tarajem"
+depends="qt5-multimedia qt5-svg ayat-tafasir ayat-tarajem"
 short_desc="The electronic Holly Quran browser Elforkane"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
