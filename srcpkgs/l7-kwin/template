@@ -1,0 +1,13 @@
+# Template file for 'l7-kwin'
+pkgname=l7-kwin
+version=0.1.0
+revision=1
+depends="kwin"
+short_desc="Additional configuration for kwin package"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="GPL-3.0-or-later"
+homepage="https://langitketujuh.id"
+
+do_install() {
+	vinstall ${FILESDIR}/kwinrc 0644 etc/xdg
+}
