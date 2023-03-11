@@ -1,7 +1,7 @@
 # Template file for 'l7-keepassxc'
 pkgname=l7-keepassxc
 version=0.1.1
-revision=8
+revision=9
 depends="keepassxc"
 short_desc="Additional configuration for keepassxc package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
