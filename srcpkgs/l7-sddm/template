@@ -1,6 +1,6 @@
 # Template file for 'l7-sddm'
 pkgname=l7-sddm
-version=0.1.4
+version=0.1.5
 revision=1
 depends="sddm"
 short_desc="Additional configuration for sddm package"
