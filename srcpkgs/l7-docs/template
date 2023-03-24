@@ -1,6 +1,6 @@
 # Template file for 'l7-docs'
 pkgname=l7-docs
-version=1.0.48
+version=1.0.49
 revision=1
 hostmakedepends="mdBook mdbook-linkcheck"
 depends="xdg-utils"
@@ -9,7 +9,7 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="CC-BY-SA-4.0"
 homepage="https://gitlab.com/langitketujuh/l7-docs"
 distfiles="https://gitlab.com/langitketujuh/l7-docs/-/archive/${version}/l7-docs-${version}.tar.gz"
-checksum=1c1b405db10cce86d69bb9ea0fd6c98f5e324ce62d48ea7c2e21e302e59edf55
+checksum=0b090c83e5088583e487e141dc0023109c035fd8454a59804c0148ea48459c37
 
 do_build() {
 	mdbook build
