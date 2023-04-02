@@ -1,8 +1,8 @@
 # Template file for 'l7-kget'
 pkgname=l7-kget
 version=0.1.1
-revision=9
-depends="kget"
+revision=10
+depends="kget kget-integrator"
 short_desc="Additional configuration for kget package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
