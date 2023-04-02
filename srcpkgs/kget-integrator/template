@@ -11,5 +11,5 @@ homepage="https://langitketujuh.id"
 do_install() {
 	vbin ${FILESDIR}/kget-integrator
 	vinstall ${FILESDIR}/com.kgetdm.chrome.json 0644 etc/chromium/native-messaging-hosts
-	vinstall ${FILESDIR}/com.kgetdm.chrome.json 0644 usr/lib/mozilla/native-messaging-hosts
+	vinstall ${FILESDIR}/com.kgetdm.firefox.json 0644 usr/lib/mozilla/native-messaging-hosts
 }
