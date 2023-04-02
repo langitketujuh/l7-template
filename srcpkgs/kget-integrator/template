@@ -1,0 +1,15 @@
+# Template file for 'kget-integrator'
+pkgname=kget-integrator
+version=0.1.0
+revision=1
+depends="kget"
+short_desc="Integration of web browsers with the KGet download manager"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="GPL-3.0-or-later"
+homepage="https://langitketujuh.id"
+
+do_install() {
+	vbin ${FILESDIR}/kget-integrator
+	vinstall ${FILESDIR}/com.kgetdm.chrome.json 0644 etc/chromium/native-messaging-hosts
+	vinstall ${FILESDIR}/com.kgetdm.chrome.json 0644 usr/lib/mozilla/native-messaging-hosts
+}
