@@ -7,7 +7,7 @@ if [ (id -u) -ne 0 ]
         command -v sudo >/dev/null
         set SUDO 'sudo'
     end
-    $SUDO xbps-query -vR $argv
+    $SUDO nix-env --uninstall $argv
 else
-    xbps-query -vR $argv
+    nix-env --uninstall $argv
 end
