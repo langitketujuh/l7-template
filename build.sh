@@ -5,7 +5,7 @@
 while getopts "p:h:" opt; do
 case $opt in
 	p) PACKAGES="$OPTARG";;
-	h) echo "${0#/*}: [-a x86_64|x86_64-musl|all] [-p packages]" >&2; exit 1;;
+	h) echo "${0#/*}: [-a x86_64|x86_64-musl] [-p packages]" >&2; exit 1;;
 esac
 done
 shift $((OPTIND - 1))
