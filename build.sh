@@ -48,7 +48,7 @@ for arch in x86_64 x86_64-musl; do
     XBPS_TARGET_ARCH=${arch} xbps-rindex --sign --signedby "LangitKetujuh Linux" --privkey ~/.ssh/privkey.pem $PWD/hostdir/binpkgs/$main_dir/
 
     # generate signature
-    XBPS_TARGET_ARCH=${arch} xbps-rindex -d --sign-pkg --privkey ~/.ssh/privkey.pem $PWD/hostdir/binpkgs/$main_dir/${basename_pkgs}
+    XBPS_TARGET_ARCH=${arch} xbps-rindex --sign-pkg --privkey ~/.ssh/privkey.pem $PWD/hostdir/binpkgs/$main_dir/${basename_pkgs}
 
     # generate x86_64 repodata
     XBPS_TARGET_ARCH=${arch} xbps-rindex -a $PWD/hostdir/binpkgs/$main_dir/${basename_pkgs} -f
