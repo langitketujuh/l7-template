@@ -4,7 +4,6 @@
 set -l progname search
 
 set -l listall "(__fish_print_xbps_packages)"
-set -l listinstalled "(__fish_print_xbps_packages -i)"
 
 function __fish_print_xbps_pkg_props
     printf 'alternatives\tList of alternatives provided by the package\n'
@@ -41,8 +40,7 @@ function __fish_print_xbps_pkg_props
 end
 
 complete -c $progname -f
-complete -c $progname -a "$listinstalled"
-complete -c $progname -n "__fish_contains_opt -s R" -a "$listall"
+complete -c $progname -a "$listall"
 
 complete -c $progname -s C -d 'Use this XBPS configuration directory' -xa "(__fish_complete_directories)"
 complete -c $progname -s c -d 'Use this cache directory to store binary packages' -xa "(__fish_complete_directories)"
