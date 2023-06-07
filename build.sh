@@ -51,7 +51,7 @@ for arch in x86_64 x86_64-musl; do
     XBPS_TARGET_ARCH=${arch} xbps-rindex --sign-pkg --privkey ~/.ssh/privkey.pem $PWD/hostdir/binpkgs/$main_dir/${basename_pkgs}
 
     # generate x86_64 repodata
-    XBPS_TARGET_ARCH=${arch} xbps-rindex -a $PWD/hostdir/binpkgs/$main_dir/${basename_pkgs} -f
+    XBPS_TARGET_ARCH=${arch} xbps-rindex -a $PWD/hostdir/binpkgs/$main_dir/*.xbps
     chmod --preserve-root 644 $PWD/hostdir/binpkgs/$main_dir/${basename_pkgs}.sig
 
   done
