@@ -2,9 +2,9 @@
 
 if test -d $XBPS_DISTDIR
     vpsm update-repo
-    vpsm update-bulk
+    vpsm update-sys
 else
     vinstall
     vpsm update-repo
-    vpsm update-bulk
+    vpsm update-sys
 end
