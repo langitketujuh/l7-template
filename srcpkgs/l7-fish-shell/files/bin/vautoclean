@@ -1,0 +1,5 @@
+#!/usr/bin/env fish
+
+set XBPS_ARCH $(xbps-uhelper arch)
+
+xbps-remove -Oov -c $XBPS_DISTDIR/hostdir/repocache-$XBPS_ARCH/

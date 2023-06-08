@@ -1,0 +1,15 @@
+#!/usr/bin/env fish
+
+# set path for xbps distdir
+set home (echo $HOME)
+set -Ux XBPS_DISTDIR $home/.local/share/void-packages
+
+# clone void-packages repository
+git clone --depth 1 https://github.com/void-linux/void-packages $XBPS_DISTDIR
+
+# install binbootstrap
+vpsm binbootstrap
+vpsm bootstrap-up
+
+# enable nonfree repository
+echo XBPS_ALLOW_RESTRICTED=yes > $XBPS_DISTDIR/etc/conf

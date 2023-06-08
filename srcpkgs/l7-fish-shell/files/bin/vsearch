@@ -1,0 +1,8 @@
+#!/usr/bin/env fish
+
+if test -d $XBPS_DISTDIR
+    vpsm searchsrc $argv
+else
+    vinstall
+    vpsm searchsrc $argv
+end

@@ -1,0 +1,10 @@
+#!/usr/bin/env fish
+
+if test -d $XBPS_DISTDIR
+    vpsm update-repo
+    vpsm install $argv
+else
+    vinstall
+    vpsm update-repo
+    vpsm install $argv
+end
