@@ -1,0 +1,8 @@
+#!/usr/bin/env fish
+
+if test -f /var/lib/flatpak/repo/flathub.trustedkeys.gpg
+    flatpak install flathub $argv
+else
+    finstall
+    flatpak install flathub $argv
+end
