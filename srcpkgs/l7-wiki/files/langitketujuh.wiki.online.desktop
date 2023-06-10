@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[en_US]=Guide Book Online
+Comment[id]=Buku Petunjuk Daring
+Comment=Guide Book Online
+Exec=xdg-open "https://wiki.langitketujuh.id/"
+GenericName[en_US]=Guide Book Online
+GenericName[id]=Buku Petunjuk Daring
+GenericName=Guide Book Online
+Icon=calibre-ebook-edit
+Name[en_US]=Wikipedia Online
+Name[id]=Wikipedia Daring
+Name=Wikipedia Online
+NoDisplay=false
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+Categories=LangitKetujuh;
+X-KDE-SubstituteUID=false
+X-KDE-Username=

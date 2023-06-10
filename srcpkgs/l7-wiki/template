@@ -1,0 +1,29 @@
+# Template file for 'l7-wiki'
+pkgname=l7-wiki
+version=1.0.53
+revision=1
+hostmakedepends="mdBook mdbook-linkcheck"
+depends="xdg-utils"
+short_desc="Wikipedia for LangitKetujuh OS"
+maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
+license="CC-BY-SA-4.0"
+homepage="https://gitlab.com/langitketujuh/l7-wiki"
+distfiles="https://gitlab.com/langitketujuh/l7-wiki/-/archive/${version}/l7-wiki-${version}.tar.gz"
+checksum=5f9d9931bbc0336013bd0bc8e34ce56af15ed109987719967f5de04487177124
+
+do_build() {
+	mdbook build
+}
+
+do_install() {
+	vmkdir usr/share/doc/langitketujuh/wiki
+	vcopy ${wrksrc}/wiki/html/* usr/share/doc/langitketujuh/wiki
+	vinstall ${FILESDIR}/langitketujuh.wiki.desktop 0644 usr/share/applications
+	vinstall ${FILESDIR}/langitketujuh.wiki.online.desktop 0644 usr/share/applications
+}
+
+l7-docs_package() {
+	depends="${sourcepkg}>=${version}_${revision}"
+	short_desc+=" (transitional dummy package)"
+	build_style=meta
+}
