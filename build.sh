@@ -25,7 +25,7 @@ for arch in x86_64 x86_64-musl; do
 
     ver_pkgs=$(grep 'version=' $PWD/srcpkgs/${pkgs}/template | sed -e 's/version=//g')
     rev_pkgs=$(grep 'revision=' $PWD/srcpkgs/${pkgs}/template | sed -e 's/revision=//g')
-    basename_pkgs="${pkgs}-${ver_pkgs}_${rev_pkgs}.${arch}.xbps"
+    basename_pkgs="${pkgs}-${ver_pkgs}_${rev_pkgs}.${arch}"
 
     # build xbps
     ./xbps-src -m masterdir-${arch} pkg ${pkgs}
@@ -48,11 +48,11 @@ for arch in x86_64 x86_64-musl; do
     XBPS_TARGET_ARCH=${arch} xbps-rindex --privkey ~/.ssh/privkey.pem --sign --signedby "LangitKetujuh Linux" $PWD/hostdir/binpkgs/$main_dir/
 
     # generate signature
-    XBPS_TARGET_ARCH=${arch} xbps-rindex --privkey ~/.ssh/privkey.pem --sign-pkg $PWD/hostdir/binpkgs/$main_dir/${basename_pkgs}
+    XBPS_TARGET_ARCH=${arch} xbps-rindex --privkey ~/.ssh/privkey.pem --sign-pkg $PWD/hostdir/binpkgs/$main_dir/${basename_pkgs}.xbps
 
     # generate x86_64 repodata
-    XBPS_TARGET_ARCH=${arch} xbps-rindex -a $PWD/hostdir/binpkgs/$main_dir/*.xbps
-    chmod --preserve-root 644 $PWD/hostdir/binpkgs/$main_dir/${basename_pkgs}.sig
+    XBPS_TARGET_ARCH=${arch} xbps-rindex -a $PWD/hostdir/binpkgs/$main_dir/${basename_pkgs}.xbps
+    chmod --preserve-root 644 $PWD/hostdir/binpkgs/$main_dir/${basename_pkgs}.xbps.sig
 
   done
 
