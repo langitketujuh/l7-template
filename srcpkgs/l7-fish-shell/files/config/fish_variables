@@ -3,6 +3,7 @@
 SETUVAR --export EDITOR:vim
 SETUVAR --export GTK_IM_MODULE:ibus
 SETUVAR --export QT_IM_MODULE:ibus
+SETUVAR --export SSH_ASKPASS:ksshaskpass
 SETUVAR --export XMODIFIERS:\x40im\x3dibus
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:969896
