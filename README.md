@@ -1,6 +1,4 @@
-# template
-
-Template of packages LangitKetujuh OS
+## The LangitKetujuh Linux source packages
 
 ### Build boostrap every architecture (x86_64-musl & x86_64)
 
