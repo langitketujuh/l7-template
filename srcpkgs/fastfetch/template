@@ -1,6 +1,6 @@
 # Template file for 'fastfetch'
 pkgname=fastfetch
-version=1.11.0
+version=1.12.2
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTS=ON"
@@ -15,7 +15,7 @@ license="MIT"
 homepage="https://github.com/LinusDierheimer/fastfetch"
 changelog="https://raw.githubusercontent.com/LinusDierheimer/fastfetch/master/CHANGELOG.md"
 distfiles="https://github.com/LinusDierheimer/fastfetch/archive/${version}.tar.gz"
-checksum=900b3c19f56fca59fd90ae2a033f40fec00185f2a0078dabdcc13a27635dd989
+checksum=e3d7384de0aa306effdcbe1b7e8095b40649773086b838d925fbfc2ec5027ab0
 
 post_install() {
 	vlicense LICENSE
