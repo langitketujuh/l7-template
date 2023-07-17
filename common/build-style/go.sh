@@ -32,6 +32,11 @@ do_build() {
 	go_package=${go_package:-$go_import_path}
 	# Build using Go modules if there's a go.mod file
 	if [ "${go_mod_mode}" != "off" ] && [ -f go.mod ]; then
+		# Check if go_import_path matches module
+		if [ "module $go_import_path" != "$(head -n1 go.mod)" ]; then
+			msg_error "\"\$go_import_path\" doesn't match the one defined in go.mod!\n"
+		fi
+
 		if [ -z "${go_mod_mode}" ] && [ -d vendor ]; then
 			msg_normal "Using vendor dir for $pkgname Go dependencies.\n"
 			go_mod_mode=vendor
@@ -40,7 +45,7 @@ do_build() {
 			# default behavior.
 			go_mod_mode=
 		fi
-		go install -p "$XBPS_MAKEJOBS" -mod="${go_mod_mode}" -x -tags "${go_build_tags}" -ldflags "${go_ldflags}" ${go_package}
+		go install -p "$XBPS_MAKEJOBS" -mod="${go_mod_mode}" -modcacherw -x -tags "${go_build_tags}" -ldflags "${go_ldflags}" ${go_package}
 	else
 		# Otherwise, build using GOPATH
 		go get -p "$XBPS_MAKEJOBS" -x -tags "${go_build_tags}" -ldflags "${go_ldflags}" ${go_package}
