@@ -22,8 +22,3 @@ do_install() {
 	vinstall ${FILESDIR}/langitketujuh.wiki.online.desktop 0644 usr/share/applications
 }
 
-l7-docs_package() {
-	depends="${sourcepkg}>=${version}_${revision}"
-	short_desc+=" (transitional dummy package)"
-	build_style=meta
-}
