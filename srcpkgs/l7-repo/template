@@ -1,7 +1,7 @@
 # Template file for 'l7-repo'
 pkgname=l7-repo
 version=0.2
-revision=5
+revision=6
 build_style=meta
 short_desc="Langitketujuh drop-in file for the main repository"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
@@ -13,15 +13,15 @@ do_install() {
 	vmkdir usr/share/xbps.d
 	case "$XBPS_TARGET_MACHINE" in
 		aarch64*)
-			echo "repository=https://al.quds.repo.langitketujuh.id/current/aarch64" > \
+			echo "repository=https://repo-fatih.langitketujuh.id/current/aarch64" > \
 				${DESTDIR}/usr/share/xbps.d/70-langitketujuh-repository-main.conf
 			;;
 		*-musl)
-			echo "repository=https://al.quds.repo.langitketujuh.id/current/musl" > \
+			echo "repository=https://repo-fatih.langitketujuh.id/current/musl" > \
 				${DESTDIR}/usr/share/xbps.d/70-langitketujuh-repository-main.conf
 			;;
 		*)
-			echo "repository=https://al.quds.repo.langitketujuh.id/current" > \
+			echo "repository=https://repo-fatih.langitketujuh.id/current" > \
 				${DESTDIR}/usr/share/xbps.d/70-langitketujuh-repository-main.conf
 			;;
 	esac
