@@ -1,7 +1,7 @@
 # Template file for 'l7-opendoas'
 pkgname=l7-opendoas
 version=0.1.1
-revision=7
+revision=8
 depends="opendoas"
 short_desc="Additional configuration for opendoas package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
