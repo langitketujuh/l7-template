@@ -23,7 +23,7 @@ for arch in x86_64 x86_64-musl; do
   # build packages xbps
   for pkgs in $PACKAGES; do
 
-    ver_pkgs=$(grep 'version=' $PWD/srcpkgs/${pkgs}/template | sed -e 's/version=//g')
+    ver_pkgs=$(grep 'version=' $PWD/srcpkgs/${pkgs}/template | sed -e 's/version=//g' | head -1)
     rev_pkgs=$(grep 'revision=' $PWD/srcpkgs/${pkgs}/template | sed -e 's/revision=//g')
     basename_pkgs="${pkgs}-${ver_pkgs}_${rev_pkgs}.${arch}"
 
@@ -51,8 +51,8 @@ for arch in x86_64 x86_64-musl; do
     XBPS_TARGET_ARCH=${arch} xbps-rindex --privkey ~/.ssh/privkey.pem --sign-pkg $PWD/hostdir/binpkgs/$main_dir/${basename_pkgs}.xbps
 
     # generate x86_64 repodata
-    XBPS_TARGET_ARCH=${arch} xbps-rindex -a $PWD/hostdir/binpkgs/$main_dir/${basename_pkgs}.xbps
-    chmod --preserve-root 644 $PWD/hostdir/binpkgs/$main_dir/${basename_pkgs}.xbps.sig
+    XBPS_TARGET_ARCH=${arch} xbps-rindex -a $PWD/hostdir/binpkgs/$main_dir/*.xbps
+    chmod --preserve-root 644 $PWD/hostdir/binpkgs/$main_dir/*.xbps.sig
 
   done
 
