@@ -1,7 +1,7 @@
 # Template file for 'arc-kde'
 pkgname=arc-kde
 version=20220908
-revision=1
+revision=2
 short_desc="Arc theme for KDE Plasma"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-3.0-or-later"
@@ -15,4 +15,8 @@ do_install() {
 	for i in $theme ; do
 		vcopy ${i} usr/share
 	done
+}
+
+post_install() {
+	vinstall ${FILESDIR}/"Arc Dark.theme" 0644 usr/share/syntax-highlighting/themes
 }
