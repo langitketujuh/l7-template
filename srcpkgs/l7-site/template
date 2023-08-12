@@ -1,7 +1,7 @@
 # Template file for 'l7-site'
 pkgname=l7-site
 version=0.1.0
-revision=4
+revision=5
 depends="xdg-utils"
 short_desc="LangitKetujuh OS Website"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
