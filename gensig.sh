@@ -8,7 +8,7 @@ for arch in x86_64 x86_64-musl; do
     main_dir="main"
   fi
 
-  for pkgs in $(ls hostdir/binpkgs/$main_dir/ | grep "\.xbps.sig" | xargs | sed -e 's/.sig//g') ; do
+  for pkgs in $(ls hostdir/binpkgs/$main_dir/ | grep "\.xbps" | xargs | sed -e 's/.sig//g') ; do
 
     # add signed by
     XBPS_TARGET_ARCH=${arch} xbps-rindex -d --privkey ~/.ssh/privkey.pem --sign --signedby "LangitKetujuh Linux" $PWD/hostdir/binpkgs/$main_dir/
