@@ -52,7 +52,7 @@ for arch in x86_64 x86_64-musl; do
 
     # generate x86_64 repodata
     XBPS_TARGET_ARCH=${arch} xbps-rindex -a $PWD/hostdir/binpkgs/$main_dir/*.xbps
-    chmod --preserve-root 644 $PWD/hostdir/binpkgs/$main_dir/*.xbps.sig
+    chmod --preserve-root 644 $PWD/hostdir/binpkgs/$main_dir/*.xbps.sig2
 
   done
 
