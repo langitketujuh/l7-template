@@ -1,7 +1,7 @@
 # Template file for 'l7-pipewire'
 pkgname=l7-pipewire
 version=0.1.2
-revision=10
+revision=11
 depends="pipewire"
 short_desc="Additional configuration for pipewire package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
@@ -17,4 +17,8 @@ do_install() {
 	ln -s /usr/share/applications/pipewire.desktop ${DESTDIR}/etc/xdg/autostart/
 	ln -s /usr/share/applications/pipewire-pulse.desktop ${DESTDIR}/etc/xdg/autostart/
 	ln -s /usr/share/applications/wireplumber.desktop ${DESTDIR}/etc/xdg/autostart/
-}
+
+	vmkdir etc/pipewire/pipewire.conf.d
+	ln -s /usr/share/examples/wireplumber/10-wireplumber.conf ${DESTDIR}/etc/pipewire/pipewire.conf.d/
+	ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf ${DESTDIR}/etc/pipewire/pipewire.conf.d/
+	}
