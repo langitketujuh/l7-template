@@ -11,5 +11,5 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="GPL-2.0-or-later"
 homepage="https://github.com/ALEX11BR/ThemeChanger"
 distfiles="https://github.com/ALEX11BR/ThemeChanger/archive/refs/tags/v${version}.tar.gz"
-checksum="a3a0a0ac88008b6707485c1df68da925b3fc9409d4acd059d9ea7eda1aca5088"
+checksum=a3a0a0ac88008b6707485c1df68da925b3fc9409d4acd059d9ea7eda1aca5088
 python_version=3
