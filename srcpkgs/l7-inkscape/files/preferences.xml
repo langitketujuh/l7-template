@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <inkscape
-   version="1"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
+   version="1">
   <group
      id="tools"
      bounding_box="0">
@@ -15,7 +14,7 @@
      id="options">
     <group
        id="boot"
-       theme="system"
+       theme="custom"
        canvas="light">
       <group
          id="shown"
@@ -44,11 +43,13 @@
   <group
      id="theme"
      defaultPreferDarkTheme="1"
-     defaultIconTheme="Papirus-Dark"
+     defaultIconTheme="multicolor"
      defaultGtkTheme="Breeze"
      narrowSpinButton="1"
      preferDarkTheme="1"
-     darkTheme="1"/>
+     darkTheme="1"
+     syntax-color-theme="kate"
+     iconTheme="multicolor"/>
   <group
      id="window">
     <group
