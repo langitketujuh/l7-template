@@ -15,10 +15,11 @@
     <group
        id="boot"
        theme="custom"
-       canvas="light">
+       canvas="dark-check">
       <group
          id="shown"
-         ver1.2="1" />
+         ver1.2="0"
+         ver1.3="0" />
     </group>
     <group
        id="softproof"
@@ -58,6 +59,21 @@
     <group
        id="rulers"
        state="0" />
+  </group>
+  <group
+     id="template">
+    <group
+       id="base"
+       pagecolor="#4f5255"
+       deskcolor="#4f5255"
+       pageopacity="0"
+       pagecheckerboard="1"
+       bordercolor="#b2b2b2"
+       borderopacity="1"
+       objecttolerance="10.0"
+       gridtolerance="10.0"
+       guidetolerance="10.0"
+       pageshadow="1" />
   </group>
   <group
      id="fullscreen">
