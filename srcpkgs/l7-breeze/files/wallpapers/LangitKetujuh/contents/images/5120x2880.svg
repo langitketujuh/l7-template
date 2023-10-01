@@ -1,454 +1,392 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   width="5120"
-   height="2880"
-   version="1.1"
-   viewBox="0 0 1354.7 762"
-   id="svg217"
-   sodipodi:docname="5120x2880.svg"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <title
-     id="title2310">Guardian</title>
-  <sodipodi:namedview
-     id="namedview219"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     showgrid="false"
-     inkscape:snap-global="false"
-     inkscape:snap-page="true"
-     inkscape:zoom="0.1265625"
-     inkscape:cx="2560"
-     inkscape:cy="1438.0247"
-     inkscape:window-width="1366"
-     inkscape:window-height="703"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg217" />
-  <defs
-     id="defs130">
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient25963"
-       id="linearGradient29530"
-       x1="3259.3259"
-       y1="-306.87833"
-       x2="1763.3994"
-       y2="-1802.8049"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(19.92536,19.770804)" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient25963">
-      <stop
-         style="stop-color:#343a3e;stop-opacity:1"
-         offset="0"
-         id="stop25959" />
-      <stop
-         style="stop-color:#1b1e20;stop-opacity:0"
-         offset="1"
-         id="stop25961" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient25963"
-       id="linearGradient29602"
-       x1="2987.334"
-       y1="-632.89771"
-       x2="1410.9047"
-       y2="-2209.3271"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="rotate(45,0.054689,0.13203093)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient73218"
-       id="linearGradient72375"
-       gradientUnits="userSpaceOnUse"
-       x1="2560"
-       y1="1496.8232"
-       x2="2560"
-       y2="7.1054274e-15" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient73218">
-      <stop
-         style="stop-color:#f5df21;stop-opacity:1"
-         offset="0"
-         id="stop73212" />
-      <stop
-         style="stop-color:#f4df25;stop-opacity:0.95686269"
-         offset="0.34832558"
-         id="stop73214" />
-      <stop
-         style="stop-color:#6c5e18;stop-opacity:0.9254902"
-         offset="1"
-         id="stop73216" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient808878"
-       id="linearGradient72591"
-       x1="2560"
-       y1="1427.8108"
-       x2="2560"
-       y2="-269.0954"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient808878">
-      <stop
-         style="stop-color:#5a5df1;stop-opacity:1"
-         offset="0"
-         id="stop808876" />
-      <stop
-         style="stop-color:#4efffc;stop-opacity:1"
-         offset="1"
-         id="stop808874" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4931"
-       id="linearGradient3097"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(19.92536,19.770804)"
-       x1="2540.0745"
-       y1="2011.479"
-       x2="2540.0745"
-       y2="1111.6001" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient4931">
-      <stop
-         style="stop-color:#1b1e20;stop-opacity:1"
-         offset="0"
-         id="stop4927" />
-      <stop
-         style="stop-color:#1c2021;stop-opacity:1"
-         offset="1"
-         id="stop4929" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient37674"
-       id="linearGradient37604"
-       gradientUnits="userSpaceOnUse"
-       x1="2560"
-       y1="2415.625"
-       x2="4813.168"
-       y2="162.45724" />
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient37674">
-      <stop
-         style="stop-color:#0eb6e4;stop-opacity:0"
-         offset="0"
-         id="stop37670" />
-      <stop
-         style="stop-color:#53a0e8;stop-opacity:0.23668641"
-         offset="0.36671045"
-         id="stop38722" />
-      <stop
-         style="stop-color:#6a50d5;stop-opacity:0.05"
-         offset="1"
-         id="stop37672" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient25963"
-       id="linearGradient28256"
-       x1="3846.5837"
-       y1="226.35132"
-       x2="4733.3037"
-       y2="152.46611"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient25963"
-       id="linearGradient26969"
-       x1="2815.8767"
-       y1="-2434.0369"
-       x2="3241.0676"
-       y2="-2506.2322"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(146.28572,404.02723)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient25963"
-       id="linearGradient26675"
-       x1="3589.1011"
-       y1="-1396.1047"
-       x2="4132.2739"
-       y2="-1484.7672"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient25963"
-       id="linearGradient25965"
-       x1="4313.5635"
-       y1="-30.771729"
-       x2="5290.144"
-       y2="-227.79959"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="rotate(45)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient808878"
-       id="linearGradient32477"
-       gradientUnits="userSpaceOnUse"
-       x1="3071.9082"
-       y1="3028.3906"
-       x2="4485.583"
-       y2="1614.7159" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient808878"
-       id="linearGradient33304"
-       gradientUnits="userSpaceOnUse"
-       x1="4019.2832"
-       y1="1732.7168"
-       x2="5423.145"
-       y2="328.8548" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient808878"
-       id="linearGradient34874"
-       gradientUnits="userSpaceOnUse"
-       x1="2559.8909"
-       y1="2880"
-       x2="5267.0908"
-       y2="172.80028" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient808878"
-       id="linearGradient35399"
-       gradientUnits="userSpaceOnUse"
-       x1="4019.2832"
-       y1="1732.7168"
-       x2="5423.145"
-       y2="328.8548"
-       gradientTransform="translate(-494.21037,-182.03422)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient808878"
-       id="linearGradient35821"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-489.28458,-1073.5852)"
-       x1="4019.2832"
-       y1="1732.7168"
-       x2="4780.3418"
-       y2="971.65826" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient808878"
-       id="linearGradient37564"
-       gradientUnits="userSpaceOnUse"
-       x1="2537.0127"
-       y1="2920.1182"
-       x2="3869.9233"
-       y2="1557.6531"
-       gradientTransform="translate(0.10896571,-704.3745)" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient808878"
-       id="linearGradient40868"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-54.182661,-704.37459)"
-       x1="2507.1794"
-       y1="2462.8481"
-       x2="4029.2197"
-       y2="527.0495" />
-  </defs>
-  <rect
-     x="-3.8037001e-06"
-     y="-0.0093745049"
-     width="1354.7"
-     height="762"
-     fill="#1b1e20"
-     stop-color="#000000"
-     style="font-variation-settings:normal;-inkscape-stroke:none;paint-order:stroke fill markers"
-     id="rect132" />
-  <g
-     id="g2783"
-     inkscape:label="full"
-     transform="matrix(0.25533204,0,0,0.25533204,23.727911,26.653056)">
-    <g
-       id="g40076"
-       inkscape:label="top">
-      <rect
-         style="fill:url(#linearGradient29530);fill-opacity:1;stroke:none;stroke-width:0.755907;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.755907, 1.51181"
-         id="rect2773"
-         width="3828.5588"
-         height="3828.5588"
-         x="-479.96603"
-         y="-4100.3525"
-         transform="rotate(45)" />
-      <path
-         id="rect6172"
-         style="fill:url(#linearGradient29602);fill-opacity:1;stroke:none;stroke-width:0.755907;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.755907, 1.51181"
-         d="M 2560,-3749.5625 44.886722,-1234.4473 1951.3906,672.05664 1759.3047,864.14258 2560,1664.8379 3360.6953,864.14062 3168.6094,672.05469 5075.1133,-1234.4473 Z" />
-      <path
-         id="path71121"
-         style="fill:none;fill-opacity:1;stroke:url(#linearGradient72375);stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="M 1241.2044,-205.59697 2122.8434,676.04205 1931.03,867.85544 2560,1496.8233 v 0 0 l 628.97,-628.96787 -191.8134,-191.81339 881.639,-881.63902"
-         sodipodi:nodetypes="ccccccccc" />
-      <path
-         id="path71123"
-         style="fill:none;stroke:url(#linearGradient72591);stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 1270.5309,-252.08499 925.2226,925.24848 -195.191,195.19653 v 0 L 2560,1427.8108 3119.4375,868.36001 v 0 L 2924.2465,673.16348 3849.4691,-252.085"
-         sodipodi:nodetypes="ccccccccc" />
-      <path
-         id="path1533"
-         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:url(#linearGradient3097);fill-opacity:1;stroke:none;stroke-width:0.755907;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.755907, 1.51181;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-         d="M 1388.9414,860.19141 1352.2188,896.91406 2560,2104.6953 3767.7812,896.91406 3731.0586,860.19141 2560,2031.25 Z" />
-    </g>
-    <use
-       x="0"
-       y="0"
-       xlink:href="#g39746"
-       id="use41345"
-       transform="matrix(-1,0,0,1,5119.7812,0)"
-       width="100%"
-       height="100%"
-       style="display:inline"
-       inkscape:label="left-clone" />
-    <g
-       id="g39746"
-       inkscape:label="right">
-      <path
-         id="rect36114"
-         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:url(#linearGradient37604);fill-opacity:1;stroke:none;stroke-width:0.755906;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.755906, 1.51181;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-         d="M 5420.2305,-684.60547 2560,2175.625 v 14.6367 L 5420.2305,-669.96875 Z m 0,40 L 2560,2215.625 v 14.6367 L 5420.2305,-629.96875 Z m 0,40 L 2560,2255.625 v 14.6367 L 5420.2305,-589.96875 Z m 0,40 L 2560,2295.625 v 14.6367 L 5420.2305,-549.96875 Z m 0,40 L 2560,2335.625 v 14.6367 L 5420.2305,-509.96875 Z m 0,40 L 2560,2375.625 v 14.6367 L 5420.2305,-469.96875 Z m 0,40 L 2560,2415.625 v 14.6367 L 5420.2305,-429.96875 Z m 0,40 L 2560,2455.625 v 14.6367 L 5420.2305,-389.96875 Z m 0,40 L 2560,2495.625 v 14.6367 L 5420.2305,-349.96875 Z M 3535.0078,1560.6172 2560,2535.625 v 14.6367 l 982.3262,-982.3262 z m 20,20 L 2560,2575.625 v 14.6367 L 3562.3262,1587.9355 Z m 20,20 L 2560,2615.625 v 14.6367 L 3582.3262,1607.9355 Z m 20,20 L 2560,2655.625 v 14.6367 L 3602.3262,1627.9355 Z m 20,20 L 2560,2695.625 v 14.6367 L 3622.3262,1647.9355 Z m 20,20 L 2560,2735.625 v 14.6367 L 3642.3262,1667.9355 Z m 20,20 L 2560,2775.625 v 14.6367 L 3662.3262,1687.9355 Z m 20,20 L 2560,2815.625 v 14.6367 L 3682.3262,1707.9355 Z m 20,20 L 2560,2855.625 v 14.6367 L 3702.3262,1727.9355 Z" />
-      <rect
-         style="fill:url(#linearGradient28256);fill-opacity:1;stroke:none;stroke-width:0.755907;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.755907, 1.51181"
-         id="rect1680"
-         width="3828.5588"
-         height="3828.5588"
-         x="3846.5837"
-         y="-3602.2073"
-         transform="rotate(45)" />
-      <rect
-         style="fill:url(#linearGradient26969);fill-opacity:1;stroke:none;stroke-width:0.755907;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.755907, 1.51181"
-         id="rect1504"
-         width="3828.5588"
-         height="3828.5588"
-         x="2962.1624"
-         y="-5858.5684"
-         transform="rotate(45)" />
-      <rect
-         style="fill:url(#linearGradient26675);fill-opacity:1;stroke:none;stroke-width:0.755907;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.755907, 1.51181"
-         id="rect1586"
-         width="3828.5588"
-         height="3828.5588"
-         x="3589.1011"
-         y="-5224.6636"
-         transform="rotate(45)" />
-      <path
-         id="rect1606"
-         style="fill:url(#linearGradient25965);fill-opacity:1;stroke:none;stroke-width:0.755907;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.755907, 1.51181"
-         d="M 6726.4824,-974.48242 4019.2832,1732.7168 4193.4336,1906.8672 3071.9082,3028.3906 5779.1094,5735.5918 8486.3086,3028.3906 8312.1602,2854.2422 9433.6836,1732.7168 Z" />
-      <path
-         style="fill:url(#linearGradient32477);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="M 3071.9082,3028.3906 4485.5829,1614.7159 3092.3163,3048.7987 Z"
-         id="path32339"
-         sodipodi:nodetypes="cccc" />
-      <path
-         style="font-variation-settings:normal;vector-effect:none;fill:url(#linearGradient33304);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-         d="m 4019.2832,1732.7168 1403.862,-1403.862 14.8365,14.83653 z"
-         id="path33125"
-         sodipodi:nodetypes="cccc" />
-      <path
-         style="font-variation-settings:normal;vector-effect:none;fill:url(#linearGradient34874);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-         d="m 2559.8909,2880 2707.1997,-2707.19974 12.7063,12.70629 z"
-         id="path34376"
-         sodipodi:nodetypes="cccc" />
-      <path
-         style="font-variation-settings:normal;vector-effect:none;fill:url(#linearGradient35399);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-         d="m 3525.0728,1550.6826 1780.8961,-1780.89604 20.8635,18.40064 z"
-         id="path35397"
-         sodipodi:nodetypes="cccc" />
-      <path
-         style="font-variation-settings:normal;vector-effect:none;fill:url(#linearGradient35821);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-         d="m 3529.9986,659.13159 918.9621,-918.96213 14.7063,15.93786 z"
-         id="path35819"
-         sodipodi:nodetypes="cccc" />
-      <path
-         style="font-variation-settings:normal;vector-effect:none;fill:url(#linearGradient37564);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-         d="m 2559.9998,2175.6255 629.9715,-641.2914 640.4206,-629.10073 z"
-         id="path37562"
-         sodipodi:nodetypes="cccc" />
-      <path
-         style="font-variation-settings:normal;vector-effect:none;fill:url(#linearGradient40868);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-         d="M 2559.8906,1664.8379 3360.5859,864.14062 3168.5,672.05469 l 852.5873,-852.58645 -10.3389,-14.03325 -858.7706,866.97589 192.1313,193.11298 z"
-         id="path40338"
-         sodipodi:nodetypes="cccccccc" />
-      <rect
-         style="fill:none;stroke:none"
-         width="45.217121"
-         height="53.467087"
-         x="2779.6609"
-         y="2962.0398"
-         id="rect42669" />
-      <rect
-         style="fill:none;stroke:none"
-         width="45.217121"
-         height="53.467087"
-         x="2861.793"
-         y="2962.0398"
-         id="rect64402" />
-    </g>
-  </g>
-  <metadata
-     id="metadata2308">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <cc:license
-           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
-        <dc:title>Guardian</dc:title>
-        <dc:date>3-24-2023</dc:date>
-        <dc:creator>
-          <cc:Agent>
-            <dc:title>Hervy Qurrotul Ainur Rozi</dc:title>
-          </cc:Agent>
-        </dc:creator>
-        <dc:subject>
-          <rdf:Bag>
-            <rdf:li>wallpaper</rdf:li>
-            <rdf:li>langitketujuh</rdf:li>
-            <rdf:li>linux</rdf:li>
-          </rdf:Bag>
-        </dc:subject>
-        <dc:description>Wallpaper of LangitKetujuh OS</dc:description>
-      </cc:Work>
-      <cc:License
-         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#Reproduction" />
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#Distribution" />
-        <cc:requires
-           rdf:resource="http://creativecommons.org/ns#Notice" />
-        <cc:requires
-           rdf:resource="http://creativecommons.org/ns#Attribution" />
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
-        <cc:requires
-           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
-      </cc:License>
-    </rdf:RDF>
-  </metadata>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="5120" height="2880" version="1.1" viewBox="0 0 1354.7 762" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient id="linearGradient7148">
+<stop stop-color="#43d068" stop-opacity="0" offset="0"/>
+<stop stop-color="#3562d9" stop-opacity=".16107" offset=".23699"/>
+<stop stop-color="#1d77d8" stop-opacity=".26985" offset=".49108"/>
+<stop stop-color="#c641e7" stop-opacity=".095593" offset=".75416"/>
+<stop stop-color="#25f6ff" stop-opacity="0" offset="1"/>
+</linearGradient>
+<linearGradient id="linearGradient7120" x1="1359.9" x2="6.7262" y1="14.12" y2="762.06" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient7148"/>
+<linearGradient id="linearGradient2412" x1="-116.04" x2="1462.8" y1="750.23" y2="1.1088" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient7148"/>
+</defs>
+<rect x="-3.8037e-6" y="-.0093745" width="1354.7" height="762" fill="#1b1e20" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+<rect x="-3.8037e-6" y="-.0093745" width="1354.7" height="762" fill="url(#linearGradient7120)" stop-color="#000000" stroke-width=".26459" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<g transform="matrix(1 0 .26795 1 -102.09 0)" fill="none" stroke="url(#linearGradient2412)">
+<g stroke-width="1.323">
+<path d="m-3.8037e-6 -0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m5.2918-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m10.584-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m15.875-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m21.167-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m26.459-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m85.198-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m79.906-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m74.614-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m69.323-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m64.031-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m58.739-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="2.3813">
+<path d="m53.447-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m48.155-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m42.864-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m37.572-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m32.28-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m89.961-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m95.252-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m100.54-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m107.85-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m293.72-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m299.01-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m219.44-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m214.15-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m172.34-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m177.63-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m182.93-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m188.22-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m193.51-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.323">
+<path d="m198.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m204.09-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m209.38-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m166.52-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m161.23-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m155.94-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m150.65-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m145.35-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m140.06-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.8521">
+<path d="m134.77-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m128.76-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m123.47-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m118.17-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m112.88-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m288.16-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m389.37-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m394.66-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m399.95-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m326.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m321.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m315.15-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m309.86-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m304.56-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m224.47-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m487.43-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m482.14-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m476.85-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.323">
+<path d="m347.03-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m352.33-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m357.62-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.8521">
+<path d="m411.06-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m416.36-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m421.65-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m426.94-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.323">
+<path d="m432.23-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m437.52-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m442.82-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m448.11-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m453.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m458.69-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m466-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="2.3813">
+<path d="m471.29-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m342.01-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m336.72-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m331.42-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m405.51-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<path d="m362.64-0.0093745v762" stop-color="#000000" stroke-width="1.323" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m367.94-0.0093745v762" stop-color="#000000" stroke-width="1.323" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<g stroke-width="2.3813">
+<path d="m373.23-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m378.52-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m383.81-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m283.13-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m277.84-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m272.55-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m267.26-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.323">
+<path d="m261.97-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m256.67-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m251.38-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m246.09-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m240.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m234.79-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m229.49-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m492.99-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m498.28-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m503.57-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m508.87-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m514.16-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m519.45-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m524.74-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m530.03-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m535.37-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m540.67-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m545.96-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m609.72-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m604.43-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.8521">
+<path d="m599.14-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m593.85-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m588.56-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m583.26-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m577.97-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m572.68-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m567.39-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m562.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m556.81-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m551.51-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m614.75-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m711.76-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m706.47-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m701.17-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m695.88-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.323">
+<path d="m688.57-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m683.28-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m677.99-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.8521">
+<path d="m672.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m667.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m662.11-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m656.82-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m651.53-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.323">
+<path d="m646.24-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m640.95-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m635.65-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m630.36-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m625.07-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m619.78-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m717.31-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m722.61-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m727.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m733.19-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m738.48-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.8521">
+<path d="m743.77-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m749.79-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m755.08-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m760.37-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m765.66-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m770.95-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m984.27-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m813.29-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m818.58-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m823.87-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m829.16-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m835.12-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m840.41-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m845.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.323">
+<path d="m850.99-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m856.29-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m861.58-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m802.44-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m797.15-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m791.86-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m786.56-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m781.27-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m775.98-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m978.72-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1290.6-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1295.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1301.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1306.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.8521">
+<path d="m1311.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m996.88-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m991.59-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m808-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m866.61-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m871.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m877.19-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m945.72-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m940.43-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m935.13-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.323">
+<path d="m929.84-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m924.55-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m919.26-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m913.97-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m908.68-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m903.38-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m898.09-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m892.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m887.51-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m882.22-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m951.27-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m956.57-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m961.86-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.8521">
+<path d="m967.87-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m973.16-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1285.6-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1280.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1124.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1119.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.323">
+<path d="m1114.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1108.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1103.6-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1098.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1091.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1086.6-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1140.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1146.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1151.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1044.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1038.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1033.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1028.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1023.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1017.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1012.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1007.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1001.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1318.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1323.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1328.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1334-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.8521">
+<path d="m1243.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1238.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1233-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1227.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1222.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1217.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1211.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1206.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1065.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1071-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1076.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1081.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1135.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1130.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1275-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1269.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1264.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1259.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1060.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1055.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1049.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1156.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1161.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1167.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1172.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.323">
+<path d="m1177.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1185-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1190.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1195.6-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1200.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1254.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1248.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1339.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1344.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1349.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1355.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1360.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1365.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1371-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1376.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1381.6-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1386.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1392.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1397.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1402.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1408-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1426.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1420.6-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1438.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1433.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1415-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<path d="m1566.7-0.0093745v762" stop-color="#000000" stroke-width="1.8521" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1561.4-0.0093745v762" stop-color="#000000" stroke-width="1.8521" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<g stroke-width="1.323">
+<path d="m1556.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1550.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1545.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1540.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1533.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1528.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1582.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1486.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1480.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1475.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1470.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1465-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1459.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1454.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1449.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1443.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.8521">
+<path d="m1507.6-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1512.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1518.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1523.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1577.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1572-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1502.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1497-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m1491.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<path d="m-65.597-0.0093745v762" stop-color="#000000" stroke-width="2.3813" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-60.305-0.0093745v762" stop-color="#000000" stroke-width="2.3813" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<g stroke-width="1.8521">
+<path d="m-71.153-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-32.917-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-38.209-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-44.165-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-49.457-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-54.749-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<path d="m-12.279-0.0093745v762" stop-color="#000000" stroke-width="1.323" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-6.9872-0.0093745v762" stop-color="#000000" stroke-width="1.323" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<g stroke-width="2.3813">
+<path d="m-17.306-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-22.598-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-27.89-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-76.181-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-81.472-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-86.764-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-92.056-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+<g stroke-width="1.323">
+<path d="m-97.348-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-102.64-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-107.93-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-113.22-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-118.52-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-124.53-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path d="m-129.82-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+</g>
+</g>
 </svg>
