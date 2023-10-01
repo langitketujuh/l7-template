@@ -1,0 +1,10 @@
+#!/usr/bin/env fish
+
+mkdir export
+for file in *.svg
+    scour --remove-descriptive-elements \
+    --enable-comment-stripping \
+    --indent=none \
+    -i $file \
+    -o export/(path change-extension '' $file).svg;
+end
