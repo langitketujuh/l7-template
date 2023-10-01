@@ -1,394 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg id="svg514" width="2560" height="1600" version="1.1" viewBox="0 0 677.33 423.33" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs id="defs146">
-<linearGradient id="linearGradient7120" x1="1359.9" x2="6.7262" y1="14.12" y2="762.06" gradientTransform="matrix(.55556 0 0 .55556 -1.8761 .005212)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient7148"/>
-<linearGradient id="linearGradient7148">
-<stop id="stop4-6" stop-color="#43d068" stop-opacity="0" offset="0"/>
-<stop id="stop6" stop-color="#3562d9" stop-opacity=".16107" offset=".23699"/>
-<stop id="stop8" stop-color="#1d77d8" stop-opacity=".26985" offset=".49108"/>
-<stop id="stop10" stop-color="#c641e7" stop-opacity=".095593" offset=".75416"/>
-<stop id="stop12" stop-color="#25f6ff" stop-opacity="0" offset="1"/>
+<linearGradient id="linearGradient5521" x1="747.79" x2="1354.7" y1="381" y2="381" gradientTransform="matrix(2.2321 0 0 .032661 -1669.2 301.97)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient1294-7"/>
+<linearGradient id="linearGradient1294-7">
+<stop id="stop660" stop-color="#6a5e19" offset="0"/>
+<stop id="stop662" stop-color="#d1b832" stop-opacity=".98824" offset=".14669"/>
+<stop id="stop664" stop-color="#8c7b20" stop-opacity=".96863" offset=".30531"/>
+<stop id="stop666" stop-color="#dbc865" stop-opacity=".95686" offset=".51079"/>
+<stop id="stop668" stop-color="#82721e" stop-opacity=".94902" offset=".6231"/>
+<stop id="stop670" stop-color="#968623" stop-opacity=".99608" offset=".83541"/>
+<stop id="stop672" stop-color="#cfb530" stop-opacity=".92157" offset="1"/>
 </linearGradient>
-<linearGradient id="linearGradient2412" x1="-116.04" x2="1462.8" y1="750.23" y2="1.1088" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient7148"/>
+<linearGradient id="linearGradient5523" x1="747.79" x2="1354.7" y1="381" y2="381" gradientTransform="matrix(2.2321 0 0 .08907 -1669.2 308.79)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient1056-3"/>
+<linearGradient id="linearGradient1056-3">
+<stop id="stop683" stop-color="#6a5e19" offset="0"/>
+<stop id="stop685" stop-color="#85751e" stop-opacity=".98824" offset=".14669"/>
+<stop id="stop687" stop-color="#a38f26" stop-opacity=".96863" offset=".30531"/>
+<stop id="stop689" stop-color="#f5d737" stop-opacity=".95686" offset=".51079"/>
+<stop id="stop691" stop-color="#968623" stop-opacity=".99608" offset=".83541"/>
+<stop id="stop693" stop-color="#4e4412" stop-opacity=".92157" offset="1"/>
+</linearGradient>
+<linearGradient id="linearGradient5525" x1="747.79" x2="1354.7" y1="381" y2="381" gradientTransform="matrix(2.2321 0 0 1 -1669.2 17.384)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient8802"/>
+<linearGradient id="linearGradient8802">
+<stop id="stop8796" stop-color="#1b668f" offset="0"/>
+<stop id="stop8798" stop-color="#121c94" offset=".43039"/>
+<stop id="stop8800" stop-color="#382279" offset="1"/>
+</linearGradient>
+<linearGradient id="linearGradient5527" x1="747.79" x2="1354.7" y1="381" y2="381" gradientTransform="matrix(2.2321 0 0 .25888 -1669.2 257.33)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient25753-9"/>
+<linearGradient id="linearGradient25753-9" x1="-21.655" x2="383.08" y1="92.147" y2="92.147" gradientTransform="matrix(3.7501 0 0 3.7501 69.604 -626.98)" gradientUnits="userSpaceOnUse">
+<stop id="stop736" stop-color="#4465eb" offset="0"/>
+<stop id="stop738" stop-color="#46a7e1" offset=".5"/>
+<stop id="stop740" stop-color="#6b50c1" offset="1"/>
+</linearGradient>
+<linearGradient id="linearGradient5529" x1="747.79" x2="1354.7" y1="381" y2="381" gradientTransform="matrix(2.2321 0 0 .08907 -1669.2 385.34)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient1056-3"/>
+<linearGradient id="linearGradient5531" x1="747.79" x2="1354.7" y1="381" y2="381" gradientTransform="matrix(2.2321 0 0 .032661 -1669.2 435.14)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient1294-7"/>
+<linearGradient id="linearGradient4540" x1="1938.1" x2="3320.3" y1="1738.6" y2="1738.6" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient1056-3"/>
+<linearGradient id="linearGradient1730" x1="1938.1" x2="3320.3" y1="1738.6" y2="1738.6" gradientUnits="userSpaceOnUse">
+<stop id="stop606" stop-color="#2936ea" offset="0"/>
+<stop id="stop608" stop-color="#164593" offset="1"/>
+</linearGradient>
+<linearGradient id="linearGradient1738" x1="1938.1" x2="3320.3" y1="1738.6" y2="1738.6" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient25753-9"/>
+<linearGradient id="linearGradient1122" x1="642.77" x2="711.93" y1="381" y2="381" gradientTransform="matrix(1.192 0 0 1.192 -130.05 -73.152)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient1056-3"/>
 </defs>
 <rect id="rect148" x="-.0016667" width="677.33" height="423.33" fill="#1b1e20" stop-color="#000000" stroke-width=".52705" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
-<g id="g59306" transform="translate(1.8745)">
-<rect id="rect23" x="-1.8761" width="677.33" height="423.33" fill="url(#linearGradient7120)" stop-color="#000000" stroke-width=".14699" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<g id="g719" transform="matrix(.55556 0 .14886 .55556 -58.519 .0052331)" fill="none" stroke="url(#linearGradient2412)">
-<g id="g49" stroke-width="1.323">
-<path id="path25" d="m-3.8037e-6 -0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path27" d="m5.2918-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path29" d="m10.584-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path31" d="m15.875-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path33" d="m21.167-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path35" d="m26.459-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path37" d="m85.198-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path39" d="m79.906-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path41" d="m74.614-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path43" d="m69.323-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path45" d="m64.031-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path47" d="m58.739-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<g id="g7521" transform="matrix(.5 0 0 .5 209.04 156.29)">
+<g id="g5519" transform="matrix(.99998 0 0 .77602 -418.09 -134.86)" opacity=".05">
+<rect id="rect5497" x="-1.4692e-5" y="312.17" width="1354.7" height="4.4962" ry=".027054" fill="url(#linearGradient5521)" stop-color="#000000" stroke-width=".084371" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<rect id="rect5499" x="-1.4692e-5" y="423.77" width="1354.7" height="21.563" ry=".12975" fill="#243bcf" stop-color="#000000" stroke-width=".18477" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<rect id="rect5501" x="-1.4692e-5" y="338.23" width="1354.7" height="8.9924" ry=".054108" fill="url(#linearGradient5523)" stop-color="#000000" stroke-width=".11932" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<rect id="rect5503" x="-1.4692e-5" y="316.67" width="1354.7" height="21.614" ry=".13759" fill="#243bcf" stop-color="#000000" stroke-width=".19027" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path id="path5505" transform="matrix(.98012 0 0 .0013951 -1899.5 335.8)" d="m2629.2 1047.5 691.09 691.09-691.09 691.09-691.09-691.09z" fill="#fff" stop-color="#000000" stroke-width="9.3056" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+<rect id="rect5507" x="-2.9385e-5" y="364.61" width="1354.7" height="50.225" ry="0" fill="url(#linearGradient5525)" stop-color="#000000" stroke-width=".32705" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<rect id="rect5509" x="-1.4692e-5" y="347.22" width="1354.7" height="17.49" ry=".10524" fill="url(#linearGradient5527)" stop-color="#000000" stroke-width=".1664" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path id="path5511" transform="matrix(.98012 0 0 .0013951 -1899.5 421.35)" d="m2629.2 1047.5 691.09 691.09-691.09 691.09-691.09-691.09z" fill="#fff" stop-color="#000000" stroke-width="9.3056" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+<path id="path5513" transform="matrix(.98012 0 0 .0022635 -1899.5 360.67)" d="m2629.2 1047.5 691.09 691.09-691.09 691.09-691.09-691.09z" fill="#fff" stop-color="#000000" stroke-width="9.3056" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+<rect id="rect5515" x="-1.4692e-5" y="414.78" width="1354.7" height="8.9923" ry=".054107" fill="url(#linearGradient5529)" stop-color="#000000" stroke-width=".11932" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<rect id="rect5517" x="-1.4692e-5" y="445.33" width="1354.7" height="4.4962" ry=".027054" fill="url(#linearGradient5531)" stop-color="#000000" stroke-width=".084371" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
 </g>
-<g id="g87" stroke-width="2.3813">
-<path id="path51" d="m53.447-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path53" d="m48.155-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path55" d="m42.864-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path57" d="m37.572-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path59" d="m32.28-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path61" d="m89.961-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path63" d="m95.252-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path65" d="m100.54-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path67" d="m107.85-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path69" d="m293.72-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path71" d="m299.01-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path73" d="m219.44-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path75" d="m214.15-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path77" d="m172.34-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path79" d="m177.63-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path81" d="m182.93-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path83" d="m188.22-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path85" d="m193.51-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<g id="g5398" transform="matrix(.99998 0 0 .77602 -418.09 -235.64)" opacity=".05">
+<rect id="rect5376" x="-1.4692e-5" y="312.17" width="1354.7" height="4.4962" ry=".027054" fill="url(#linearGradient5521)" stop-color="#000000" stroke-width=".084371" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<rect id="rect5378" x="-1.4692e-5" y="423.77" width="1354.7" height="21.563" ry=".12975" fill="#243bcf" stop-color="#000000" stroke-width=".18477" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<rect id="rect5380" x="-1.4692e-5" y="338.23" width="1354.7" height="8.9924" ry=".054108" fill="url(#linearGradient5523)" stop-color="#000000" stroke-width=".11932" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<rect id="rect5382" x="-1.4692e-5" y="316.67" width="1354.7" height="21.614" ry=".13759" fill="#243bcf" stop-color="#000000" stroke-width=".19027" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path id="path5384" transform="matrix(.98012 0 0 .0013951 -1899.5 335.8)" d="m2629.2 1047.5 691.09 691.09-691.09 691.09-691.09-691.09z" fill="#fff" stop-color="#000000" stroke-width="9.3056" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+<rect id="rect5386" x="-2.9385e-5" y="364.61" width="1354.7" height="50.225" ry="0" fill="url(#linearGradient5525)" stop-color="#000000" stroke-width=".32705" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<rect id="rect5388" x="-1.4692e-5" y="347.22" width="1354.7" height="17.49" ry=".10524" fill="url(#linearGradient5527)" stop-color="#000000" stroke-width=".1664" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path id="path5390" transform="matrix(.98012 0 0 .0013951 -1899.5 421.35)" d="m2629.2 1047.5 691.09 691.09-691.09 691.09-691.09-691.09z" fill="#fff" stop-color="#000000" stroke-width="9.3056" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+<path id="path5392" transform="matrix(.98012 0 0 .0022635 -1899.5 360.67)" d="m2629.2 1047.5 691.09 691.09-691.09 691.09-691.09-691.09z" fill="#fff" stop-color="#000000" stroke-width="9.3056" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+<rect id="rect5394" x="-1.4692e-5" y="414.78" width="1354.7" height="8.9923" ry=".054107" fill="url(#linearGradient5529)" stop-color="#000000" stroke-width=".11932" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<rect id="rect5396" x="-1.4692e-5" y="445.33" width="1354.7" height="4.4962" ry=".027054" fill="url(#linearGradient5531)" stop-color="#000000" stroke-width=".084371" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
 </g>
-<g id="g107" stroke-width="1.323">
-<path id="path89" d="m198.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path91" d="m204.09-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path93" d="m209.38-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path95" d="m166.52-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path97" d="m161.23-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path99" d="m155.94-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path101" d="m150.65-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path103" d="m145.35-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path105" d="m140.06-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<use id="use6459" transform="matrix(2.2422 0 0 2.2422 -322.05 -137.58)" opacity=".05" xlink:href="#g2305"/>
+<use id="use6249" transform="matrix(1.9998 0 0 1.9998 -259.2 -110.73)" opacity=".08" xlink:href="#g2305"/>
+<g id="g7941" transform="matrix(.99998 0 0 .77602 -418.09 -184.91)">
+<rect id="rect1732" x="-1.4692e-5" y="312.17" width="1354.7" height="4.4962" ry=".027054" fill="url(#linearGradient5521)" stop-color="#000000" stroke-width=".084371" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<rect id="rect2472" x="-1.4692e-5" y="423.77" width="1354.7" height="21.563" ry=".12975" fill="#243bcf" stop-color="#000000" stroke-width=".18477" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<rect id="rect2470" x="-1.4692e-5" y="338.23" width="1354.7" height="8.9924" ry=".054108" fill="url(#linearGradient5523)" stop-color="#000000" stroke-width=".11932" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<rect id="rect5260" x="-1.4692e-5" y="316.67" width="1354.7" height="21.614" ry=".13759" fill="#243bcf" stop-color="#000000" stroke-width=".19027" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path id="path7650" transform="matrix(.98012 0 0 .0013951 -1899.5 335.8)" d="m2629.2 1047.5 691.09 691.09-691.09 691.09-691.09-691.09z" fill="#fff" stop-color="#000000" stroke-width="9.3056" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+<rect id="rect4362" x="-2.9385e-5" y="364.61" width="1354.7" height="50.225" ry="0" fill="url(#linearGradient5525)" stop-color="#000000" stroke-width=".32705" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<rect id="rect2296" x="-1.4692e-5" y="347.22" width="1354.7" height="17.49" ry=".10524" fill="url(#linearGradient5527)" stop-color="#000000" stroke-width=".1664" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path id="path7736" transform="matrix(.98012 0 0 .0013951 -1899.5 421.35)" d="m2629.2 1047.5 691.09 691.09-691.09 691.09-691.09-691.09z" fill="#fff" stop-color="#000000" stroke-width="9.3056" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+<path id="path7931" transform="matrix(.98012 0 0 .0022635 -1899.5 360.67)" d="m2629.2 1047.5 691.09 691.09-691.09 691.09-691.09-691.09z" fill="#fff" stop-color="#000000" stroke-width="9.3056" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+<rect id="rect5252" x="-1.4692e-5" y="414.78" width="1354.7" height="8.9923" ry=".054107" fill="url(#linearGradient5529)" stop-color="#000000" stroke-width=".11932" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<rect id="rect5256" x="-1.4692e-5" y="445.33" width="1354.7" height="4.4962" ry=".027054" fill="url(#linearGradient5531)" stop-color="#000000" stroke-width=".084371" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
 </g>
-<g id="g145" stroke-width="1.8521">
-<path id="path109" d="m134.77-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path111" d="m128.76-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path113" d="m123.47-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path115" d="m118.17-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path117" d="m112.88-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path119" d="m288.16-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path121" d="m389.37-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path123" d="m394.66-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path125" d="m399.95-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path127" d="m326.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path129" d="m321.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path131" d="m315.15-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path133" d="m309.86-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path135" d="m304.56-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path137" d="m224.47-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path139" d="m487.43-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path141" d="m482.14-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path143" d="m476.85-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g153" stroke-width="1.323">
-<path id="path147" d="m347.03-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path149" d="m352.33-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path151" d="m357.62-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g163" stroke-width="1.8521">
-<path id="path155" d="m411.06-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path157" d="m416.36-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path159" d="m421.65-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path161" d="m426.94-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g179" stroke-width="1.323">
-<path id="path165" d="m432.23-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path167" d="m437.52-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path169" d="m442.82-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path171" d="m448.11-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path173" d="m453.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path175" d="m458.69-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path177" d="m466-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g191" stroke-width="2.3813">
-<path id="path181" d="m471.29-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path183" d="m342.01-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path185" d="m336.72-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path187" d="m331.42-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path189" d="m405.51-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<path id="path193" d="m362.64-0.0093745v762" stop-color="#000000" stroke-width="1.323" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path195" d="m367.94-0.0093745v762" stop-color="#000000" stroke-width="1.323" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<g id="g211" stroke-width="2.3813">
-<path id="path197" d="m373.23-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path199" d="m378.52-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path201" d="m383.81-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path203" d="m283.13-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path205" d="m277.84-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path207" d="m272.55-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path209" d="m267.26-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g253" stroke-width="1.323">
-<path id="path213" d="m261.97-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path215" d="m256.67-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path217" d="m251.38-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path219" d="m246.09-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path221" d="m240.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path223" d="m234.79-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path225" d="m229.49-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path227" d="m492.99-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path229" d="m498.28-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path231" d="m503.57-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path233" d="m508.87-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path235" d="m514.16-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path237" d="m519.45-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path239" d="m524.74-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path241" d="m530.03-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path243" d="m535.37-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path245" d="m540.67-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path247" d="m545.96-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path249" d="m609.72-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path251" d="m604.43-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g285" stroke-width="1.8521">
-<path id="path255" d="m599.14-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path257" d="m593.85-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path259" d="m588.56-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path261" d="m583.26-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path263" d="m577.97-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path265" d="m572.68-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path267" d="m567.39-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path269" d="m562.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path271" d="m556.81-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path273" d="m551.51-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path275" d="m614.75-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path277" d="m711.76-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path279" d="m706.47-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path281" d="m701.17-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path283" d="m695.88-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g293" stroke-width="1.323">
-<path id="path287" d="m688.57-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path289" d="m683.28-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path291" d="m677.99-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g305" stroke-width="1.8521">
-<path id="path295" d="m672.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path297" d="m667.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path299" d="m662.11-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path301" d="m656.82-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path303" d="m651.53-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g329" stroke-width="1.323">
-<path id="path307" d="m646.24-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path309" d="m640.95-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path311" d="m635.65-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path313" d="m630.36-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path315" d="m625.07-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path317" d="m619.78-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path319" d="m717.31-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path321" d="m722.61-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path323" d="m727.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path325" d="m733.19-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path327" d="m738.48-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g359" stroke-width="1.8521">
-<path id="path331" d="m743.77-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path333" d="m749.79-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path335" d="m755.08-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path337" d="m760.37-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path339" d="m765.66-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path341" d="m770.95-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path343" d="m984.27-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path345" d="m813.29-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path347" d="m818.58-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path349" d="m823.87-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path351" d="m829.16-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path353" d="m835.12-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path355" d="m840.41-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path357" d="m845.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g389" stroke-width="1.323">
-<path id="path361" d="m850.99-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path363" d="m856.29-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path365" d="m861.58-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path367" d="m802.44-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path369" d="m797.15-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path371" d="m791.86-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path373" d="m786.56-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path375" d="m781.27-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path377" d="m775.98-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path379" d="m978.72-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path381" d="m1290.6-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path383" d="m1295.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path385" d="m1301.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path387" d="m1306.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g411" stroke-width="1.8521">
-<path id="path391" d="m1311.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path393" d="m996.88-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path395" d="m991.59-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path397" d="m808-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path399" d="m866.61-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path401" d="m871.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path403" d="m877.19-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path405" d="m945.72-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path407" d="m940.43-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path409" d="m935.13-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g439" stroke-width="1.323">
-<path id="path413" d="m929.84-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path415" d="m924.55-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path417" d="m919.26-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path419" d="m913.97-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path421" d="m908.68-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path423" d="m903.38-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path425" d="m898.09-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path427" d="m892.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path429" d="m887.51-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path431" d="m882.22-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path433" d="m951.27-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path435" d="m956.57-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path437" d="m961.86-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g453" stroke-width="1.8521">
-<path id="path441" d="m967.87-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path443" d="m973.16-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path445" d="m1285.6-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path447" d="m1280.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path449" d="m1124.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path451" d="m1119.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g499" stroke-width="1.323">
-<path id="path455" d="m1114.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path457" d="m1108.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path459" d="m1103.6-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path461" d="m1098.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path463" d="m1091.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path465" d="m1086.6-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path467" d="m1140.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path469" d="m1146.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path471" d="m1151.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path473" d="m1044.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path475" d="m1038.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path477" d="m1033.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path479" d="m1028.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path481" d="m1023.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path483" d="m1017.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path485" d="m1012.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path487" d="m1007.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path489" d="m1001.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path491" d="m1318.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path493" d="m1323.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path495" d="m1328.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path497" d="m1334-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g551" stroke-width="1.8521">
-<path id="path501" d="m1243.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path503" d="m1238.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path505" d="m1233-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path507" d="m1227.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path509" d="m1222.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path511" d="m1217.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path513" d="m1211.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path515" d="m1206.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path517" d="m1065.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path519" d="m1071-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path521" d="m1076.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path523" d="m1081.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path525" d="m1135.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path527" d="m1130.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path529" d="m1275-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path531" d="m1269.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path533" d="m1264.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path535" d="m1259.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path537" d="m1060.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path539" d="m1055.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path541" d="m1049.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path543" d="m1156.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path545" d="m1161.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path547" d="m1167.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path549" d="m1172.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g605" stroke-width="1.323">
-<path id="path553" d="m1177.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path555" d="m1185-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path557" d="m1190.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path559" d="m1195.6-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path561" d="m1200.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path563" d="m1254.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path565" d="m1248.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path567" d="m1339.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path569" d="m1344.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path571" d="m1349.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path573" d="m1355.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path575" d="m1360.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path577" d="m1365.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path579" d="m1371-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path581" d="m1376.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path583" d="m1381.6-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path585" d="m1386.9-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path587" d="m1392.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path589" d="m1397.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path591" d="m1402.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path593" d="m1408-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path595" d="m1426.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path597" d="m1420.6-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path599" d="m1438.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path601" d="m1433.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path603" d="m1415-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<path id="path607" d="m1566.7-0.0093745v762" stop-color="#000000" stroke-width="1.8521" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path609" d="m1561.4-0.0093745v762" stop-color="#000000" stroke-width="1.8521" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<g id="g643" stroke-width="1.323">
-<path id="path611" d="m1556.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path613" d="m1550.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path615" d="m1545.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path617" d="m1540.2-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path619" d="m1533.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path621" d="m1528.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path623" d="m1582.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path625" d="m1486.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path627" d="m1480.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path629" d="m1475.5-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path631" d="m1470.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path633" d="m1465-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path635" d="m1459.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path637" d="m1454.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path639" d="m1449.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path641" d="m1443.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g663" stroke-width="1.8521">
-<path id="path645" d="m1507.6-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path647" d="m1512.8-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path649" d="m1518.1-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path651" d="m1523.4-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path653" d="m1577.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path655" d="m1572-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path657" d="m1502.3-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path659" d="m1497-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path661" d="m1491.7-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<path id="path665" d="m-65.597-0.0093745v762" stop-color="#000000" stroke-width="2.3813" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path667" d="m-60.305-0.0093745v762" stop-color="#000000" stroke-width="2.3813" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<g id="g681" stroke-width="1.8521">
-<path id="path669" d="m-71.153-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path671" d="m-32.917-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path673" d="m-38.209-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path675" d="m-44.165-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path677" d="m-49.457-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path679" d="m-54.749-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<path id="path683" d="m-12.279-0.0093745v762" stop-color="#000000" stroke-width="1.323" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path685" d="m-6.9872-0.0093745v762" stop-color="#000000" stroke-width="1.323" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<g id="g701" stroke-width="2.3813">
-<path id="path687" d="m-17.306-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path689" d="m-22.598-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path691" d="m-27.89-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path693" d="m-76.181-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path695" d="m-81.472-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path697" d="m-86.764-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path699" d="m-92.056-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
-<g id="g717" stroke-width="1.323">
-<path id="path703" d="m-97.348-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path705" d="m-102.64-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path707" d="m-107.93-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path709" d="m-113.22-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path711" d="m-118.52-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path713" d="m-124.53-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-<path id="path715" d="m-129.82-0.0093745v762" stop-color="#000000" style="font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
-</g>
+<g id="g2305" transform="matrix(.78561 0 0 .78561 -272.89 -188.56)">
+<path id="path7400" transform="matrix(.17818 0 0 .24421 208.88 -43.578)" d="m2629.2 1047.5-691.09 691.09 691.09 691.09 691.09-691.09zm0 27.181 663.74 663.91-663.74 663.91-663.74-663.91z" fill="url(#linearGradient4540)" stop-color="#000000" stroke-width=".26459" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path id="path1821" transform="matrix(.17113 0 0 .23461 227.42 -26.879)" d="m2629.2 1047.5 691.09 691.09-691.09 691.09-691.09-691.09z" fill="url(#linearGradient1730)" stop-color="#000000" stroke-width=".26459" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path id="path1071" transform="matrix(.13684 0 0 .18375 317.58 61.54)" d="m2629.2 1047.5-691.09 691.09 691.09 691.09 691.09-691.09zm0 60.145 630.95 630.95-630.95 630.95-630.95-630.95z" fill="url(#linearGradient4540)" stop-color="#000000" stroke-width=".26459" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path id="path8299" transform="matrix(.12493 0 0 .16776 348.88 89.341)" d="m2629.2 1047.5 691.09 691.09-691.09 691.09-691.09-691.09z" fill="url(#linearGradient1738)" stop-color="#000000" stroke-width=".26459" style="-inkscape-stroke:none;font-variation-settings:'wght' 700;paint-order:stroke fill markers"/>
+<path id="path8804" transform="matrix(.10648 0 0 .14299 397.39 132.41)" d="m2629.2 1047.5-691.09 691.09 691.09 691.09 691.09-691.09zm0 45.751 645.34 645.34-645.34 645.34-645.34-645.34z" fill="#fff" stop-color="#000000" stroke-width="9.3056" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+<path id="path3296" transform="matrix(.099434 0 0 .13352 415.92 148.87)" d="m2629.2 1047.5 691.09 691.09-691.09 691.09-691.09-691.09z" fill="#333" stop-color="#000000" stroke-width="9.3056" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+<path id="path3298" d="m677.35 321.52c-24.719 0-44.293 34.757-44.293 59.477s19.574 59.477 44.293 59.477c24.719 0 44.293-34.757 44.293-59.477 0-24.719-19.574-59.477-44.293-59.477zm0 4.1204c23.007 0 41.225 32.35 41.225 55.356 0 23.007-18.218 55.356-41.225 55.356-23.007 0-41.225-32.35-41.225-55.356 0-23.007 18.218-55.356 41.225-55.356z" fill="#47a6e0" stop-color="#000000" stroke-width=".69112" style="paint-order:stroke fill markers"/>
+<path id="path4523" d="m677.35 325.64c-23.007 0-41.225 32.35-41.225 55.356s18.218 55.356 41.225 55.356c23.007 0 41.225-32.35 41.225-55.356 0-23.007-18.218-55.356-41.225-55.356zm0 6.5365c20.29 0 36.357 28.53 36.357 48.82s-16.067 48.82-36.357 48.82c-20.29 0-36.357-28.53-36.357-48.82 0-20.29 16.067-48.82 36.357-48.82z" fill="url(#linearGradient1122)" stop-color="#000000" stroke-width=".64324" style="paint-order:stroke fill markers"/>
+<path id="path1124" d="m677.35 331.65c-20.511 0-36.753 28.84-36.753 49.351s16.242 49.352 36.753 49.352c20.511 0 36.752-28.841 36.752-49.352 0-20.511-16.241-49.351-36.752-49.351zm0 6.3516c17.871 0 32.023 25.128 32.023 42.999 0 17.871-14.152 42.999-32.023 42.999-17.871 0-32.023-25.128-32.023-42.999s14.152-42.999 32.023-42.999z" fill="#ccc" stop-color="#000000" stroke-width=".57346" style="paint-order:stroke fill markers"/>
+<path id="path1324" d="m677.35 336.59c18.459 0 33.075 25.955 33.075 44.414s-14.617 44.414-33.075 44.414c-18.459 0-33.075-25.955-33.075-44.414 0-18.459 14.617-44.414 33.075-44.414z" fill="#fff" stop-color="#000000" stroke-width=".51609" style="paint-order:stroke fill markers"/>
+<path id="path7265" transform="matrix(.48248 0 0 .0016745 -591.18 378.09)" d="m2629.2 1047.5 691.09 691.09-691.09 691.09-691.09-691.09z" fill="#fff" stop-color="#000000" stroke-width="9.3056" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
+<path id="path7457" transform="matrix(0 .18443 -.0030753 0 682.7 -103.89)" d="m2629.2 1047.5 691.09 691.09-691.09 691.09-691.09-691.09z" fill="#fff" stop-color="#000000" stroke-width="9.3056" style="-inkscape-stroke:none;font-variation-settings:normal;paint-order:stroke fill markers"/>
 </g>
 </g>
 </svg>
