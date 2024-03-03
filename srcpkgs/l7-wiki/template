@@ -1,6 +1,6 @@
 # Template file for 'l7-wiki'
 pkgname=l7-wiki
-version=1.0.57
+version=1.0.58
 revision=1
 hostmakedepends="mdBook mdbook-linkcheck"
 depends="xdg-utils"
@@ -9,7 +9,7 @@ maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
 license="CC-BY-SA-4.0"
 homepage="https://gitlab.com/langitketujuh/l7-wiki"
 distfiles="https://gitlab.com/langitketujuh/l7-wiki/-/archive/${version}/l7-wiki-${version}.tar.gz"
-checksum=1c41a148b4c213496c40a8ce857b49b6c3ad02762eb37d2a6132aa9b9aecd922
+checksum=09ed9afff673c81e59621537376011a93b543227d3e46f2db94f73ed9d88e633
 
 do_build() {
 	mdbook build
