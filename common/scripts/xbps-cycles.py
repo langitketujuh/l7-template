@@ -84,7 +84,7 @@ def find_cycles(depmap, xbpsdir):
 			try: deps = pkgs.pop(p)
 			except KeyError: break
 
-		        # Any of the dependencies here contributes to a cycle
+			# Any of the dependencies here contributes to a cycle
 			p = min(deps)
 			if len(deps) > 1:
 				print('Multipath: {} -> {}, choosing first'.format(p, deps))
@@ -97,10 +97,14 @@ if __name__ == '__main__':
 	parser = ArgumentParser(description='Cycle detector for xbps-src')
 	parser.add_argument('-j', '--jobs', default=None,
 			type=int, help='Number of parallel jobs')
-	parser.add_argument('-c', '--cachedir',
-			default=None, help='''Directory to use as cache for xbps-src show-build-deps. Directory must exist already.''')
+	parser.add_argument('-c', '--cachedir', default=None,
+			help='Directory used to cache build dependencies (must exist)')
 	parser.add_argument('-d', '--directory',
 			default=None, help='Path to void-packages repo')
+	parser.add_argument('-Q', dest='check_pkgs', action='store_const',
+			const='yes', help='Use build dependencies for check -Q')
+	parser.add_argument('-K', dest='check_pkgs', action='store_const',
+			const='full', help='Use build dependencies for check -K')
 
 	args = parser.parse_args()
 
@@ -108,13 +112,15 @@ if __name__ == '__main__':
 		try: args.directory = os.environ['XBPS_DISTDIR']
 		except KeyError: args.directory = '.'
 
-	cachedir = args.cachedir
+	if args.check_pkgs:
+		os.environ['XBPS_CHECK_PKGS'] = args.check_pkgs
 
 	pool = multiprocessing.Pool(processes = args.jobs)
 
 	pattern = os.path.join(args.directory, 'srcpkgs', '*')
-	depmap = dict(pool.starmap(enum_depends,
-			((os.path.basename(g), args.directory, cachedir)
-				for g in glob.iglob(pattern))))
+	pkgs = {os.path.realpath(p) for p in glob.iglob(pattern)}
+
+	depargs = ((os.path.basename(g), args.directory, args.cachedir) for g in pkgs)
+	depmap = dict(pool.starmap(enum_depends, depargs))
 
 	find_cycles(depmap, args.directory)

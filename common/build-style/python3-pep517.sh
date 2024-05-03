@@ -4,8 +4,18 @@
 
 do_build() {
 	: ${make_build_target:=.}
-	: ${make_build_args:=--no-isolation  --wheel}
-	python3 -m build ${make_build_args} ${make_build_target}
+
+	if [ "${CROSS_BUILD}" ] && [[ "${build_helper}" = *meson* ]]; then
+		local mcross="-Csetup-args=--cross-file=${XBPS_WRAPPERDIR}/meson"
+		make_build_args+=" ${mcross}/xbps_meson.cross"
+
+		if [[ "${build_helper}" = *numpy* ]]; then
+			make_build_args+=" ${mcross}/xbps_numpy.cross"
+		fi
+	fi
+
+	python3 -m build --no-isolation --wheel \
+		${make_build_args} ${make_build_target}
 }
 
 do_check() {
@@ -23,7 +33,7 @@ do_check() {
 	python3 -m installer --destdir "${testdir}" \
 		${make_install_args} ${make_install_target:-dist/*.whl}
 
-	PATH="${testdir}/usr/bin:${PATH}" PYTHONPATH="${testdir}/${py3_sitelib}" \
+	PATH="${testdir}/usr/bin:${PATH}" PYTHONPATH="${testdir}/${py3_sitelib}" PY_IGNORE_IMPORTMISMATCH=1 \
 		${make_check_pre} pytest3 ${testjobs} ${make_check_args} ${make_check_target}
 }
 
