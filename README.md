@@ -5,13 +5,13 @@
 - x86_64-musl
 
 ```
-./xbps-src -m masterdir-x86_64-musl binary-bootstrap x86_64-musl
+./xbps-src binary-bootstrap -A x86_64-musl
 ```
 
 - x86_64
 
 ```
-./xbps-src -m masterdir-x86_64 binary-bootstrap x86_64
+./xbps-src binary-bootstrap -A x86_64
 ```
 
 ### Generate privat key to signature xbps packages (one time)
