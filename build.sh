@@ -18,7 +18,7 @@ for arch in x86_64 x86_64-musl; do
   XBPS_TARGET_ARCH=${arch} ./xbps-src clean -m masterdir-${arch}
 
   # new masterdir
-  ./xbps-src -m masterdir-${arch} binary-bootstrap ${arch}
+  ./xbps-src binary-bootstrap -A ${arch}
 
   # build packages xbps
   for pkgs in $PACKAGES; do
