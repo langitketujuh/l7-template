@@ -1,7 +1,7 @@
 # Template file for 'l7-kservice'
 pkgname=l7-kservice
-version=0.1.1
-revision=4
+version=0.2
+revision=1
 depends="kservice"
 short_desc="Additional configuration for kservice package"
 maintainer="Hervy Qurrotul Ainur Rozi <hervyqa@proton.me>"
@@ -10,5 +10,5 @@ homepage="https://langitketujuh.id"
 
 do_install() {
 	vmkdir etc/xdg/menus
-	vinstall ${FILESDIR}/applications.menu 0644 etc/xdg/menus applications.menu
+	vinstall ${FILESDIR}/plasma-applications.menu 0644 etc/xdg/menus plasma-applications.menu
 }
